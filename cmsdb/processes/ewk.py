@@ -6,7 +6,7 @@ EWK-related process definitions.
 
 __all__ = [
     "dy",
-    "dy_lep",
+    "dy_lep", "dy_lep_m10to50",
     "dy_lep_m50", "dy_lep_m50_1j", "dy_lep_m50_2j", "dy_lep_m50_3j", "dy_lep_m50_4j",
     "dy_lep_0j", "dy_lep_1j", "dy_lep_2j",
     "dy_lep_m50_ht70to100", "dy_lep_m50_ht100to200", "dy_lep_m50_ht200to400",
@@ -38,7 +38,7 @@ __all__ = [
     "wz", "wz_lllnu", "wz_qqll_m4", "wz_lnuqq",
     "ww", "ww_lnulnu", "ww_lnuqq", "ww_qqqq",
     "vvv",
-    "zzz", "wzz", "wwz", "www",
+    "zzz", "wzz", "wwz", "www", "wwz4f", "www4f",
 ]
 
 from order import Process
@@ -68,14 +68,16 @@ dy_lep = dy.add_process(
 # NNLO cross section, based on:
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV?rev=27
 
+dy_lep_m10to50 = dy_lep.add_process(
+    name="dy_lep_m10to50",
+    id=51050,
+    xsecs={13: Number(18610.)},
+)
+
 dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
     id=51100,
-    xsecs={13: const.n_leps * Number(6077.22, {
-        "integration": 1.49,
-        "scale": 0.02j,
-        "pdf": 14.78,
-    })},
+    xsecs={13: Number(6077.22)},
 )
 
 # based on datasets DY{i}JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
@@ -581,7 +583,7 @@ zz_llnunu = zz.add_process(
 zz_llll = zz.add_process(
     name="zz_llll",
     id=8130,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(1.256)},
 )
 
 zz_qqqq = zz.add_process(
@@ -610,13 +612,19 @@ wz = vv.add_process(
 wz_lllnu = wz.add_process(
     name="wz_lllnu",
     id=8210,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: 4.9173},
 )
 
 wz_qqll_m4 = wz.add_process(
     name="wz_qqll_m4",
     id=8220,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(10.73)},
+)
+
+wz_lnununu_m4 = wz.add_process(
+    name="wz_lnununu_m4",
+    id=8230,
+    xsecs={13: Number(3.067)},
 )
 
 wz_lnuqq = wz.add_process(
@@ -632,7 +640,7 @@ ww = vv.add_process(
     label="WW",
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
-        13: Number(75.91),
+        13: Number(118.7),
     },
 )
 
@@ -655,6 +663,60 @@ ww_qqqq = ww.add_process(
 )
 
 
+ggtozzto4l = Process(
+    name="ggtozzto4l",
+    id=8500,
+    label="gg -> ZZ -> 4l",
+    xsecs={13: Number(0.1)},
+)
+
+ggtozzto2e2mu = ggtozzto4l.add_process(
+    name="ggtozzto2e2mu",
+    id=8510,
+    label="gg -> ZZ -> 2e 2tau",
+    xsecs={13: Number(0.005423)},
+)
+
+ggtozzto2e2tau = ggtozzto4l.add_process(
+    name="ggtozzto2e2tau",
+    id=8520,
+    label="gg -> ZZ -> 2e 2tau",
+    xsecs={13: Number(0.005423)},
+)
+
+ggtozzto2mu2tau = ggtozzto4l.add_process(
+    name="ggtozzto2mu2tau",
+    id=8530,
+    label="gg -> ZZ -> 2mu 2tau",
+    xsecs={13: Number(0.005423)},
+)
+
+ggtozzto4e = ggtozzto4l.add_process(
+    name="ggtozzto4e",
+    id=8540,
+    label="gg -> ZZ -> 4e",
+    xsecs={13: Number(0.0027)},
+)
+
+ggtozzto4mu = ggtozzto4l.add_process(
+    name="ggtozzto4mu",
+    id=8550,
+    label="gg -> ZZ -> 4mu",
+    xsecs={13: Number(0.0027)},
+)
+
+ggtozzto4tau = ggtozzto4l.add_process(
+    name="ggtozzto4tau",
+    id=8560,
+    label="gg -> ZZ -> 4tau",
+    xsecs={13: Number(0.0027)},
+)
+
+ggtozzto4l.set_xsec(
+    13,
+    ggtozzto2e2mu.get_xsec(13) + ggtozzto2e2tau.get_xsec(13) + ggtozzto2mu2tau.get_xsec(13) +
+    ggtozzto4e.get_xsec(13) + ggtozzto4mu.get_xsec(13) + ggtozzto4tau.get_xsec(13)
+)
 #
 # Triple-boson
 #
@@ -669,13 +731,13 @@ vvv = Process(
 zzz = vvv.add_process(
     name="zzz",
     id=9100,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.01476)},  # TODO
 )
 
 wzz = vvv.add_process(
     name="wzz",
     id=9200,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.05565)},  # TODO
 )
 
 wwz = vvv.add_process(
@@ -684,8 +746,20 @@ wwz = vvv.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
+wwz4f = wwz.add_process(
+    name="wwz4f",
+    id=9310,
+    xsecs={13: Number(0.1651)},  # TODO
+)
+
 www = vvv.add_process(
     name="www",
     id=9400,
     xsecs={13: Number(0.1)},  # TODO
+)
+
+www4f = www.add_process(
+    name="www4f",
+    id=9410,
+    xsecs={13: Number(0.2086)},  # TODO
 )
