@@ -16,11 +16,16 @@ __all__ = [
     "st_schannel", "st_schannel_lep", "st_schannel_had",
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
+    "tzq",
+    "twz", "twztoll_thad_wlept_5f", "twztoll_tlept_whad_5f", "twztoll_tlept_wlept_5f",
     "ttv",
-    "ttz", "ttz_llnunu_m10",
+    "ttz", "ttz_llnunu_m10", "ttz_llnunu_m1",
     "ttw", "ttw_lnu", "ttw_qq",
+    "tth", "tthjetstononbb",
+    "ttgamma", "ttgamma_dilept",
+    "ttxx",
     "ttvv",
-    "ttzz", "ttwz", "ttww",
+    "ttzz", "ttwz", "ttww", "tthh", "ttwh", "ttzh", "tttt"
 ]
 
 from order import Process
@@ -41,7 +46,7 @@ import cmsdb.constants as const
 tt = Process(
     name="tt",
     id=1000,
-    label=r"$t\bar{t}$ + Jets",
+    label=r"$t\bar{t}$",
     color=(205, 0, 9),
     xsecs={
         13: Number(831.76, {
@@ -291,10 +296,48 @@ st.set_xsec(
     st_tchannel.get_xsec(13) + st_twchannel.get_xsec(13) + st_schannel.get_xsec(13),
 )
 
+# Single top + vector boson
+
+tzq = Process(
+    name="tzq",
+    id=2500,
+    label='tZq',
+    xsecs={13: 0.07358},
+)
+
+twz = Process(
+    name="twz",
+    id=2600,
+    label='tWZ',
+    xsecs={13: Number(0.1)},
+)
+
+twztoll_thad_wlept_5f = twz.add_process(
+    name="twztoll_thad_wlept_5f",
+    id=2610,
+    label='twztoll_thad_wlept_5f',
+    xsecs={13: Number(0.003004)},
+)
+
+twztoll_tlept_whad_5f = twz.add_process(
+    name="twztoll_tlept_whad_5f",
+    id=2620,
+    label='twztoll_tlept_whad_5f',
+    xsecs={13: Number(0.003004)},
+)
+
+twztoll_tlept_wlept_5f = twz.add_process(
+    name="twztoll_tlept_wlept_5f",
+    id=2630,
+    label='twztoll_tlept_wlept_5f',
+    xsecs={13: Number(0.0015)},
+)
+
 
 #
 # ttbar + 1 vector boson
 #
+
 
 ttv = Process(
     name="ttv",
@@ -311,10 +354,23 @@ ttz = ttv.add_process(
 )
 
 ttz_llnunu_m10 = ttz.add_process(
-    name="ttz_llnunu_m10",  # non-hadronically decaying Z
+    name="ttz_llnunu_m10",  # non-hadronically decaying Z m10>
     id=3110,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: 0.281},
 )
+
+
+ttz_llnunu_m1 = ttz.add_process(
+    name="ttz_llnunu_m1",  # non-hadronically decaying Z m1-10
+    id=3120,
+    xsecs={13: 0.08416},
+)
+
+ttz.set_xsec(
+    13,
+    ttz_llnunu_m10.get_xsec(13) + ttz_llnunu_m1.get_xsec(13)
+)
+
 
 ttw = ttv.add_process(
     name="ttw",
@@ -323,44 +379,117 @@ ttw = ttv.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
-ttw_lnu = ttz.add_process(
+ttw_lnu = ttw.add_process(
     name="ttw_lnu",
     id=3210,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.235)},
 )
 
-ttw_qq = ttz.add_process(
+ttw_qq = ttw.add_process(
     name="ttw_qq",
     id=3220,
     xsecs={13: Number(0.1)},  # TODO
 )
 
 
+tth = ttv.add_process(
+    name="tth",
+    id=3300,
+    label=f"{tt.label} + H",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+tthjetstononbb = tth.add_process(
+    name="tthjetstononbb",
+    id=3310,
+    label=f"{tt.label} + H (nonbb)",
+    xsecs={13: Number(0.211)},
+)
+
+ttgamma = ttv.add_process(
+    name="ttgamma",
+    id=3400,
+    label=f"${tt.label} + \gamma$",
+    xsecs={13: Number(0.1)},  # TODO
+)
+
+ttgamma_dilept = ttgamma.add_process(
+    name="ttgamma_dilept",
+    id=3410,
+    label=f"${tt.label} + \gamma(ll)$",
+    xsecs={13: Number(2.22)},
+)
+
+
+#
+# ttbar + 2 bosons/fermions
+#
+
+ttxx = Process(
+    name="ttxx",
+    id=3999,
+    label=f"{tt.label} + XX",
+    xsecs={13: Number(0.1)},
+)
+
 #
 # ttbar + 2 vector bosons
 #
 
-ttvv = Process(
+
+ttvv = ttxx.add_process(
     name="ttvv",
     id=4000,
     label=f"{tt.label} + VV",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1)},
 )
 
 ttzz = ttvv.add_process(
     name="ttzz",
     id=4100,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.001386)},
 )
 
 ttwz = ttvv.add_process(
     name="ttwz",
     id=4200,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.002453)},
 )
 
 ttww = ttvv.add_process(
     name="ttww",
     id=4300,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.007003)},
+)
+
+#
+# ttbar + 2 bosons with atleast 1 Higgs
+#
+
+tthh = ttxx.add_process(
+    name="tthh",
+    id=4400,
+    label=f"{tt.label} + HH",
+    xsecs={13: Number(0.0003697)},
+)
+
+ttwh = ttxx.add_process(
+    name="ttwh",
+    id=4500,
+    label=f"{tt.label} + WH",
+    xsecs={13: Number(0.001141)},
+)
+
+ttzh = ttxx.add_process(
+    name="ttzh",
+    id=4600,
+    label=f"{tt.label} + ZH",
+    xsecs={13: Number(0.00113)},
+)
+
+tttt = ttxx.add_process(
+    name="ttt",
+    id=4700,
+    label=f"{tt.label}{tt.label}",
+    xsecs={13: Number(0.01337)},
 )
