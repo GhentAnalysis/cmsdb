@@ -627,12 +627,6 @@ wz_lnununu_m4 = wz.add_process(
     xsecs={13: Number(3.067)},
 )
 
-wz_lnuqq = wz.add_process(
-    name="wz_lnuqq",
-    id=8230,
-    xsecs={13: Number(0.1)},  # TODO
-)
-
 
 ww = vv.add_process(
     name="ww",
