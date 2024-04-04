@@ -35,7 +35,7 @@ __all__ = [
     "ewk_wp_lnu_m50", "ewk_wm_lnu_m50", "ewk_z_ll_m50",
     "vv",
     "zz", "zz_qqll_m4", "zz_llnunu", "zz_llll", "zz_qqqq", "zz_nunuqq",
-    "wz", "wz_lllnu", "wz_qqll_m4", "wz_lnuqq",
+    "wz", "wz_lllnu", "wz_qqll_m4", 
     "ww", "ww_lnulnu", "ww_lnuqq", "ww_qqqq",
     "vvv",
     "zzz", "wzz", "wwz", "www", "wwz4f", "www4f",
