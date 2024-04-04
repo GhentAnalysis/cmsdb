@@ -15,7 +15,7 @@ from cmsdb.campaigns.run2_2018_nano_v9 import campaign_run2_2018_nano_v9 as cpn
 #
 
 cpn.add_dataset(
-    name="st_tchannel_t",
+    name="st_tchannel_t_powheg",
     id=14293903,
     processes=[procs.st_tchannel_t],
     info=dict(
@@ -58,7 +58,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_tchannel_tbar",
+    name="st_tchannel_tbar_powheg",
     id=14296756,
     processes=[procs.st_tchannel_tbar],
     info=dict(
@@ -131,7 +131,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tt_sl",
+    name="tt_sl_powheg",
     id=14235437,
     processes=[procs.tt_sl],
     info=dict(
@@ -174,7 +174,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tt_dl",
+    name="tt_dl_powheg",
     id=14234474,
     processes=[procs.tt_dl],
     info=dict(
@@ -217,7 +217,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tt_fh",
+    name="tt_fh_powheg",
     id=14232068,
     processes=[procs.tt_fh],
     info=dict(
