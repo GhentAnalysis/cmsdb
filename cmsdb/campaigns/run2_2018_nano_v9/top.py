@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-top quark datasets for the 2017 data-taking campaign
+top quark datasets for the 2018 data-taking campaign
 """
 
 from order import DatasetInfo
