@@ -119,7 +119,7 @@ cpn.add_dataset(
         is_data=True,
         processes=[procs.data],
         keys=[
-            "/EGamma/Run2018D-UL2018_MiniAODv2_NanoAODv9-v3/NANOAOD",
+            "/EGamma/Run2018D-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
         ],
         n_files=355,
         n_events=752524583,
