@@ -79,6 +79,7 @@ dy_lep_m10to50 = dy_lep.add_process(
 dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
     id=51100,
+    label=rf"{dy_lep.label.lstrip(')')}, m(ll) > 50)"
     xsecs={13: Number(6077.22)},
 )
 
