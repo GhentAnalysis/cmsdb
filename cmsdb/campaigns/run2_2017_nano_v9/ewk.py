@@ -248,9 +248,10 @@ cpn.add_dataset(
     processes=[procs.w_lnu],
     keys=[
         "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9_ext-v2/NANOAODSIM"  # noqa
     ],
-    n_files=81,
-    n_events=78307186,
+    n_files=81 + 549,
+    n_events=78307186 + 79936459,
 )
 
 # ht binned

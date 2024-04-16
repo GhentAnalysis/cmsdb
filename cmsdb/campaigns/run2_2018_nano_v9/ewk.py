@@ -110,9 +110,10 @@ cpn.add_dataset(
     processes=[procs.w_lnu],
     keys=[
         "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",
+        "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1_ext1-v2/NANOAODSIM",
     ],
-    n_files=94,
-    n_events=81051269,
+    n_files=94 + 467,
+    n_events=81051269 + 79645994,
 )
 
 #
