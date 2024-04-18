@@ -14,7 +14,7 @@ cpn.add_dataset(
         is_data=True,
         processes=[procs.data],
         keys=[
-            "/DoubleMuon/Run2018A-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD", # TODO: GT36 to t2b, currently only at DESY or ipnl
+            "/DoubleMuon/Run2018A-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
         ],
         n_files=49,
         n_events=75499908,
@@ -29,7 +29,7 @@ cpn.add_dataset(
         is_data=True,
         processes=[procs.data],
         keys=[
-            "/DoubleMuon/Run2018B-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD", # TODO: GT36 to t2b, currently only at DESY or ipnl
+            "/DoubleMuon/Run2018B-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
         ],
         n_files=18,
         n_events=35057758,
@@ -44,7 +44,7 @@ cpn.add_dataset(
         is_data=True,
         processes=[procs.data],
         keys=[
-            "/DoubleMuon/Run2018C-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",  # TODO: GT36 to t2b, currently only at DESY or ipnl
+            "/DoubleMuon/Run2018C-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
         ],
         n_files=31,
         n_events=34565869,
@@ -59,7 +59,7 @@ cpn.add_dataset(
         is_data=True,
         processes=[procs.data],
         keys=[
-            "/DoubleMuon/Run2018D-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD", # TODO: GT36 to t2b, currently only at DESY or ipnl
+            "/DoubleMuon/Run2018D-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
         ],
         n_files=88,
         n_events=168620231,
@@ -134,7 +134,7 @@ cpn.add_dataset(
         is_data=True,
         processes=[procs.data],
         keys=[
-            "/MuonEG/Run2018A-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD", # TODO: GT36 to t2b
+            "/MuonEG/Run2018A-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD",
         ],
         n_files=32,
         n_events=32958503,
@@ -149,7 +149,7 @@ cpn.add_dataset(
         is_data=True,
         processes=[procs.data],
         keys=[
-            "/MuonEG/Run2018B-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD", # TODO: GT36 to t2b
+            "/MuonEG/Run2018B-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD",
         ],
         n_files=12,
         n_events=16204062,
@@ -164,7 +164,7 @@ cpn.add_dataset(
         is_data=True,
         processes=[procs.data],
         keys=[
-            "/MuonEG/Run2018C-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD", # TODO: GT36 to t2b
+            "/MuonEG/Run2018C-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD",
         ],
         n_files=14,
         n_events=15652198,
@@ -179,7 +179,7 @@ cpn.add_dataset(
         is_data=True,
         processes=[procs.data],
         keys=[
-            "/MuonEG/Run2018D-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD", # TODO: GT36 to t2b
+            "/MuonEG/Run2018D-UL2018_MiniAODv2_NanoAODv9-v1/NANOAOD",
         ],
         n_files=60,
         n_events=71947999,
