@@ -264,7 +264,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ttz_llnunu_m10_amcatnlo",
+    name="ttztollnunu_m10_amcatnlo",
     id=14253137,
     processes=[procs.ttz_llnunu_m10],
     keys=[
@@ -275,7 +275,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttz_llnunu_m1_amcatnlo",
+    name="ttztoll_m1to10_amcatnlo",
     id=14338813,
     processes=[procs.ttz_llnunu_m1],
     keys=[
@@ -286,7 +286,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttHJetToNonbb_M125_amcatnlo",
+    name="tthjettononbb_m125_amcatnlo",
     id=14230871,
     processes=[procs.tthjetstononbb],
     keys=[
@@ -297,7 +297,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="TTGamma_Dilept",
+    name="ttgamma_dilept",
     id=14260351,
     processes=[procs.ttgamma_dilept],
     keys=[
@@ -308,7 +308,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttWJetsToLNu_amcatnlo",
+    name="ttwjetstoln_amcatnlo",
     id=14232323,
     processes=[procs.ttw_lnu],
     keys=[
@@ -322,7 +322,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="TTWW_madgraph",
+    name="ttww_madgraph",
     id=14235441,
     processes=[procs.ttww],
     keys=[
@@ -333,7 +333,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="TTWZ_madgraph",
+    name="ttwz_madgraph",
     id=14234781,
     processes=[procs.ttwz],
     keys=[
@@ -344,7 +344,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="TTZZ_madgraph",
+    name="ttzz_madgraph",
     id=14242307,
     processes=[procs.ttzz],
     keys=[
@@ -355,7 +355,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="TTHH_madgraph",
+    name="tthh_madgraph",
     id=14286140,
     processes=[procs.tthh],
     keys=[
@@ -366,7 +366,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="TTWH_madgraph",
+    name="ttwh_madgraph",
     id=14285392,
     processes=[procs.ttwh],
     keys=[
@@ -377,7 +377,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="TTZH_madgraph",
+    name="ttzh_madgraph",
     id=14286190,
     processes=[procs.ttzh],
     keys=[
@@ -388,7 +388,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="TTTT_amcatnlo",
+    name="tttt_amcatnlo",
     id=14284832,
     processes=[procs.tttt],
     keys=[
@@ -403,7 +403,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="TWZToLL_thad_Wlept_5f_amcatnlo",
+    name="twztoll_thad_wlept_5f_amcatnlo",
     id=14231384,
     processes=[procs.twztoll_thad_wlept_5f],
     keys=[
@@ -414,7 +414,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="TWZToLL_tlept_Whad_5f_amcatnlo",
+    name="twztoll_tlept_whad_5f_amcatnlo",
     id=14728151,
     processes=[procs.twztoll_tlept_whad_5f],
     keys=[
@@ -425,7 +425,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="TWZToLL_tlept_Wlept_5f_amcatnlo",
+    name="twztoll_tlept_wlept_5f_amcatnlo",
     id=14231368,
     processes=[procs.twztoll_tlept_wlept_5f],
     keys=[
