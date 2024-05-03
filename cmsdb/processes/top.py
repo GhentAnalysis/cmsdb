@@ -116,7 +116,7 @@ st_tchannel = st.add_process(
 
 st_tchannel_t = st_tchannel.add_process(
     name="st_tchannel_t",
-    label=r"Single $t$, t-channel"
+    label=r"Single $t$, t-channel",
     id=2110,
     xsecs={
         13: Number(136.02, dict(
@@ -129,7 +129,7 @@ st_tchannel_t = st_tchannel.add_process(
 
 st_tchannel_tbar = st_tchannel.add_process(
     name="st_tchannel_tbar",
-    label=r"Single $\bar{t}$, t-channel"
+    label=r"Single $\bar{t}$, t-channel",
     id=2120,
     xsecs={
         13: Number(80.95, dict(
