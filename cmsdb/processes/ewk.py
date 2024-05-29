@@ -37,7 +37,7 @@ __all__ = [
     "zz", "zz_qqll_m4", "zz_llnunu", "zz_llll", "zz_qqqq", "zz_nunuqq",
     "ggtozzto4l", "ggtozzto2e2mu", "ggtozzto2mu2tau", "ggtozzto2e2tau",
     "ggtozzto4e", "ggtozzto4mu", "ggtozzto4tau",
-    "wz", "wz_lllnu", "wz_qqll_m4", "wz_lnununu_m4", 
+    "wz", "wz_lllnu", "wz_qqll_m4", "wz_lnununu_m4", "wzto3lnu_1jets",
     "ww", "ww_lnulnu", "ww_lnuqq", "ww_qqqq",
     "vvv",
     "zzz", "wzz", "wwz", "www", "wwz4f", "www4f",
@@ -57,160 +57,162 @@ dy = Process(
     name="dy",
     id=50000,
     label="Drell-Yan",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 dy_lep = dy.add_process(
     name="dy_lep",
     id=51000,
     label=rf"{dy.label} ($Z \rightarrow ll$)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 # NNLO cross section, based on:
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV?rev=27
 
+# 13.6 xsec from AN-23-137
 dy_lep_m10to50 = dy_lep.add_process(
     name="dy_lep_m10to50",
     id=51050,
-    xsecs={13: Number(18610.)},
+    xsecs={13: Number(18610.), 13.6: Number(19982.5)},
 )
 
+# 13.6 xsec from AN-23-137
 dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
     id=51100,
     label=rf"{dy_lep.label.rstrip(')')}, m(ll) > 50)",
-    xsecs={13: Number(6077.22)},
+    xsecs={13: Number(6077.22), 13.6: Number(6345.99)},
 )
 
 # based on datasets DY{i}JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 dy_lep_m50_1j = dy_lep_m50.add_process(
     name="dy_lep_m50_1j",
     id=51111,
-    xsecs={13: Number(928.3)},
+    xsecs={13: Number(928.3), 13.6: Number(0.1)},
 )
 
 dy_lep_m50_2j = dy_lep_m50.add_process(
     name="dy_lep_m50_2j",
     id=51112,
-    xsecs={13: Number(293.6)},
+    xsecs={13: Number(293.6), 13.6: Number(0.1)},
 )
 
 dy_lep_m50_3j = dy_lep_m50.add_process(
     name="dy_lep_m50_3j",
     id=51113,
-    xsecs={13: Number(86.53)},
+    xsecs={13: Number(86.53), 13.6: Number(0.1)},
 )
 
 dy_lep_m50_4j = dy_lep_m50.add_process(
     name="dy_lep_m50_4j",
     id=51114,
-    xsecs={13: Number(41.28)},
+    xsecs={13: Number(41.28), 13.6: Number(0.1)},
 )
 
 # based on datasets DYJetsToLL_{i}J_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
 dy_lep_0j = dy_lep.add_process(
     name="dy_lep_0j",
     id=51200,
-    xsecs={13: Number(5129.0)},
+    xsecs={13: Number(5129.0), 13.6: Number(0.1)},
 )
 
 dy_lep_1j = dy_lep.add_process(
     name="dy_lep_1j",
     id=51300,
-    xsecs={13: Number(951.5)},
+    xsecs={13: Number(951.5), 13.6: Number(0.1)},
 )
 
 dy_lep_2j = dy_lep.add_process(
     name="dy_lep_2j",
     id=51400,
-    xsecs={13: Number(361.4)},
+    xsecs={13: Number(361.4), 13.6: Number(0.1)},
 )
 
 # based on datasets DYJetsToLL_M-50_HT-{i}to{j}_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8 (Autumn18, LO)
 dy_lep_m50_ht70to100 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht70to100",
     id=51121,
-    xsecs={13: Number(146.5)},
+    xsecs={13: Number(146.5), 13.6: Number(0.1)},
 )
 
 dy_lep_m50_ht100to200 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht100to200",
     id=51122,
-    xsecs={13: Number(160.7)},
+    xsecs={13: Number(160.7), 13.6: Number(0.1)},
 )
 
 dy_lep_m50_ht200to400 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht200to400",
     id=51123,
-    xsecs={13: Number(48.63)},
+    xsecs={13: Number(48.63), 13.6: Number(0.1)},
 )
 
 dy_lep_m50_ht400to600 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht400to600",
     id=51124,
-    xsecs={13: Number(6.993)},
+    xsecs={13: Number(6.993), 13.6: Number(0.1)},
 )
 
 dy_lep_m50_ht600to800 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht600to800",
     id=51125,
-    xsecs={13: Number(1.761)},
+    xsecs={13: Number(1.761), 13.6: Number(0.1)},
 )
 
 dy_lep_m50_ht800to1200 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht800to1200",
     id=51126,
-    xsecs={13: Number(0.8021)},
+    xsecs={13: Number(0.8021), 13.6: Number(0.1)},
 )
 
 dy_lep_m50_ht1200to2500 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht1200to2500",
     id=51127,
-    xsecs={13: Number(0.1937)},
+    xsecs={13: Number(0.1937), 13.6: Number(0.1)},
 )
 
 dy_lep_m50_ht2500 = dy_lep_m50.add_process(
     name="dy_lep_m50_ht2500",
     id=51128,
-    xsecs={13: Number(0.003514)},
+    xsecs={13: Number(0.003514), 13.6: Number(0.1)},
 )
 
 # based on datasets DYJetsToLL_Pt-{i}To{j}_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
 dy_lep_pt0To50 = dy_lep.add_process(
     name="dy_lep_pt0To50",
     id=51510,
-    xsecs={13: Number(1.0)},  # TODO
+    xsecs={13: Number(1.0), 13.6: Number(0.1)},  # TODO
 )
 
 dy_lep_pt50To100 = dy_lep.add_process(
     name="dy_lep_pt50To100",
     id=51520,
-    xsecs={13: Number(398.8)},
+    xsecs={13: Number(398.8), 13.6: Number(0.1)},
 )
 
 dy_lep_pt100To250 = dy_lep.add_process(
     name="dy_lep_pt100To250",
     id=51530,
-    xsecs={13: Number(93.61)},
+    xsecs={13: Number(93.61), 13.6: Number(0.1)},
 )
 
 dy_lep_pt250To400 = dy_lep.add_process(
     name="dy_lep_pt250To400",
     id=51540,
-    xsecs={13: Number(3.67)},
+    xsecs={13: Number(3.67), 13.6: Number(0.1)},
 )
 
 dy_lep_pt400To650 = dy_lep.add_process(
     name="dy_lep_pt400To650",
     id=51550,
-    xsecs={13: Number(0.5)},
+    xsecs={13: Number(0.5), 13.6: Number(0.1)},
 )
 
 dy_lep_pt650 = dy_lep.add_process(
     name="dy_lep_pt650",
     id=51560,
-    xsecs={13: Number(0.04704)},
+    xsecs={13: Number(0.04704), 13.6: Number(0.1)},
 )
 
 #
@@ -222,7 +224,7 @@ z = Process(
     id=55000,
     label="Z + jets",
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -234,7 +236,7 @@ z_nunu = z.add_process(
     id=55100,
     label=rf"{z.label} (Z $\rightarrow$ $\nu\nu$)",
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -243,7 +245,7 @@ z_nunu_ht100to200 = z_nunu.add_process(
     name="z_nunu_ht100to200",
     id=55110,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -252,7 +254,7 @@ z_nunu_ht200to400 = z_nunu.add_process(
     name="z_nunu_ht200to400",
     id=55120,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -261,7 +263,7 @@ z_nunu_ht400to600 = z_nunu.add_process(
     name="z_nunu_ht400to600",
     id=55130,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -270,7 +272,7 @@ z_nunu_ht600to800 = z_nunu.add_process(
     name="z_nunu_ht600to800",
     id=55140,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -279,7 +281,7 @@ z_nunu_ht800to1200 = z_nunu.add_process(
     name="z_nunu_ht800to1200",
     id=55150,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -288,7 +290,7 @@ z_nunu_ht1200to2500 = z_nunu.add_process(
     name="z_nunu_ht1200to2500",
     id=55160,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -297,7 +299,7 @@ z_nunu_ht2500 = z_nunu.add_process(
     name="z_nunu_ht2500",
     id=55170,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -309,7 +311,7 @@ z_qq = z.add_process(
     id=55210,
     label=rf"{z.label} (Z $\rightarrow$ $\text{{q}}\overline{{\text{{q}}}}$)",
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -318,7 +320,7 @@ z_qq_ht200to400 = z_qq.add_process(
     name="z_qq_ht200to400",
     id=55210,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -327,7 +329,7 @@ z_qq_ht400to600 = z_qq.add_process(
     name="z_qq_ht400to600",
     id=55220,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -336,7 +338,7 @@ z_qq_ht600to800 = z_qq.add_process(
     name="z_qq_ht600to800",
     id=55230,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -345,7 +347,7 @@ z_qq_ht800 = z_qq.add_process(
     name="z_qq_ht800",
     id=55240,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(0.1), 13.6: Number(0.1),  # TODO
         13.6: Number(0.1),  # TODO
     },
 )
@@ -359,7 +361,7 @@ w = Process(
     name="w",
     id=6000,
     label="W + jets",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 # NNLO cross section, based on:
@@ -369,10 +371,12 @@ w_lnu = w.add_process(
     name="w_lnu",
     id=6100,
     label=rf"{w.label} ($W \rightarrow l\nu$)",
-    xsecs={13: const.n_leps * Number(20508.9, {
-        "scale": (165.7, 88.2),
-        "pdf": 770.9,
-    })},
+    xsecs={
+        13: const.n_leps * Number(20508.9, {
+            "scale": (165.7, 88.2),
+            "pdf": 770.9, }),
+        13.6: Number(64481.58)
+    },
 )
 
 # LO cross sections, scaled to NNLO
@@ -435,56 +439,56 @@ z = Process(
     name="z",
     id=6500,
     label="Z + jets",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 z_nunu = z.add_process(
     name="z_nunu",
     id=6600,
     label=rf"{z.label} ($Z \rightarrow \nu\nu$)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 z_nunu_ht100To200 = z_nunu.add_process(
     name="z_nunu_ht100To200",
     id=6610,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 z_nunu_ht200To400 = z_nunu.add_process(
     name="z_nunu_ht200To400",
     id=6620,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 z_nunu_ht400To600 = z_nunu.add_process(
     name="z_nunu_ht400To600",
     id=6630,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 z_nunu_ht600To800 = z_nunu.add_process(
     name="z_nunu_ht600To800",
     id=6640,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 z_nunu_ht800To1200 = z_nunu.add_process(
     name="z_nunu_ht800To1200",
     id=6650,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 z_nunu_ht1200To2500 = z_nunu.add_process(
     name="z_nunu_ht1200To2500",
     id=6660,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 z_nunu_ht2500 = z_nunu.add_process(
     name="z_nunu_ht2500",
     id=6670,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 
@@ -492,31 +496,31 @@ z_qq = z.add_process(
     name="z_qq",
     id=6700,
     label=rf"{z.label} ($Z \rightarrow q\bar{{q}}$)",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 z_qq_ht200To400 = z_qq.add_process(
     name="z_qq_ht200To400",
     id=6710,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 z_qq_ht400To600 = z_qq.add_process(
     name="z_qq_ht400To600",
     id=6720,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 z_qq_ht600To800 = z_qq.add_process(
     name="z_qq_ht600To800",
     id=6730,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 z_qq_ht800 = z_qq.add_process(
     name="z_qq_ht800",
     id=6740,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 
@@ -528,25 +532,25 @@ ewk = Process(
     name="ewk",
     id=7000,
     label="EWK",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 ewk_wp_lnu_m50 = ewk.add_process(
     name="ewk_wp_lnu_m50",
     id=7100,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 ewk_wm_lnu_m50 = ewk.add_process(
     name="ewk_wm_lnu_m50",
     id=7200,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 ewk_z_ll_m50 = ewk.add_process(
     name="ewk_z_ll_m50",
     id=7300,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 
@@ -558,7 +562,7 @@ vv = Process(
     name="vv",
     id=8000,
     label="Di-Boson",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 zz = vv.add_process(
@@ -568,37 +572,39 @@ zz = vv.add_process(
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
         13: Number(12.13),
+        13.6: Number(0.1)
     },
 )
 
 zz_qqll_m4 = zz.add_process(
     name="zz_qqll_m4",
     id=8110,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 zz_llnunu = zz.add_process(
     name="zz_llnunu",
     id=8120,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
+# 13.6 xsec from AN-23-137
 zz_llll = zz.add_process(
     name="zz_llll",
     id=8130,
-    xsecs={13: Number(1.256)},
+    xsecs={13: Number(1.256), 13.6: Number(1.65)},
 )
 
 zz_qqqq = zz.add_process(
     name="zz_qqqq",
     id=8140,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 zz_nunuqq = zz.add_process(
     name="zz_nunuqq",
     id=8150,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 
@@ -608,28 +614,36 @@ wz = vv.add_process(
     label="WZ",
     xsecs={
         # https://cms.cern.ch/iCMS/jsp/db_notes/noteInfo.jsp?cmsnoteid=CMS%20AN-2019/197 (v3)
-        13: Number(25.56),
+        13: Number(25.56), 13.6: Number(0.1)
     },
 )
 
+
+# 13.6 xsec from AN-23-137
 wz_lllnu = wz.add_process(
     name="wz_lllnu",
     id=8210,
-    xsecs={13: 4.9173},
+    xsecs={13: 4.9173, 13.6: 5.31},
 )
 
 wz_qqll_m4 = wz.add_process(
     name="wz_qqll_m4",
     id=8220,
-    xsecs={13: Number(10.73)},
+    xsecs={13: Number(10.73), 13.6: Number(0.1)},
 )
 
 wz_lnununu_m4 = wz.add_process(
     name="wz_lnununu_m4",
     id=8230,
-    xsecs={13: Number(3.067)},
+    xsecs={13: Number(3.067), 13.6: Number(0.1)},
 )
 
+# 13.6 TeV xsec from GenXSecAnalyzer
+wzto3lnu_1jets = wz.add_process(
+    name="wzto3lnu_1jets",
+    id=8240,
+    xsecs={13.6: Number(5.297)},
+)
 
 ww = vv.add_process(
     name="ww",
@@ -641,22 +655,23 @@ ww = vv.add_process(
     },
 )
 
+# 13.6 xsec from AN-23-137
 ww_lnulnu = ww.add_process(
     name="ww_lnulnu",
     id=8310,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(12.98)},  # TODO
 )
 
 ww_lnuqq = ww.add_process(
     name="ww_lnuqq",
     id=8320,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 ww_qqqq = ww.add_process(
     name="ww_qqqq",
     id=8330,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 
@@ -664,49 +679,55 @@ ggtozzto4l = Process(
     name="ggtozzto4l",
     id=8500,
     label="gg -> ZZ -> 4l",
-    xsecs={13: Number(0.1)},
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},
 )
 
+# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
 ggtozzto2e2mu = ggtozzto4l.add_process(
     name="ggtozzto2e2mu",
     id=8510,
     label="gg -> ZZ -> 2e 2tau",
-    xsecs={13: Number(0.005423)},
+    xsecs={13: Number(0.005423), 13.6: Number(0.1)},  # TODO
 )
 
+# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
 ggtozzto2e2tau = ggtozzto4l.add_process(
     name="ggtozzto2e2tau",
     id=8520,
     label="gg -> ZZ -> 2e 2tau",
-    xsecs={13: Number(0.005423)},
+    xsecs={13: Number(0.005423), 13.6: Number(0.1)},  # TODO
 )
 
+# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
 ggtozzto2mu2tau = ggtozzto4l.add_process(
     name="ggtozzto2mu2tau",
     id=8530,
     label="gg -> ZZ -> 2mu 2tau",
-    xsecs={13: Number(0.005423)},
+    xsecs={13: Number(0.005423), 13.6: Number(0.1)},  # TODO
 )
 
+# 13.6 TeV dataset not available
 ggtozzto4e = ggtozzto4l.add_process(
     name="ggtozzto4e",
     id=8540,
     label="gg -> ZZ -> 4e",
-    xsecs={13: Number(0.0027)},
+    xsecs={13: Number(0.0027), 13.6: Number(0.1)},  # TODO
 )
 
+# 13.6 TeV dataset not available
 ggtozzto4mu = ggtozzto4l.add_process(
     name="ggtozzto4mu",
     id=8550,
     label="gg -> ZZ -> 4mu",
-    xsecs={13: Number(0.0027)},
+    xsecs={13: Number(0.0027), 13.6: Number(0.1)},  # TODO
 )
 
+# 13.6 TeV dataset not available
 ggtozzto4tau = ggtozzto4l.add_process(
     name="ggtozzto4tau",
     id=8560,
     label="gg -> ZZ -> 4tau",
-    xsecs={13: Number(0.0027)},
+    xsecs={13: Number(0.0027), 13.6: Number(0.1)},  # TODO
 )
 
 ggtozzto4l.set_xsec(
@@ -722,41 +743,41 @@ vvv = Process(
     name="vvv",
     id=9000,
     label="Triple-Boson",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 zzz = vvv.add_process(
     name="zzz",
     id=9100,
-    xsecs={13: Number(0.01476)},  # TODO
+    xsecs={13: Number(0.01476), 13.6: Number(0.1)},  # TODO
 )
 
 wzz = vvv.add_process(
     name="wzz",
     id=9200,
-    xsecs={13: Number(0.05565)},  # TODO
+    xsecs={13: Number(0.05565), 13.6: Number(0.1)},  # TODO
 )
 
 wwz = vvv.add_process(
     name="wwz",
     id=9300,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 wwz4f = wwz.add_process(
     name="wwz4f",
     id=9310,
-    xsecs={13: Number(0.1651)},  # TODO
+    xsecs={13: Number(0.1651), 13.6: Number(0.1)},  # TODO
 )
 
 www = vvv.add_process(
     name="www",
     id=9400,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 www4f = www.add_process(
     name="www4f",
     id=9410,
-    xsecs={13: Number(0.2086)},  # TODO
+    xsecs={13: Number(0.2086), 13.6: Number(0.1)},  # TODO
 )

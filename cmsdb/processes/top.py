@@ -17,10 +17,12 @@ __all__ = [
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
     "tzq",
-    "twz", "twztoll_thad_wlept_5f", "twztoll_tlept_whad_5f", "twztoll_tlept_wlept_5f",
+    "twz",
+    "twztoll_thad_wlept_dr1", "twztoll_tlept_whad_dr1", "twztoll_tlept_wlept_dr1",
+    "twztoll_thad_wlept_dr2", "twztoll_tlept_whad_dr2", "twztoll_tlept_wlept_dr2",
     "ttv",
-    "ttz", "ttz_llnunu_m10", "ttz_llnunu_m1",
-    "ttw", "ttw_lnu", "ttw_qq",
+    "ttz", "ttz_llnunu_m10", "ttz_llnunu_m1", "ttll_mll_m50", "ttll_mll_m4to50",
+    "ttw", "ttw_lnu", "ttw_qq", "ttlnu",
     "tth", "tthjetstononbb",
     "ttgamma", "ttgamma_dilept",
     "ttxx",
@@ -43,6 +45,8 @@ import cmsdb.constants as const
 # https://twiki.cern.ch/twiki/bin/view/CMS/TopMonteCarloSystematics?rev=7#mtop
 #
 
+# for 13.6 TeV: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG136TeVxsec_extrap
+
 tt = Process(
     name="tt",
     id=1000,
@@ -54,6 +58,11 @@ tt = Process(
             "pdf": 35.06,
             "mtop": (23.18, 22.45),
         }),
+        13.6: Number(831.76, {
+            "scale": (33.4, 22.6),
+            "pdf": 22.8,
+            "mtop": (24.6, 25.4),
+        }),
     },
 )
 
@@ -64,6 +73,7 @@ tt_sl = tt.add_process(
     color=(205, 0, 9),
     xsecs={
         13: tt.get_xsec(13) * const.br_ww.sl,
+        13.6: tt.get_xsec(13.6) * const.br_ww.fh,
     },
 )
 
@@ -74,6 +84,7 @@ tt_dl = tt.add_process(
     color=(235, 230, 10),
     xsecs={
         13: tt.get_xsec(13) * const.br_ww.dl,
+        13.6: tt.get_xsec(13.6) * const.br_ww.dl,
     },
 )
 
@@ -84,6 +95,7 @@ tt_fh = tt.add_process(
     color=(255, 153, 0),
     xsecs={
         13: tt.get_xsec(13) * const.br_ww.fh,
+        13.6: tt.get_xsec(13.6) * const.br_ww.fh
     },
 )
 
@@ -164,19 +176,19 @@ st_twchannel_t = st_twchannel.add_process(
 st_twchannel_t_sl = st_twchannel_t.add_process(
     name="st_twchannel_t_sl",
     id=2211,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 st_twchannel_t_dl = st_twchannel_t.add_process(
     name="st_twchannel_t_dl",
     id=2212,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 st_twchannel_t_fh = st_twchannel_t.add_process(
     name="st_twchannel_t_fh",
     id=2213,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 st_twchannel_tbar = st_twchannel.add_process(
@@ -193,19 +205,19 @@ st_twchannel_tbar = st_twchannel.add_process(
 st_twchannel_tbar_sl = st_twchannel_tbar.add_process(
     name="st_twchannel_tbar_sl",
     id=2221,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 st_twchannel_tbar_dl = st_twchannel_tbar.add_process(
     name="st_twchannel_tbar_dl",
     id=2222,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 st_twchannel_tbar_fh = st_twchannel_tbar.add_process(
     name="st_twchannel_tbar_fh",
     id=2223,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 st_schannel = st.add_process(
@@ -297,42 +309,65 @@ st.set_xsec(
 )
 
 # Single top + vector boson
-
+# 13.6 TeV xsec from GenXSecAnalyzer
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/HowToGenXSecAnalyzer
 tzq = Process(
     name="tzq",
     id=2500,
     label='tZq',
-    xsecs={13: 0.07358},
+    xsecs={13: 0.07358, 13.6: Number(0.07968)},
 )
 
 twz = Process(
     name="twz",
     id=2600,
     label='tWZ',
-    xsecs={13: Number(0.1)},
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},
 )
 
-twztoll_thad_wlept_5f = twz.add_process(
-    name="twztoll_thad_wlept_5f",
+# 13.6 TeV xsec from GenXSecAnalyzer
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/HowToGenXSecAnalyzer
+twztoll_thad_wlept_dr2 = twz.add_process(
+    name="twztoll_thad_wlept_dr2",
     id=2610,
-    label='twztoll_thad_wlept_5f',
-    xsecs={13: Number(0.003004)},
+    label='twztoll_thad_wlept_dr2',
+    xsecs={13: Number(0.1), 13.6: Number(0.009135)},
 )
 
-twztoll_tlept_whad_5f = twz.add_process(
-    name="twztoll_tlept_whad_5f",
+twztoll_tlept_whad_dr2 = twz.add_process(
+    name="twztoll_tlept_whad_dr2",
     id=2620,
-    label='twztoll_tlept_whad_5f',
-    xsecs={13: Number(0.003004)},
+    label='twztoll_tlept_whad_dr2',
+    xsecs={13: Number(0.1), 13.6: Number(0.009135)},
 )
 
-twztoll_tlept_wlept_5f = twz.add_process(
-    name="twztoll_tlept_wlept_5f",
+twztoll_tlept_wlept_dr2 = twz.add_process(
+    name="twztoll_tlept_wlept_dr2",
     id=2630,
-    label='twztoll_tlept_wlept_5f',
-    xsecs={13: Number(0.0015)},
+    label='twztoll_tlept_wlept_dr2',
+    xsecs={13: Number(0.1), 13.6: Number(0.009135 / 2)},
 )
 
+twztoll_thad_wlept_dr1 = twz.add_process(
+    name="twztoll_thad_wlept_dr1",
+    id=2640,
+    label='twztoll_thad_wlept_dr1',
+    xsecs={13: Number(0.003004), 13.6: Number(0.003338)},
+)
+
+twztoll_tlept_whad_dr1 = twz.add_process(
+    name="twztoll_tlept_whad_dr1",
+    id=2650,
+    label='twztoll_tlept_whad_dr1',
+    xsecs={13: Number(0.003004), 13.6: Number(0.003338)},
+)
+
+twztoll_tlept_wlept_dr1 = twz.add_process(
+    name="twztoll_tlept_wlept_dr1",
+    id=2660,
+    label='twztoll_tlept_wlept_dr1',
+    xsecs={13: Number(0.0015), 13.6: Number(0.001669)},
+)
 
 #
 # ttbar + 1 vector boson
@@ -343,32 +378,52 @@ ttv = Process(
     name="ttv",
     id=3000,
     label=f"{tt.label} + V",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 ttz = ttv.add_process(
     name="ttz",
     id=3100,
     label=f"{tt.label} + Z",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 ttz_llnunu_m10 = ttz.add_process(
     name="ttz_llnunu_m10",  # non-hadronically decaying Z m10>
     id=3110,
-    xsecs={13: 0.281},
+    xsecs={13: 0.281, 13.6: Number(0.1)},
+)
+
+# 13.6 xsec from AN-23-137
+ttll_mll_m50 = ttz.add_process(
+    name="ttll_mll_m50",  # non-hadronically decaying Z m10>
+    id=3111,
+    xsecs={13: Number(0.1), 13.6: Number(0.08646)},
 )
 
 
 ttz_llnunu_m1 = ttz.add_process(
     name="ttz_llnunu_m1",  # non-hadronically decaying Z m1-10
     id=3120,
-    xsecs={13: 0.08416},
+    xsecs={13: 0.08416, 13.6: Number(0.1)},
 )
+
+# 13.6 xsec from AN-23-137
+ttll_mll_m4to50 = ttz.add_process(
+    name="ttll_mll_m4to50",  # non-hadronically decaying Z m10>
+    id=3121,
+    xsecs={13: Number(0.1), 13.6: Number(0.03949)},
+)
+
 
 ttz.set_xsec(
     13,
     ttz_llnunu_m10.get_xsec(13) + ttz_llnunu_m1.get_xsec(13)
+)
+
+ttz.set_xsec(
+    13.6,
+    ttll_mll_m4to50.get_xsec(13.6) + ttll_mll_m50.get_xsec(13.6)
 )
 
 
@@ -376,48 +431,56 @@ ttw = ttv.add_process(
     name="ttw",
     id=3200,
     label=f"{tt.label} + W",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
 ttw_lnu = ttw.add_process(
     name="ttw_lnu",
     id=3210,
-    xsecs={13: Number(0.235)},
+    xsecs={13: Number(0.235), 13.6: Number(0.1)},
+)
+
+# 13.6 xsec from AN-23-137
+ttlnu = ttw.add_process(
+    name="ttlnu",
+    id=3211,
+    xsecs={13: Number(0.1), 13.6: Number(0.25)},
 )
 
 ttw_qq = ttw.add_process(
     name="ttw_qq",
     id=3220,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
 )
 
+# 13.6 ttH cross section: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG136TeVxsec_extrap
 
 tth = ttv.add_process(
     name="tth",
     id=3300,
     label=f"{tt.label} + H",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.57)},  # TODO
 )
 
 tthjetstononbb = tth.add_process(
     name="tthjetstononbb",
     id=3310,
     label=f"{tt.label} + H (nonbb)",
-    xsecs={13: Number(0.211)},
+    xsecs={13: Number(0.211), 13.6: tth.get_xsec(13.6) * (1. - const.br_h_bb_full)},
 )
 
 ttgamma = ttv.add_process(
     name="ttgamma",
     id=3400,
     label=f"${tt.label} + \gamma$",
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},
 )
 
 ttgamma_dilept = ttgamma.add_process(
     name="ttgamma_dilept",
     id=3410,
     label=f"${tt.label} + \gamma(ll)$",
-    xsecs={13: Number(2.22)},
+    xsecs={13: Number(2.22), 13.6: Number(0.1)},
 )
 
 
@@ -429,7 +492,7 @@ ttxx = Process(
     name="ttxx",
     id=3999,
     label=f"{tt.label} + XX",
-    xsecs={13: Number(0.1)},
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},
 )
 
 #
@@ -441,55 +504,62 @@ ttvv = ttxx.add_process(
     name="ttvv",
     id=4000,
     label=f"{tt.label} + VV",
-    xsecs={13: Number(0.1)},
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},
 )
 
+# 13.6 TeV xsec from GenXSecAnalyzer
 ttzz = ttvv.add_process(
     name="ttzz",
     id=4100,
-    xsecs={13: Number(0.001386)},
+    xsecs={13: Number(0.001386), 13.6: Number(0.001564)},
 )
 
+# 13.6 TeV dataset still missing TODO
 ttwz = ttvv.add_process(
     name="ttwz",
     id=4200,
-    xsecs={13: Number(0.002453)},
+    xsecs={13: Number(0.002453), 13.6: Number(0.1)},
 )
 
+# 13.6 TeV xsec from GenXSecAnalyzer
 ttww = ttvv.add_process(
     name="ttww",
     id=4300,
-    xsecs={13: Number(0.007003)},
+    xsecs={13: Number(0.007003), 13.6: Number(0.008177)},
 )
 
 #
 # ttbar + 2 bosons with atleast 1 Higgs
 #
 
+# 13.6 TeV dataset still missing TODO
 tthh = ttxx.add_process(
     name="tthh",
     id=4400,
     label=f"{tt.label} + HH",
-    xsecs={13: Number(0.0003697)},
+    xsecs={13: Number(0.0003697), 13.6: Number(0.1)},
 )
 
+# 13.6 TeV xsec from GenXSecAnalyzer
 ttwh = ttxx.add_process(
     name="ttwh",
     id=4500,
     label=f"{tt.label} + WH",
-    xsecs={13: Number(0.001141)},
+    xsecs={13: Number(0.001141), 13.6: Number(0.001253)},
 )
 
+# 13.6 TeV xsec from GenXSecAnalyzer
 ttzh = ttxx.add_process(
     name="ttzh",
     id=4600,
     label=f"{tt.label} + ZH",
-    xsecs={13: Number(0.00113)},
+    xsecs={13: Number(0.00113), 13.6: Number(0.001288)},
 )
 
+# 13.6 TeV https://arxiv.org/abs/2212.03259
 tttt = ttxx.add_process(
-    name="ttt",
+    name="tttt",
     id=4700,
     label=f"{tt.label}{tt.label}",
-    xsecs={13: Number(0.01337)},
+    xsecs={13: Number(0.01337), 13.6: Number(0.01582)},
 )
