@@ -308,7 +308,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttwjetstoln_amcatnlo",
+    name="ttwjetstolnu_amcatnlo",
     id=14232323,
     processes=[procs.ttw_lnu],
     keys=[
@@ -403,9 +403,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="twztoll_thad_wlept_5f_amcatnlo",
+    name="twztoll_thad_wlept_dr1_amcatnlo",
     id=14231384,
-    processes=[procs.twztoll_thad_wlept_5f],
+    processes=[procs.twztoll_thad_wlept_dr1],
     keys=[
             "/TWZToLL_thad_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
         ],
@@ -414,9 +414,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twztoll_tlept_whad_5f_amcatnlo",
+    name="twztoll_tlept_whad_dr1_amcatnlo",
     id=14728151,
-    processes=[procs.twztoll_tlept_whad_5f],
+    processes=[procs.twztoll_tlept_whad_dr1],
     keys=[
             "/TWZToLL_tlept_Whad_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
         ],
@@ -425,9 +425,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twztoll_tlept_wlept_5f_amcatnlo",
+    name="twztoll_tlept_wlept_dr1_amcatnlo",
     id=14231368,
-    processes=[procs.twztoll_tlept_wlept_5f],
+    processes=[procs.twztoll_tlept_wlept_dr1],
     keys=[
             "/TWZToLL_tlept_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
         ],
