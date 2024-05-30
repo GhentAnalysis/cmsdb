@@ -28,8 +28,10 @@ campaign_run3_2022_postEE_nano_v11 = Campaign(
     bx=25,
     aux={
         "tier": "NanoAOD",
+        "run": 3,
         "year": 2022,
         "version": 11,
+        "EE": "post",
     },
 )
 
