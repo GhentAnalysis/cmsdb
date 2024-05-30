@@ -18,3 +18,5 @@ import cmsdb.campaigns.run2_2018_nano_v9.data
 import cmsdb.campaigns.run2_2018_nano_v9.top
 import cmsdb.campaigns.run2_2018_nano_v9.ewk
 import cmsdb.campaigns.run2_2018_nano_v9.qcd
+import cmsdb.campaigns.run2_2018_nano_v9.top_PNET
+import cmsdb.campaigns.run2_2018_nano_v9.ewk_PNET
