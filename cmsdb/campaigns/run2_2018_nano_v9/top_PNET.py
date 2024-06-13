@@ -94,17 +94,23 @@ cpn.add_dataset(
     ),
 )
 
+
 cpn.add_dataset(
     name="tt_dl_powheg_PNET",
     id=142344740, #NOTE adding a last 0 to the id to avoid conflicts with the original tt_dl_powheg
     processes=[procs.tt_dl],
     info=dict(
         nominal=DatasetInfo(
+            #keys=[
+            #    "/2018UL/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+            #],
+            #n_files=3061, 
+            #n_events=145020000, 
             keys=[
-                "/2018UL/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+                "/2018/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1"
             ],
-            n_files=3061, 
-            n_events=145020000, 
+            n_files=3069,
+            n_events=146010000,
         ),
     ),
 )
