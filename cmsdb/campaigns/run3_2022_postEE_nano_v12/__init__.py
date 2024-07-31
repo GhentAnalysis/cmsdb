@@ -21,8 +21,8 @@ from order import Campaign
 # campaign
 #
 
-campaign_run3_2022_postEE_nano_v11 = Campaign(
-    name="run3_2022_postEE_nano_v11",
+campaign_run3_2022_postEE_nano_v12 = Campaign(
+    name="run3_2022_postEE_nano_v12",
     id=320221102,  # 3 2022 11 02(u)
     ecm=13.6,
     bx=25,
@@ -37,7 +37,7 @@ campaign_run3_2022_postEE_nano_v11 = Campaign(
 
 
 # trailing imports to load datasets
-import cmsdb.campaigns.run3_2022_postEE_nano_v11.data  # noqa
-import cmsdb.campaigns.run3_2022_postEE_nano_v11.top  # noqa
-import cmsdb.campaigns.run3_2022_postEE_nano_v11.ewk  # noqa
-import cmsdb.campaigns.run3_2022_postEE_nano_v11.qcd  # noqa
+import cmsdb.campaigns.run3_2022_postEE_nano_v12.data  # noqa
+import cmsdb.campaigns.run3_2022_postEE_nano_v12.top  # noqa
+import cmsdb.campaigns.run3_2022_postEE_nano_v12.ewk  # noqa
+import cmsdb.campaigns.run3_2022_postEE_nano_v12.qcd  # noqa
