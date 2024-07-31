@@ -17,16 +17,16 @@ from cmsdb.campaigns.run3_2022_postEE_nano_v11 import campaign_run3_2022_postEE_
 # GrASP: https://cms-pdmv.cern.ch/grasp/samples?campaign=Run3Summer22EEwmLHEGS&nanoaod_version=v11&dataset=TTtoLNu2Q%28_Hdamp-*%7C_MT-17%281%7C3%29p5%29%3F_TuneCP5%28%7CUp%7CDown%7CCR1%7CCR2%29_13p6TeV&chained_request=Premix  # noqa
 cpn.add_dataset(
     name="tt_sl_powheg",
-    id=14693443,
+    id=14784316,
     is_data=False,
     processes=[procs.tt_sl],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv11-126X_mcRun3_2022_realistic_postEE_v1-v1/NANOAODSIM",  # noqa
+                "/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/NANOAODSIM",  # noqa
             ],
-            n_files=218,
-            n_events=268418648,
+            n_files=1786,
+            n_events=275339453,
         ),
         tune_up=DatasetInfo(
             keys=[
@@ -371,17 +371,18 @@ cpn.add_dataset(
 # GrASP: https://cms-pdmv.cern.ch/grasp/samples?campaign=Run3Summer22EEwmLHEGS&nanoaod_version=v11&dataset=TWminusto2L2Nu*_TuneCP5%28%7CUp%7CDown%7CCR1%7CCR2%29_13p6TeV&chained_request=Premix  # noqa
 cpn.add_dataset(
     name="st_twchannel_t_dl_powheg",
-    id=14691190,
+    id=14784144,
     is_data=False,
     processes=[procs.st_twchannel_t_dl],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/TWminusto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv11-126X_mcRun3_2022_realistic_postEE_v1-v1/NANOAODSIM",  # noqa
+                "/TWminusto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/NANOAODSIM",  # noqa
             ],
-            n_files=8,
-            n_events=8326616,
+            n_files=233,
+            n_events=8466410,
         ),
+
         # missing as of 2023-07-01
         # tune_up=DatasetInfo(
         #     keys=[
@@ -421,16 +422,16 @@ cpn.add_dataset(
 # GrASP: https://cms-pdmv.cern.ch/grasp/samples?campaign=Run3Summer22EEwmLHEGS&nanoaod_version=v11&dataset=TbarWplusto2L2Nu*_TuneCP5%28%7CUp%7CDown%7CCR1%7CCR2%29_13p6TeV&chained_request=Premix  # noqa
 cpn.add_dataset(
     name="st_twchannel_tbar_dl_powheg",
-    id=14691259,
+    id=14784283,
     is_data=False,
     processes=[procs.st_twchannel_tbar_dl],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/TbarWplusto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv11-126X_mcRun3_2022_realistic_postEE_v1-v1/NANOAODSIM",  # noqa
+                "/TbarWplusto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/NANOAODSIM",  # noqa
             ],
-            n_files=8,
-            n_events=8549264,
+            n_files=196,
+            n_events=8555460,
         ),
         # missing as of 2023-07-01
         # tune_up=DatasetInfo(

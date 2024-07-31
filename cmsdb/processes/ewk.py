@@ -7,7 +7,7 @@ EWK-related process definitions.
 __all__ = [
     "dy",
     "dy_lep", "dy_lep_m10to50",
-    "dy_lep_m50", "dy_lep_m50_1j", "dy_lep_m50_2j", "dy_lep_m50_3j", "dy_lep_m50_4j",
+    "dy_lep_m50", "dy_lep_m50_0j", "dy_lep_m50_1j", "dy_lep_m50_2j", "dy_lep_m50_3j", "dy_lep_m50_4j",
     "dy_lep_0j", "dy_lep_1j", "dy_lep_2j",
     "dy_lep_m50_ht70to100", "dy_lep_m50_ht100to200", "dy_lep_m50_ht200to400",
     "dy_lep_m50_ht400to600", "dy_lep_m50_ht600to800", "dy_lep_m50_ht800to1200",
@@ -33,7 +33,7 @@ __all__ = [
     "z_qq_ht200To400", "z_qq_ht400To600", "z_qq_ht600To800", "z_qq_ht800",
     "ewk",
     "ewk_wp_lnu_m50", "ewk_wm_lnu_m50", "ewk_z_ll_m50",
-    "vv",
+    "vv", "vh",
     "zz", "zz_qqll_m4", "zz_llnunu", "zz_llll", "zz_qqqq", "zz_nunuqq",
     "ggtozzto4l", "ggtozzto2e2mu", "ggtozzto2mu2tau", "ggtozzto2e2tau",
     "ggtozzto4e", "ggtozzto4mu", "ggtozzto4tau",
@@ -41,6 +41,13 @@ __all__ = [
     "ww", "ww_lnulnu", "ww_lnuqq", "ww_qqqq",
     "vvv",
     "zzz", "wzz", "wwz", "www", "wwz4f", "www4f",
+    "wg",
+    "wgtolnug_ptg10to100", "wgtolnug_ptg100to200", "wgtolnug_ptg200to400", "wgtolnug_ptg400to600", "wgtolnug_ptg600",
+    "wzg",
+    "dygto2lg",
+    "dygto2lg_mll4to50_ptg10to100", "dygto2lg_mll4to50_ptg100to200", "dygto2lg_mll4to50_ptg200",
+    "dygto2lg_mll50_ptg10to50", "dygto2lg_mll50_ptg50to100", "dygto2lg_mll50_ptg100to200", "dygto2lg_mll50_ptg200to400",
+    "dygto2lg_mll50_ptg400to600", "dygto2lg_mll50_ptg600",
 ]
 
 from order import Process
@@ -86,16 +93,24 @@ dy_lep_m50 = dy_lep.add_process(
 )
 
 # based on datasets DY{i}JetsToLL_M-50_MatchEWPDG20_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# 13.6 TeV with genXanalyzer:
+# based on datasets/DYto2L-2Jets_MLL-50_{i}J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM
+dy_lep_m50_0j = dy_lep_m50.add_process(
+    name="dy_lep_m50_0j",
+    id=51110,
+    xsecs={13: Number(0.1), 13.6: Number(5368)},
+)
+
 dy_lep_m50_1j = dy_lep_m50.add_process(
     name="dy_lep_m50_1j",
     id=51111,
-    xsecs={13: Number(928.3), 13.6: Number(0.1)},
+    xsecs={13: Number(928.3), 13.6: Number(995.1)},
 )
 
 dy_lep_m50_2j = dy_lep_m50.add_process(
     name="dy_lep_m50_2j",
     id=51112,
-    xsecs={13: Number(293.6), 13.6: Number(0.1)},
+    xsecs={13: Number(293.6), 13.6: Number(381.7)},
 )
 
 dy_lep_m50_3j = dy_lep_m50.add_process(
@@ -735,6 +750,16 @@ ggtozzto4l.set_xsec(
     ggtozzto2e2mu.get_xsec(13) + ggtozzto2e2tau.get_xsec(13) + ggtozzto2mu2tau.get_xsec(13) +
     ggtozzto4e.get_xsec(13) + ggtozzto4mu.get_xsec(13) + ggtozzto4tau.get_xsec(13)
 )
+
+vh = vv.add_process(
+    name="vh",
+    id=8600,
+    label="VH",
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: Number(2.55)
+    },
+)
 #
 # Triple-boson
 #
@@ -749,13 +774,13 @@ vvv = Process(
 zzz = vvv.add_process(
     name="zzz",
     id=9100,
-    xsecs={13: Number(0.01476), 13.6: Number(0.1)},  # TODO
+    xsecs={13: Number(0.01476), 13.6: Number(0.02)},  # TODO
 )
 
 wzz = vvv.add_process(
     name="wzz",
     id=9200,
-    xsecs={13: Number(0.05565), 13.6: Number(0.1)},  # TODO
+    xsecs={13: Number(0.05565), 13.6: Number(0.06)},  # TODO
 )
 
 wwz = vvv.add_process(
@@ -767,7 +792,7 @@ wwz = vvv.add_process(
 wwz4f = wwz.add_process(
     name="wwz4f",
     id=9310,
-    xsecs={13: Number(0.1651), 13.6: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1651), 13.6: Number(0.19)},  # TODO
 )
 
 www = vvv.add_process(
@@ -779,5 +804,112 @@ www = vvv.add_process(
 www4f = www.add_process(
     name="www4f",
     id=9410,
-    xsecs={13: Number(0.2086), 13.6: Number(0.1)},  # TODO
+    xsecs={13: Number(0.2086), 13.6: Number(1.00)},  # TODO
+)
+
+
+#
+# WG
+#
+
+wg = Process(
+    name="wg",
+    id=9500,
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
+)
+
+wgtolnug_ptg10to100 = wg.add_process(
+    name="wgtolnug_ptg10to100",
+    id=9510,
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
+)
+
+wgtolnug_ptg100to200 = wg.add_process(
+    name="wgtolnug_ptg100to200",
+    id=9520,
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
+)
+
+wgtolnug_ptg200to400 = wg.add_process(
+    name="wgtolnug_ptg200to400",
+    id=9530,
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
+)
+
+wgtolnug_ptg400to600 = wg.add_process(
+    name="wgtolnug_ptg400to600",
+    id=9540,
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
+)
+
+wgtolnug_ptg600 = wg.add_process(
+    name="wgtolnug_ptg600",
+    id=9550,
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
+)
+
+wzg = Process(
+    name="wzg",
+    id=9560,
+    xsecs={13: Number(0.1), 13.6: Number(0.08)},  # TODO
+)
+
+dygto2lg = Process(
+    name="dygto2lg",
+    id=9600,
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
+)
+
+dygto2lg_mll4to50_ptg10to100 = dygto2lg.add_process(
+    name="dygto2lg_mll4to50_ptg10to100",
+    id=9610,
+    xsecs={13: Number(0.1), 13.6: Number(87.94)},  # TODO
+)
+
+dygto2lg_mll4to50_ptg100to200 = dygto2lg.add_process(
+    name="dygto2lg_mll4to50_ptg100to200",
+    id=9620,
+    xsecs={13: Number(0.1), 13.6: Number(0.85)},  # TODO
+)
+
+dygto2lg_mll4to50_ptg200 = dygto2lg.add_process(
+    name="dygto2lg_mll4to50_ptg200",
+    id=9630,
+    xsecs={13: Number(0.1), 13.6: Number(0.04)},  # TODO
+)
+
+dygto2lg_mll50_ptg10to50 = dygto2lg.add_process(
+    name="dygto2lg_mll50_ptg10to50",
+    id=9640,
+    xsecs={13: Number(0.1), 13.6: Number(124.4)},  # TODO
+)
+
+dygto2lg_mll50_ptg50to100 = dygto2lg.add_process(
+    name="dygto2lg_mll50_ptg50to100",
+    id=9650,
+    xsecs={13: Number(0.1), 13.6: Number(39.27)},  # TODO
+)
+
+dygto2lg_mll50_ptg100to200 = dygto2lg.add_process(
+    name="dygto2lg_mll50_ptg100to200",
+    id=9660,
+    xsecs={13: Number(0.1), 13.6: Number(1.01)},  # TODO
+)
+
+dygto2lg_mll50_ptg200to400 = dygto2lg.add_process(
+    name="dygto2lg_mll50_ptg200to400",
+    id=9670,
+    xsecs={13: Number(0.1), 13.6: Number(0.08)},  # TODO
+)
+
+dygto2lg_mll50_ptg400to600 = dygto2lg.add_process(
+    name="dygto2lg_mll50_ptg400to600",
+    id=9680,
+    xsecs={13: Number(0.1), 13.6: Number(0.00329)},  # TODO
+)
+
+dygto2lg_mll50_ptg600 = dygto2lg.add_process(
+    name="dygto2lg_mll50_ptg600",
+    id=9690,
+    xsecs={13: Number(0.1), 13.6: Number(0.0006773)},  # TODO
 )

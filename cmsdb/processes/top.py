@@ -45,8 +45,6 @@ import cmsdb.constants as const
 # https://twiki.cern.ch/twiki/bin/view/CMS/TopMonteCarloSystematics?rev=7#mtop
 #
 
-# for 13.6 TeV: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG136TeVxsec_extrap
-
 tt = Process(
     name="tt",
     id=1000,
@@ -58,11 +56,11 @@ tt = Process(
             "pdf": 35.06,
             "mtop": (23.18, 22.45),
         }),
-        13.6: Number(831.76, {
-            "scale": (33.4, 22.6),
+        13.6: Number(923.6, {
+            "scale": (22.6, 33.4),
             "pdf": 22.8,
-            "mtop": (24.6, 25.4),
-        }),
+            "mtop": (25.4, 24.6),
+        })
     },
 )
 

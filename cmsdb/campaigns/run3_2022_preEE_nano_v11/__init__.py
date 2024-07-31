@@ -30,6 +30,7 @@ campaign_run3_2022_preEE_nano_v11 = Campaign(
         "tier": "NanoAOD",
         "year": 2022,
         "version": 11,
+        "run": 3,
     },
 )
 
