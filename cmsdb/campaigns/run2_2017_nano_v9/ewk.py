@@ -12,6 +12,29 @@ from cmsdb.campaigns.run2_2017_nano_v9 import campaign_run2_2017_nano_v9 as cpn
 # Drell-Yan
 #
 
+# amcatnlo
+cpn.add_dataset(
+    name="dy_lep_m10to50_amcatnlo",
+    id=14550981,
+    processes=[procs.dy_lep_m10to50],
+    keys=[
+        "/DYJetsToLL_M-10to50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=41,
+    n_events=95894507,
+)
+
+cpn.add_dataset(
+    name="dy_lep_m50_amcatnlo",
+    id=14262316,
+    processes=[procs.dy_lep_m50],
+    keys=[
+        "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=153,
+    n_events=195529774,
+)
+
 # jet binned, madgraph
 cpn.add_dataset(
     name="dy_m50toinf_1j_madgraph",
@@ -191,9 +214,10 @@ cpn.add_dataset(
     processes=[procs.w_lnu],
     keys=[
         "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9_ext-v2/NANOAODSIM"  # noqa
     ],
-    n_files=81,
-    n_events=78307186,
+    n_files=81 + 549,
+    n_events=78307186 + 79936459,
 )
 
 # ht binned

@@ -128,6 +128,7 @@ st_tchannel = st.add_process(
 
 st_tchannel_t = st_tchannel.add_process(
     name="st_tchannel_t",
+    label=r"Single $t$, t-channel",
     id=2110,
     xsecs={
         13: Number(134.2, dict(
@@ -150,6 +151,7 @@ st_tchannel_t = st_tchannel.add_process(
 
 st_tchannel_tbar = st_tchannel.add_process(
     name="st_tchannel_tbar",
+    label=r"Single $\bar{t}$, t-channel",
     id=2120,
     xsecs={
         13: Number(80.0, dict(
@@ -474,6 +476,7 @@ ttw_wqq = ttw.add_process(
     xsecs=multiply_xsecs(ttw, const.br_w.had),
 )
 
+# 13.6 ttH cross section: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG136TeVxsec_extrap
 
 #
 # ttbar + 2 vector bosons
@@ -487,6 +490,7 @@ ttvv = Process(
     label=f"{tt.label} + VV",
 )
 
+# 13.6 TeV xsec from GenXSecAnalyzer
 ttzz = ttvv.add_process(
     name="ttzz",
     id=4100,
@@ -503,6 +507,7 @@ ttzz = ttvv.add_process(
     },
 )
 
+# 13.6 TeV dataset still missing TODO
 ttwz = ttvv.add_process(
     name="ttwz",
     id=4200,
@@ -514,6 +519,7 @@ ttwz = ttvv.add_process(
     },
 )
 
+# 13.6 TeV xsec from GenXSecAnalyzer
 ttww = ttvv.add_process(
     name="ttww",
     id=4300,
