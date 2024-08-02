@@ -18,7 +18,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/Muon/Run2022C-22Sep2023-v1/NANOAOD",
+        "/Muon/Run2022C-22Sep2023-v1/NANOAOD",  # noqa
     ],
     n_files=124,
     n_events=138427345,
@@ -33,7 +33,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/Muon/Run2022D-22Sep2023-v1/NANOAOD",
+        "/Muon/Run2022D-22Sep2023-v1/NANOAOD",  # noqa
     ],
     n_files=82,
     n_events=75468381,
@@ -52,7 +52,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_egamma],
     keys=[
-        "/EGamma/Run2022C-22Sep2023-v1/NANOAOD",
+        "/EGamma/Run2022C-22Sep2023-v1/NANOAOD",  # noqa
     ],
     n_files=313,
     n_events=263689151,
@@ -67,7 +67,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_egamma],
     keys=[
-        "/EGamma/Run2022D-22Sep2023-v1/NANOAOD",
+        "/EGamma/Run2022D-22Sep2023-v1/NANOAOD",  # noqa
     ],
     n_files=109,
     n_events=89134996,
@@ -76,13 +76,49 @@ cpn.add_dataset(
     },
 )
 
+
+#
+# MuonEG
+#
+
+
+cpn.add_dataset(
+    name="data_muoneg_a",
+    id=14783289,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022A-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=5,
+    n_events=12,
+    aux={
+        "era": "A",
+    },
+)
+
+cpn.add_dataset(
+    name="data_muoneg_b",
+    id=14784076,
+    is_data=True,
+    processes=[procs.data_muoneg],
+    keys=[
+        "/MuonEG/Run2022B-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=7,
+    n_events=254803,
+    aux={
+        "era": "B",
+    },
+)
+
 cpn.add_dataset(
     name="data_muoneg_c",
     id=14784125,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_muoneg],
     keys=[
-        "/MuonEG/Run2022C-22Sep2023-v1/NANOAOD",
+        "/MuonEG/Run2022C-22Sep2023-v1/NANOAOD",  # noqa
     ],
     n_files=28,
     n_events=15768439,
@@ -95,28 +131,13 @@ cpn.add_dataset(
     name="data_muoneg_d",
     id=14784209,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_muoneg],
     keys=[
-        "/MuonEG/Run2022D-22Sep2023-v1/NANOAOD",
+        "/MuonEG/Run2022D-22Sep2023-v1/NANOAOD",  # noqa
     ],
     n_files=16,
     n_events=8007031,
     aux={
         "era": "D",
-    },
-)
-
-cpn.add_dataset(
-    name="data_mumu_c",
-    id=14784138,
-    is_data=True,
-    processes=[procs.data],
-    keys=[
-        "/DoubleMuon/Run2022C-22Sep2023-v1/NANOAOD",
-    ],
-    n_files=12,
-    n_events=4646904,
-    aux={
-        "era": "C",
     },
 )
