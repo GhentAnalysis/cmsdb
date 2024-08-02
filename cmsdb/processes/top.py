@@ -16,11 +16,14 @@ __all__ = [
     "st_schannel", "st_schannel_lep", "st_schannel_had",
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
+    "tzq",
+    "twz_tqq_wlnu_zll_dr1", "twz_tlnu_wqq_zll_dr1", "twz_tlnu_wlnu_zll_dr1",
+    "twz_tqq_wlnu_zll_dr2", "twz_tlnu_wqq_zll_dr2", "twz_tlnu_wlnu_zll_dr2",
     "ttv",
     "ttz", "ttz_zqq", "ttz_zlep_m10toinf", "ttz_zll_m4to50", "ttz_zll_m50toinf", "ttz_znunu",
     "ttw", "ttw_wlnu", "ttw_wqq",
     "ttvv",
-    "ttzz", "ttwz", "ttww",
+    "ttzz", "ttwz", "ttww", "tttt", "tthh",
 ]
 
 
@@ -347,6 +350,68 @@ st.set_xsec(
 )
 
 
+# Single top + vector boson
+# 13.6 TeV xsec from GenXSecAnalyzer
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/HowToGenXSecAnalyzer
+
+tzq = Process(
+    name="tzq",
+    id=2500,
+    label='tZq',
+    xsecs={13: 0.07358, 13.6: Number(0.07968)},
+)
+
+twz = Process(
+    name="twz",
+    id=2600,
+    label='tWZ',
+)
+
+# 13.6 TeV xsec from GenXSecAnalyzer
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/HowToGenXSecAnalyzer
+twz_tqq_wlnu_zll_dr2 = twz.add_process(
+    name="twz_tqq_wlnu_zll_dr2",
+    id=2610,
+    label='twz_tqq_wlnu_zll_dr2',
+    xsecs={13: Number(0.1), 13.6: Number(0.009135)},
+)
+
+twz_tlnu_wqq_zll_dr2 = twz.add_process(
+    name="twz_tlnu_wqq_zll_dr2",
+    id=2620,
+    label='twz_tlnu_wqq_zll_dr2',
+    xsecs={13: Number(0.1), 13.6: Number(0.009135)},
+)
+
+twz_tlnu_wlnu_zll_dr2 = twz.add_process(
+    name="twz_tlnu_wlnu_zll_dr2",
+    id=2630,
+    label='twz_tlnu_wlnu_zll_dr2',
+    xsecs={13: Number(0.1), 13.6: Number(0.009135 / 2)},
+)
+
+twz_tqq_wlnu_zll_dr1 = twz.add_process(
+    name="twz_tqq_wlnu_zll_dr1",
+    id=2640,
+    label='twz_tqq_wlnu_zll_dr1',
+    xsecs={13: Number(0.003004), 13.6: Number(0.003338)},
+)
+
+twz_tlnu_wqq_zll_dr1 = twz.add_process(
+    name="twz_tlnu_wqq_zll_dr1",
+    id=2650,
+    label='twz_tlnu_wqq_zll_dr1',
+    xsecs={13: Number(0.003004), 13.6: Number(0.003338)},
+)
+
+twz_tlnu_wlnu_zll_dr1 = twz.add_process(
+    name="twz_tlnu_wlnu_zll_dr1",
+    id=2660,
+    label='twz_tlnu_wlnu_zll_dr1',
+    xsecs={13: Number(0.0015), 13.6: Number(0.001669)},
+)
+
+
 #
 # ttbar + 1 vector boson
 #
@@ -460,10 +525,6 @@ ttw = ttv.add_process(
     },
 )
 
-# set combined cross sections
-for ecm in (13, 14):
-    ttv.set_xsec(ecm, ttw.get_xsec(ecm) + ttz.get_xsec(ecm))
-
 ttw_wlnu = ttw.add_process(
     name="ttw_wlnu",
     id=3210,
@@ -475,6 +536,12 @@ ttw_wqq = ttw.add_process(
     id=3220,
     xsecs=multiply_xsecs(ttw, const.br_w.had),
 )
+
+
+# set combined cross sections
+for ecm in (13, 14):
+    ttv.set_xsec(ecm, ttw.get_xsec(ecm) + ttz.get_xsec(ecm))
+
 
 # 13.6 ttH cross section: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG136TeVxsec_extrap
 
@@ -534,6 +601,23 @@ ttww = ttvv.add_process(
             "tot": 0.000002113,  # xsdb Number(0.008203, {"tot": 0.00001404})
         }),
     },
+)
+
+# 13.6 TeV dataset still missing TODO
+tthh = ttvv.add_process(
+    name="tthh",
+    id=4400,
+    label=f"{tt.label} + HH",
+    xsecs={13: Number(0.0003697)},
+)
+
+
+# 13.6 TeV https://arxiv.org/abs/2212.03259
+tttt = ttvv.add_process(
+    name="tttt",
+    id=4700,
+    label=f"{tt.label}{tt.label}",
+    xsecs={13: Number(0.01337), 13.6: Number(0.01582)},
 )
 
 # define the combined ttvv cross section as the sum of the three channels

@@ -598,9 +598,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zzto4l_powheg",
+    name="zz_zll_zll",
     id=14791221,
-    processes=[procs.zz_llll],
+    processes=[procs.zz_zll_zll],
     keys=[
         "/ZZto4L_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -610,7 +610,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="wz_pythia",
+    name="wz",
     id=14803901,
     is_data=False,
     processes=[procs.wz],
@@ -622,10 +622,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_lllnu_amcatnlo",
+    name="wz_wlnu_zll",
     id=14791591,
     is_data=False,
-    processes=[procs.wz_lllnu],
+    processes=[procs.wz_wlnu_zll],
     keys=[
         "/WZto3LNu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
@@ -634,10 +634,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wzto3lnu_1jets_4fs_amcatnlo",
+    name="wz_wlnu_zll_1jets",
     id=14784506,
     is_data=False,
-    processes=[procs.wzto3lnu_1jets],  # TODO change processes to 1 jet specific
+    processes=[procs.wz_wlnu_zll_1jets],  # TODO change processes to 1 jet specific
     keys=[
         "/WZto3LNu-1Jets-4FS_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],
@@ -658,10 +658,10 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wwto2l2nu_powheg",
+    name="ww_wlnu_lnu_powheg",
     id=14793091,
     is_data=False,
-    processes=[procs.ww_lnulnu],
+    processes=[procs.ww_dl],
     keys=[
         "/WWto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],

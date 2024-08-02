@@ -46,11 +46,21 @@ __all__ = [
     "vv",
     "zz",
     "zz_zqq_zll", "zz_zll_znunu", "zz_zll_zll", "zz_zqq_zqq", "zz_znunu_zqq",
-    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq",
+    "ggtozzto4l",
+    "ggtozzto2e2mu", "ggtozzto2mu2tau", "ggtozzto2e2tau",
+    "ggtozzto4e", "ggtozzto4mu", "ggtozzto4tau",
+    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq", "wz_wlnu_zll_1jets",
     "ww",
     "ww_dl", "ww_sl", "ww_fh",
     "vvv",
     "zzz", "wzz", "wwz", "www",
+    "wg",
+    "wg_wlnu_ptg10to100", "wg_wlnu_ptg100to200", "wg_wlnu_ptg200to400",
+    "wg_wlnu_ptg400to600", "wg_wlnu_ptg600toinf", "wzg_wlnu",
+    "dyg",
+    "dyg_zll_mll4to50_ptg10to100", "dyg_zll_mll4to50_ptg100to200", "dyg_zll_mll4to50_ptg200toinf",
+    "dyg_zll_mll50toinf_ptg10to50", "dyg_zll_mll50_ptg50to100", "dyg_zll_mll50toinf_ptg100to200",
+    "dyg_zll_mll50toinf_ptg200to400", "dyg_zll_mll50toinf_ptg400to600", "dyg_zll_mll50toinf_ptg600toinf",
 ]
 
 
@@ -1080,6 +1090,14 @@ wz_wlnu_zqq = wz.add_process(
     },
 )
 
+# 13.6 TeV xsec from GenXSecAnalyzer
+wz_wlnu_zll_1jets = wz.add_process(
+    name="wz_wlnu_zll_1jets",
+    id=8240,
+    xsecs={13.6: Number(5.297)},
+)
+
+
 # NNLO QCD from https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=28
 # itself from https://arxiv.org/pdf/1408.5243.pdf v1
 
@@ -1142,6 +1160,72 @@ ww_fh = ww.add_process(
     xsecs={
         13: ww.get_xsec(13) * const.br_ww.fh,  # value around 53.94 for comparison to GenXSecAnalyzer NLO result
     },
+)
+
+
+#
+# gg -> ZZ -> 4l
+#
+
+ggtozzto4l = Process(
+    name="ggtozzto4l",
+    id=8500,
+    label="gg -> ZZ -> 4l",
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},
+)
+
+# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
+ggtozzto2e2mu = ggtozzto4l.add_process(
+    name="ggtozzto2e2mu",
+    id=8510,
+    label="gg -> ZZ -> 2e 2tau",
+    xsecs={13: Number(0.005423), 13.6: Number(0.1)},  # TODO
+)
+
+# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
+ggtozzto2e2tau = ggtozzto4l.add_process(
+    name="ggtozzto2e2tau",
+    id=8520,
+    label="gg -> ZZ -> 2e 2tau",
+    xsecs={13: Number(0.005423), 13.6: Number(0.1)},  # TODO
+)
+
+# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
+ggtozzto2mu2tau = ggtozzto4l.add_process(
+    name="ggtozzto2mu2tau",
+    id=8530,
+    label="gg -> ZZ -> 2mu 2tau",
+    xsecs={13: Number(0.005423), 13.6: Number(0.1)},  # TODO
+)
+
+# 13.6 TeV dataset not available
+ggtozzto4e = ggtozzto4l.add_process(
+    name="ggtozzto4e",
+    id=8540,
+    label="gg -> ZZ -> 4e",
+    xsecs={13: Number(0.0027), 13.6: Number(0.1)},  # TODO
+)
+
+# 13.6 TeV dataset not available
+ggtozzto4mu = ggtozzto4l.add_process(
+    name="ggtozzto4mu",
+    id=8550,
+    label="gg -> ZZ -> 4mu",
+    xsecs={13: Number(0.0027), 13.6: Number(0.1)},  # TODO
+)
+
+# 13.6 TeV dataset not available
+ggtozzto4tau = ggtozzto4l.add_process(
+    name="ggtozzto4tau",
+    id=8560,
+    label="gg -> ZZ -> 4tau",
+    xsecs={13: Number(0.0027), 13.6: Number(0.1)},  # TODO
+)
+
+ggtozzto4l.set_xsec(
+    13,
+    ggtozzto2e2mu.get_xsec(13) + ggtozzto2e2tau.get_xsec(13) + ggtozzto2mu2tau.get_xsec(13) +
+    ggtozzto4e.get_xsec(13) + ggtozzto4mu.get_xsec(13) + ggtozzto4tau.get_xsec(13)
 )
 
 
@@ -1232,3 +1316,101 @@ www = vvv.add_process(
 # update vvv cross section
 for cme in [13]:
     vvv.set_xsec(cme, www.get_xsec(cme) + wwz.get_xsec(cme) + wzz.get_xsec(cme) + zzz.get_xsec(cme))
+
+
+#
+# V+g
+#
+
+# W+g
+wg = Process(
+    name="wg",
+    id=9500,
+    label=r"W+\gamma",
+    # xsecs set below as sum over individual processes
+)
+
+
+wg_wlnu_ptg10to100 = wg.add_process(
+    name="wg_wlnu_ptg10to100",
+    id=9510,
+)
+
+wg_wlnu_ptg100to200 = wg.add_process(
+    name="wg_wlnu_ptg100to200",
+    id=9520,
+)
+
+wg_wlnu_ptg200to400 = wg.add_process(
+    name="wg_wlnu_ptg200to400",
+    id=9530,
+)
+
+wg_wlnu_ptg400to600 = wg.add_process(
+    name="wg_wlnu_ptg400to600",
+    id=9540,
+)
+
+wg_wlnu_ptg600toinf = wg.add_process(
+    name="wg_wlnu_ptg600toinf",
+    id=9550,
+)
+
+wzg_wlnu = wg.add_process(
+    name="wzg_wlnu",
+    id=9560,
+)
+
+# DY+g
+
+dyg = Process(
+    name="dyg",
+    id=9600,
+    label=r"Z+\gamma",
+    # xsecs set below as sum over individual processes
+)
+
+dyg_zll_mll4to50_ptg10to100 = dyg.add_process(
+    name="dyg_zll_mll4to50_ptg10to100",
+    id=9610,
+)
+
+dyg_zll_mll4to50_ptg100to200 = dyg.add_process(
+    name="dyg_zll_mll4to50_ptg100to200",
+    id=9620,
+)
+
+dyg_zll_mll4to50_ptg200toinf = dyg.add_process(
+    name="dyg_zll_mll4to50_ptg200toinf",
+    id=9630,
+)
+
+dyg_zll_mll50toinf_ptg10to50 = dyg.add_process(
+    name="dyg_zll_mll50toinf_ptg10to50",
+    id=9640,
+)
+
+dyg_zll_mll50_ptg50to100 = dyg.add_process(
+    name="dyg_zll_mll50_ptg50to100",
+    id=9650,
+)
+
+dyg_zll_mll50toinf_ptg100to200 = dyg.add_process(
+    name="dyg_zll_mll50toinf_ptg100to200",
+    id=9660,
+)
+
+dyg_zll_mll50toinf_ptg200to400 = dyg.add_process(
+    name="dyg_zll_mll50toinf_ptg200to400",
+    id=9670,
+)
+
+dyg_zll_mll50toinf_ptg400to600 = dyg.add_process(
+    name="dyg_zll_mll50toinf_ptg400to600",
+    id=9680,
+)
+
+dyg_zll_mll50toinf_ptg600toinf = dyg.add_process(
+    name="dyg_zll_mll50toinf_ptg600toinf",
+    id=9690,
+)
