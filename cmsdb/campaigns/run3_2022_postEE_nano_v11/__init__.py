@@ -31,8 +31,9 @@ campaign_run3_2022_postEE_nano_v11 = Campaign(
         "run": 3,
         "year": 2022,
         "version": 11,
-        "EE": "post",
+        "postfix": "EE",
     },
+    tags={"EE", "postEE"},
 )
 
 

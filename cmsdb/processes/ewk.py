@@ -69,7 +69,7 @@ dy = Process(
     name="dy",
     id=50000,
     label="Drell-Yan",
-    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
+    xsecs={13: Number(0.1)},  # TODO
 )
 
 # NNLO cross section, based on:

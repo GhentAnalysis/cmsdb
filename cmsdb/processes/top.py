@@ -57,11 +57,6 @@ tt = Process(
             "pdf": 22.8,
             "mtop": (25.4, 24.6),
         }),
-        13.6: Number(831.76, {
-            "scale": (33.4, 22.6),
-            "pdf": 22.8,
-            "mtop": (24.6, 25.4),
-        }),
     },
 )
 
@@ -351,26 +346,6 @@ st.set_xsec(
     st_tchannel.get_xsec(13.6) + st_twchannel.get_xsec(13.6) + st_schannel.get_xsec(13.6),
 )
 
-twztoll_thad_wlept_dr1 = twz.add_process(
-    name="twztoll_thad_wlept_dr1",
-    id=2640,
-    label='twztoll_thad_wlept_dr1',
-    xsecs={13: Number(0.003004), 13.6: Number(0.003338)},
-)
-
-twztoll_tlept_whad_dr1 = twz.add_process(
-    name="twztoll_tlept_whad_dr1",
-    id=2650,
-    label='twztoll_tlept_whad_dr1',
-    xsecs={13: Number(0.003004), 13.6: Number(0.003338)},
-)
-
-twztoll_tlept_wlept_dr1 = twz.add_process(
-    name="twztoll_tlept_wlept_dr1",
-    id=2660,
-    label='twztoll_tlept_wlept_dr1',
-    xsecs={13: Number(0.0015), 13.6: Number(0.001669)},
-)
 
 #
 # ttbar + 1 vector boson
