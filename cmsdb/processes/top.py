@@ -21,9 +21,9 @@ __all__ = [
     "twztoll_thad_wlept_dr1", "twztoll_tlept_whad_dr1", "twztoll_tlept_wlept_dr1",
     "twztoll_thad_wlept_dr2", "twztoll_tlept_whad_dr2", "twztoll_tlept_wlept_dr2",
     "ttv",
-    "ttz", "ttz_llnunu_m10", "ttz_llnunu_m1", "ttll_mll_m50", "ttll_mll_m4to50",
+    "ttz", "ttz_llnunu_m10", "ttz_qq", "ttz_llnunu_m1", "ttll_mll_m50", "ttll_mll_m4to50",
     "ttw", "ttw_lnu", "ttw_qq", "ttlnu",
-    "tth", "tthjetstononbb",
+    "tth", "tthjetstononbb", "tth_bb", "tth_nonbb",
     "ttgamma", "ttgamma_dilept",
     "ttxx",
     "ttvv",
@@ -396,6 +396,12 @@ ttz_llnunu_m10 = ttz.add_process(
     xsecs={13: 0.281, 13.6: Number(0.1)},
 )
 
+ttz_qq = ttz.add_process(
+    name="ttz_qq",  
+    id=3112,
+    xsecs={13: 0.530, 13.6: Number(0.1)},
+)
+
 # 13.6 xsec from AN-23-137
 ttll_mll_m50 = ttz.add_process(
     name="ttll_mll_m50",  # non-hadronically decaying Z m10>
@@ -420,12 +426,12 @@ ttll_mll_m4to50 = ttz.add_process(
 
 ttz.set_xsec(
     13,
-    ttz_llnunu_m10.get_xsec(13) + ttz_llnunu_m1.get_xsec(13)
+    ttz_llnunu_m10.get_xsec(13) + ttz_qq.get_xsec(13)
 )
 
 ttz.set_xsec(
     13.6,
-    ttll_mll_m4to50.get_xsec(13.6) + ttll_mll_m50.get_xsec(13.6)
+    ttll_mll_m4to50.get_xsec(13.6) + ttz_qq.get_xsec(13.6)
 )
 
 
@@ -433,13 +439,13 @@ ttw = ttv.add_process(
     name="ttw",
     id=3200,
     label=f"{tt.label} + W",
-    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
+    xsecs={13: Number(0.61), 13.6: Number(0.1)},  # TODO
 )
 
 ttw_lnu = ttw.add_process(
     name="ttw_lnu",
     id=3210,
-    xsecs={13: Number(0.235), 13.6: Number(0.1)},
+    xsecs={13: ttw.get_xsec(13) * const.br_w.lep, 13.6: Number(0.1)},
 )
 
 # 13.6 xsec from AN-23-137
@@ -452,7 +458,7 @@ ttlnu = ttw.add_process(
 ttw_qq = ttw.add_process(
     name="ttw_qq",
     id=3220,
-    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
+    xsecs={13: ttw.get_xsec(13) * const.br_w.had, 13.6: Number(0.1)},  # TODO
 )
 
 # 13.6 ttH cross section: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG136TeVxsec_extrap
@@ -461,7 +467,23 @@ tth = ttv.add_process(
     name="tth",
     id=3300,
     label=f"{tt.label} + H",
-    xsecs={13: Number(0.1), 13.6: Number(0.57)},  # TODO
+    xsecs={13: Number(0.507), 13.6: Number(0.57)},  # TODO
+)
+
+tth_bb = tth.add_process(
+    name="tth_bb",
+    id=3301,
+    label=f"{tth.label}(bb)",
+    xsecs={13: tth.get_xsec(13) * const.br_h_bb_full,
+        13.6: tth.get_xsec(13.6) * const.br_h_bb_full}
+)
+
+tth_nonbb = tth.add_process(
+    name="tth_nonbb",
+    id=3302,
+    label=f"{tth.label}(non-bb)",
+    xsecs={13: tth.get_xsec(13) * (1. - const.br_h_bb_full),
+        13.6: tth.get_xsec(13.6) * (1. - const.br_h_bb_full)}
 )
 
 tthjetstononbb = tth.add_process(
