@@ -16,6 +16,10 @@ __all__ = [
     "st_schannel", "st_schannel_lep", "st_schannel_had",
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
+    "tx",
+    "tzq", "tzq_wlnu",
+    "twz_tqq_wlnu_zll_dr1", "twz_tlnu_wqq_zll_dr1", "twz_tlnu_wlnu_zll_dr1",
+    "twz_tqq_wlnu_zll_dr2", "twz_tlnu_wqq_zll_dr2", "twz_tlnu_wlnu_zll_dr2",
     "ttv",
     "ttz", "ttz_zqq", "ttz_zlep_m10toinf", "ttz_zll_m4to50", "ttz_zll_m50toinf", "ttz_znunu",
     "ttw", "ttw_wlnu", "ttw_wqq",
@@ -351,6 +355,82 @@ st.set_xsec(
     st_tchannel.get_xsec(13.6) + st_twchannel.get_xsec(13.6) + st_schannel.get_xsec(13.6),
 )
 
+# Single top + vector boson
+# 13.6 TeV xsec from GenXSecAnalyzer
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/HowToGenXSecAnalyzer
+
+tx = Process(
+    name="tx",
+    id=2499,
+    label='t+X',
+    xsecs={},
+)
+
+tzq = tx.add_process(
+    name="tzq",
+    id=2500,
+    label='tZq',
+    xsecs={13: 0.07358, 13.6: Number(0.07968)},
+)
+
+tzq_wlnu = tzq.add_process(
+    name="tzq_wlnu",
+    id=2510,
+    label="tZq (lept)",
+    xsecs=multiply_xsecs(tzq, const.br_w.lep),
+)
+
+
+twz = tx.add_process(
+    name="twz",
+    id=2600,
+    label='tWZ',
+)
+
+# 13.6 TeV xsec from GenXSecAnalyzer
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/HowToGenXSecAnalyzer
+twz_tqq_wlnu_zll_dr2 = twz.add_process(
+    name="twz_tqq_wlnu_zll_dr2",
+    id=2610,
+    label='twz_tqq_wlnu_zll_dr2',
+    xsecs={13: Number(0.1), 13.6: Number(0.009135)},
+)
+
+twz_tlnu_wqq_zll_dr2 = twz.add_process(
+    name="twz_tlnu_wqq_zll_dr2",
+    id=2620,
+    label='twz_tlnu_wqq_zll_dr2',
+    xsecs={13: Number(0.1), 13.6: Number(0.009135)},
+)
+
+twz_tlnu_wlnu_zll_dr2 = twz.add_process(
+    name="twz_tlnu_wlnu_zll_dr2",
+    id=2630,
+    label='twz_tlnu_wlnu_zll_dr2',
+    xsecs={13: Number(0.1), 13.6: Number(0.009135 / 2)},
+)
+
+twz_tqq_wlnu_zll_dr1 = twz.add_process(
+    name="twz_tqq_wlnu_zll_dr1",
+    id=2640,
+    label='twz_tqq_wlnu_zll_dr1',
+    xsecs={13: Number(0.003004), 13.6: Number(0.003338)},
+)
+
+twz_tlnu_wqq_zll_dr1 = twz.add_process(
+    name="twz_tlnu_wqq_zll_dr1",
+    id=2650,
+    label='twz_tlnu_wqq_zll_dr1',
+    xsecs={13: Number(0.003004), 13.6: Number(0.003338)},
+)
+
+twz_tlnu_wlnu_zll_dr1 = twz.add_process(
+    name="twz_tlnu_wlnu_zll_dr1",
+    id=2660,
+    label='twz_tlnu_wlnu_zll_dr1',
+    xsecs={13: Number(0.0015), 13.6: Number(0.001669)},
+)
+
 
 #
 # ttbar + 1 vector boson
@@ -399,6 +479,12 @@ ttz_zlep_m10toinf = ttz.add_process(
             "total": 0.0002995,
         }),
     },
+)
+
+ttz_qq = ttz.add_process(
+    name="ttz_qq",
+    id=3112,
+    xsecs={13: 0.530, 13.6: Number(0.1)},
 )
 
 ttz_zll_m4to50 = ttz.add_process(
