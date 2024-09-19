@@ -984,7 +984,6 @@ cpn.add_dataset(
     n_events=443238,
 )
 
-# TODO update to NanoAODv12 once available
 cpn.add_dataset(
     name="tttt",
     id=14795232,
@@ -995,6 +994,7 @@ cpn.add_dataset(
     n_files=47,
     n_events=2396925,
 )
+
 
 #
 # Single Top + X(X/q)
@@ -1024,13 +1024,13 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="twz_tlnu_wqq_zll_dr1",
-    id=14882755,
+    id=14885317,
     processes=[procs.twz_tlnu_wqq_zll_dr1],
     keys=[
             "/TWZ_TtoLNu_Wto2Q_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v4/NANOAODSIM",  # noqa
         ],
-    n_files=13,
-    n_events=137368,
+    n_files=11,
+    n_events=45954,
 )
 
 

@@ -1142,20 +1142,20 @@ cpn.add_dataset(
         ),
     ),
 )
-# cpn.add_dataset(
-#     name="tth_hnonbb_1j_amcatnlo",
-#     id=14852415,
-#     processes=[procs.tth_hnonbb_1j],
-#     info=dict(
-#         nominal=DatasetInfo(
-#             keys=[
-#                 "/TTHtoNon2B-1Jets_M-125_TuneCP5_13p6TeV_amcatnloFXFX-madspin-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
-#             ],
-#             n_files=320,
-#             n_events=22107915,
-#         ),
-#     ),
-# )
+cpn.add_dataset(
+    name="tth_hnonbb_1j_amcatnlo",
+    id=14852415,
+    processes=[procs.tth_hnonbb_1j],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTHtoNon2B-1Jets_M-125_TuneCP5_13p6TeV_amcatnloFXFX-madspin-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=320,
+            n_events=22107915,
+        ),
+    ),
+)
 cpn.add_dataset(
     name="tth_hnonbb_powheg",
     id=14845759,

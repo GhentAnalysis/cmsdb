@@ -30,36 +30,36 @@ cpn.add_dataset(
 # inclusive, LO
 cpn.add_dataset(
     name="dy_m10to50_madgraph",
-    id=14873228,
+    id=14817818,
     processes=[procs.dy_m10to50],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/DYto2L-4Jets_MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+                "/DYto2L-4Jets_MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
             ],
-            n_files=2274,
-            n_events=500642946,
+            n_files=349,
+            n_events=154413937,
         ),
     ),
 )
 cpn.add_dataset(
     name="dy_m50toinf_madgraph",
-    id=14810676,
+    id=14791369,
     processes=[procs.dy_m50toinf],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+                "/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
             ],
-            n_files=236,
-            n_events=240872023,
+            n_files=157,
+            n_events=74397637,
         ),
         extension=DatasetInfo(
             keys=[
-                "/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/NANOAODSIM",  # noqa
+                "/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
             ],
-            n_files=1587,
-            n_events=254295366,
+            n_files=497,
+            n_events=71486192,
         ),
     ),
 )
@@ -579,12 +579,16 @@ cpn.add_dataset(
     n_events=84739011,
 )
 
+####################################################################################################
 #
 # Diboson
 #
+####################################################################################################
+
 
 # GrASP: https://cms-pdmv.cern.ch/grasp/samples?campaign=Run3Summer22GS&nanoaod_version=v11&short_name=VV  # noqa
 
+# TODO update to NanoAODv12
 cpn.add_dataset(
     name="zz_pythia",
     id=14587173,
@@ -608,6 +612,9 @@ cpn.add_dataset(
     n_events=14629101,
 )
 
+#
+# WZ
+#
 
 cpn.add_dataset(
     name="wz",
@@ -645,6 +652,10 @@ cpn.add_dataset(
     n_events=10095542,
 )
 
+#
+# WW
+#
+
 cpn.add_dataset(
     name="ww_pythia",
     id=14800098,
@@ -658,17 +669,27 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ww_wlnu_lnu_powheg",
+    name="ww_wlnu_wlnu_powheg",
     id=14793091,
     is_data=False,
     processes=[procs.ww_dl],
-    keys=[
-        "/WWto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
-    ],
-    n_files=40,
-    n_events=6135192,
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/WWto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=40,
+            n_events=6135192,
+            ),
+        extension=DatasetInfo(
+            keys=[
+                "/WWto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=77,
+            n_events=6599291,
+        ),
+    ),
 )
-
 
 #
 # GluGlueToContinToZZ

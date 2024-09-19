@@ -42,6 +42,9 @@ cpn.add_dataset(
         ),
     ),
 )
+
+# until not extended dataset is on t2b only use extended one
+"""
 cpn.add_dataset(
     name="dy_m50toinf_madgraph",
     id=14810676,
@@ -63,6 +66,22 @@ cpn.add_dataset(
         ),
     ),
 )
+"""
+cpn.add_dataset(
+    name="dy_m50toinf_madgraph",
+    id=14810676,
+    processes=[procs.dy_m50toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=1587,
+            n_events=254295366,
+        ),
+    ),
+)
+
 
 # jet-binned, LO
 cpn.add_dataset(
@@ -801,7 +820,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wzz_amcatnlo",
+    name="wzz",
     id=14798602,
     processes=[procs.wzz],
     keys=[
@@ -812,7 +831,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zzz_amcatnlo",
+    name="zzz",
     id=14805133,
     processes=[procs.zzz],
     keys=[
@@ -945,7 +964,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dyg_zll_mll50toinf_ptg50to100",
     id=14808376,
-    processes=[procs.dyg_zll_mll50_ptg50to100],
+    processes=[procs.dyg_zll_mll50toinf_ptg50to100],
     keys=[
         "/DYGto2LG-1Jets_MLL-50_PTG-50to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v1/NANOAODSIM",  # noqa
     ],
