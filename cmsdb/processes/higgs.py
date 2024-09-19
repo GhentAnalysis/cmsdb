@@ -250,7 +250,7 @@ __all__ = [
     "wmh_wqq_hzz4l", "wmh_wqq_hzz2l2nu", "wmh_wqq_hzz2l2q", "wmh_wqq_hzz2q2nu", "wmh_wqq_hzz4nu", "wmh_wqq_hzz4q",
     "wmh_wqq_hzg_zll", "wmh_wqq_hzg_zqq", "wmh_wqq_hzg_znunu",
     "tth",
-    "tth_htt", "tth_hww", "tth_hzz", "tth_hbb", "tth_hnonbb", "tth_hcc", "tth_hzg", "tth_hgg", "tth_hmm",
+    "tth_htt", "tth_hww", "tth_hzz", "tth_hbb", "tth_hnonbb", "tth_hnonbb_1j", "tth_hcc", "tth_hzg", "tth_hgg", "tth_hmm",
     "tth_hwwqqlnu", "tth_hww2l2nu", "tth_hww4q",
     "tth_hzz4l", "tth_hzz2l2nu", "tth_hzz2l2q", "tth_hzz2q2nu", "tth_hzz4nu", "tth_hzz4q",
     "tth_hzg_zll", "tth_hzg_zqq", "tth_hzg_znunu",
@@ -1373,6 +1373,18 @@ tth_hww = add_decay_process(tth, h_decay_map.hww)
 tth_hzz = add_decay_process(tth, h_decay_map.hzz)
 tth_hbb = add_decay_process(tth, h_decay_map.hbb)
 tth_hnonbb = add_decay_process(tth, h_decay_map.hnonbb)
+
+# xsec value from xsec analyzer
+tth_hnonbb_1j = tth_hnonbb.add_process(
+    name="tth_hnonbb_1j",
+    id=99000,
+    label=r"$t\bar{t}H$",
+    xsecs={
+
+        13.6: Number(0.5781),  # TODO: only preliminary
+    },
+)
+
 tth_hcc = add_decay_process(tth, h_decay_map.hcc)
 tth_hzg = add_decay_process(tth, h_decay_map.hzg)
 tth_hgg = add_decay_process(tth, h_decay_map.hgg)
@@ -1425,6 +1437,9 @@ ttzh = ttvh.add_process(
     name="ttzh",
     id=120000,
     label=r"$t\bar{t}ZH$",
+    xsecs={
+        13.6: 0.00129,
+    },
     aux={"production_mode_parent": ttvh},
 )
 ttwh = ttvh.add_process(

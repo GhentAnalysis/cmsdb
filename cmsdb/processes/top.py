@@ -47,7 +47,7 @@ from cmsdb.util import multiply_xsecs
 tt = Process(
     name="tt",
     id=1000,
-    label=r"$t\bar{t}$ + Jets",
+    label=r"$t\bar{t}$",
     color=(205, 0, 9),
     xsecs={
         13: Number(833.9, {
@@ -423,13 +423,13 @@ twz_tlnu_wlnu_zll_dr1 = twz.add_process(
 ttv = Process(
     name="ttv",
     id=3000,
-    label=f"{tt.label} + V",
+    label=f"{tt.label}V",
 )
 
 ttz = ttv.add_process(
     name="ttz",
     id=3100,
-    label=f"{tt.label} + Z",
+    label=f"{tt.label}Z",
     xsecs={
         13: Number(0.859, {
             "scale": (0.086j, 0.095j),
@@ -503,7 +503,7 @@ ttz_zqq = ttz.add_process(
 ttw = ttv.add_process(
     name="ttw",
     id=3200,
-    label=f"{tt.label} + W",
+    label=f"{tt.label}W",
     xsecs={
         13: Number(0.592, {
             "scale": (0.261j, 0.162j),
@@ -554,7 +554,7 @@ for ecm in (13, 14):
 ttvv = Process(
     name="ttvv",
     id=4000,
-    label=f"{tt.label} + VV",
+    label=f"{tt.label}VV",
 )
 
 # 13.6 TeV xsec from GenXSecAnalyzer
@@ -583,6 +583,7 @@ ttwz = ttvv.add_process(
             Number(2705E-6, {"scale": (0.099j, 0.106j), "pdf": 0.027j}) +
             Number(1179E-6, {"scale": 0.112j, "pdf": 0.037j})
         ),
+
     },
 )
 
@@ -607,7 +608,7 @@ ttww = ttvv.add_process(
 tthh = ttvv.add_process(
     name="tthh",
     id=4400,
-    label=f"{tt.label} + HH",
+    label=f"{tt.label}HH",
     xsecs={13: Number(0.0003697)},
 )
 
