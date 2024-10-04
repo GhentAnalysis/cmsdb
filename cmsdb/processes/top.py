@@ -381,20 +381,26 @@ ttz = ttv.add_process(
     },
 )
 
-# based on GenXSecAnalyzer
-# for TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO)
-# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
+# based on CMS AN-2023/021, TOP-23-004
 
 # zlep = zll or znunu, both decays present in samples
 ttz_zlep_m10toinf = ttz.add_process(
     name="ttz_zlep_m10toinf",  # non-hadronically decaying Z
     id=3110,
     xsecs={
-        13: Number(0.2439, {
-            "total": 0.0002995,
-        }),
+        13: Number(0.28136),
     },
 )
+
+ttz_zlep_m1to10 = ttz.add_process(
+    name="ttz_zlep_m1to10",  # non-hadronically decaying Z
+    id=3111,
+    xsecs={
+        13: Number(0.0822),
+    },
+)
+
+# based on GenXSecAnalyzer
 
 ttz_zll_m4to50 = ttz.add_process(
     name="ttz_zll_m4to50",

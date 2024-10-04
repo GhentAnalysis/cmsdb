@@ -266,7 +266,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="ttztollnunu_m10_amcatnlo",
     id=14253137,
-    processes=[procs.ttz_llnunu_m10],
+    processes=[procs.ttz_zlep_m10toinf],
     keys=[
             "/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
         ],
@@ -277,7 +277,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="ttztoll_m1to10_amcatnlo",
     id=14338813,
-    processes=[procs.ttz_llnunu_m1],
+    processes=[procs.ttz_zlep_m1to10],
     keys=[
             "/TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
         ],
