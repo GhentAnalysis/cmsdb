@@ -288,7 +288,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="tthjettononbb_m125_amcatnlo",
     id=14230871,
-    processes=[procs.tthjetstononbb],
+    processes=[procs.tth_hnonbb],
     keys=[
             "/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
         ],
