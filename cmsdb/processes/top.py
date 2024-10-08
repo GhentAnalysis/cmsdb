@@ -459,8 +459,8 @@ ttgamma_dilept = ttgamma.add_process(
     name="ttgamma_dilept",
     id=3160,
     label=f"{tt.label} + gamma",
-    xsec={
-        13: Number(0.4208)
+    xsecs={
+        13: Number(0.4208),
     }
 )
 
