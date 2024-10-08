@@ -12,7 +12,6 @@ from cmsdb.campaigns.run3_2022_postEE_nano_v12 import campaign_run3_2022_postEE_
 # Muon
 #
 
-
 cpn.add_dataset(
     name="data_mu_e",
     id=14784109,
@@ -58,11 +57,9 @@ cpn.add_dataset(
     },
 )
 
-
 #
 # E/Gamma
 #
-
 
 cpn.add_dataset(
     name="data_egamma_e",

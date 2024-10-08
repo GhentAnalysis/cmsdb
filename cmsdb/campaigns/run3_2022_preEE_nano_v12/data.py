@@ -12,7 +12,6 @@ from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_na
 # Muon
 #
 
-
 cpn.add_dataset(
     name="data_mu_c",
     id=14784127,
@@ -25,6 +24,39 @@ cpn.add_dataset(
     n_events=138427345,
     aux={
         "era": "C",
+        "jec_era": "RunCD",
+    },
+)
+
+cpn.add_dataset(
+    name="data_singlemu_c",
+    id=14784104,
+    is_data=True,
+    processes=[procs.data_mu],
+    keys=[
+        "/Muon/Run2022C-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=35,
+    n_events=20162441,
+    aux={
+        "era": "C",
+        "jec_era": "RunCD",
+    },
+)
+
+cpn.add_dataset(
+    name="data_doublemu_c",
+    id=14784138,
+    is_data=True,
+    processes=[procs.data_mu],
+    keys=[
+        "/DoubleMuon/Run2022C-22Sep2023-v1/NANOAOD",  # noqa
+    ],
+    n_files=12,
+    n_events=4646904,
+    aux={
+        "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -40,6 +72,7 @@ cpn.add_dataset(
     n_events=75468381,
     aux={
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
 
@@ -47,37 +80,6 @@ cpn.add_dataset(
 #
 # E/Gamma
 #
-
-
-cpn.add_dataset(
-    name="data_egamma_a",
-    id=14783268,
-    is_data=True,
-    processes=[procs.data_egamma],
-    keys=[
-        "/EGamma/Run2022A-22Sep2023-v1/NANOAOD",  # noqa
-    ],
-    n_files=5,
-    n_events=186,
-    aux={
-        "era": "A",
-    },
-)
-
-cpn.add_dataset(
-    name="data_egamma_b",
-    id=14826835,
-    is_data=True,
-    processes=[procs.data_egamma],
-    keys=[
-        "/EGamma/Run2022B-22Sep2023-v2/NANOAOD",  # noqa
-    ],
-    n_files=14,
-    n_events=11074301,
-    aux={
-        "era": "B",
-    },
-)
 
 cpn.add_dataset(
     name="data_egamma_c",
@@ -91,6 +93,7 @@ cpn.add_dataset(
     n_events=263689151,
     aux={
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -106,6 +109,7 @@ cpn.add_dataset(
     n_events=89134996,
     aux={
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
 
@@ -157,6 +161,7 @@ cpn.add_dataset(
     n_events=15768439,
     aux={
         "era": "C",
+        "jec_era": "RunCD",
     },
 )
 
@@ -172,5 +177,6 @@ cpn.add_dataset(
     n_events=8007031,
     aux={
         "era": "D",
+        "jec_era": "RunCD",
     },
 )
