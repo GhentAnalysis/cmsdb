@@ -46,7 +46,7 @@ __all__ = [
     "vv",
     "zz",
     "zz_zqq_zll", "zz_zll_znunu", "zz_zll_zll", "zz_zqq_zqq", "zz_znunu_zqq",
-    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq",
+    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq", "wz_wlnu_znunu",
     "ww",
     "ww_dl", "ww_sl", "ww_fh",
     "vvv",
