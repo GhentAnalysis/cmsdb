@@ -18,6 +18,7 @@ __all__ = [
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
     "ttv",
     "ttz", "ttz_zqq", "ttz_zlep_m1to10", "ttz_zlep_m10toinf", "ttz_zll_m4to50", "ttz_zll_m50toinf", "ttz_znunu",
+    "ttgamma", "ttgamma_dilept",
     "ttw", "ttw_wlnu", "ttw_wqq",
     "ttvv",
     "ttzz", "ttwz", "ttww",
@@ -440,6 +441,29 @@ ttz_zqq = ttz.add_process(
     id=3120,
     xsecs=multiply_xsecs(ttz, const.br_z.qq),
 )
+
+
+#
+# ttgamma
+#
+
+ttgamma = ttv.add_process(
+    name="ttgamma",
+    id=3150,
+    label=f"{tt.label} + gamma",
+)
+
+# xsec from CMS AN-2021/217, TOP-23-002
+
+ttgamma_dilept = ttgamma.add_process(
+    name="ttgamma_dilept",
+    id=3160,
+    label=f"{tt.label} + gamma",
+    xsec={
+        13: Number(0.4208)
+    }
+)
+
 
 ttw = ttv.add_process(
     name="ttw",
