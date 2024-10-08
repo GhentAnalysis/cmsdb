@@ -1056,13 +1056,13 @@ wz = vv.add_process(
 wz_wlnu_zll = wz.add_process(
     name="wz_wlnu_zll",
     id=8210,
-    xsecs=multiply_xsecs(zz, const.br_w.lep * const.br_z.clep),
+    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.clep),
 )
 
 wz_wqq_zll = wz.add_process(
     name="wz_wqq_zll",
     id=8220,
-    xsecs=multiply_xsecs(zz, const.br_w.had * const.br_z.clep),
+    xsecs=multiply_xsecs(wz, const.br_w.had * const.br_z.clep),
 )
 
 
@@ -1072,12 +1072,18 @@ wz_wqq_zll = wz.add_process(
 # Log for GenXSecAnalyzer of
 # for WZTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO) -> value : Number(9.159, {"tot": 0.008259})
 # also available, but not used here
+
 wz_wlnu_zqq = wz.add_process(
     name="wz_wlnu_zqq",
     id=8230,
-    xsecs={
-        13: wz.get_xsec(13) * const.br_w.lep * const.br_z.qq,  # value around 10.65
-    },
+    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.qq)
+)
+
+
+wz_wlnu_znunu = wz.add_process(
+    name="wz_wlnu_znunu",
+    id=8240,
+    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.nunu)
 )
 
 # NNLO QCD from https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=28
