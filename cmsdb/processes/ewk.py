@@ -49,6 +49,9 @@ __all__ = [
     "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq", "wz_wlnu_znunu",
     "ww",
     "ww_dl", "ww_sl", "ww_fh",
+    "ggtozzto4l",
+    "ggtozzto2e2mu", "ggtozzto2mu2tau", "ggtozzto2e2tau",
+    "ggtozzto4e", "ggtozzto4mu", "ggtozzto4tau",
     "vvv",
     "zzz", "wzz", "wwz", "www",
 ]
