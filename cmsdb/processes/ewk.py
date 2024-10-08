@@ -46,9 +46,12 @@ __all__ = [
     "vv",
     "zz",
     "zz_zqq_zll", "zz_zll_znunu", "zz_zll_zll", "zz_zqq_zqq", "zz_znunu_zqq",
-    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq",
+    "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq", "wz_wlnu_znunu",
     "ww",
     "ww_dl", "ww_sl", "ww_fh",
+    "ggtozzto4l",
+    "ggtozzto2e2mu", "ggtozzto2mu2tau", "ggtozzto2e2tau",
+    "ggtozzto4e", "ggtozzto4mu", "ggtozzto4tau",
     "vvv",
     "zzz", "wzz", "wwz", "www",
 ]
@@ -1056,13 +1059,13 @@ wz = vv.add_process(
 wz_wlnu_zll = wz.add_process(
     name="wz_wlnu_zll",
     id=8210,
-    xsecs=multiply_xsecs(zz, const.br_w.lep * const.br_z.clep),
+    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.clep),
 )
 
 wz_wqq_zll = wz.add_process(
     name="wz_wqq_zll",
     id=8220,
-    xsecs=multiply_xsecs(zz, const.br_w.had * const.br_z.clep),
+    xsecs=multiply_xsecs(wz, const.br_w.had * const.br_z.clep),
 )
 
 
@@ -1072,12 +1075,18 @@ wz_wqq_zll = wz.add_process(
 # Log for GenXSecAnalyzer of
 # for WZTo1L1Nu2Q_4f_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO) -> value : Number(9.159, {"tot": 0.008259})
 # also available, but not used here
+
 wz_wlnu_zqq = wz.add_process(
     name="wz_wlnu_zqq",
     id=8230,
-    xsecs={
-        13: wz.get_xsec(13) * const.br_w.lep * const.br_z.qq,  # value around 10.65
-    },
+    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.qq)
+)
+
+
+wz_wlnu_znunu = wz.add_process(
+    name="wz_wlnu_znunu",
+    id=8240,
+    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.nunu)
 )
 
 # NNLO QCD from https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=28
@@ -1144,6 +1153,70 @@ ww_fh = ww.add_process(
     },
 )
 
+#
+# gg -> ZZ -> 4l
+#
+
+ggtozzto4l = Process(
+    name="ggtozzto4l",
+    id=8500,
+    label="gg -> ZZ -> 4l",
+    xsecs={13: Number(0.1), 13.6: Number(0.1)},
+)
+
+# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
+ggtozzto2e2mu = ggtozzto4l.add_process(
+    name="ggtozzto2e2mu",
+    id=8510,
+    label="gg -> ZZ -> 2e 2tau",
+    xsecs={13: Number(0.005423), 13.6: Number(0.0061150)},  # TODO
+)
+
+# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
+ggtozzto2e2tau = ggtozzto4l.add_process(
+    name="ggtozzto2e2tau",
+    id=8520,
+    label="gg -> ZZ -> 2e 2tau",
+    xsecs={13: Number(0.005423), 13.6: Number(0.0061150)},  # TODO
+)
+
+# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
+ggtozzto2mu2tau = ggtozzto4l.add_process(
+    name="ggtozzto2mu2tau",
+    id=8530,
+    label="gg -> ZZ -> 2mu 2tau",
+    xsecs={13: Number(0.005423), 13.6: Number(0.0061150)},  # TODO
+)
+
+# 13.6 TeV dataset not available
+ggtozzto4e = ggtozzto4l.add_process(
+    name="ggtozzto4e",
+    id=8540,
+    label="gg -> ZZ -> 4e",
+    xsecs={13: Number(0.0027), 13.6: Number(0.003)},  # TODO
+)
+
+# 13.6 TeV dataset not available
+ggtozzto4mu = ggtozzto4l.add_process(
+    name="ggtozzto4mu",
+    id=8550,
+    label="gg -> ZZ -> 4mu",
+    xsecs={13: Number(0.0027), 13.6: Number(0.003)},  # TODO
+)
+
+# 13.6 TeV dataset not available
+ggtozzto4tau = ggtozzto4l.add_process(
+    name="ggtozzto4tau",
+    id=8560,
+    label="gg -> ZZ -> 4tau",
+    xsecs={13: Number(0.0027), 13.6: Number(0.003)},  # TODO
+)
+
+ggtozzto4l.set_xsec(
+    13,
+    ggtozzto2e2mu.get_xsec(13) + ggtozzto2e2tau.get_xsec(13) + ggtozzto2mu2tau.get_xsec(13) +
+    ggtozzto4e.get_xsec(13) + ggtozzto4mu.get_xsec(13) + ggtozzto4tau.get_xsec(13)
+)
 
 #
 # Triple-boson

@@ -17,7 +17,8 @@ __all__ = [
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
     "ttv",
-    "ttz", "ttz_zqq", "ttz_zlep_m10toinf", "ttz_zll_m4to50", "ttz_zll_m50toinf", "ttz_znunu",
+    "ttz", "ttz_zqq", "ttz_zlep_m1to10", "ttz_zlep_m10toinf", "ttz_zll_m4to50", "ttz_zll_m50toinf", "ttz_znunu",
+    "ttgamma", "ttgamma_dilept",
     "ttw", "ttw_wlnu", "ttw_wqq",
     "ttvv",
     "ttzz", "ttwz", "ttww",
@@ -381,20 +382,26 @@ ttz = ttv.add_process(
     },
 )
 
-# based on GenXSecAnalyzer
-# for TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8 (Summer20UL16, NLO)
-# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
+# based on CMS AN-2023/021, TOP-23-004
 
 # zlep = zll or znunu, both decays present in samples
 ttz_zlep_m10toinf = ttz.add_process(
     name="ttz_zlep_m10toinf",  # non-hadronically decaying Z
     id=3110,
     xsecs={
-        13: Number(0.2439, {
-            "total": 0.0002995,
-        }),
+        13: Number(0.28136),
     },
 )
+
+ttz_zlep_m1to10 = ttz.add_process(
+    name="ttz_zlep_m1to10",  # non-hadronically decaying Z
+    id=3111,
+    xsecs={
+        13: Number(0.0822),
+    },
+)
+
+# based on GenXSecAnalyzer
 
 ttz_zll_m4to50 = ttz.add_process(
     name="ttz_zll_m4to50",
@@ -434,6 +441,29 @@ ttz_zqq = ttz.add_process(
     id=3120,
     xsecs=multiply_xsecs(ttz, const.br_z.qq),
 )
+
+
+#
+# ttgamma
+#
+
+ttgamma = ttv.add_process(
+    name="ttgamma",
+    id=3150,
+    label=f"{tt.label} + gamma",
+)
+
+# xsec from CMS AN-2021/217, TOP-23-002
+
+ttgamma_dilept = ttgamma.add_process(
+    name="ttgamma_dilept",
+    id=3160,
+    label=f"{tt.label} + gamma",
+    xsecs={
+        13: Number(0.4208),
+    }
+)
+
 
 ttw = ttv.add_process(
     name="ttw",
