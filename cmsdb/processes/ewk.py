@@ -1107,7 +1107,7 @@ wz_wlnu_znunu = wz.add_process(
 # 13.6 TeV xsec from GenXSecAnalyzer
 wz_wlnu_zll_1jets = wz.add_process(
     name="wz_wlnu_zll_1jets",
-    id=8240,
+    id=8250,
     xsecs={13.6: Number(5.297)},
 )
 
