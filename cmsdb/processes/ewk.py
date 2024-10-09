@@ -1021,8 +1021,11 @@ zz_zll_znunu = zz.add_process(
 zz_zll_zll = zz.add_process(
     name="zz_zll_zll",
     id=8130,
-    xsecs={13.6: 1.65},
+    xsecs=multiply_xsecs(zz, const.br_zz.llll),
 )
+
+# zz_zll_zll cross section updated to match xsec stated in wZ inclusive measurement 13.6 TeV
+zz_zll_zll.xsecs[13.6] = Number(1.65)
 
 zz_zqq_zqq = zz.add_process(
     name="zz_zqq_zqq",
