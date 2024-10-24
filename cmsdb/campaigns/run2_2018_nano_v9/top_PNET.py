@@ -153,7 +153,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="tthjettononbb_m125_amcatnlo_PNET",
     id=142308710,  # 0
-    processes=[procs.tthjetstononbb],
+    processes=[procs.tth_hnonbb_1j],
     keys=[
             "/2018UL/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
         ],
