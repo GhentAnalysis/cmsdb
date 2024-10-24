@@ -15,8 +15,8 @@ from cmsdb.campaigns.run2_2018_nano_v9 import campaign_run2_2018_nano_v9 as cpn
 #
 cpn.add_dataset(
     name="dy_lept_m10to50_madgraph_PNET",
-    id=1423518500, #00 because the next one has the same id
-    processes=[procs.dy_lep_m50_ht100to200],
+    id=1423518500,  # 00 because the next one has the same id
+    processes=[procs.dy_m10to50],
     keys=[
         "/2018UL/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
     ],
@@ -26,8 +26,8 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="dy_lept_m50_ht-100to200_madgraph_PNET",
-    id=142351850, #0
-    processes=[procs.dy_lep_m50_ht100to200],
+    id=142351850,  # 0
+    processes=[procs.dy_m50toinf_ht100to200],
     keys=[
         "/2018UL/DYJetsToLL_M-50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
     ],
@@ -37,8 +37,8 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="dy_lept_m50_ht-200to400_madgraph_PNET",
-    id=142348900, #0
-    processes=[procs.dy_lep_m50_ht200to400],
+    id=142348900,  # 0
+    processes=[procs.dy_m50toinf_ht200to400],
     keys=[
         "/2018UL/DYJetsToLL_M-50_HT-200to400_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
     ],
@@ -48,8 +48,8 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="dy_lept_m50_ht-400to600_madgraph_PNET",
-    id=142313830, #0
-    processes=[procs.dy_lep_m50_ht400to600],
+    id=142313830,  # 0
+    processes=[procs.dy_m50toinf_ht400to600],
     keys=[
         "/2018UL/DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
     ],
@@ -59,8 +59,8 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="dy_lept_m50_ht-600to800_madgraph_PNET",
-    id=142355740, #0
-    processes=[procs.dy_lep_m50_ht600to800],
+    id=142355740,  # 0
+    processes=[procs.dy_m50toinf_ht600to800],
     keys=[
         "/2018UL/DYJetsToLL_M-50_HT-600to800_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
     ],
@@ -70,8 +70,8 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="dy_lept_m50_ht-800to1200_madgraph_PNET",
-    id=142363170, #0
-    processes=[procs.dy_lep_m50_ht800to1200],
+    id=142363170,  # 0
+    processes=[procs.dy_m50toinf_ht800to1200],
     keys=[
         "/2018UL/DYJetsToLL_M-50_HT-800to1200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
     ],
@@ -81,8 +81,8 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="dy_lept_m50_ht-1200to2500_madgraph_PNET",
-    id=142353780, #0
-    processes=[procs.dy_lep_m50_ht1200to2500],
+    id=142353780,  # 0
+    processes=[procs.dy_m50toinf_ht1200to2500],
     keys=[
         "/2018UL/DYJetsToLL_M-50_HT-1200to2500_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
     ],
@@ -94,20 +94,20 @@ cpn.add_dataset(
 # W + jets
 #
 
-#TODO
+# TODO
 
 #
 # WZ
 #
 
 
-#TODO
+# TODO
 
 #
 # ZZ
 #
 
-#TODO
+# TODO
 
 
 #
@@ -116,7 +116,7 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="ww_pythia8_PNET",
-    id=142299860, #0
+    id=142299860,  # 0
     processes=[procs.ww],
     keys=[
         "/2018UL/WW_TuneCP5_13TeV-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
@@ -132,8 +132,8 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="www_4f_amcatnlo_PNET",
-    id=142296710, #0
-    processes=[procs.www4f],
+    id=142296710,  # 0
+    processes=[procs.www],
     keys=[
         "/2018UL/WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
     ],
@@ -143,8 +143,8 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="wwz_4f_amcatnlo_PNET",
-    id=142303610, #0
-    processes=[procs.wwz4f],
+    id=142303610,  # 0
+    processes=[procs.wwz],
     keys=[
         "/2018UL/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
     ],
@@ -154,7 +154,7 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="wzz_amcatnlo_PNET",
-    id=142411040, #0
+    id=142411040,  # 0
     processes=[procs.wzz],
     keys=[
         "/2018UL/WZZ_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
@@ -165,7 +165,7 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="zzz_amcatnlo_PNET",
-    id=142419400, #0
+    id=142419400,  # 0
     processes=[procs.zzz],
     keys=[
         "/2018UL/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
