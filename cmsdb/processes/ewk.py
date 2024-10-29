@@ -880,6 +880,11 @@ w_lnu_2j = w_lnu.add_process(
     xsecs={13: Number(3049.263)},
 )
 
+# LO cross sections, scaled to NNLO
+
+# ht bins based on GenXSecAnalyzer
+# for WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
 w_lnu_ht70to100 = w_lnu.add_process(
     name="w_lnu_ht70to100",
     id=6110,
