@@ -39,7 +39,6 @@ __all__ = [
     "w",
     "w_taunu", "w_munu",
     "w_lnu",
-<<<<<<< HEAD
     "w_lnu_0j",
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
@@ -47,17 +46,6 @@ __all__ = [
     "w_lnu_1j_pt400to600", "w_lnu_1j_pt600toinf",
     "w_lnu_2j", "w_lnu_2j_pt40to100", "w_lnu_2j_pt100to200", "w_lnu_2j_pt200to400",
     "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf",
-=======
-    "w_lnu_0j", "w_lnu_1j", "w_lnu_2j",
-    "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
-    "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
-    "z",
-    "z_nunu",
-    "z_nunu_ht100To200", "z_nunu_ht200To400", "z_nunu_ht400To600", "z_nunu_ht600To800",
-    "z_nunu_ht800To1200", "z_nunu_ht1200To2500", "z_nunu_ht2500",
-    "z_qq",
-    "z_qq_ht200To400", "z_qq_ht400To600", "z_qq_ht600To800", "z_qq_ht800",
->>>>>>> 70b82fe (update dy)
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
     "vv",
@@ -94,10 +82,6 @@ dy = Process(
 # and for 13.6 TeV, based on:
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 70b82fe (update dy)
 # if needed for scaling from NLO to NNLO:
 # NLO cross section, based on GenXSecAnalyzer for
 # DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
@@ -163,7 +147,7 @@ dy_m10to50 = dy.add_process(
     name="dy_m10to50",
     id=51001,
     xsecs={
-        13: Number(15810.),  
+        13: Number(15810.),
         13.6: dy_m10to50_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
     aux={
