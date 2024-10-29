@@ -47,7 +47,7 @@ from cmsdb.util import multiply_xsecs
 
 tt = Process(
     name="tt",
-    id=100000,
+    id=1000,
     label=r"$t\bar{t}$",
     color=(205, 0, 9),
     xsecs={
@@ -66,7 +66,7 @@ tt = Process(
 
 tt_sl = tt.add_process(
     name="tt_sl",
-    id=tt.id+10000,
+    id=tt.id+100,
     label=f"{tt.label}, SL",
     color=(205, 0, 9),
     xsecs=multiply_xsecs(tt, const.br_ww.sl),
@@ -74,7 +74,7 @@ tt_sl = tt.add_process(
 
 tt_dl = tt.add_process(
     name="tt_dl",
-    id=tt.id+20000,
+    id=tt.id+200,
     label=f"{tt.label}, DL",
     color=(235, 230, 10),
     xsecs=multiply_xsecs(tt, const.br_ww.dl),
@@ -82,7 +82,7 @@ tt_dl = tt.add_process(
 
 tt_fh = tt.add_process(
     name="tt_fh",
-    id=tt.id+30000,
+    id=tt.id+300,
     label=f"{tt.label}, FH",
     color=(255, 153, 0),
     xsecs=multiply_xsecs(tt, const.br_ww.fh),
@@ -458,15 +458,9 @@ ttz_zlep_m10toinf = ttz.add_process(
     },
 )
 
-ttz_qq = ttz.add_process(
-    name="ttz_qq",  
-    id=3112,
-    xsecs={13: 0.530, 13.6: Number(0.1)},
-)
 
-# 13.6 xsec from AN-23-137
-ttll_mll_m50 = ttz.add_process(
-    name="ttll_mll_m50",  # non-hadronically decaying Z m10>
+ttz_zlep_m1to10 = ttz.add_process(
+    name="ttz_zlep_m1to10",  # non-hadronically decaying Z
     id=3111,
     xsecs={
         13: Number(0.0822),
@@ -490,6 +484,7 @@ ttz_zll_m50toinf = ttz.add_process(
     name="ttz_zll_m50toinf",
     id=3116,
     xsecs={
+        13: Number(0.0822),
         # XSDB
         13.6: Number(0.08646, {
             "total": 0.0000552,
@@ -514,15 +509,6 @@ ttz_zqq = ttz.add_process(
     xsecs=multiply_xsecs(ttz, const.br_z.qq),
 )
 
-
-ttz.set_xsec(
-    13,
-    ttz_llnunu_m10.get_xsec(13) + ttz_qq.get_xsec(13)
-)
-
-ttz.set_xsec(
-    13.6,
-    ttll_mll_m4to50.get_xsec(13.6) + ttz_qq.get_xsec(13.6)
 #
 # ttgamma
 #
