@@ -21,7 +21,7 @@ __all__ = [
     "twz_tqq_wlnu_zll_dr1", "twz_tlnu_wqq_zll_dr1", "twz_tlnu_wlnu_zll_dr1",
     "twz_tqq_wlnu_zll_dr2", "twz_tlnu_wqq_zll_dr2", "twz_tlnu_wlnu_zll_dr2",
     "ttv",
-    "ttz", "ttz_zqq", "ttz_zlep_m10toinf", "ttz_zll_m4to50", "ttz_zll_m50toinf", "ttz_znunu",
+    "ttz", "ttz_zqq", "ttz_zlep_m1to10", "ttz_zlep_m10toinf", "ttz_zll_m4to50", "ttz_zll_m50toinf", "ttz_znunu",
     "ttw", "ttw_wlnu", "ttw_wqq",
     "tth", "tth_bb", "tth_nonbb",
     "ttgamma", "ttgamma_dilept",
@@ -69,7 +69,7 @@ tt = Process(
 
 tt_sl = tt.add_process(
     name="tt_sl",
-    id=tt.id + 10000,
+    id=tt.id + 100,
     label=f"{tt.label}, SL",
     color=(205, 0, 9),
     xsecs=multiply_xsecs(tt, const.br_ww.sl),
@@ -77,7 +77,7 @@ tt_sl = tt.add_process(
 
 tt_dl = tt.add_process(
     name="tt_dl",
-    id=tt.id + 20000,
+    id=tt.id + 200,
     label=f"{tt.label}, DL",
     color=(235, 230, 10),
     xsecs=multiply_xsecs(tt, const.br_ww.dl),
@@ -85,7 +85,7 @@ tt_dl = tt.add_process(
 
 tt_fh = tt.add_process(
     name="tt_fh",
-    id=tt.id + 30000,
+    id=tt.id + 300,
     label=f"{tt.label}, FH",
     color=(255, 153, 0),
     xsecs=multiply_xsecs(tt, const.br_ww.fh),
@@ -484,11 +484,16 @@ ttz_zlep_m10toinf = ttz.add_process(
     },
 )
 
-ttz_qq = ttz.add_process(
-    name="ttz_qq",
-    id=3112,
-    xsecs={13: 0.530, 13.6: Number(0.1)},
+
+ttz_zlep_m1to10 = ttz.add_process(
+    name="ttz_zlep_m1to10",  # non-hadronically decaying Z
+    id=3111,
+    xsecs={
+        13: Number(0.0822),
+    },
 )
+
+# based on GenXSecAnalyzer
 
 ttz_zll_m4to50 = ttz.add_process(
     name="ttz_zll_m4to50",
@@ -505,6 +510,7 @@ ttz_zll_m50toinf = ttz.add_process(
     name="ttz_zll_m50toinf",
     id=3116,
     xsecs={
+        13: Number(0.0822),
         # XSDB
         13.6: Number(0.08646, {
             "total": 0.0000552,
@@ -528,6 +534,28 @@ ttz_zqq = ttz.add_process(
     id=3120,
     xsecs=multiply_xsecs(ttz, const.br_z.qq),
 )
+
+#
+# ttgamma
+#
+
+ttgamma = ttv.add_process(
+    name="ttgamma",
+    id=3150,
+    label=f"{tt.label} + gamma",
+)
+
+# xsec from CMS AN-2021/217, TOP-23-002
+
+ttgamma_dilept = ttgamma.add_process(
+    name="ttgamma_dilept",
+    id=3160,
+    label=f"{tt.label} + gamma",
+    xsecs={
+        13: Number(0.4208),
+    }
+)
+
 
 ttw = ttv.add_process(
     name="ttw",
