@@ -14,6 +14,17 @@ from cmsdb.campaigns.run2_2018_nano_v9 import campaign_run2_2018_nano_v9 as cpn
 # Drell-Yan
 #
 cpn.add_dataset(
+    name="dy_lept_m50_FxFx",
+    id=14235180,
+    processes=[procs.dy_lep_m50],
+    keys=[
+        "/2018/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",
+    ],
+    n_files=2462,
+    n_events=196376161,
+)
+
+cpn.add_dataset(
     name="dy_lept_m10to50_madgraph_PNET",
     id=1423518500, #00 because the next one has the same id
     processes=[procs.dy_lep_m50_ht100to200],

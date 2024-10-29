@@ -23,6 +23,7 @@ __all__ = [
     "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800",
     "w",
     "w_lnu",
+    "w_lnu_0j", "w_lnu_1j", "w_lnu_2j",
     "w_lnu_ht70To100", "w_lnu_ht100To200", "w_lnu_ht200To400", "w_lnu_ht400To600",
     "w_lnu_ht600To800", "w_lnu_ht800To1200", "w_lnu_ht1200To2500", "w_lnu_ht2500",
     "z",
@@ -74,7 +75,7 @@ dy_lep = dy.add_process(
 dy_lep_m10to50 = dy_lep.add_process(
     name="dy_lep_m10to50",
     id=51050,
-    xsecs={13: Number(18610.), 13.6: Number(19982.5)},
+    xsecs={13: Number(15810.), 13.6: Number(19982.5)},
 )
 
 # 13.6 xsec from AN-23-137
@@ -382,6 +383,22 @@ w_lnu = w.add_process(
 # LO cross sections, scaled to NNLO
 # inclusive cross section based on WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 # ht bins based on datasets WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+w_lnu_0j = w_lnu.add_process(
+    name="w_lnu_0j",
+    id=6101,
+    xsecs={13: Number(48716.955)},
+)
+w_lnu_1j = w_lnu.add_process(
+    name="w_lnu_1j",
+    id=6102,
+    xsecs={13: Number(8107.312)},
+)
+w_lnu_2j = w_lnu.add_process(
+    name="w_lnu_2j",
+    id=6103,
+    xsecs={13: Number(3049.263)},
+)
+
 w_lnu_ht70To100 = w_lnu.add_process(
     name="w_lnu_ht70To100",
     id=6110,
@@ -579,20 +596,20 @@ zz = vv.add_process(
 zz_qqll_m4 = zz.add_process(
     name="zz_qqll_m4",
     id=8110,
-    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
+    xsecs={13: Number(8.08), 13.6: Number(0.1)},  # TODO
 )
 
 zz_llnunu = zz.add_process(
     name="zz_llnunu",
     id=8120,
-    xsecs={13: Number(0.1), 13.6: Number(0.1)},  # TODO
+    xsecs={13: Number(0.9738), 13.6: Number(0.1)},  # TODO
 )
 
 # 13.6 xsec from AN-23-137
 zz_llll = zz.add_process(
     name="zz_llll",
     id=8130,
-    xsecs={13: Number(1.256), 13.6: Number(1.65)},
+    xsecs={13: Number(1.325), 13.6: Number(1.65)},
 )
 
 zz_qqqq = zz.add_process(
@@ -623,7 +640,7 @@ wz = vv.add_process(
 wz_lllnu = wz.add_process(
     name="wz_lllnu",
     id=8210,
-    xsecs={13: 4.9173, 13.6: 5.31},
+    xsecs={13: 4.429, 13.6: 5.31},
 )
 
 wz_qqll_m4 = wz.add_process(
@@ -659,7 +676,7 @@ ww = vv.add_process(
 ww_lnulnu = ww.add_process(
     name="ww_lnulnu",
     id=8310,
-    xsecs={13: Number(0.1), 13.6: Number(12.98)},  # TODO
+    xsecs={13: Number(12.178), 13.6: Number(12.98)},  # TODO
 )
 
 ww_lnuqq = ww.add_process(

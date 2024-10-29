@@ -22,10 +22,10 @@ cpn.add_dataset(
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/2018UL/ST_t-channel_top_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+                "/2018/ST_t-channel_top_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
             ],
-            n_files=149, 
-            n_events=178336000, 
+            n_files=3650,
+            n_events=178397000,
         ),
     ),
 )
@@ -37,10 +37,10 @@ cpn.add_dataset(
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/2018UL/ST_t-channel_antitop_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+                "/2018/ST_t-channel_antitop_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
             ],
-            n_files=130, 
-            n_events=95627000, 
+            n_files=1913,
+            n_events=95785000,
         ),
     ),
 )
@@ -52,10 +52,10 @@ cpn.add_dataset(
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/2018UL/ST_tW_top_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+                "/2018/ST_tW_antitop_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
             ],
-            n_files=52, 
-            n_events=7956000, 
+            n_files=235,
+            n_events=11015956,
         ),
     ),
 )
@@ -101,11 +101,6 @@ cpn.add_dataset(
     processes=[procs.tt_dl],
     info=dict(
         nominal=DatasetInfo(
-            #keys=[
-            #    "/2018UL/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-            #],
-            #n_files=3061, 
-            #n_events=145020000, 
             keys=[
                 "/2018/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1"
             ],

@@ -116,10 +116,10 @@ cpn.add_dataset(
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/2018UL/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+                "/2018/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
             ],
-            n_files=391, 
-            n_events=476408000, 
+            n_files=250,
+            n_events=478982000,
         ),
     ),
 )
@@ -205,16 +205,6 @@ cpn.add_dataset(
 )
 
 
-cpn.add_dataset(
-    name="tthjettononbb_m125_amcatnlo",
-    id=142308710, #0
-    processes=[procs.tthjetstononbb],
-    keys=[
-            "/2018UL/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
-    n_files=51, 
-    n_events=9852567,
-)
 
 cpn.add_dataset(
     name="ttgamma_dilept",

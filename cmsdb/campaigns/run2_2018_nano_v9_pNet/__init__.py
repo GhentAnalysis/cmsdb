@@ -17,3 +17,4 @@ cpn = campaign_run2_2018_nano_v9_pNet = Campaign(
 import cmsdb.campaigns.run2_2018_nano_v9_pNet.data
 import cmsdb.campaigns.run2_2018_nano_v9_pNet.top
 import cmsdb.campaigns.run2_2018_nano_v9_pNet.ewk
+import cmsdb.campaigns.run2_2018_nano_v9_pNet.qcd

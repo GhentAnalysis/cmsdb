@@ -23,7 +23,7 @@ __all__ = [
     "ttv",
     "ttz", "ttz_llnunu_m10", "ttz_qq", "ttz_llnunu_m1", "ttll_mll_m50", "ttll_mll_m4to50",
     "ttw", "ttw_lnu", "ttw_qq", "ttlnu",
-    "tth", "tthjetstononbb", "tth_bb", "tth_nonbb",
+    "tth", "tth_bb", "tth_nonbb",
     "ttgamma", "ttgamma_dilept",
     "ttxx",
     "ttvv",
@@ -49,7 +49,7 @@ import cmsdb.constants as const
 
 tt = Process(
     name="tt",
-    id=1000,
+    id=100000,
     label=r"$t\bar{t}$",
     color=(205, 0, 9),
     xsecs={
@@ -68,7 +68,7 @@ tt = Process(
 
 tt_sl = tt.add_process(
     name="tt_sl",
-    id=1100,
+    id=tt.id+10000,
     label=f"{tt.label}, SL",
     color=(205, 0, 9),
     xsecs={
@@ -79,7 +79,7 @@ tt_sl = tt.add_process(
 
 tt_dl = tt.add_process(
     name="tt_dl",
-    id=1200,
+    id=tt.id+20000,
     label=f"{tt.label}, DL",
     color=(235, 230, 10),
     xsecs={
@@ -90,7 +90,7 @@ tt_dl = tt.add_process(
 
 tt_fh = tt.add_process(
     name="tt_fh",
-    id=1300,
+    id=tt.id+30000,
     label=f"{tt.label}, FH",
     color=(255, 153, 0),
     xsecs={
@@ -465,14 +465,14 @@ ttw_qq = ttw.add_process(
 
 tth = ttv.add_process(
     name="tth",
-    id=3300,
+    id=15000,
     label=f"{tt.label} + H",
     xsecs={13: Number(0.507), 13.6: Number(0.57)},  # TODO
 )
 
 tth_bb = tth.add_process(
     name="tth_bb",
-    id=3301,
+    id=15200,
     label=f"{tth.label}(bb)",
     xsecs={13: tth.get_xsec(13) * const.br_h_bb_full,
         13.6: tth.get_xsec(13.6) * const.br_h_bb_full}
@@ -480,18 +480,12 @@ tth_bb = tth.add_process(
 
 tth_nonbb = tth.add_process(
     name="tth_nonbb",
-    id=3302,
+    id=15300,
     label=f"{tth.label}(non-bb)",
     xsecs={13: tth.get_xsec(13) * (1. - const.br_h_bb_full),
         13.6: tth.get_xsec(13.6) * (1. - const.br_h_bb_full)}
 )
 
-tthjetstononbb = tth.add_process(
-    name="tthjetstononbb",
-    id=3310,
-    label=f"{tt.label} + H (nonbb)",
-    xsecs={13: Number(0.211), 13.6: tth.get_xsec(13.6) * (1. - const.br_h_bb_full)},
-)
 
 ttgamma = ttv.add_process(
     name="ttgamma",
