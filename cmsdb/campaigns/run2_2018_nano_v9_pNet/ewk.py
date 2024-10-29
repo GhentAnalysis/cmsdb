@@ -14,9 +14,9 @@ from cmsdb.campaigns.run2_2018_nano_v9_pNet import campaign_run2_2018_nano_v9_pN
 # Drell-Yan
 #
 cpn.add_dataset(
-    name="dy_lep_m50",
+    name="dy_m50toinf",
     id=14235180,
-    processes=[procs.dy_lep_m50],
+    processes=[procs.dy_m50toinf],
     keys=[
         "/2018/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",
     ],
@@ -25,80 +25,14 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_m10to50",
+    name="dy_m10to50",
     id=1423518500, #00 because the next one has the same id
-    processes=[procs.dy_lep_m10to50],
+    processes=[procs.dy_m10to50],
     keys=[
         "/2018/DYJetsToLL_M-10to50_TuneCP5_13TeV-amcatnloFXFX-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
     ],
     n_files=75,
     n_events=99091883,
-)
-
-cpn.add_dataset(
-    name="dy_lept_m50_ht-100to200_madgraph",
-    id=142351850, #0
-    processes=[procs.dy_lep_m50_ht100to200],
-    keys=[
-        "/2018UL/DYJetsToLL_M-50_HT-100to200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
-    ],
-    n_files=30,
-    n_events=26202328,
-)
-
-cpn.add_dataset(
-    name="dy_lept_m50_ht-200to400_madgraph",
-    id=142348900, #0
-    processes=[procs.dy_lep_m50_ht200to400],
-    keys=[
-        "/2018UL/DYJetsToLL_M-50_HT-200to400_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
-    ],
-    n_files=21,
-    n_events=18455718,
-)
-
-cpn.add_dataset(
-    name="dy_lept_m50_ht-400to600_madgraph",
-    id=142313830, #0
-    processes=[procs.dy_lep_m50_ht400to600],
-    keys=[
-        "/2018UL/DYJetsToLL_M-50_HT-400to600_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
-    ],
-    n_files=28,
-    n_events=8682257,
-)
-
-cpn.add_dataset(
-    name="dy_lept_m50_ht-600to800_madgraph",
-    id=142355740, #0
-    processes=[procs.dy_lep_m50_ht600to800],
-    keys=[
-        "/2018UL/DYJetsToLL_M-50_HT-600to800_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
-    ],
-    n_files=11,
-    n_events=7035971,
-)
-
-cpn.add_dataset(
-    name="dy_lept_m50_ht-800to1200_madgraph",
-    id=142363170, #0
-    processes=[procs.dy_lep_m50_ht800to1200],
-    keys=[
-        "/2018UL/DYJetsToLL_M-50_HT-800to1200_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
-    ],
-    n_files=24,
-    n_events=6554679,
-)
-
-cpn.add_dataset(
-    name="dy_lept_m50_ht-1200to2500_madgraph",
-    id=142353780, #0
-    processes=[procs.dy_lep_m50_ht1200to2500],
-    keys=[
-        "/2018UL/DYJetsToLL_M-50_HT-1200to2500_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/TopNanoAODv9-1-1_2018UL",
-    ],
-    n_files=13,
-    n_events=5966661,
 )
 
 #
@@ -236,52 +170,3 @@ cpn.add_dataset(
 )
 
 
-#
-
-#
-# triboson
-#
-
-cpn.add_dataset(
-    name="www_4f_amcatnlo",
-    id=142296710, #0
-    processes=[procs.www4f],
-    keys=[
-        "/2018UL/WWW_4F_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-    ],
-    n_files=5,
-    n_events=240000,
-)
-
-cpn.add_dataset(
-    name="wwz_4f_amcatnlo",
-    id=142303610, #0
-    processes=[procs.wwz4f],
-    keys=[
-        "/2018UL/WWZ_4F_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-    ],
-    n_files=5,
-    n_events=248000,
-)
-
-cpn.add_dataset(
-    name="wzz_amcatnlo",
-    id=142411040, #0
-    processes=[procs.wzz],
-    keys=[
-        "/2018UL/WZZ_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-    ],
-    n_files=20,
-    n_events=9994000,
-)
-
-cpn.add_dataset(
-    name="zzz_amcatnlo",
-    id=142419400, #0
-    processes=[procs.zzz],
-    keys=[
-        "/2018UL/ZZZ_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-    ],
-    n_files=60,
-    n_events=9889000,
-)
