@@ -873,9 +873,8 @@ w_lnu = w.add_process(
 
 w_lnu_lo_13tev_xsec = Number(54070.0, {"tot": 18.32})
 
-# LO cross sections, scaled to NNLO
-# inclusive cross section based on WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
-# ht bins based on datasets WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+
+# jet binned samples
 w_lnu_0j = w_lnu.add_process(
     name="w_lnu_0j",
     id=6101,
@@ -892,6 +891,10 @@ w_lnu_2j = w_lnu.add_process(
     xsecs={13: Number(3049.263)},
 )
 
+# LO cross sections, scaled to NNLO
+# ht bins based on GenXSecAnalyzer
+# for WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
 w_lnu_ht70To100 = w_lnu.add_process(
     name="w_lnu_ht70To100",
     id=6110,
