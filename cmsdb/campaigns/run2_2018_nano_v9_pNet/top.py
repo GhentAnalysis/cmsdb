@@ -145,9 +145,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ttztollnunu_m10_amcatnlo",
+    name="ttz_zlep_m10toinf",
     id=142531370, #0
-    processes=[procs.ttz_llnunu_m10],
+    processes=[procs.ttz_zlep_m10toinf],
     keys=[
         "/2018/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
     ],
@@ -156,9 +156,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttztoqq_amcatnlo",
+    name="ttz_zqq",
     id=143388130, #0
-    processes=[procs.ttz_qq],
+    processes=[procs.ttz_zqq],
     keys=[
         "/2018/TTZToQQ_TuneCP5_13TeV-amcatnlo-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
     ],
@@ -170,7 +170,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="tthtobb_powheg",
     id=142318710, #0
-    processes=[procs.tth_bb],
+    processes=[procs.tth_hbb],
     keys=[
         "/2018/ttHTobb_M125_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
     ],
@@ -181,7 +181,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="tthtononbb_powheg",
     id=142348710, #0
-    processes=[procs.tth_nonbb],
+    processes=[procs.tth_hnonbb],
     keys=[
         "/2018/ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
     ],
@@ -192,9 +192,9 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="ttwjetstoln_amcatnlo",
+    name="ttw_wlnu",
     id=142323230, #0
-    processes=[procs.ttw_lnu],
+    processes=[procs.ttw_wlnu],
     keys=[
         "/2018/TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
     ],
@@ -203,9 +203,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttwjetstoqq_amcatnlo",
+    name="ttw_wqq",
     id=142323231, #0
-    processes=[procs.ttw_qq],
+    processes=[procs.ttw_wqq],
     keys=[
         "/2018/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
     ],
