@@ -40,8 +40,8 @@ __all__ = [
     "w_taunu", "w_munu",
     "w_lnu",
     "w_lnu_0j", "w_lnu_1j", "w_lnu_2j",
-    "w_lnu_ht70To100", "w_lnu_ht100To200", "w_lnu_ht200To400", "w_lnu_ht400To600",
-    "w_lnu_ht600To800", "w_lnu_ht800To1200", "w_lnu_ht1200To2500", "w_lnu_ht2500",
+    "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
+    "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
     "z",
     "z_nunu",
     "z_nunu_ht100To200", "z_nunu_ht200To400", "z_nunu_ht400To600", "z_nunu_ht600To800",
@@ -94,12 +94,12 @@ dy = Process(
 # and for 13.6 TeV, based on:
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
 
-# 13.6 xsec from AN-23-137
-dy_lep_m10to50 = dy_lep.add_process(
-    name="dy_lep_m10to50",
-    id=51050,
-    xsecs={13: Number(15810.), 13.6: Number(19982.5)},
-)
+
+# if needed for scaling from NLO to NNLO:
+# NLO cross section, based on GenXSecAnalyzer for
+# DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
+dy_m50toinf_nlo_13tev_xsec = Number(6421.0, {"tot": 11.25})
 
 # if needed for scaling from LO to NNLO:
 # LO cross section, based on GenXSecAnalyzer for DYJetsToLL_M-50_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
@@ -160,7 +160,7 @@ dy_m10to50 = dy.add_process(
     name="dy_m10to50",
     id=51001,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(15810.),  
         13.6: dy_m10to50_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
     aux={
