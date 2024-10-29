@@ -8,7 +8,7 @@ Credit to Juhee Song for providing the datasets
 from order import DatasetInfo
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2018_nano_v9_pNet import campaign_run2_2018_nano_v9_pNet as cpn
+from cmsdb.campaigns.run2_2018_nano_v9 import campaign_run2_2018_nano_v9 as cpn
 
 
 #
@@ -16,37 +16,7 @@ from cmsdb.campaigns.run2_2018_nano_v9_pNet import campaign_run2_2018_nano_v9_pN
 #
 
 cpn.add_dataset(
-    name="st_schannel_had",
-    id=166366322, #0
-    processes=[procs.st_schannel_had],
-    info=dict(
-        nominal=DatasetInfo(
-            keys=[
-                "/2018/ST_s-channel_4f_hadronicDecays_TuneCP5_13TeV-amcatnlo-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
-            ],
-            n_files=15,
-            n_events=16391000,
-        ),
-    ),
-)
-
-cpn.add_dataset(
-    name="st_schannel_lep",
-    id=166366355, #0
-    processes=[procs.st_schannel_lep],
-    info=dict(
-        nominal=DatasetInfo(
-            keys=[
-                "/2018/ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
-            ],
-            n_files=21,
-            n_events=19365999,
-        ),
-    ),
-)
-
-cpn.add_dataset(
-    name="st_tchannel_t_powheg",
+    name="st_tchannel_t_powheg_PNET",
     id=142939030, #0
     processes=[procs.st_tchannel_t],
     info=dict(
@@ -54,14 +24,14 @@ cpn.add_dataset(
             keys=[
                 "/2018/ST_t-channel_top_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
             ],
-            n_files=182,
+            n_files=3650,
             n_events=178397000,
         ),
     ),
 )
 
 cpn.add_dataset(
-    name="st_tchannel_tbar_powheg",
+    name="st_tchannel_tbar_powheg_PNET",
     id=142967560, #0
     processes=[procs.st_tchannel_tbar],
     info=dict(
@@ -69,38 +39,38 @@ cpn.add_dataset(
             keys=[
                 "/2018/ST_t-channel_antitop_4f_InclusiveDecays_TuneCP5_13TeV-powheg-madspin-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
             ],
-            n_files=95,
+            n_files=1913,
             n_events=95785000,
         ),
     ),
 )
 
 cpn.add_dataset(
-    name="st_twchannel_t",
+    name="st_twchannel_t_PNET",
     id=142488300, #0
     processes=[procs.st_twchannel_t],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/2018/ST_tW_top_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
+                "/2018/ST_tW_antitop_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
             ],
-            n_files=11,
-            n_events=11270430,
+            n_files=235,
+            n_events=11015956,
         ),
     ),
 )
 
 cpn.add_dataset(
-    name="st_twchannel_tbar",
+    name="st_twchannel_tbar_PNET",
     id=142537780, #0
     processes=[procs.st_twchannel_tbar],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/2018/ST_tW_antitop_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
+                "/2018UL/ST_tW_antitop_5f_NoFullyHadronicDecays_TuneCP5_13TeV-powheg-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
             ],
-            n_files=11,
-            n_events=11015956,
+            n_files=23, 
+            n_events=7749000, 
         ),
     ),
 )
@@ -110,23 +80,23 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="tt_sl_powheg",
+    name="tt_sl_powheg_PNET",
     id=142354370, #0
     processes=[procs.tt_sl],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/2018/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+                "/2018UL/TTToSemiLeptonic_TuneCP5_13TeV-powheg-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
             ],
-            n_files=250,
-            n_events=478982000,
+            n_files=391, 
+            n_events=476408000, 
         ),
     ),
 )
 
 
 cpn.add_dataset(
-    name="tt_dl_powheg",
+    name="tt_dl_powheg_PNET",
     id=142344740, #NOTE adding a last 0 to the id to avoid conflicts with the original tt_dl_powheg
     processes=[procs.tt_dl],
     info=dict(
@@ -134,14 +104,14 @@ cpn.add_dataset(
             keys=[
                 "/2018/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1"
             ],
-            n_files=153,
+            n_files=3069,
             n_events=146010000,
         ),
     ),
 )
 
 cpn.add_dataset(
-    name="tt_fh_powheg",
+    name="tt_fh_powheg_PNET",
     id=142320680, #0
     processes=[procs.tt_fh],
     info=dict(
@@ -160,54 +130,40 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ttztollnunu_m10_amcatnlo",
+    name="ttztollnunu_m10_amcatnlo_PNET",
     id=142531370, #0
     processes=[procs.ttz_llnunu_m10],
     keys=[
-        "/2018/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
-    ],
-    n_files=20,
-    n_events=19608000,
+            "/2018UL/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+        ],
+    n_files=21, 
+    n_events=19608000, 
 )
 
 cpn.add_dataset(
-    name="ttztoqq_amcatnlo",
+    name="ttztoll_m1to10_amcatnlo_PNET",
     id=143388130, #0
-    processes=[procs.ttz_qq],
+    processes=[procs.ttz_llnunu_m1],
     keys=[
-        "/2018/TTZToQQ_TuneCP5_13TeV-amcatnlo-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
-    ],
-    n_files=20,
-    n_events=19816000,
-)
-
-
-cpn.add_dataset(
-    name="tthtobb_powheg",
-    id=142318710, #0
-    processes=[procs.tth_bb],
-    keys=[
-        "/2018/ttHTobb_M125_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
-    ],
-    n_files=10,
-    n_events=9599000,
+            "/2018UL/TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+        ],
+    n_files=7, 
+    n_events=994000, 
 )
 
 cpn.add_dataset(
-    name="tthtononbb_powheg",
-    id=142348710, #0
-    processes=[procs.tth_nonbb],
+    name="tthjettononbb_m125_amcatnlo_PNET",
+    id=142308710, #0
+    processes=[procs.tthjetstononbb],
     keys=[
-        "/2018/ttHToNonbb_M125_TuneCP5_13TeV-powheg-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
-    ],
-    n_files=8,
-    n_events=7328993,
+            "/2018UL/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+        ],
+    n_files=51, 
+    n_events=9852567,
 )
 
-
-
 cpn.add_dataset(
-    name="ttgamma_dilept",
+    name="ttgamma_dilept_PNET",
     id=142603510, #0
     processes=[procs.ttgamma_dilept],
     keys=[
@@ -217,36 +173,22 @@ cpn.add_dataset(
     n_events=14694000,
 )
 
-
 cpn.add_dataset(
-    name="ttwjetstoln_amcatnlo",
+    name="ttwjetstoln_amcatnlo_PNET",
     id=142323230, #0
     processes=[procs.ttw_lnu],
     keys=[
-        "/2018/TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
-    ],
-    n_files=11,
-    n_events=10468937,
+            "/2018UL/TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+        ],
+    n_files=13,
+    n_events=10450000,
 )
-
-cpn.add_dataset(
-    name="ttwjetstoqq_amcatnlo",
-    id=142323231, #0
-    processes=[procs.ttw_qq],
-    keys=[
-        "/2018/TTWJetsToQQ_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v1", #noqa
-    ],
-    n_files=1,
-    n_events=970179,
-)
-#
-# TT + XX
 #
 # TT + XX
 #
 
 cpn.add_dataset(
-    name="ttww_madgraph",
+    name="ttww_madgraph_PNET",
     id=142354410, #0
     processes=[procs.ttww],
     keys=[
@@ -257,7 +199,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttwz_madgraph",
+    name="ttwz_madgraph_PNET",
     id=142347810, #0
     processes=[procs.ttwz],
     keys=[
@@ -268,7 +210,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttzz_madgraph",
+    name="ttzz_madgraph_PNET",
     id=142423070, #0
     processes=[procs.ttzz],
     keys=[
@@ -279,7 +221,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tthh_madgraph",
+    name="tthh_madgraph_PNET",
     id=142861400, #0
     processes=[procs.tthh],
     keys=[
@@ -290,7 +232,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttwh_madgraph",
+    name="ttwh_madgraph_PNET",
     id=142853920, #0
     processes=[procs.ttwh],
     keys=[
@@ -301,7 +243,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttzh_madgraph",
+    name="ttzh_madgraph_PNET",
     id=142861900, #0
     processes=[procs.ttzh],
     keys=[
@@ -312,7 +254,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tttt_amcatnlo",
+    name="tttt_amcatnlo_PNET",
     id=142848320, #0
     processes=[procs.tttt],
     keys=[
@@ -327,7 +269,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="twztoll_thad_wlept_dr1_amcatnlo",
+    name="twztoll_thad_wlept_dr1_amcatnlo_PNET",
     id=142313840, #0
     processes=[procs.twztoll_thad_wlept_dr1],
     keys=[
@@ -338,7 +280,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twztoll_tlept_whad_dr1_amcatnlo",
+    name="twztoll_tlept_whad_dr1_amcatnlo_PNET",
     id=147281510, #0
     processes=[procs.twztoll_tlept_whad_dr1],
     keys=[
@@ -349,7 +291,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twztoll_tlept_wlept_dr1_amcatnlo",
+    name="twztoll_tlept_wlept_dr1_amcatnlo_PNET",
     id=142313680, #0
     processes=[procs.twztoll_tlept_wlept_dr1],
     keys=[
@@ -360,7 +302,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tzq_ll_4f_ckm_amcatnlo",
+    name="tzq_ll_4f_ckm_amcatnlo_PNET",
     id=143003610, #0
     processes=[procs.tzq],
     keys=[

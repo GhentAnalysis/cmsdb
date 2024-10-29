@@ -862,6 +862,24 @@ w_lnu_lo_13tev_xsec = Number(54070.0, {"tot": 18.32})
 # for WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
 # LO cross sections, scaled to NNLO
+# inclusive cross section based on WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# ht bins based on datasets WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+w_lnu_0j = w_lnu.add_process(
+    name="w_lnu_0j",
+    id=6101,
+    xsecs={13: Number(48716.955)},
+)
+w_lnu_1j = w_lnu.add_process(
+    name="w_lnu_1j",
+    id=6102,
+    xsecs={13: Number(8107.312)},
+)
+w_lnu_2j = w_lnu.add_process(
+    name="w_lnu_2j",
+    id=6103,
+    xsecs={13: Number(3049.263)},
+)
+
 w_lnu_ht70to100 = w_lnu.add_process(
     name="w_lnu_ht70to100",
     id=6110,
@@ -1154,7 +1172,7 @@ zz_zll_znunu = zz.add_process(
 zz_zll_zll = zz.add_process(
     name="zz_zll_zll",
     id=8130,
-    xsecs=multiply_xsecs(zz, const.br_zz.llll),
+    xsecs={13: Number(1.325), 13.6: Number(1.65)},
 )
 
 zz_zqq_zqq = zz.add_process(
@@ -1199,7 +1217,7 @@ wz = vv.add_process(
 wz_wlnu_zll = wz.add_process(
     name="wz_wlnu_zll",
     id=8210,
-    xsecs=multiply_xsecs(zz, const.br_w.lep * const.br_z.clep),
+    xsecs={13: 4.429, 13.6: 5.31},
 )
 
 wz_wqq_zll = wz.add_process(
@@ -1254,9 +1272,7 @@ for cme in [13]:
 ww_dl = ww.add_process(
     name="ww_dl",
     id=8310,
-    xsecs={
-        13: ww.get_xsec(13) * const.br_ww.dl,  # value around 12.6 for comparison to GenXSecAnalyzer NLO result
-    },
+    xsecs={13: Number(12.178), 13.6: Number(12.98)},  # TODO
 )
 
 # no additional cut found in generator card in MCM:
