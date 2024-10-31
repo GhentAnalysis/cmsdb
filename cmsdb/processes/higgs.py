@@ -1389,7 +1389,6 @@ tth_hcc = add_decay_process(tth, h_decay_map.hcc)
 tth_hzg = add_decay_process(tth, h_decay_map.hzg)
 tth_hgg = add_decay_process(tth, h_decay_map.hgg)
 tth_hmm = add_decay_process(tth, h_decay_map.hmm)
->>>>>>> e2b696c01ba94f11a3a9e9adaea48d601bd39000
 
 # Higgs sub-decay channels
 tth_hwwqqlnu = add_sub_decay_process(tth_hww, ww_decay_map["qqlnu"])
