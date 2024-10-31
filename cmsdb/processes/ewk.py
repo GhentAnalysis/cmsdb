@@ -42,10 +42,13 @@ __all__ = [
     "w_lnu_0j",
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
+<<<<<<< HEAD
     "w_lnu_1j", "w_lnu_1j_pt40to100", "w_lnu_1j_pt100to200", "w_lnu_1j_pt200to400",
     "w_lnu_1j_pt400to600", "w_lnu_1j_pt600toinf",
     "w_lnu_2j", "w_lnu_2j_pt40to100", "w_lnu_2j_pt100to200", "w_lnu_2j_pt200to400",
     "w_lnu_2j_pt400to600", "w_lnu_2j_pt600toinf",
+=======
+>>>>>>> c864013 (fix stuff)
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
     "vv",

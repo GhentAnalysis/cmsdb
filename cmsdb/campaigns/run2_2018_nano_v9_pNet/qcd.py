@@ -13,7 +13,7 @@ cpn.add_dataset(
     id=140417147,
     processes=[procs.qcd_ht50to100],
     keys=[
-        "/2018/QCD_HT50to100_TuneCP5_13TeV-madgraphMLM-pythia8/dev_Run2ULPuppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT50to100_TuneCP5_13TeV-madgraphMLM-pythia8/dev_Run2ULPuppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=20,
     n_events=38521609,
@@ -23,7 +23,7 @@ cpn.add_dataset(
     id=140417146,
     processes=[procs.qcd_ht100to200],
     keys=[
-        "/2018/QCD_HT100to200_TuneCP5_13TeV-madgraphMLM-pythia8/dev_Run2ULPuppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT100to200_TuneCP5_13TeV-madgraphMLM-pythia8/dev_Run2ULPuppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=39,
     n_events=78438757,
@@ -33,7 +33,7 @@ cpn.add_dataset(
     id=140417145,
     processes=[procs.qcd_ht200to300],
     keys=[
-        "/2018/QCD_HT200to300_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT200to300_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=68,
     n_events=61565494,
@@ -43,7 +43,7 @@ cpn.add_dataset(
     id=140417144,
     processes=[procs.qcd_ht300to500],
     keys=[
-        "/2018/QCD_HT300to500_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT300to500_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=64,
     n_events=57213303,
@@ -53,7 +53,7 @@ cpn.add_dataset(
     id=140417143,
     processes=[procs.qcd_ht500to700],
     keys=[
-        "/2018/QCD_HT500to700_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT500to700_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=80,
     n_events=61644502,
@@ -63,7 +63,7 @@ cpn.add_dataset(
     id=140417142,
     processes=[procs.qcd_ht700to1000],
     keys=[
-        "/2018/QCD_HT700to1000_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT700to1000_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=67,
     n_events=47664468,
@@ -73,7 +73,7 @@ cpn.add_dataset(
     id=140417141,
     processes=[procs.qcd_ht1000to1500],
     keys=[
-        "/2018/QCD_HT1000to1500_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT1000to1500_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=26,
     n_events=15230975,
@@ -83,7 +83,7 @@ cpn.add_dataset(
     id=140417140,
     processes=[procs.qcd_ht1500to2000],
     keys=[
-        "/2018/QCD_HT1500to2000_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT1500to2000_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=26,
     n_events=12063456,
@@ -91,9 +91,9 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="qcd_ht2000",
     id=140417139,
-    processes=[procs.qcd_ht2000],
+    processes=[procs.qcd_ht2000toinf],
     keys=[
-        "/2018/QCD_HT2000toInf_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT2000toInf_TuneCP5_13TeV-madgraphMLM-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=14,
     n_events=5710430,
@@ -105,7 +105,7 @@ cpn.add_dataset(
     id=140417138,
     processes=[procs.qcd_bgen_ht200to300],
     keys=[
-        "/2018/QCD_HT200to300_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT200to300_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=9,
     n_events=14830551,
@@ -115,7 +115,7 @@ cpn.add_dataset(
     id=140417137,
     processes=[procs.qcd_bgen_ht300to500],
     keys=[
-        "/2018/QCD_HT300to500_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT300to500_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=12,
     n_events=14144826,
@@ -125,7 +125,7 @@ cpn.add_dataset(
     id=140417136,
     processes=[procs.qcd_bgen_ht500to700],
     keys=[
-        "/2018/QCD_HT500to700_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT500to700_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=7,
     n_events=8015859,
@@ -135,7 +135,7 @@ cpn.add_dataset(
     id=140417135,
     processes=[procs.qcd_bgen_ht700to1000],
     keys=[
-        "/2018/QCD_HT700to1000_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT700to1000_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=5,
     n_events=4642245,
@@ -145,7 +145,7 @@ cpn.add_dataset(
     id=140417134,
     processes=[procs.qcd_bgen_ht1000to1500],
     keys=[
-        "/2018/QCD_HT1000to1500_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT1000to1500_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=1,
     n_events=1537452,
@@ -155,7 +155,7 @@ cpn.add_dataset(
     id=140417133,
     processes=[procs.qcd_bgen_ht1500to2000],
     keys=[
-        "/2018/QCD_HT1500to2000_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT1500to2000_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=1,
     n_events=1263157,
@@ -165,7 +165,7 @@ cpn.add_dataset(
     id=140417132,
     processes=[procs.qcd_bgen_ht2000],
     keys=[
-        "/2018/QCD_HT2000toInf_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2", #noqa
+        "/2018/QCD_HT2000toInf_BGenFilter_TuneCP5_13TeV-madgraph-pythia8/NanoTuples-28Aug2023_Run2ULNanoAOD_AK4Puppi_RunIISummer20UL18MiniAODv2-106X_v16-v2",  # noqa
     ],
     n_files=2,
     n_events=1300672,
@@ -287,7 +287,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="qcd_mu_pt1000_pythia",
     id=14281945,
-    processes=[procs.qcd_mu_pt1000],
+    processes=[procs.qcd_mu_pt1000toinf],
     keys=[
         "/QCD_Pt-1000_MuEnrichedPt5_TuneCP5_13TeV-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -379,7 +379,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="qcd_em_pt300toInf_pythia",
     id=14271788,
-    processes=[procs.qcd_em_pt300toInf],
+    processes=[procs.qcd_em_pt300toinf],
     keys=[
         "/QCD_Pt-300toInf_EMEnriched_TuneCP5_13TeV-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
