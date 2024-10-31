@@ -39,6 +39,7 @@ __all__ = [
     "w",
     "w_taunu", "w_munu",
     "w_lnu",
+    "w_lnu_0j", "w_lnu_1j", "w_lnu_2j",
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
     "ewk",
@@ -86,6 +87,7 @@ dy = Process(
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/StandardModelCrossSectionsat13TeV?rev=28
 # and for 13.6 TeV, based on:
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
+
 
 # if needed for scaling from NLO to NNLO:
 # NLO cross section, based on GenXSecAnalyzer for
@@ -152,7 +154,7 @@ dy_m10to50 = dy.add_process(
     name="dy_m10to50",
     id=51001,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(15810.),  
         13.6: dy_m10to50_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
     aux={
@@ -864,6 +866,24 @@ w_lnu = w.add_process(
 # using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
 
 w_lnu_lo_13tev_xsec = Number(54070.0, {"tot": 18.32})
+
+
+# jet binned samples
+w_lnu_0j = w_lnu.add_process(
+    name="w_lnu_0j",
+    id=6101,
+    xsecs={13: Number(48716.955)},
+)
+w_lnu_1j = w_lnu.add_process(
+    name="w_lnu_1j",
+    id=6102,
+    xsecs={13: Number(8107.312)},
+)
+w_lnu_2j = w_lnu.add_process(
+    name="w_lnu_2j",
+    id=6103,
+    xsecs={13: Number(3049.263)},
+)
 
 # LO cross sections, scaled to NNLO
 
