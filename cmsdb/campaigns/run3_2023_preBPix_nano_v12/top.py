@@ -932,16 +932,16 @@ cpn.add_dataset(
     n_events=794000,
 )
 
-# TODO ttW not available in 2023 preBPIX yet
-# cpn.add_dataset(
-#     name="ttw_wlnu_1jets",
-#     id=14836097,
-#     processes=[procs.ttw_wlnu],
-#     keys=[
-#         ],
-#     n_files=1,
-#     n_events=111308,
-# )
+cpn.add_dataset(
+    name="ttw_wlnu_1jets",
+    id=15138234,
+    processes=[procs.ttw_wlnu],
+    keys=[
+        "/TTLNu-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",
+    ],
+    n_files=3,
+    n_events=460305,
+)
 
 #
 # TT + XX
@@ -1010,6 +1010,18 @@ cpn.add_dataset(
 # only dr2 available
 
 cpn.add_dataset(
+    name="twz_tqq_wlnu_zll_dr1",
+    id=15140387,
+    processes=[procs.twz_tqq_wlnu_zll_dr1],
+    keys=[
+            "/TWZ_Tto2Q_WtoLNu_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+        ],
+    n_files=52,
+    n_events=4336000,
+)
+
+
+cpn.add_dataset(
     name="twz_tqq_wlnu_zll_dr2",
     id=15053561,
     processes=[procs.twz_tqq_wlnu_zll_dr2],
@@ -1018,6 +1030,17 @@ cpn.add_dataset(
         ],
     n_files=8,
     n_events=1096000,
+)
+
+cpn.add_dataset(
+    name="twz_tlnu_wqq_zll_dr1",
+    id=15139307,
+    processes=[procs.twz_tlnu_wqq_zll_dr1],
+    keys=[
+            "/TWZ_TtoLNu_Wto2Q_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+        ],
+    n_files=35,
+    n_events=4272000,
 )
 
 cpn.add_dataset(
@@ -1030,6 +1053,17 @@ cpn.add_dataset(
     n_files=26,
     n_events=1091000,
 )
+
+# TODO missing for 2023 preBPix
+# cpn.add_dataset(
+#     name="twz_tlnu_wlnu_zll_dr1",
+#     id=15054360,
+#     processes=[procs.twz_tlnu_wlnu_zll_dr1],
+#     keys=[
+#         ],
+#     n_files=14,
+#     n_events=444000,
+# )
 
 cpn.add_dataset(
     name="twz_tlnu_wlnu_zll_dr2",
