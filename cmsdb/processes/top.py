@@ -16,7 +16,7 @@ __all__ = [
     "st_schannel", "st_schannel_lep", "st_schannel_had",
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
-    "tzq",
+    "tzq", "tzq_wlnu",
     "twz_tqq_wlnu_zll_dr1", "twz_tlnu_wqq_zll_dr1", "twz_tlnu_wlnu_zll_dr1",
     "twz_tqq_wlnu_zll_dr2", "twz_tlnu_wqq_zll_dr2", "twz_tlnu_wlnu_zll_dr2",
     "ttv",
@@ -361,6 +361,14 @@ tzq = Process(
     label='tZq',
     xsecs={13: 0.07358, 13.6: Number(0.07968)},
 )
+
+tzq_wlnu = tzq.add_process(
+    name="tzq_wlnu",
+    id=2510,
+    label="tZq (lept)",
+    xsecs=multiply_xsecs(tzq, const.br_w.lep),
+)
+
 
 twz = Process(
     name="twz",

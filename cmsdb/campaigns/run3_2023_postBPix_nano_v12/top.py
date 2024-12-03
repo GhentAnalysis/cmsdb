@@ -118,11 +118,20 @@ cpn.add_dataset(
     name="ttz_zll_m4to50",
     id=14982175,
     processes=[procs.ttz_zll_m4to50],
-    keys=[
-            "/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
-        ],
-    n_files=17,
-    n_events=294000,
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+            ],
+            aux={
+                "broken_files": [
+                    "/store/mc/Run3Summer23BPixNanoAODv12/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2023_realistic_postBPix_v6-v2/80000/3370d4e8-e2f9-4901-b8af-e3225e39a1c2.root",
+                ],
+            },
+            n_files=16,  # 17-1 broken file because not available on t2b
+            n_events=294000,
+        ),
+    ),
 )
 
 cpn.add_dataset(
@@ -277,7 +286,7 @@ cpn.add_dataset(
     n_events=226000,
 )
 
-# tZq not available in 2023 preBPIX
+# tZq not available in 2023 postBPIX
 # cpn.add_dataset(
 #   name="tzq_zll_4f_m30toinf",
 #   id=14916923,

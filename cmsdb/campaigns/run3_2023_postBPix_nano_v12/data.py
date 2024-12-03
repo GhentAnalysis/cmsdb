@@ -171,7 +171,7 @@ cpn.add_dataset(
     keys=[
         "/EGamma1/Run2023C-22Sep2023_v2-v1/NANOAOD",  # noqa
     ],
-    n_files=30,
+    n_files=24,
     n_events=22653287,
     aux={
         "era": "D",
