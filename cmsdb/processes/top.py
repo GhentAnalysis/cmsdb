@@ -20,7 +20,8 @@ __all__ = [
     "twz_tqq_wlnu_zll_dr1", "twz_tlnu_wqq_zll_dr1", "twz_tlnu_wlnu_zll_dr1",
     "twz_tqq_wlnu_zll_dr2", "twz_tlnu_wqq_zll_dr2", "twz_tlnu_wlnu_zll_dr2",
     "ttv",
-    "ttz", "ttz_zqq", "ttz_zlep_m1to10", "ttz_zlep_m10toinf", "ttz_zll_m4to50", "ttz_zll_m50toinf", "ttz_znunu",
+    "ttz", "ttz_zqq", "ttz_zlep_m1to10", "ttz_zlep_m10toinf", "ttz_zll_m4to50",
+    "ttz_zll_m50toinf", "ttz_znunu",
     "ttgamma", "ttgamma_dilept",
     "ttw", "ttw_wlnu", "ttw_wqq",
     "ttvv",
@@ -500,7 +501,7 @@ ttz_zll_m50toinf = ttz.add_process(
 
 ttz_znunu = ttz.add_process(
     name="ttz_znunu",
-    id=3118,
+    id=3130,
     xsecs={
         # XSDB
         13.6: Number(0.1638, {
@@ -511,7 +512,7 @@ ttz_znunu = ttz.add_process(
 
 ttz_zqq = ttz.add_process(
     name="ttz_zqq",
-    id=3120,
+    id=3140,
     xsecs=multiply_xsecs(ttz, const.br_z.qq),
 )
 
