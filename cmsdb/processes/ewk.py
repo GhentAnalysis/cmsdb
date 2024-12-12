@@ -37,7 +37,7 @@ __all__ = [
     "zz", "zz_qqll_m4", "zz_llnunu", "zz_llll", "zz_qqqq", "zz_nunuqq",
     "ggtozzto4l", "ggtozzto2e2mu", "ggtozzto2mu2tau", "ggtozzto2e2tau",
     "ggtozzto4e", "ggtozzto4mu", "ggtozzto4tau",
-    "wz", "wz_lllnu", "wz_qqll_m4", "wz_lnununu_m4", 
+    "wz", "wz_lllnu", "wz_qqll_m4", "wz_lnununu_m4",
     "ww", "ww_lnulnu", "ww_lnuqq", "ww_qqqq",
     "vvv",
     "zzz", "wzz", "wwz", "www", "wwz4f", "www4f",
@@ -73,7 +73,7 @@ dy_lep = dy.add_process(
 dy_lep_m10to50 = dy_lep.add_process(
     name="dy_lep_m10to50",
     id=51050,
-    xsecs={13: Number(18610.)},
+    xsecs={13: Number(15810.)},
 )
 
 dy_lep_m50 = dy_lep.add_process(
