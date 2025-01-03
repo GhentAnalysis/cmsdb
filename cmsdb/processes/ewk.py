@@ -1066,7 +1066,6 @@ wz = vv.add_process(
     },
 )
 
-# wz_wlnu_zll cross section updated to match WZ inclusive measurement 13.6 TeV
 wz_wlnu_zll = wz.add_process(
     name="wz_wlnu_zll",
     id=8210,

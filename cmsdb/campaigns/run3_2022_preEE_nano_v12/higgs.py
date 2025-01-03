@@ -1218,7 +1218,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="ttzh_madgraph",
     id=14861662,
-    processes=[procs.ttz],
+    processes=[procs.ttzh],
     info=dict(
         nominal=DatasetInfo(
             keys=[

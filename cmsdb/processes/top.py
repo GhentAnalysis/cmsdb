@@ -17,6 +17,7 @@ __all__ = [
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
     "tzq", "tzq_wlnu",
+    "tx",
     "twz_tqq_wlnu_zll_dr1", "twz_tlnu_wqq_zll_dr1", "twz_tlnu_wlnu_zll_dr1",
     "twz_tqq_wlnu_zll_dr2", "twz_tlnu_wqq_zll_dr2", "twz_tlnu_wlnu_zll_dr2",
     "ttv",
@@ -356,7 +357,14 @@ st.set_xsec(
 # 13.6 TeV xsec from GenXSecAnalyzer
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/HowToGenXSecAnalyzer
 
-tzq = Process(
+tx = Process(
+    name="tx",
+    id=2499,
+    label='t+X',
+    xsecs={},
+)
+
+tzq = tx.add_process(
     name="tzq",
     id=2500,
     label='tZq',
@@ -371,7 +379,7 @@ tzq_wlnu = tzq.add_process(
 )
 
 
-twz = Process(
+twz = tx.add_process(
     name="twz",
     id=2600,
     label='tWZ',

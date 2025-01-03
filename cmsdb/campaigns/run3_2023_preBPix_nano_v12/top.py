@@ -1077,13 +1077,3 @@ cpn.add_dataset(
 )
 
 # tZq not available in 2023 preBPIX
-# cpn.add_dataset(
-#   name="tzq_zll_4f_m30toinf",
-#   id=14916923,
-#   processes=[procs.tzq],
-#   keys=[
-#           "/TZQB-Zto2L-4FS_MLL-30_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
-#       ],
-#   n_files=32,
-#   n_events=889780,
-# )
