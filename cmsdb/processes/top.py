@@ -68,7 +68,7 @@ tt = Process(
 
 tt_sl = tt.add_process(
     name="tt_sl",
-    id=tt.id+100,
+    id=tt.id + 100,
     label=f"{tt.label}, SL",
     color=(205, 0, 9),
     xsecs=multiply_xsecs(tt, const.br_ww.sl),
@@ -76,7 +76,7 @@ tt_sl = tt.add_process(
 
 tt_dl = tt.add_process(
     name="tt_dl",
-    id=tt.id+200,
+    id=tt.id + 200,
     label=f"{tt.label}, DL",
     color=(235, 230, 10),
     xsecs=multiply_xsecs(tt, const.br_ww.dl),
@@ -84,7 +84,7 @@ tt_dl = tt.add_process(
 
 tt_fh = tt.add_process(
     name="tt_fh",
-    id=tt.id+300,
+    id=tt.id + 300,
     label=f"{tt.label}, FH",
     color=(255, 153, 0),
     xsecs=multiply_xsecs(tt, const.br_ww.fh),

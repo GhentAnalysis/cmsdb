@@ -835,14 +835,14 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-   name="gluglutocontintozzto2e2mu_mcfm",
-   id=15022885,
-   processes=[procs.ggtozzto2e2mu],
-   keys=[
-       "/GluGluToContinto2Zto2E2Mu_TuneCP5_13p6TeV_mcfm701-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
-   ],
-   n_files=32,
-   n_events=525000,
+    name="gluglutocontintozzto2e2mu_mcfm",
+    id=15022885,
+    processes=[procs.ggtozzto2e2mu],
+    keys=[
+        "/GluGluToContinto2Zto2E2Mu_TuneCP5_13p6TeV_mcfm701-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=32,
+    n_events=525000,
 )
 
 cpn.add_dataset(

@@ -1039,14 +1039,14 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-   name="ttwz_madgraph",
-   id=15007011,
-   processes=[procs.ttwz],
-   keys=[
+    name="ttwz_madgraph",
+    id=15007011,
+    processes=[procs.ttwz],
+    keys=[
         "/TTWZ_TuneCP5_13p6TeV_madgraph-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],
-   n_files=49,
-   n_events=1132932,
+    n_files=49,
+    n_events=1132932,
 )
 
 
@@ -1122,12 +1122,12 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-   name="tzq_zll_4f_m30toinf",
-   id=14916913,
-   processes=[procs.tzq],
-   keys=[
-        "/TZQB-Zto2L-4FS_MLL-30_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    name="tzq_zll_4f_m30toinf",
+    id=14916913,
+    processes=[procs.tzq],
+    keys=[
+         "/TZQB-Zto2L-4FS_MLL-30_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],
-   n_files=40,
-   n_events=3047512,
+    n_files=40,
+    n_events=3047512,
 )

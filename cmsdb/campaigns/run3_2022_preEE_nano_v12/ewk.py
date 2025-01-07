@@ -680,7 +680,7 @@ cpn.add_dataset(
             ],
             n_files=40,
             n_events=6135192,
-            ),
+        ),
         extension=DatasetInfo(
             keys=[
                 "/WWto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa

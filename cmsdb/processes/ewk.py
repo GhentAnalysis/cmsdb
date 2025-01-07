@@ -154,7 +154,7 @@ dy_m10to50 = dy.add_process(
     name="dy_m10to50",
     id=51001,
     xsecs={
-        13: Number(15810.),  
+        13: Number(15810.),
         13.6: dy_m10to50_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
     aux={
