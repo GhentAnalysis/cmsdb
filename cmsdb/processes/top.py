@@ -68,7 +68,7 @@ tt = Process(
 
 tt_sl = tt.add_process(
     name="tt_sl",
-    id=1100,
+    id=tt.id+100,
     label=f"{tt.label}, SL",
     color=(205, 0, 9),
     xsecs=multiply_xsecs(tt, const.br_ww.sl),
@@ -76,7 +76,7 @@ tt_sl = tt.add_process(
 
 tt_dl = tt.add_process(
     name="tt_dl",
-    id=1200,
+    id=tt.id+200,
     label=f"{tt.label}, DL",
     color=(235, 230, 10),
     xsecs=multiply_xsecs(tt, const.br_ww.dl),
@@ -84,7 +84,7 @@ tt_dl = tt.add_process(
 
 tt_fh = tt.add_process(
     name="tt_fh",
-    id=1300,
+    id=tt.id+300,
     label=f"{tt.label}, FH",
     color=(255, 153, 0),
     xsecs=multiply_xsecs(tt, const.br_ww.fh),
@@ -475,6 +475,7 @@ ttz_zlep_m10toinf = ttz.add_process(
     },
 )
 
+
 ttz_zlep_m1to10 = ttz.add_process(
     name="ttz_zlep_m1to10",  # non-hadronically decaying Z
     id=3111,
@@ -500,6 +501,7 @@ ttz_zll_m50toinf = ttz.add_process(
     name="ttz_zll_m50toinf",
     id=3116,
     xsecs={
+        13: Number(0.0822),
         # XSDB
         13.6: Number(0.08646, {
             "total": 0.0000552,
@@ -523,7 +525,6 @@ ttz_zqq = ttz.add_process(
     id=3140,
     xsecs=multiply_xsecs(ttz, const.br_z.qq),
 )
-
 
 #
 # ttgamma
@@ -590,9 +591,6 @@ for ecm in (13, 14):
     ttv.set_xsec(ecm, ttw.get_xsec(ecm) + ttz.get_xsec(ecm))
 
 
-# 13.6 ttH cross section: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG136TeVxsec_extrap
-
-#
 # ttbar + 2 vector bosons
 #
 # https://arxiv.org/pdf/1610.07922.pdf page 165 Table 42
