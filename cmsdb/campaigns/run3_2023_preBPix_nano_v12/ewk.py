@@ -776,6 +776,98 @@ cpn.add_dataset(
 ####################################################################################################
 
 #
+# ZZ
+#
+
+cpn.add_dataset(
+    name="zz_pythia",
+    id=14788275,
+    is_data=False,
+    processes=[procs.zz],
+    keys=[
+        "/ZZ_TuneCP5_13p6TeV_pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=11,
+    n_events=2517000,
+)
+
+cpn.add_dataset(
+    name="zz_zll_zll",
+    id=14888198,
+    processes=[procs.zz_zll_zll],
+    keys=[
+        "/ZZto4L_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=165,
+    n_events=29832000,
+)
+
+#
+# WZ
+#
+
+cpn.add_dataset(
+    name="wz",
+    id=14789850,
+    is_data=False,
+    processes=[procs.wz],
+    keys=[
+        "/WZ_TuneCP5_13p6TeV_pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=60,
+    n_events=16770000,
+)
+
+cpn.add_dataset(
+    name="wz_wlnu_zll",
+    id=14843630,
+    is_data=False,
+    processes=[procs.wz_wlnu_zll],
+    keys=[
+        "/WZto3LNu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v14-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=59,
+    n_events=5522000,
+)
+
+#
+# GluGluToContinToZZ
+#
+
+cpn.add_dataset(
+    name="gluglutocontintozzto2e2mu_mcfm",
+    id=15022885,
+    processes=[procs.ggtozzto2e2mu],
+    keys=[
+        "/GluGluToContinto2Zto2E2Mu_TuneCP5_13p6TeV_mcfm701-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=32,
+    n_events=525000,
+)
+
+cpn.add_dataset(
+    name="gluglutocontintozzto2e2tau_mcfm",
+    id=15022659,
+    processes=[procs.ggtozzto2e2tau],
+    keys=[
+        "/GluGluToContinto2Zto2E2Tau_TuneCP5_13p6TeV_mcfm701-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=34,
+    n_events=525000,
+)
+
+cpn.add_dataset(
+    name="gluglutocontintozzto2mu2tau_mcfm",
+    id=15022864,
+    processes=[procs.ggtozzto2mu2tau],
+    keys=[
+        "/GluGluToContinto2Zto2Mu2Tau_TuneCP5_13p6TeV_mcfm701-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=27,
+    n_events=522000,
+)
+
+#
 # WW
 #
 
