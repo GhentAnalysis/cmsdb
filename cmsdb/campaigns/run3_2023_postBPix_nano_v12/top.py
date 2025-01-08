@@ -125,10 +125,9 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/mc/Run3Summer23BPixNanoAODv12/TTLL_MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2023_realistic_postBPix_v6-v2/80000/3370d4e8-e2f9-4901-b8af-e3225e39a1c2.root",
                 ],
             },
-            n_files=16,  # 17-1 broken file because not available on t2b
+            n_files=17,
             n_events=294000,
         ),
     ),
