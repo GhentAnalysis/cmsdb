@@ -16,11 +16,13 @@ __all__ = [
     "st_schannel", "st_schannel_lep", "st_schannel_had",
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
-    "tzq",
+    "tzq", "tzq_wlnu",
+    "tx",
     "twz_tqq_wlnu_zll_dr1", "twz_tlnu_wqq_zll_dr1", "twz_tlnu_wlnu_zll_dr1",
     "twz_tqq_wlnu_zll_dr2", "twz_tlnu_wqq_zll_dr2", "twz_tlnu_wlnu_zll_dr2",
     "ttv",
-    "ttz", "ttz_zqq", "ttz_zlep_m1to10", "ttz_zlep_m10toinf", "ttz_zll_m4to50", "ttz_zll_m50toinf", "ttz_znunu",
+    "ttz", "ttz_zqq", "ttz_zlep_m1to10", "ttz_zlep_m10toinf", "ttz_zll_m4to50",
+    "ttz_zll_m50toinf", "ttz_znunu",
     "ttgamma", "ttgamma_dilept",
     "ttw", "ttw_wlnu", "ttw_wqq",
     "ttvv",
@@ -66,7 +68,7 @@ tt = Process(
 
 tt_sl = tt.add_process(
     name="tt_sl",
-    id=tt.id+100,
+    id=tt.id + 100,
     label=f"{tt.label}, SL",
     color=(205, 0, 9),
     xsecs=multiply_xsecs(tt, const.br_ww.sl),
@@ -74,7 +76,7 @@ tt_sl = tt.add_process(
 
 tt_dl = tt.add_process(
     name="tt_dl",
-    id=tt.id+200,
+    id=tt.id + 200,
     label=f"{tt.label}, DL",
     color=(235, 230, 10),
     xsecs=multiply_xsecs(tt, const.br_ww.dl),
@@ -82,7 +84,7 @@ tt_dl = tt.add_process(
 
 tt_fh = tt.add_process(
     name="tt_fh",
-    id=tt.id+300,
+    id=tt.id + 300,
     label=f"{tt.label}, FH",
     color=(255, 153, 0),
     xsecs=multiply_xsecs(tt, const.br_ww.fh),
@@ -355,14 +357,29 @@ st.set_xsec(
 # 13.6 TeV xsec from GenXSecAnalyzer
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/HowToGenXSecAnalyzer
 
-tzq = Process(
+tx = Process(
+    name="tx",
+    id=2499,
+    label='t+X',
+    xsecs={},
+)
+
+tzq = tx.add_process(
     name="tzq",
     id=2500,
     label='tZq',
     xsecs={13: 0.07358, 13.6: Number(0.07968)},
 )
 
-twz = Process(
+tzq_wlnu = tzq.add_process(
+    name="tzq_wlnu",
+    id=2510,
+    label="tZq (lept)",
+    xsecs=multiply_xsecs(tzq, const.br_w.lep),
+)
+
+
+twz = tx.add_process(
     name="twz",
     id=2600,
     label='tWZ',
@@ -494,7 +511,7 @@ ttz_zll_m50toinf = ttz.add_process(
 
 ttz_znunu = ttz.add_process(
     name="ttz_znunu",
-    id=3118,
+    id=3130,
     xsecs={
         # XSDB
         13.6: Number(0.1638, {
@@ -505,7 +522,7 @@ ttz_znunu = ttz.add_process(
 
 ttz_zqq = ttz.add_process(
     name="ttz_zqq",
-    id=3120,
+    id=3140,
     xsecs=multiply_xsecs(ttz, const.br_z.qq),
 )
 

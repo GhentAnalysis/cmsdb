@@ -680,7 +680,7 @@ cpn.add_dataset(
             ],
             n_files=40,
             n_events=6135192,
-            ),
+        ),
         extension=DatasetInfo(
             keys=[
                 "/WWto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5_ext1-v2/NANOAODSIM",  # noqa
@@ -761,3 +761,51 @@ cpn.add_dataset(
 #    n_files=10,
 #    n_events=493998,
 # )
+
+#
+# Triple Boson
+#
+
+cpn.add_dataset(
+    name="www",
+    id=14800679,
+    processes=[procs.www],
+    keys=[
+        "/WWW_4F_TuneCP5_13p6TeV_amcatnlo-madspin-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=24,
+    n_events=450000,
+)
+
+cpn.add_dataset(
+    name="wwz",
+    id=14797985,
+    processes=[procs.wwz],
+    keys=[
+        "/WWZ_4F_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=40,
+    n_events=1950044,
+)
+
+cpn.add_dataset(
+    name="wzz",
+    id=14796198,
+    processes=[procs.wzz],
+    keys=[
+        "/WZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=19,
+    n_events=1987058,
+)
+
+cpn.add_dataset(
+    name="zzz",
+    id=14801345,
+    processes=[procs.zzz],
+    keys=[
+        "/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=23,
+    n_events=1970234,
+)

@@ -250,8 +250,8 @@ __all__ = [
     "wmh_wqq_hzz4l", "wmh_wqq_hzz2l2nu", "wmh_wqq_hzz2l2q", "wmh_wqq_hzz2q2nu", "wmh_wqq_hzz4nu", "wmh_wqq_hzz4q",
     "wmh_wqq_hzg_zll", "wmh_wqq_hzg_zqq", "wmh_wqq_hzg_znunu",
     "tth",
-    "tth_htt", "tth_hww", "tth_hzz", "tth_hbb", "tth_hnonbb", "tth_hnonbb_1j", "tth_hcc", "tth_hzg", "tth_hgg", "tth_hmm",
-    "tth_hwwqqlnu", "tth_hww2l2nu", "tth_hww4q",
+    "tth_htt", "tth_hww", "tth_hzz", "tth_hbb", "tth_hnonbb", "tth_hnonbb_1j", "tth_hcc", "tth_hzg", "tth_hgg",
+    "tth_hmm", "tth_hwwqqlnu", "tth_hww2l2nu", "tth_hww4q",
     "tth_hzz4l", "tth_hzz2l2nu", "tth_hzz2l2q", "tth_hzz2q2nu", "tth_hzz4nu", "tth_hzz4q",
     "tth_hzg_zll", "tth_hzg_zqq", "tth_hzg_znunu",
     # TODO: the following processes are not yet implemented in full combination
