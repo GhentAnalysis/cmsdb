@@ -1222,13 +1222,16 @@ wz = vv.add_process(
 wz_wlnu_zll = wz.add_process(
     name="wz_wlnu_zll",
     id=8210,
-    xsecs={13: 4.429, 13.6: 5.31},
+    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.clep),
 )
+
+# wz_wlnu_zll cross section updated to match WZ inclusive measurement 13.6 TeV
+wz_wlnu_zll.xsecs[13.6] = Number(5.31)
 
 wz_wqq_zll = wz.add_process(
     name="wz_wqq_zll",
     id=8220,
-    xsecs=multiply_xsecs(zz, const.br_w.had * const.br_z.clep),
+    xsecs=multiply_xsecs(wz, const.br_w.had * const.br_z.clep),
 )
 
 
