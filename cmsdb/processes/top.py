@@ -23,7 +23,6 @@ __all__ = [
     "ttv",
     "ttz", "ttz_zqq", "ttz_zlep_m1to10", "ttz_zlep_m10toinf", "ttz_zll_m4to50", "ttz_zll_m50toinf", "ttz_znunu",
     "ttw", "ttw_wlnu", "ttw_wqq",
-    "tth", "tth_bb", "tth_nonbb",
     "ttgamma", "ttgamma_dilept",
     "ttxx",
     "ttvv",
@@ -597,34 +596,6 @@ ttw_wqq = ttw.add_process(
     id=3220,
     xsecs=multiply_xsecs(ttw, const.br_w.had),
 )
-
-# 13.6 ttH cross section: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/LHCHWG136TeVxsec_extrap
-
-tth = ttv.add_process(
-    name="tth",
-    id=15000,
-    label=f"{tt.label} + H",
-    xsecs={13: Number(0.507), 13.6: Number(0.57)},  # TODO
-)
-
-tth_bb = tth.add_process(
-    name="tth_bb",
-    id=15200,
-    label=f"{tth.label}(bb)",
-    xsecs={
-        13: tth.get_xsec(13) * const.br_h_bb_full,
-        13.6: tth.get_xsec(13.6) * const.br_h_bb_full,
-    },
-)
-
-tth_nonbb = tth.add_process(
-    name="tth_nonbb",
-    id=15300,
-    label=f"{tth.label}(non-bb)",
-    xsecs={13: tth.get_xsec(13) * (1. - const.br_h_bb_full),
-        13.6: tth.get_xsec(13.6) * (1. - const.br_h_bb_full)}
-)
-
 
 ttgamma = ttv.add_process(
     name="ttgamma",
