@@ -2,8 +2,6 @@
 
 from order import Campaign
 
-import cmsdb.processes as procs
-
 
 cpn = campaign_run2_2018_nano_v9 = Campaign(
     name="run2_2018_nano_v9",

@@ -45,7 +45,7 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                ]
+                ],
             },
             n_files=214,  # 218 - 4
             n_events=69035447,

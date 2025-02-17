@@ -360,14 +360,14 @@ st.set_xsec(
 tx = Process(
     name="tx",
     id=2499,
-    label='t+X',
+    label="t+X",
     xsecs={},
 )
 
 tzq = tx.add_process(
     name="tzq",
     id=2500,
-    label='tZq',
+    label="tZq",
     xsecs={13: 0.07358, 13.6: Number(0.07968)},
 )
 
@@ -382,7 +382,7 @@ tzq_wlnu = tzq.add_process(
 twz = tx.add_process(
     name="twz",
     id=2600,
-    label='tWZ',
+    label="tWZ",
 )
 
 # 13.6 TeV xsec from GenXSecAnalyzer
@@ -390,42 +390,42 @@ twz = tx.add_process(
 twz_tqq_wlnu_zll_dr2 = twz.add_process(
     name="twz_tqq_wlnu_zll_dr2",
     id=2610,
-    label='twz_tqq_wlnu_zll_dr2',
+    label="twz_tqq_wlnu_zll_dr2",
     xsecs={13: Number(0.1), 13.6: Number(0.009135)},
 )
 
 twz_tlnu_wqq_zll_dr2 = twz.add_process(
     name="twz_tlnu_wqq_zll_dr2",
     id=2620,
-    label='twz_tlnu_wqq_zll_dr2',
+    label="twz_tlnu_wqq_zll_dr2",
     xsecs={13: Number(0.1), 13.6: Number(0.009135)},
 )
 
 twz_tlnu_wlnu_zll_dr2 = twz.add_process(
     name="twz_tlnu_wlnu_zll_dr2",
     id=2630,
-    label='twz_tlnu_wlnu_zll_dr2',
+    label="twz_tlnu_wlnu_zll_dr2",
     xsecs={13: Number(0.1), 13.6: Number(0.009135 / 2)},
 )
 
 twz_tqq_wlnu_zll_dr1 = twz.add_process(
     name="twz_tqq_wlnu_zll_dr1",
     id=2640,
-    label='twz_tqq_wlnu_zll_dr1',
+    label="twz_tqq_wlnu_zll_dr1",
     xsecs={13: Number(0.003004), 13.6: Number(0.003338)},
 )
 
 twz_tlnu_wqq_zll_dr1 = twz.add_process(
     name="twz_tlnu_wqq_zll_dr1",
     id=2650,
-    label='twz_tlnu_wqq_zll_dr1',
+    label="twz_tlnu_wqq_zll_dr1",
     xsecs={13: Number(0.003004), 13.6: Number(0.003338)},
 )
 
 twz_tlnu_wlnu_zll_dr1 = twz.add_process(
     name="twz_tlnu_wlnu_zll_dr1",
     id=2660,
-    label='twz_tlnu_wlnu_zll_dr1',
+    label="twz_tlnu_wlnu_zll_dr1",
     xsecs={13: Number(0.0015), 13.6: Number(0.001669)},
 )
 
@@ -543,7 +543,7 @@ ttgamma_dilept = ttgamma.add_process(
     label=f"{tt.label} + gamma",
     xsecs={
         13: Number(0.4208),
-    }
+    },
 )
 
 

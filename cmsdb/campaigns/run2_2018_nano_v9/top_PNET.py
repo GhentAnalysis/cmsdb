@@ -133,8 +133,8 @@ cpn.add_dataset(
     id=142531370,  # 0
     processes=[procs.ttz_zlep_m10toinf],
     keys=[
-            "/2018UL/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TTZToLLNuNu_M-10_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=21,
     n_events=19608000,
 )
@@ -144,8 +144,8 @@ cpn.add_dataset(
     id=143388130,  # 0
     processes=[procs.ttz_zlep_m1to10],
     keys=[
-            "/2018UL/TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TTZToLL_M-1to10_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=7,
     n_events=994000,
 )
@@ -155,8 +155,8 @@ cpn.add_dataset(
     id=142308710,  # 0
     processes=[procs.tth_hnonbb_1j],
     keys=[
-            "/2018UL/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/ttHJetToNonbb_M125_TuneCP5_13TeV_amcatnloFXFX_madspin_pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=51,
     n_events=9852567,
 )
@@ -166,8 +166,8 @@ cpn.add_dataset(
     id=142603510,  # 0
     processes=[procs.ttgamma_dilept],
     keys=[
-            "/2018UL/TTGamma_Dilept_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TTGamma_Dilept_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=15,
     n_events=14694000,
 )
@@ -177,8 +177,8 @@ cpn.add_dataset(
     id=142323230,  # 0
     processes=[procs.ttw_wlnu],
     keys=[
-            "/2018UL/TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TTWJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-madspin-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=13,
     n_events=10450000,
 )
@@ -191,8 +191,8 @@ cpn.add_dataset(
     id=142354410,  # 0
     processes=[procs.ttww],
     keys=[
-            "/2018UL/TTWW_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TTWW_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=3,
     n_events=944000,
 )
@@ -202,8 +202,8 @@ cpn.add_dataset(
     id=142347810,  # 0
     processes=[procs.ttwz],
     keys=[
-            "/2018UL/TTWZ_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TTWZ_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=2,
     n_events=498000,
 )
@@ -213,8 +213,8 @@ cpn.add_dataset(
     id=142423070,  # 0
     processes=[procs.ttzz],
     keys=[
-            "/2018UL/TTZZ_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TTZZ_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=8,
     n_events=498000,
 )
@@ -224,8 +224,8 @@ cpn.add_dataset(
     id=142861400,  # 0
     processes=[procs.tthh],
     keys=[
-            "/2018UL/TTHH_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TTHH_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=13,
     n_events=500000,
 )
@@ -235,8 +235,8 @@ cpn.add_dataset(
     id=142853920,  # 0
     processes=[procs.ttwh],
     keys=[
-            "/2018UL/TTWH_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TTWH_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=4,
     n_events=497000,
 )
@@ -246,8 +246,8 @@ cpn.add_dataset(
     id=142861900,  # 0
     processes=[procs.ttzh],
     keys=[
-            "/2018UL/TTZH_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TTZH_TuneCP5_13TeV-madgraph-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=17,
     n_events=500000,
 )
@@ -257,8 +257,8 @@ cpn.add_dataset(
     id=142848320,  # 0
     processes=[procs.tttt],
     keys=[
-            "/2018UL/TTTT_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TTTT_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=49,
     n_events=13058000,
 )
@@ -272,8 +272,8 @@ cpn.add_dataset(
     id=142313840,  # 0
     processes=[procs.twz_tqq_wlnu_zll_dr1],
     keys=[
-            "/2018UL/TWZToLL_thad_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TWZToLL_thad_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=32,
     n_events=2976000,
 )
@@ -283,8 +283,8 @@ cpn.add_dataset(
     id=147281510,  # 0
     processes=[procs.twz_tlnu_wqq_zll_dr1],
     keys=[
-            "/2018UL/TWZToLL_tlept_Whad_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TWZToLL_tlept_Whad_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=12,
     n_events=9806000,
 )
@@ -294,8 +294,8 @@ cpn.add_dataset(
     id=142313680,  # 0
     processes=[procs.twz_tlnu_wlnu_zll_dr1],
     keys=[
-            "/2018UL/TWZToLL_tlept_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/TWZToLL_tlept_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=10,
     n_events=1000000,
 )
@@ -305,8 +305,8 @@ cpn.add_dataset(
     id=143003610,  # 0
     processes=[procs.tzq],
     keys=[
-            "/2018UL/tZq_ll_4f_ckm_NLO_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
-        ],
+        "/2018UL/tZq_ll_4f_ckm_NLO_TuneCP5_13TeV-amcatnlo-pythia8/TopNanoAODv9-1-1_2018UL",  # noqa
+    ],
     n_files=14,
     n_events=11916000,
 )

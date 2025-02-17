@@ -1093,14 +1093,14 @@ wz_wqq_zll = wz.add_process(
 wz_wlnu_zqq = wz.add_process(
     name="wz_wlnu_zqq",
     id=8230,
-    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.qq)
+    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.qq),
 )
 
 
 wz_wlnu_znunu = wz.add_process(
     name="wz_wlnu_znunu",
     id=8240,
-    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.nunu)
+    xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.nunu),
 )
 
 # 13.6 TeV xsec from GenXSecAnalyzer
@@ -1144,7 +1144,7 @@ ww_dl = ww.add_process(
     id=8310,
     xsecs={
         13: ww.get_xsec(13) * const.br_ww.dl,
-        13.6: 12.98  # value around 12.6 for comparison to GenXSecAnalyzer NLO result
+        13.6: 12.98,  # value around 12.6 for comparison to GenXSecAnalyzer NLO result
     },
 )
 
@@ -1238,13 +1238,13 @@ ggtozzto4tau = ggtozzto4l.add_process(
 ggtozzto4l.set_xsec(
     13,
     ggtozzto2e2mu.get_xsec(13) + ggtozzto2e2tau.get_xsec(13) + ggtozzto2mu2tau.get_xsec(13) +
-    ggtozzto4e.get_xsec(13) + ggtozzto4mu.get_xsec(13) + ggtozzto4tau.get_xsec(13)
+    ggtozzto4e.get_xsec(13) + ggtozzto4mu.get_xsec(13) + ggtozzto4tau.get_xsec(13),
 )
 
 ggtozzto4l.set_xsec(
     13.6,
     ggtozzto2e2mu.get_xsec(13.6) + ggtozzto2e2tau.get_xsec(13.6) + ggtozzto2mu2tau.get_xsec(13.6) +
-    ggtozzto4e.get_xsec(13.6) + ggtozzto4mu.get_xsec(13.6) + ggtozzto4tau.get_xsec(13.6)
+    ggtozzto4e.get_xsec(13.6) + ggtozzto4mu.get_xsec(13.6) + ggtozzto4tau.get_xsec(13.6),
 )
 
 
