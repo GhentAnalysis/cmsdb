@@ -22,6 +22,7 @@ __all__ = [
     "qcd_bgen_ht700to1000",
     "qcd_bgen_ht1000to1500",
     "qcd_bgen_ht1500to2000",
+    "qcd_bgen_ht2000",
     "qcd_pt15to30",
     "qcd_pt30to50",
     "qcd_pt50to80",
@@ -198,6 +199,7 @@ qcd_bgen_ht200to300 = qcd.add_process(
         13: Number(111700),
     },
 )
+
 qcd_bgen_ht300to500 = qcd.add_process(
     name="qcd_bgen_ht300to500",
     id=33302,
@@ -206,6 +208,7 @@ qcd_bgen_ht300to500 = qcd.add_process(
         13: Number(27960),
     },
 )
+
 qcd_bgen_ht500to700 = qcd.add_process(
     name="qcd_bgen_ht500to700",
     id=33303,
@@ -214,6 +217,7 @@ qcd_bgen_ht500to700 = qcd.add_process(
         13: Number(3078),
     },
 )
+
 qcd_bgen_ht700to1000 = qcd.add_process(
     name="qcd_bgen_ht700to1000",
     id=33304,
@@ -222,6 +226,7 @@ qcd_bgen_ht700to1000 = qcd.add_process(
         13: Number(732),
     },
 )
+
 qcd_bgen_ht1000to1500 = qcd.add_process(
     name="qcd_bgen_ht1000to1500",
     id=33305,
@@ -230,6 +235,7 @@ qcd_bgen_ht1000to1500 = qcd.add_process(
         13: Number(139),
     },
 )
+
 qcd_bgen_ht1500to2000 = qcd.add_process(
     name="qcd_bgen_ht1500to2000",
     id=33306,
@@ -238,6 +244,7 @@ qcd_bgen_ht1500to2000 = qcd.add_process(
         13: Number(14.7),
     },
 )
+
 qcd_bgen_ht2000 = qcd.add_process(
     name="qcd_bgen_ht2000",
     id=33307,
