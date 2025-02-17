@@ -4,6 +4,8 @@
 CMS datasets from the 2022 pre-EE data-taking campaign
 """
 
+from order import DatasetInfo
+
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2022_preEE_nano_v12 import campaign_run3_2022_preEE_nano_v12 as cpn
 
@@ -178,5 +180,52 @@ cpn.add_dataset(
     aux={
         "era": "D",
         "jec_era": "RunCD",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet_c",
+    id=14784135,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET/Run2022C-22Sep2023-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=206,
+            n_events=169187457,
+        ),
+    ),
+    aux={
+        "era": "C",
+        "jec_era": "RunCD",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet_d",
+    id=14809508,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET/Run2022D-22Sep2023-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=100,
+            n_events=100853361,
+        ),
+    ),
+    aux={
+        "era": "D",
     },
 )

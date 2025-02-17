@@ -168,3 +168,72 @@ cpn.add_dataset(
         "era": "G",
     },
 )
+
+cpn.add_dataset(
+    name="data_jetmet_e",
+    id=14784141,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET/Run2022E-22Sep2023-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=148,
+            n_events=138985608,
+        ),
+    ),
+    aux={
+        "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet_f",
+    id=14826581,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET/Run2022F-22Sep2023-v2/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=476,
+            n_events=514823262,
+        ),
+    ),
+    aux={
+        "era": "F",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet_g",
+    id=14826611,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET/Run2022G-22Sep2023-v2/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=107,
+            n_events=84696790,
+        ),
+    ),
+    aux={
+        "era": "G",
+    },
+)

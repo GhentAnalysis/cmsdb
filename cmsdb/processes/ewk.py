@@ -1180,7 +1180,7 @@ ww_fh = ww.add_process(
 # gg -> ZZ -> 4l
 #
 
-ggtozzto4l = Process(
+ggtozzto4l = zz.add_process(
     name="ggtozzto4l",
     id=8500,
     label="gg -> ZZ -> 4l",
@@ -1241,69 +1241,10 @@ ggtozzto4l.set_xsec(
     ggtozzto4e.get_xsec(13) + ggtozzto4mu.get_xsec(13) + ggtozzto4tau.get_xsec(13)
 )
 
-#
-# gg -> ZZ -> 4l
-#
-
-ggtozzto4l = Process(
-    name="ggtozzto4l",
-    id=8500,
-    label="gg -> ZZ -> 4l",
-    xsecs={13: Number(0.1), 13.6: Number(0.1)},
-)
-
-# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
-ggtozzto2e2mu = ggtozzto4l.add_process(
-    name="ggtozzto2e2mu",
-    id=8510,
-    label="gg -> ZZ -> 2e 2tau",
-    xsecs={13: Number(0.005423), 13.6: Number(0.0061150)},  # TODO
-)
-
-# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
-ggtozzto2e2tau = ggtozzto4l.add_process(
-    name="ggtozzto2e2tau",
-    id=8520,
-    label="gg -> ZZ -> 2e 2tau",
-    xsecs={13: Number(0.005423), 13.6: Number(0.0061150)},  # TODO
-)
-
-# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
-ggtozzto2mu2tau = ggtozzto4l.add_process(
-    name="ggtozzto2mu2tau",
-    id=8530,
-    label="gg -> ZZ -> 2mu 2tau",
-    xsecs={13: Number(0.005423), 13.6: Number(0.0061150)},  # TODO
-)
-
-# 13.6 TeV dataset not available
-ggtozzto4e = ggtozzto4l.add_process(
-    name="ggtozzto4e",
-    id=8540,
-    label="gg -> ZZ -> 4e",
-    xsecs={13: Number(0.0027), 13.6: Number(0.003)},  # TODO
-)
-
-# 13.6 TeV dataset not available
-ggtozzto4mu = ggtozzto4l.add_process(
-    name="ggtozzto4mu",
-    id=8550,
-    label="gg -> ZZ -> 4mu",
-    xsecs={13: Number(0.0027), 13.6: Number(0.003)},  # TODO
-)
-
-# 13.6 TeV dataset not available
-ggtozzto4tau = ggtozzto4l.add_process(
-    name="ggtozzto4tau",
-    id=8560,
-    label="gg -> ZZ -> 4tau",
-    xsecs={13: Number(0.0027), 13.6: Number(0.003)},  # TODO
-)
-
 ggtozzto4l.set_xsec(
-    13,
-    ggtozzto2e2mu.get_xsec(13) + ggtozzto2e2tau.get_xsec(13) + ggtozzto2mu2tau.get_xsec(13) +
-    ggtozzto4e.get_xsec(13) + ggtozzto4mu.get_xsec(13) + ggtozzto4tau.get_xsec(13)
+    13.6,
+    ggtozzto2e2mu.get_xsec(13.6) + ggtozzto2e2tau.get_xsec(13.6) + ggtozzto2mu2tau.get_xsec(13.6) +
+    ggtozzto4e.get_xsec(13.6) + ggtozzto4mu.get_xsec(13.6) + ggtozzto4tau.get_xsec(13.6)
 )
 
 
