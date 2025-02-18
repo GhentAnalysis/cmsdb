@@ -16,7 +16,7 @@ from cmsdb.campaigns.run2_2018_nano_v9_pNet import campaign_run2_2018_nano_v9_pN
 #
 
 cpn.add_dataset(
-    name="st_schannel_had",
+    name="st_schannel_had_amcatnlo",
     id=166366322,  # 0
     processes=[procs.st_schannel_had],
     info=dict(
@@ -31,7 +31,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_schannel_lep",
+    name="st_schannel_lep_amcatnlo",
     id=166366355,  # 0
     processes=[procs.st_schannel_lep],
     info=dict(
@@ -76,7 +76,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_twchannel_t",
+    name="st_twchannel_t_powheg",
     id=142488300,  # 0
     processes=[procs.st_twchannel_t],
     info=dict(
@@ -91,7 +91,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_twchannel_tbar",
+    name="st_twchannel_tbar_powheg",
     id=142537780,  # 0
     processes=[procs.st_twchannel_tbar],
     info=dict(
@@ -145,7 +145,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ttz_zlep_m10toinf",
+    name="ttz_zlep_m10toinf_amcatnlo",
     id=142531370,  # 0
     processes=[procs.ttz_zlep_m10toinf],
     keys=[
@@ -156,7 +156,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttz_zqq",
+    name="ttz_zqq_amcatnlo",
     id=143388130,  # 0
     processes=[procs.ttz_zqq],
     keys=[
@@ -191,7 +191,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="ttw_wlnu",
+    name="ttw_wlnu_amcatnlo",
     id=142323230,  # 0
     processes=[procs.ttw_wlnu],
     keys=[
@@ -202,7 +202,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttw_wqq",
+    name="ttw_wqq_amcatnlo",
     id=142323231,  # 0
     processes=[procs.ttw_wqq],
     keys=[

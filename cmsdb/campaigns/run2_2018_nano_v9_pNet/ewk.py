@@ -14,7 +14,7 @@ from cmsdb.campaigns.run2_2018_nano_v9_pNet import campaign_run2_2018_nano_v9_pN
 # Drell-Yan
 #
 cpn.add_dataset(
-    name="dy_m50toinf",
+    name="dy_m50toinf_amcatnlo",
     id=14235180,
     processes=[procs.dy_m50toinf],
     keys=[
@@ -25,7 +25,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_m10to50",
+    name="dy_m10to50_amcatnlo",
     id=1423518500,  # 00 because the next one has the same id
     processes=[procs.dy_m10to50],
     keys=[
@@ -40,7 +40,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="w_lnu_0j",
+    name="w_lnu_0j_amcatnlo",
     id=14235183,
     processes=[procs.w_lnu_0j],
     keys=[
@@ -51,7 +51,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_1j",
+    name="w_lnu_1j_amcatnlo",
     id=14235182,
     processes=[procs.w_lnu_1j],
     keys=[
@@ -62,7 +62,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_2j",
+    name="w_lnu_2j_amcatnlo",
     id=14235181,
     processes=[procs.w_lnu_2j],
     keys=[
@@ -78,7 +78,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="zz_llnunu",
+    name="zz_llnunu_powheg",
     id=142299864,  # 0
     processes=[procs.zz_zll_znunu],
     keys=[
@@ -89,7 +89,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_qqll_m4",
+    name="zz_qqll_m4_amcatnlo",
     id=142299865,  # 0
     processes=[procs.zz_zqq_zll],
     keys=[
@@ -101,7 +101,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="zz_llll",
+    name="zz_llll_powheg",
     id=142299866,  # 0
     processes=[procs.zz_zll_zll],
     keys=[
@@ -117,7 +117,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ww_lnulnu",
+    name="ww_lnulnu_powheg",
     id=142299861,  # 0
     processes=[procs.ww_dl],
     keys=[
@@ -133,7 +133,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="wz_qqll_m4",
+    name="wz_qqll_m4_amcatnlo",
     id=142299862,  # 0
     processes=[procs.wz_wqq_zll],
     keys=[
@@ -145,7 +145,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="wz_lllnu",
+    name="wz_lllnu_amcatnlo",
     id=142299863,  # 0
     processes=[procs.wz_wlnu_zll],
     keys=[
