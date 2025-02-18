@@ -47,7 +47,7 @@ cpn.add_dataset(
                 "broken_files": [
                 ],
             },
-            n_files=214,  # 218 - 4
+            n_files=218,
             n_events=69035447,
         ),
     ),
@@ -135,7 +135,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_zll_zll_powheg",
+    name="zz_zll_zll",
     id=14888198,
     processes=[procs.zz_zll_zll],
     keys=[
@@ -150,7 +150,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="wz_pythia",
+    name="wz",
     id=14784070,
     is_data=False,
     processes=[procs.wz],
@@ -162,7 +162,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_wlnu_zll_powheg",
+    name="wz_wlnu_zll",
     id=14837052,
     is_data=False,
     processes=[procs.wz_wlnu_zll],
@@ -175,7 +175,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_wlnu_zll_1jets_amcatnlo",
+    name="wz_wlnu_zll_1jets",
     id=15204555,
     is_data=False,
     processes=[procs.wz_wlnu_zll_1jets],  # TODO change processes to 1 jet specific
@@ -328,7 +328,7 @@ cpn.add_dataset(
 ####################################################################################################
 
 cpn.add_dataset(
-    name="wwz_amcatnlo",
+    name="wwz",
     id=14827071,
     processes=[procs.wwz],
     info=dict(
@@ -342,7 +342,7 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="www__amcatnlo",
+    name="www",
     id=14787825,
     processes=[procs.www],
     info=dict(
@@ -357,7 +357,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wzz__amcatnlo",
+    name="wzz",
     id=14788046,
     processes=[procs.wzz],
     keys=[
@@ -368,7 +368,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zzz__amcatnlo",
+    name="zzz",
     id=14784436,
     processes=[procs.zzz],
     keys=[
