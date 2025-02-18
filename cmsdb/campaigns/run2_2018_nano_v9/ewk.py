@@ -243,7 +243,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ww_pythia8",
+    name="ww_pythia",
     id=14229986,
     processes=[procs.ww],
     keys=[

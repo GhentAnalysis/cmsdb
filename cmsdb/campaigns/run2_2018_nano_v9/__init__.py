@@ -9,7 +9,14 @@ cpn = campaign_run2_2018_nano_v9 = Campaign(
     id=220181,
     ecm=13,
     bx=25,
-    aux={"year": 2018, "run": 2, "tier": "NanoAOD", "version": "9"},
+    aux={
+        "year": 2018,
+        "run": 2,
+        "tier":
+        "NanoAOD",
+        "version": "9",
+        "postfix": "",
+    },
 )
 
 # trailing imports to load datasets
