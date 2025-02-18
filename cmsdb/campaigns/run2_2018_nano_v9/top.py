@@ -101,7 +101,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_twchannel_t",
+    name="st_twchannel_t_powheg",
     id=14248830,
     processes=[procs.st_twchannel_t],
     info=dict(
@@ -116,7 +116,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_twchannel_tbar",
+    name="st_twchannel_tbar_powheg",
     id=14253778,
     processes=[procs.st_twchannel_tbar],
     info=dict(
@@ -297,7 +297,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttgamma_dilept",
+    name="ttgamma_dilept_madgraph",
     id=14260351,
     processes=[procs.ttgamma_dilept],
     keys=[

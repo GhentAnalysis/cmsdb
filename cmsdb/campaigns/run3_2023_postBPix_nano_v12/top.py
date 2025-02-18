@@ -115,7 +115,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ttz_zll_m4to50",
+    name="ttz_zll_m4to50_amcatnlo",
     id=14982175,
     processes=[procs.ttz_zll_m4to50],
     info=dict(
@@ -135,7 +135,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttz_zll_m50toinf",
+    name="ttz_zll_m50toinf_amcatnlo",
     id=14989610,
     processes=[procs.ttz_zll_m50toinf],
     keys=[
@@ -147,7 +147,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttw_wlnu_1jets",
+    name="ttw_wlnu_1jets_amcatnlo",
     id=15137890,
     processes=[procs.ttw_wlnu],
     keys=[
@@ -161,7 +161,7 @@ cpn.add_dataset(
 # TT + XX
 
 cpn.add_dataset(
-    name="tttt",
+    name="tttt_amcatnlo",
     id=14987188,
     processes=[procs.tttt],
     keys=[
@@ -222,7 +222,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="twz_tqq_wlnu_zll_dr1",
+    name="twz_tqq_wlnu_zll_dr1_amcatnlo",
     id=15140022,
     processes=[procs.twz_tqq_wlnu_zll_dr1],
     keys=[
@@ -234,7 +234,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twz_tqq_wlnu_zll_dr2",
+    name="twz_tqq_wlnu_zll_dr2_amcatnlo",
     id=15053489,
     processes=[procs.twz_tqq_wlnu_zll_dr2],
     keys=[
@@ -245,7 +245,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twz_tlnu_wqq_zll_dr1",
+    name="twz_tlnu_wqq_zll_dr1_amcatnlo",
     id=15139307,
     processes=[procs.twz_tlnu_wqq_zll_dr1],
     keys=[
@@ -257,7 +257,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twz_tlnu_wqq_zll_dr2",
+    name="twz_tlnu_wqq_zll_dr2_amcatnlo",
     id=15058265,
     processes=[procs.twz_tlnu_wqq_zll_dr2],
     keys=[
@@ -268,7 +268,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twz_tlnu_wlnu_zll_dr1",
+    name="twz_tlnu_wlnu_zll_dr1_amcatnlo",
     id=15139306,
     processes=[procs.twz_tlnu_wlnu_zll_dr1],
     keys=[
@@ -280,7 +280,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twz_tlnu_wlnu_zll_dr2",
+    name="twz_tlnu_wlnu_zll_dr2_amcatnlo",
     id=15054138,
     processes=[procs.twz_tlnu_wlnu_zll_dr2],
     keys=[
@@ -293,7 +293,7 @@ cpn.add_dataset(
 # tZq now available in 2023 postBPIX
 
 cpn.add_dataset(
-    name="tzq_zll_4f_m30toinf",
+    name="tzq_zll_4f_m30toinf_amcatnlo",
     id=15199869,
     processes=[procs.tzq],
     keys=[

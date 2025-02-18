@@ -914,7 +914,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="ttz_zll_m4to50",
+    name="ttz_zll_m4to50_amcatnlo",
     id=14793589,
     processes=[procs.ttz_zll_m4to50],
     keys=[
@@ -925,7 +925,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttz_zll_m50toinf",
+    name="ttz_zll_m50toinf_amcatnlo",
     id=14793929,
     processes=[procs.ttz_zll_m50toinf],
     info=dict(
@@ -956,7 +956,7 @@ cpn.add_dataset(
 # )
 
 cpn.add_dataset(
-    name="ttw_wlnu_1jets",
+    name="ttw_wlnu_1jets_amcatnlo",
     id=14836097,
     processes=[procs.ttw_wlnu],
     keys=[
@@ -1005,7 +1005,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tttt",
+    name="tttt_amcatnlo",
     id=14795232,
     processes=[procs.tttt],
     keys=[
@@ -1021,7 +1021,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="twz_tqq_wlnu_zll_dr1",
+    name="twz_tqq_wlnu_zll_dr1_amcatnlo",
     id=14885205,
     processes=[procs.twz_tqq_wlnu_zll_dr1],
     keys=[
@@ -1033,7 +1033,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twz_tqq_wlnu_zll_dr2",
+    name="twz_tqq_wlnu_zll_dr2_amcatnlo",
     id=14868457,
     processes=[procs.twz_tqq_wlnu_zll_dr2],
     keys=[
@@ -1044,7 +1044,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twz_tlnu_wqq_zll_dr1",
+    name="twz_tlnu_wqq_zll_dr1_amcatnlo",
     id=14882755,
     processes=[procs.twz_tlnu_wqq_zll_dr1],
     keys=[
@@ -1057,7 +1057,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="twz_tlnu_wqq_zll_dr2",
+    name="twz_tlnu_wqq_zll_dr2_amcatnlo",
     id=14868174,
     processes=[procs.twz_tlnu_wqq_zll_dr2],
     keys=[
@@ -1068,7 +1068,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twz_tlnu_wlnu_zll_dr1",
+    name="twz_tlnu_wlnu_zll_dr1_amcatnlo",
     id=14885080,
     processes=[procs.twz_tlnu_wlnu_zll_dr1],
     keys=[
@@ -1080,7 +1080,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twz_tlnu_wlnu_zll_dr2",
+    name="twz_tlnu_wlnu_zll_dr2_amcatnlo",
     id=14870857,
     processes=[procs.twz_tlnu_wlnu_zll_dr2],
     keys=[
@@ -1091,7 +1091,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tzq_zll_4f_m30toinf",
+    name="tzq_zll_4f_m30toinf_amcatnlo",
     id=14916923,
     processes=[procs.tzq],
     keys=[

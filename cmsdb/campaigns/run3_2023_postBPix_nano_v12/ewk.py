@@ -135,7 +135,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zz_zll_zll",
+    name="zz_zll_zll_powheg",
     id=14888198,
     processes=[procs.zz_zll_zll],
     keys=[
@@ -150,7 +150,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="wz",
+    name="wz_pythia",
     id=14784070,
     is_data=False,
     processes=[procs.wz],
@@ -162,7 +162,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_wlnu_zll",
+    name="wz_wlnu_zll_powheg",
     id=14837052,
     is_data=False,
     processes=[procs.wz_wlnu_zll],
@@ -175,7 +175,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_wlnu_zll_1jets",
+    name="wz_wlnu_zll_1jets_amcatnlo",
     id=15204555,
     is_data=False,
     processes=[procs.wz_wlnu_zll_1jets],  # TODO change processes to 1 jet specific
@@ -328,7 +328,7 @@ cpn.add_dataset(
 ####################################################################################################
 
 cpn.add_dataset(
-    name="wwz",
+    name="wwz_amcatnlo",
     id=14827071,
     processes=[procs.wwz],
     info=dict(
@@ -342,7 +342,7 @@ cpn.add_dataset(
     ),
 )
 cpn.add_dataset(
-    name="www",
+    name="www__amcatnlo",
     id=14787825,
     processes=[procs.www],
     info=dict(
@@ -357,7 +357,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wzz",
+    name="wzz__amcatnlo",
     id=14788046,
     processes=[procs.wzz],
     keys=[
@@ -368,7 +368,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zzz",
+    name="zzz__amcatnlo",
     id=14784436,
     processes=[procs.zzz],
     keys=[

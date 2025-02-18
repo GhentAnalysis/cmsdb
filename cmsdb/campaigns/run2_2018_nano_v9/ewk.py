@@ -173,7 +173,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="gluglutocontintozzto2e2mu_mcfm",
+    name="ggtozzto2e2mu_mcfm",
     id=14241611,
     processes=[procs.ggtozzto2e2mu],
     keys=[
@@ -184,7 +184,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="gluglutocontintozzto2e2tau_mcfm",
+    name="ggtozzto2e2tau_mcfm",
     id=14242063,
     processes=[procs.ggtozzto2e2tau],
     keys=[
@@ -195,7 +195,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="gluglutocontintozzto2mu2tau_mcfm",
+    name="ggtozzto2mu2tau_mcfm",
     id=14266664,
     processes=[procs.ggtozzto2mu2tau],
     keys=[
@@ -206,7 +206,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="gluglutocontintozzto4e_mcfm",
+    name="ggtozzto4e_mcfm",
     id=14242982,
     processes=[procs.ggtozzto4e],
     keys=[
@@ -217,7 +217,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="gluglutocontintozzto4mu_mcfm",
+    name="ggtozzto4mu_mcfm",
     id=14266651,
     processes=[procs.ggtozzto4mu],
     keys=[
@@ -228,7 +228,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="gluglutocontintozzto4tau_mcfm",
+    name="ggtozzto4tau_mcfm",
     id=14253997,
     processes=[procs.ggtozzto4tau],
     keys=[
