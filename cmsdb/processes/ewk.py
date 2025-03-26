@@ -12,8 +12,8 @@ __all__ = [
     "dy_lep_m50_ht70to100", "dy_lep_m50_ht100to200", "dy_lep_m50_ht200to400",
     "dy_lep_m50_ht400to600", "dy_lep_m50_ht600to800", "dy_lep_m50_ht800to1200",
     "dy_lep_m50_ht1200to2500", "dy_lep_m50_ht2500",
-    "dy_lep_pt0To50", "dy_lep_pt50To100", "dy_lep_pt100To250", "dy_lep_pt250To400",
-    "dy_lep_pt400To650", "dy_lep_pt650",
+    "dy_lep_pt0to50", "dy_lep_pt50to100", "dy_lep_pt100to250", "dy_lep_pt250to400",
+    "dy_lep_pt400to650", "dy_lep_pt650",
     "z",
     "z_nunu",
     "z_nunu_ht100to200", "z_nunu_ht200to400", "z_nunu_ht400to600",
@@ -23,14 +23,14 @@ __all__ = [
     "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800",
     "w",
     "w_lnu",
-    "w_lnu_ht70To100", "w_lnu_ht100To200", "w_lnu_ht200To400", "w_lnu_ht400To600",
-    "w_lnu_ht600To800", "w_lnu_ht800To1200", "w_lnu_ht1200To2500", "w_lnu_ht2500",
+    "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
+    "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500",
     "z",
     "z_nunu",
-    "z_nunu_ht100To200", "z_nunu_ht200To400", "z_nunu_ht400To600", "z_nunu_ht600To800",
-    "z_nunu_ht800To1200", "z_nunu_ht1200To2500", "z_nunu_ht2500",
+    "z_nunu_ht100to200", "z_nunu_ht200to400", "z_nunu_ht400to600", "z_nunu_ht600to800",
+    "z_nunu_ht800to1200", "z_nunu_ht1200to2500", "z_nunu_ht2500",
     "z_qq",
-    "z_qq_ht200To400", "z_qq_ht400To600", "z_qq_ht600To800", "z_qq_ht800",
+    "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800",
     "ewk",
     "ewk_wp_lnu_m50", "ewk_wm_lnu_m50", "ewk_z_ll_m50",
     "vv",
@@ -177,32 +177,32 @@ dy_lep_m50_ht2500 = dy_lep_m50.add_process(
 )
 
 # based on datasets DYJetsToLL_Pt-{i}To{j}_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
-dy_lep_pt0To50 = dy_lep.add_process(
-    name="dy_lep_pt0To50",
+dy_lep_pt0to50 = dy_lep.add_process(
+    name="dy_lep_pt0to50",
     id=51510,
     xsecs={13: Number(1.0)},  # TODO
 )
 
-dy_lep_pt50To100 = dy_lep.add_process(
-    name="dy_lep_pt50To100",
+dy_lep_pt50to100 = dy_lep.add_process(
+    name="dy_lep_pt50to100",
     id=51520,
     xsecs={13: Number(398.8)},
 )
 
-dy_lep_pt100To250 = dy_lep.add_process(
-    name="dy_lep_pt100To250",
+dy_lep_pt100to250 = dy_lep.add_process(
+    name="dy_lep_pt100to250",
     id=51530,
     xsecs={13: Number(93.61)},
 )
 
-dy_lep_pt250To400 = dy_lep.add_process(
-    name="dy_lep_pt250To400",
+dy_lep_pt250to400 = dy_lep.add_process(
+    name="dy_lep_pt250to400",
     id=51540,
     xsecs={13: Number(3.67)},
 )
 
-dy_lep_pt400To650 = dy_lep.add_process(
-    name="dy_lep_pt400To650",
+dy_lep_pt400to650 = dy_lep.add_process(
+    name="dy_lep_pt400to650",
     id=51550,
     xsecs={13: Number(0.5)},
 )
@@ -378,44 +378,44 @@ w_lnu = w.add_process(
 # LO cross sections, scaled to NNLO
 # inclusive cross section based on WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
 # ht bins based on datasets WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
-w_lnu_ht70To100 = w_lnu.add_process(
-    name="w_lnu_ht70To100",
+w_lnu_ht70to100 = w_lnu.add_process(
+    name="w_lnu_ht70to100",
     id=6110,
     xsecs={13: w_lnu.get_xsec(13) * 1264.0 / 53870.0},
 )
 
-w_lnu_ht100To200 = w_lnu.add_process(
-    name="w_lnu_ht100To200",
+w_lnu_ht100to200 = w_lnu.add_process(
+    name="w_lnu_ht100to200",
     id=6120,
     xsecs={13: w_lnu.get_xsec(13) * 1256.0 / 53870.0},
 )
 
-w_lnu_ht200To400 = w_lnu.add_process(
-    name="w_lnu_ht200To400",
+w_lnu_ht200to400 = w_lnu.add_process(
+    name="w_lnu_ht200to400",
     id=6130,
     xsecs={13: w_lnu.get_xsec(13) * 335.5 / 53870.0},
 )
 
-w_lnu_ht400To600 = w_lnu.add_process(
-    name="w_lnu_ht400To600",
+w_lnu_ht400to600 = w_lnu.add_process(
+    name="w_lnu_ht400to600",
     id=6140,
     xsecs={13: w_lnu.get_xsec(13) * 45.25 / 53870.0},
 )
 
-w_lnu_ht600To800 = w_lnu.add_process(
-    name="w_lnu_ht600To800",
+w_lnu_ht600to800 = w_lnu.add_process(
+    name="w_lnu_ht600to800",
     id=6150,
     xsecs={13: w_lnu.get_xsec(13) * 10.97 / 53870.0},
 )
 
-w_lnu_ht800To1200 = w_lnu.add_process(
-    name="w_lnu_ht800To1200",
+w_lnu_ht800to1200 = w_lnu.add_process(
+    name="w_lnu_ht800to1200",
     id=6160,
     xsecs={13: w_lnu.get_xsec(13) * 4.933 / 53870.0},
 )
 
-w_lnu_ht1200To2500 = w_lnu.add_process(
-    name="w_lnu_ht1200To2500",
+w_lnu_ht1200to2500 = w_lnu.add_process(
+    name="w_lnu_ht1200to2500",
     id=6170,
     xsecs={13: w_lnu.get_xsec(13) * 1.16 / 53870.0},
 )
@@ -445,38 +445,38 @@ z_nunu = z.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht100To200 = z_nunu.add_process(
-    name="z_nunu_ht100To200",
+z_nunu_ht100to200 = z_nunu.add_process(
+    name="z_nunu_ht100to200",
     id=6610,
     xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht200To400 = z_nunu.add_process(
-    name="z_nunu_ht200To400",
+z_nunu_ht200to400 = z_nunu.add_process(
+    name="z_nunu_ht200to400",
     id=6620,
     xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht400To600 = z_nunu.add_process(
-    name="z_nunu_ht400To600",
+z_nunu_ht400to600 = z_nunu.add_process(
+    name="z_nunu_ht400to600",
     id=6630,
     xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht600To800 = z_nunu.add_process(
-    name="z_nunu_ht600To800",
+z_nunu_ht600to800 = z_nunu.add_process(
+    name="z_nunu_ht600to800",
     id=6640,
     xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht800To1200 = z_nunu.add_process(
-    name="z_nunu_ht800To1200",
+z_nunu_ht800to1200 = z_nunu.add_process(
+    name="z_nunu_ht800to1200",
     id=6650,
     xsecs={13: Number(0.1)},  # TODO
 )
 
-z_nunu_ht1200To2500 = z_nunu.add_process(
-    name="z_nunu_ht1200To2500",
+z_nunu_ht1200to2500 = z_nunu.add_process(
+    name="z_nunu_ht1200to2500",
     id=6660,
     xsecs={13: Number(0.1)},  # TODO
 )
@@ -495,20 +495,20 @@ z_qq = z.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
-z_qq_ht200To400 = z_qq.add_process(
-    name="z_qq_ht200To400",
+z_qq_ht200to400 = z_qq.add_process(
+    name="z_qq_ht200to400",
     id=6710,
     xsecs={13: Number(0.1)},  # TODO
 )
 
-z_qq_ht400To600 = z_qq.add_process(
-    name="z_qq_ht400To600",
+z_qq_ht400to600 = z_qq.add_process(
+    name="z_qq_ht400to600",
     id=6720,
     xsecs={13: Number(0.1)},  # TODO
 )
 
-z_qq_ht600To800 = z_qq.add_process(
-    name="z_qq_ht600To800",
+z_qq_ht600to800 = z_qq.add_process(
+    name="z_qq_ht600to800",
     id=6730,
     xsecs={13: Number(0.1)},  # TODO
 )
