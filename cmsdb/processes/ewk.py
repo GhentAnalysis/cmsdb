@@ -24,7 +24,7 @@ __all__ = [
     "w",
     "w_lnu",
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
-    "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500",
+    "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
     "z",
     "z_nunu",
     "z_nunu_ht100to200", "z_nunu_ht200to400", "z_nunu_ht400to600", "z_nunu_ht600to800",
@@ -364,69 +364,128 @@ w = Process(
 
 # NNLO cross section, based on:
 # https://twiki.cern.ch/twiki/bin/view/CMS/StandardModelCrossSectionsat13TeV?rev=27
+# and for 13.6 TeV, based on:
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
+
+wm_lnu_xs_13p6 = const.n_leps * Number(9009.5, {
+    "scale": (0.014j, 0.012j),
+    "pdf": 0.008j,
+})
+wp_lnu_xs_13p6 = const.n_leps * Number(12122.5, {
+    "scale": (0.011j, 0.014),
+    "pdf": 0.007j,
+})
 
 w_lnu = w.add_process(
     name="w_lnu",
     id=6100,
     label=rf"{w.label} ($W \rightarrow l\nu$)",
-    xsecs={13: const.n_leps * Number(20508.9, {
-        "scale": (165.7, 88.2),
-        "pdf": 770.9,
-    })},
+    xsecs={
+        13: const.n_leps * Number(20508.9, {
+            "scale": (165.7, 88.2),
+            "pdf": 770.9,
+        }),
+        # addition necessary due to absence of combined value
+        13.6: wm_lnu_xs_13p6 + wp_lnu_xs_13p6,
+    },
+)
+
+
+# LO cross section, needed for scaling to NNLO:
+# based on GenXSecAnalyzer
+# for WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
+
+w_lnu_lo_13tev_xsec = Number(54070.0, {"tot": 18.32})
+
+
+# jet binned samples
+w_lnu_0j = w_lnu.add_process(
+    name="w_lnu_0j",
+    id=6101,
+    xsecs={13: Number(48716.955)},
+)
+w_lnu_1j = w_lnu.add_process(
+    name="w_lnu_1j",
+    id=6102,
+    xsecs={13: Number(8107.312)},
+)
+w_lnu_2j = w_lnu.add_process(
+    name="w_lnu_2j",
+    id=6103,
+    xsecs={13: Number(3049.263)},
 )
 
 # LO cross sections, scaled to NNLO
-# inclusive cross section based on WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
-# ht bins based on datasets WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+
+# ht bins based on GenXSecAnalyzer
+# for WJetsToLNu_HT-{i}To{j}_TuneCP5_13TeV-madgraphMLM-pythia8 (Summer20UL16, LO)
+# using command ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v1 -n 5000000  # noqa
 w_lnu_ht70to100 = w_lnu.add_process(
     name="w_lnu_ht70to100",
     id=6110,
-    xsecs={13: w_lnu.get_xsec(13) * 1264.0 / 53870.0},
+    xsecs={
+        13: Number(1270.0, {"tot": 0.5259}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
 )
 
 w_lnu_ht100to200 = w_lnu.add_process(
     name="w_lnu_ht100to200",
     id=6120,
-    xsecs={13: w_lnu.get_xsec(13) * 1256.0 / 53870.0},
+    xsecs={
+        13: Number(1254.0, {"tot": 0.5274}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
 )
 
 w_lnu_ht200to400 = w_lnu.add_process(
     name="w_lnu_ht200to400",
     id=6130,
-    xsecs={13: w_lnu.get_xsec(13) * 335.5 / 53870.0},
+    xsecs={
+        13: Number(336.6, {"tot": 0.1528}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
 )
 
 w_lnu_ht400to600 = w_lnu.add_process(
     name="w_lnu_ht400to600",
     id=6140,
-    xsecs={13: w_lnu.get_xsec(13) * 45.25 / 53870.0},
+    xsecs={
+        13: Number(45.21, {"tot": 0.02966}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
 )
 
 w_lnu_ht600to800 = w_lnu.add_process(
     name="w_lnu_ht600to800",
     id=6150,
-    xsecs={13: w_lnu.get_xsec(13) * 10.97 / 53870.0},
+    xsecs={
+        13: Number(10.98, {"tot": 0.006997}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
 )
 
 w_lnu_ht800to1200 = w_lnu.add_process(
     name="w_lnu_ht800to1200",
     id=6160,
-    xsecs={13: w_lnu.get_xsec(13) * 4.933 / 53870.0},
+    xsecs={
+        13: Number(4.927, {"tot": 0.003229}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
 )
 
 w_lnu_ht1200to2500 = w_lnu.add_process(
     name="w_lnu_ht1200to2500",
     id=6170,
-    xsecs={13: w_lnu.get_xsec(13) * 1.16 / 53870.0},
+    xsecs={
+        13: Number(1.157, {"tot": 0.0007663}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
 )
 
-# NOTE: Summer20UL16 not available in xsdb, Fall17 cross section is used instead
-w_lnu_ht2500 = w_lnu.add_process(
-    name="w_lnu_ht2500",
+# this ht bin needs the command:
+# ./calculateXSectionAndFilterEfficiency.sh -f datasets.txt -c RunIISummer20UL16MiniAODv2-106X_mcRun2_asymptotic_v17-v2 -n 5000000  # noqa
+w_lnu_ht2500toinf = w_lnu.add_process(
+    name="w_lnu_ht2500toinf",
     id=6180,
-    xsecs={13: w_lnu.get_xsec(13) * 0.008001 / 53870.0},
+    xsecs={
+        13: Number(0.02624, {"tot": 0.00002981}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
+    },
 )
-
 #
 # Z boson
 #
