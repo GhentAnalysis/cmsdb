@@ -11,7 +11,7 @@ __all__ = [
     "dy_lep_0j", "dy_lep_1j", "dy_lep_2j",
     "dy_lep_m50_ht70to100", "dy_lep_m50_ht100to200", "dy_lep_m50_ht200to400",
     "dy_lep_m50_ht400to600", "dy_lep_m50_ht600to800", "dy_lep_m50_ht800to1200",
-    "dy_lep_m50_ht1200to2500", "dy_lep_m50_ht2500",
+    "dy_lep_m50_ht1200to2500", "dy_lep_m50_ht2500toinf",
     "dy_lep_pt0to50", "dy_lep_pt50to100", "dy_lep_pt100to250", "dy_lep_pt250to400",
     "dy_lep_pt400to650", "dy_lep_pt650",
     "z",
@@ -94,41 +94,7 @@ dy_lep_m50_nlo_13p6tev_xsec = Number(6728.0, {"tot": 6.981})  # xsdb: Number(668
 dy_lep_m10to50_lo_13p6tev_xsec = Number(17410, {"tot": 2.393})
 dy_lep_m50_lo_13p6tev_xsec = Number(5450, {"tot": 1.872})
 
-dy_k_factor_lo_to_nnlo = {
-    13: dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13tev_xsec,
-    13.6: dy_lep_m50.get_xsec(13.6) / dy_lep_m50_lo_13p6tev_xsec,
-}
-
-dy_k_factor_nlo_to_nnlo = {
-    13: dy_lep_m50.get_xsec(13) / dy_lep_m50_nlo_13tev_xsec,
-    13.6: dy_lep_m50.get_xsec(13.6) / dy_lep_m50_nlo_13p6tev_xsec,
-}
-
-dy_lep_m4to10 = dy.add_process(
-    name="dy_lep_m4to10",
-    id=51002,
-    xsecs={
-        13: Number(0.1),  # TODO
-        13.6: dy_lep_m4to10_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
-    },
-    aux={
-        "mll": (4.0, 10.0),
-    },
-)
-
-dy_lep_m10to50 = dy.add_process(
-    name="dy_lep_m10to50",
-    id=51001,
-    xsecs={
-        13: Number(15810.),
-        13.6: dy_lep_m10to50_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
-    },
-    aux={
-        "mll": (10.0, 50.0),
-    },
-)
-
-dy_lep_m50 = dy.add_process(
+dy_lep_m50 = dy_lep.add_process(
     name="dy_lep_m50",
     id=51100,
     xsecs={
@@ -144,6 +110,40 @@ dy_lep_m50 = dy.add_process(
     },
     aux={
         "mll": (50.0, const.inf),
+    },
+)
+
+dy_k_factor_lo_to_nnlo = {
+    13: dy_lep_m50.get_xsec(13) / dy_lep_m50_lo_13tev_xsec,
+    13.6: dy_lep_m50.get_xsec(13.6) / dy_lep_m50_lo_13p6tev_xsec,
+}
+
+dy_k_factor_nlo_to_nnlo = {
+    13: dy_lep_m50.get_xsec(13) / dy_lep_m50_nlo_13tev_xsec,
+    13.6: dy_lep_m50.get_xsec(13.6) / dy_lep_m50_nlo_13p6tev_xsec,
+}
+
+dy_lep_m4to10 = dy_lep.add_process(
+    name="dy_lep_m4to10",
+    id=51002,
+    xsecs={
+        13: Number(0.1),  # TODO
+        13.6: dy_lep_m4to10_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (4.0, 10.0),
+    },
+)
+
+dy_lep_m10to50 = dy_lep.add_process(
+    name="dy_lep_m10to50",
+    id=51050,
+    xsecs={
+        13: Number(15810.),
+        13.6: dy_lep_m10to50_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
+    },
+    aux={
+        "mll": (10.0, 50.0),
     },
 )
 
