@@ -217,3 +217,19 @@ cpn.add_dataset(
         ),
     ),
 )
+
+
+cpn.add_dataset(
+    name="tt_fh_powheg",
+    id=14232826,
+    processes=[procs.tt_fh],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTToHadronic_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=146,
+            n_events=107067000,
+        ),
+    ),
+)
