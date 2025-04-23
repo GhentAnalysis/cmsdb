@@ -5,7 +5,7 @@ Electroweak datasets for the 2018 data-taking campaign
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2018_nano_v9 import campaign_run2_2018_nano_v9 as cpn
+from cmsdb.campaigns.run2_2016_nano_v9 import campaign_run2_2016_nano_v9 as cpn
 
 
 #
@@ -124,7 +124,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="w_lnu_ht70to100",
+    name="w_lnu_ht70to100_madgraph",
     id=14235559,
     processes=[procs.w_lnu_ht70to100],
     keys=[
@@ -136,7 +136,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht100to200",
+    name="w_lnu_ht100to200_madgraph",
     id=14235206,
     processes=[procs.w_lnu_ht100to200],
     keys=[
@@ -148,7 +148,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht200to400",
+    name="w_lnu_ht200to400_madgraph",
     id=14230094,
     processes=[procs.w_lnu_ht200to400],
     keys=[
@@ -160,7 +160,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht400to600",
+    name="w_lnu_ht400to600_madgraph",
     id=14232919,
     processes=[procs.w_lnu_ht400to600],
     keys=[
@@ -172,7 +172,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht600to800",
+    name="w_lnu_ht600to800_madgraph",
     id=14235199,
     processes=[procs.w_lnu_ht600to800],
     keys=[
@@ -184,7 +184,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht800to1200",
+    name="w_lnu_ht800to1200_madgraph",
     id=14229696,
     processes=[procs.w_lnu_ht800to1200],
     keys=[
@@ -196,7 +196,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht1200to2500",
+    name="w_lnu_ht1200to2500_madgraph",
     id=14271374,
     processes=[procs.w_lnu_ht1200to2500],
     keys=[
@@ -208,7 +208,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht2500toinf",
+    name="w_lnu_ht2500toinf_madgraph",
     id=14238291,
     processes=[procs.w_lnu_ht2500toinf],
     keys=[

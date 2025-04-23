@@ -5,7 +5,7 @@ Electroweak datasets for the 2018 data-taking campaign
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2018_nano_v9 import campaign_run2_2018_nano_v9 as cpn
+from cmsdb.campaigns.run2_2016_HIPM_nano_v9 import campaign_run2_2016_HIPM_nano_v9 as cpn
 
 
 #
@@ -40,18 +40,16 @@ cpn.add_dataset(
 # W + jets
 #
 
-
-# v1?
 cpn.add_dataset(
     name="w_lnu_madgraph",
     id=14884611,
     processes=[procs.w_lnu],
     keys=[
-        "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-20UL16APVJMENano_106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+        "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
         "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=203 + 474,
-    n_events=74686199 + 79321807,
+    n_files=38 + 474,
+    n_events=74060701 + 79321807,
 )
 
 #
@@ -59,7 +57,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="w_lnu_ht70to100",
+    name="w_lnu_ht70to100_madgraph",
     id=14341281,
     processes=[procs.w_lnu_ht70to100],
     keys=[
@@ -71,7 +69,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht100to200",
+    name="w_lnu_ht100to200_madgraph",
     id=14235541,
     processes=[procs.w_lnu_ht100to200],
     keys=[
@@ -83,7 +81,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht200to400",
+    name="w_lnu_ht200to400_madgraph",
     id=14229253,
     processes=[procs.w_lnu_ht200to400],
     keys=[
@@ -95,7 +93,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht400to600",
+    name="w_lnu_ht400to600_madgraph",
     id=14233422,
     processes=[procs.w_lnu_ht400to600],
     keys=[
@@ -108,7 +106,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht600to800",
+    name="w_lnu_ht600to800_madgraph",
     id=14244164,
     processes=[procs.w_lnu_ht600to800],
     keys=[
@@ -121,7 +119,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht800to1200",
+    name="w_lnu_ht800to1200_madgraph",
     id=14234969,
     processes=[procs.w_lnu_ht800to1200],
     keys=[
@@ -134,7 +132,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht1200to2500",
+    name="w_lnu_ht1200to2500_madgraph",
     id=14244347,
     processes=[procs.w_lnu_ht1200to2500],
     keys=[
@@ -147,7 +145,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht2500toinf",
+    name="w_lnu_ht2500toinf_madgraph",
     id=14266963,
     processes=[procs.w_lnu_ht2500toinf],
     keys=[

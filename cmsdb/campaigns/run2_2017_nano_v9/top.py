@@ -418,7 +418,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_twchannel_t_powheg",
+    name="st_twchannel_t",
     id=14246131,
     processes=[procs.st_twchannel_t],
     info=dict(
@@ -440,7 +440,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_twchannel_tbar_powheg",
+    name="st_twchannel_tbar",
     id=14248566,
     processes=[procs.st_twchannel_tbar],
     info=dict(

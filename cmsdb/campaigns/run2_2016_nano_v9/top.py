@@ -7,7 +7,7 @@ top quark datasets for the 2018 data-taking campaign
 from order import DatasetInfo
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2018_nano_v9 import campaign_run2_2018_nano_v9 as cpn
+from cmsdb.campaigns.run2_2016_nano_v9 import campaign_run2_2016_nano_v9 as cpn
 
 
 #
@@ -221,7 +221,7 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="tt_fh_powheg",
-    id=14232826,
+    id=14231933,
     processes=[procs.tt_fh],
     info=dict(
         nominal=DatasetInfo(

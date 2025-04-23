@@ -5,14 +5,14 @@ QCD datasets for the 2018 data-taking campaign
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2018_nano_v9 import campaign_run2_2018_nano_v9 as cpn
+from cmsdb.campaigns.run2_2016_HIPM_nano_v9 import campaign_run2_2016_HIPM_nano_v9 as cpn
 
 #
 # QCD pt-binned (muon enriched) samples
 #
 
 cpn.add_dataset(
-    name="qcd_mu_pt15to20",
+    name="qcd_mu_pt15to20_pythia",
     id=14342952,
     processes=[procs.qcd_mu_pt15to20],
     keys=[
@@ -23,7 +23,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_mu_pt20to30",
+    name="qcd_mu_pt20to30_pythia",
     id=14304959,
     processes=[procs.qcd_mu_pt20to30],
     keys=[
@@ -34,7 +34,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_mu_pt30to50",
+    name="qcd_mu_pt30to50_pythia",
     id=14304936,
     processes=[procs.qcd_mu_pt30to50],
     keys=[
@@ -46,7 +46,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="qcd_mu_pt50to80",
+    name="qcd_mu_pt50to80_pythia",
     id=14304086,
     processes=[procs.qcd_mu_pt50to80],
     keys=[
@@ -58,7 +58,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="qcd_mu_pt80to120",
+    name="qcd_mu_pt80to120_pythia",
     id=14304990,
     processes=[procs.qcd_mu_pt80to120],
     keys=[
@@ -69,7 +69,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_mu_pt120to170",
+    name="qcd_mu_pt120to170_pythia",
     id=14306090,
     processes=[procs.qcd_mu_pt120to170],
     keys=[
@@ -80,7 +80,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_mu_pt170to300",
+    name="qcd_mu_pt170to300_pythia",
     id=14306082,
     processes=[procs.qcd_mu_pt170to300],
     keys=[
@@ -91,7 +91,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_mu_pt300to470",
+    name="qcd_mu_pt300to470_pythia",
     id=14306135,
     processes=[procs.qcd_mu_pt300to470],
     keys=[
@@ -102,7 +102,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_mu_pt470to600",
+    name="qcd_mu_pt470to600_pythia",
     id=14305904,
     processes=[procs.qcd_mu_pt470to600],
     keys=[
@@ -113,7 +113,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_mu_pt600to800",
+    name="qcd_mu_pt600to800_pythia",
     id=14342580,
     processes=[procs.qcd_mu_pt600to800],
     keys=[
@@ -124,7 +124,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_mu_pt800to1000",
+    name="qcd_mu_pt800to1000_pythia",
     id=14306566,
     processes=[procs.qcd_mu_pt800to1000],
     keys=[
@@ -135,7 +135,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_mu_pt1000",
+    name="qcd_mu_pt1000_pythia",
     id=14306334,
     processes=[procs.qcd_mu_pt1000],
     keys=[
@@ -153,7 +153,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="qcd_em_pt15to20",
+    name="qcd_em_pt15to20_pythia",
     id=14432083,
     processes=[procs.qcd_em_pt15to20],
     keys=[
@@ -164,7 +164,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_em_pt20to30",
+    name="qcd_em_pt20to30_pythia",
     id=14414915,
     processes=[procs.qcd_em_pt20to30],
     keys=[
@@ -175,7 +175,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_em_pt30to50",
+    name="qcd_em_pt30to50_pythia",
     id=14307263,
     processes=[procs.qcd_em_pt30to50],
     keys=[
@@ -186,7 +186,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_em_pt50to80",
+    name="qcd_em_pt50to80_pythia",
     id=14307262,
     processes=[procs.qcd_em_pt50to80],
     keys=[
@@ -197,7 +197,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_em_pt80to120",
+    name="qcd_em_pt80to120_pythia",
     id=14307345,
     processes=[procs.qcd_em_pt80to120],
     keys=[
@@ -208,7 +208,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_em_pt120to170",
+    name="qcd_em_pt120to170_pythia",
     id=14307342,
     processes=[procs.qcd_em_pt120to170],
     keys=[
@@ -219,7 +219,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="qcd_em_pt170to300",
+    name="qcd_em_pt170to300_pythia",
     id=14306942,
     processes=[procs.qcd_em_pt170to300],
     keys=[
@@ -231,7 +231,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="qcd_em_pt300toinf",
+    name="qcd_em_pt300toInf_pythia",
     id=14307347,
     processes=[procs.qcd_em_pt300toInf],
     keys=[

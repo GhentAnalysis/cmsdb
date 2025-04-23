@@ -100,6 +100,17 @@ cpn.add_dataset(
     n_events=5966661,
 )
 
+cpn.add_dataset(
+    name="dy_lept_m50_ht-2500toinf_madgraph",
+    id=14244277,
+    processes=[procs.dy_lep_m50_ht2500toinf],
+    keys=[
+        "/DYJetsToLL_M-50_HT-2500toInf_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=19,
+    n_events=1978203,
+)
+
 #
 # W + jets
 #

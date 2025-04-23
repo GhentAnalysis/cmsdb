@@ -195,7 +195,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_m50_ht2500_madgraph",
     id=14244972,
-    processes=[procs.dy_lep_m50_ht2500],
+    processes=[procs.dy_lep_m50_ht2500toinf],
     keys=[
         "/DYJetsToLL_M-50_HT-2500toInf_TuneCP5_PSweights_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -205,9 +205,9 @@ cpn.add_dataset(
 
 # pt binned
 cpn.add_dataset(
-    name="dy_lep_pt50To100_amcatnlo",
+    name="dy_lep_pt50to100_amcatnlo",
     id=14231159,
-    processes=[procs.dy_lep_pt50To100],
+    processes=[procs.dy_lep_pt50to100],
     keys=[
         "/DYJetsToLL_Pt-50To100_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -216,9 +216,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt100To250_amcatnlo",
+    name="dy_lep_pt100to250_amcatnlo",
     id=14300156,
-    processes=[procs.dy_lep_pt100To250],
+    processes=[procs.dy_lep_pt100to250],
     keys=[
         "/DYJetsToLL_Pt-100To250_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -227,9 +227,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt250To400_amcatnlo",
+    name="dy_lep_pt250to400_amcatnlo",
     id=14235259,
-    processes=[procs.dy_lep_pt250To400],
+    processes=[procs.dy_lep_pt250to400],
     keys=[
         "/DYJetsToLL_Pt-250To400_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -238,9 +238,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_pt400To650_amcatnlo",
+    name="dy_lep_pt400to650_amcatnlo",
     id=14228178,
-    processes=[procs.dy_lep_pt400To650],
+    processes=[procs.dy_lep_pt400to650],
     keys=[
         "/DYJetsToLL_Pt-400To650_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -279,7 +279,7 @@ cpn.add_dataset(
 
 # ht binned
 cpn.add_dataset(
-    name="w_lnu_ht70To100_madgraph",
+    name="w_lnu_ht70to100_madgraph",
     id=14245091,
     processes=[procs.w_lnu_ht70to100],
     keys=[
@@ -290,7 +290,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht100To200_madgraph",
+    name="w_lnu_ht100to200_madgraph",
     id=14231627,
     processes=[procs.w_lnu_ht100to200],
     keys=[
@@ -301,7 +301,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht200To400_madgraph",
+    name="w_lnu_ht200to400_madgraph",
     id=14239255,
     processes=[procs.w_lnu_ht200to400],
     keys=[
@@ -312,7 +312,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht400To600_madgraph",
+    name="w_lnu_ht400to600_madgraph",
     id=14231356,
     processes=[procs.w_lnu_ht400to600],
     keys=[
@@ -323,7 +323,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht600To800_madgraph",
+    name="w_lnu_ht600to800_madgraph",
     id=14230638,
     processes=[procs.w_lnu_ht600to800],
     keys=[
@@ -334,7 +334,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht800To1200_madgraph",
+    name="w_lnu_ht800to1200_madgraph",
     id=14346984,
     processes=[procs.w_lnu_ht800to1200],
     keys=[
@@ -345,7 +345,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="w_lnu_ht1200To2500_madgraph",
+    name="w_lnu_ht1200to2500_madgraph",
     id=14231551,
     processes=[procs.w_lnu_ht1200to2500],
     keys=[
