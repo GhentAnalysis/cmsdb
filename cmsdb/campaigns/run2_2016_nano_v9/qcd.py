@@ -17,7 +17,7 @@ cpn.add_dataset(
     id=14238188,
     processes=[procs.qcd_mu_pt15to20],
     keys=[
-        "/QCD_Pt-15To20_MuEnrichedPt5_TuneCP5_13TeV-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+        "/QCD_Pt-15To20_MuEnrichedPt5_TuneCP5_13TeV-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
     ],
     n_files=19,
     n_events=4529975,
