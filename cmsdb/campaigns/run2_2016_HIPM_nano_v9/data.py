@@ -17,7 +17,6 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data],
     keys=[
-        "/SingleElectron/Run2016B-ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
         "/SingleElectron/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
 
     ],
@@ -99,7 +98,6 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data],
     keys=[
-        "/SingleMuon/Run2016B-ver1_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
         "/SingleMuon/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
     n_files=2 + 70,
