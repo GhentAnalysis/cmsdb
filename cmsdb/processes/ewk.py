@@ -23,6 +23,7 @@ __all__ = [
     "z_qq_ht200to400", "z_qq_ht400to600", "z_qq_ht600to800", "z_qq_ht800",
     "w",
     "w_lnu",
+    "w_lnu_0j", "w_lnu_1j", "w_lnu_2j",
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
     "z",
@@ -515,7 +516,7 @@ w_lnu = w.add_process(
 w_lnu_lo_13tev_xsec = Number(54070.0, {"tot": 18.32})
 
 
-# jet binned samples
+# jet binned samples NNLO xsec
 w_lnu_0j = w_lnu.add_process(
     name="w_lnu_0j",
     id=6101,

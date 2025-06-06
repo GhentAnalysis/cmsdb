@@ -20,8 +20,8 @@ cpn.add_dataset(
         "/SingleElectron/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
 
     ],
-    n_files=1 + 106,
-    n_events=1422819 + 246440440,
+    n_files=106,
+    n_events=246440440,
     aux=dict(
         era="B",
     ),
@@ -100,8 +100,8 @@ cpn.add_dataset(
     keys=[
         "/SingleMuon/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
-    n_files=2 + 70,
-    n_events=2789243 + 158145722,
+    n_files=70,
+    n_events=158145722,
     aux=dict(
         era="B",
     ),

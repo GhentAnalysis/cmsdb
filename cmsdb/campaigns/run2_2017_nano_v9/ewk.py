@@ -271,7 +271,7 @@ cpn.add_dataset(
     processes=[procs.w_lnu],
     keys=[
         "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
-        "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9_ext-v2/NANOAODSIM"  # noqa
+        "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9_ext1-v2/NANOAODSIM"  # noqa
     ],
     n_files=81 + 549,
     n_events=78307186 + 79936459,
@@ -365,6 +365,69 @@ cpn.add_dataset(
     n_files=15,
     n_events=1185699,
 )
+
+#
+# W + Jets (NLO)
+#
+
+cpn.add_dataset(
+    name="w_lnu_amcatnlo",
+    id=14305034,
+    processes=[procs.w_lnu],
+    keys=[
+        "/WJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=45,
+    n_events=26454101,
+)
+
+
+cpn.add_dataset(
+    name="w_lnu_0j_amcatnlo",
+    id=14230752,
+    processes=[procs.w_lnu_0j],
+    keys=[
+        "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=119,
+    n_events=168622690,
+)
+
+
+# TODO: what to do with this dataset? ttHcc used the former
+# cpn.add_dataset(
+#     name="w_lnu_0j_amcatnlo",
+#     id=15026862,
+#     processes=[procs.w_lnu_0j],
+#     keys=[
+#         "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+#     ],
+#     n_files=80,
+#     n_events=160150804,
+# )
+
+cpn.add_dataset(
+    name="w_lnu_1j_amcatnlo",
+    id=14302894,
+    processes=[procs.w_lnu_1j],
+    keys=[
+        "/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=127,
+    n_events=177102579,
+)
+
+cpn.add_dataset(
+    name="w_lnu_2j_amcatnlo",
+    id=15026723,
+    processes=[procs.w_lnu_2j],
+    keys=[
+        "/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=68,
+    n_events=96032711,
+)
+
 
 
 #

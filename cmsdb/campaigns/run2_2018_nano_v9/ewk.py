@@ -112,7 +112,7 @@ cpn.add_dataset(
 )
 
 #
-# W + jets
+# W + jets (LO)
 #
 
 cpn.add_dataset(
@@ -227,6 +227,56 @@ cpn.add_dataset(
     n_files=51 + 50 + 241,
     n_events=2097648 + 10124647 + 15094137,
 )
+
+#
+# W + Jets (NLO)
+#
+
+cpn.add_dataset(
+    name="w_lnu_amcatnlo",
+    id=14294932,
+    processes=[procs.w_lnu],
+    keys=[
+        "/WJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=54,
+    n_events=29117828,
+)
+
+
+cpn.add_dataset(
+    name="w_lnu_0j_amcatnlo",
+    id=14253116,
+    processes=[procs.w_lnu_0j],
+    keys=[
+        "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=102,
+    n_events=172138190,
+)
+
+cpn.add_dataset(
+    name="w_lnu_1j_amcatnlo",
+    id=14230754,
+    processes=[procs.w_lnu_1j],
+    keys=[
+        "/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=149,
+    n_events=183483106,
+)
+
+cpn.add_dataset(
+    name="w_lnu_2j_amcatnlo",
+    id=14299548,
+    processes=[procs.w_lnu_2j],
+    keys=[
+        "/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=63,
+    n_events=94925903,
+)
+
 
 #
 # WZ
