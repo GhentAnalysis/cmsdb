@@ -25,7 +25,7 @@ cpn.add_dataset(
     n_events=54715896,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -41,7 +41,7 @@ cpn.add_dataset(
     n_events=54698315,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -57,7 +57,7 @@ cpn.add_dataset(
     n_events=17063451,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -73,7 +73,7 @@ cpn.add_dataset(
     n_events=17059895,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -89,7 +89,7 @@ cpn.add_dataset(
     n_events=20015377,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -105,7 +105,7 @@ cpn.add_dataset(
     n_events=20010429,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -121,7 +121,7 @@ cpn.add_dataset(
     n_events=138943783,
     aux={
         "era": "C",
-        "jec_era": "RunCv4",
+        "jec_era": "",
     },
 )
 
@@ -137,7 +137,7 @@ cpn.add_dataset(
     n_events=101615754,
     aux={
         "era": "C",
-        "jec_era": "RunCv4",
+        "jec_era": "",
     },
 )
 
@@ -157,7 +157,7 @@ cpn.add_dataset(
     n_events=9772655,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -173,7 +173,7 @@ cpn.add_dataset(
     n_events=2735170,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -189,7 +189,7 @@ cpn.add_dataset(
     n_events=3502967,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -205,7 +205,7 @@ cpn.add_dataset(
     n_events=24205121,
     aux={
         "era": "C",
-        "jec_era": "RunCv4",
+        "jec_era": "",
     },
 )
 
@@ -225,7 +225,7 @@ cpn.add_dataset(
     n_events=67598081,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -241,7 +241,7 @@ cpn.add_dataset(
     n_events=67582665,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -257,7 +257,7 @@ cpn.add_dataset(
     n_events=17233307,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -273,7 +273,7 @@ cpn.add_dataset(
     n_events=17230822,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -289,7 +289,7 @@ cpn.add_dataset(
     n_events=21993048,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -305,7 +305,7 @@ cpn.add_dataset(
     n_events=21987586,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -321,7 +321,7 @@ cpn.add_dataset(
     n_events=160108119,
     aux={
         "era": "C",
-        "jec_era": "RunCv4",
+        "jec_era": "",
     },
 )
 
@@ -337,7 +337,7 @@ cpn.add_dataset(
     n_events=160049621,
     aux={
         "era": "C",
-        "jec_era": "RunCv4",
+        "jec_era": "",
     },
 )
 
@@ -361,7 +361,7 @@ cpn.add_dataset(
     ),
     aux={
         "era": "c",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -385,7 +385,7 @@ cpn.add_dataset(
     ),
     aux={
         "era": "c",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -409,7 +409,7 @@ cpn.add_dataset(
     ),
     aux={
         "era": "c",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -433,7 +433,7 @@ cpn.add_dataset(
     ),
     aux={
         "era": "c",
-        "jec_era": "RunCv4",
+        "jec_era": "",
     },
 )
 

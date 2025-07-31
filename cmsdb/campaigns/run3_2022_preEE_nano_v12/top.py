@@ -913,6 +913,60 @@ cpn.add_dataset(
 # TT + X
 #
 
+
+#
+# tt + Gamma
+#
+
+cpn.add_dataset(
+    name="ttg_ptg_10to100_amcatnlo",
+    id=14837199,
+    processes=[procs.ttg_ptg_10to100],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTG-1Jets_PTG-10to100_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=22,
+            n_events=986777,
+        )
+    ),
+)
+
+cpn.add_dataset(
+    name="ttg_ptg_100to200_amcatnlo",
+    id=14845482,
+    processes=[procs.ttg_ptg_100to200],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTG-1Jets_PTG-100to200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=26,
+            n_events=317194,
+        )
+    ),
+)
+
+cpn.add_dataset(
+    name="ttg_ptg_200toinf_amcatnlo",
+    id=14845249,
+    processes=[procs.ttg_ptg_200toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTG-1Jets_PTG-200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=28,
+            n_events=286306,
+        )
+    ),
+)
+
+#
+# tt + V
+#
+
 cpn.add_dataset(
     name="ttz_zll_m4to50_amcatnlo",
     id=14793589,
@@ -944,26 +998,27 @@ cpn.add_dataset(
     ),
 )
 
-# cpn.add_dataset(
-#    name="ttgamma_dilept",
-#    id=14260351,
-#    processes=[procs.ttgamma_dilept],
-#    keys=[
-#            "/TTGamma_Dilept_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM ",  # noqa
-#        ],
-#    n_files=15,
-#    n_events=14694000,
-# )
 
 cpn.add_dataset(
     name="ttw_wlnu_1jets_amcatnlo",
-    id=14836097,
+    id=15370309,
     processes=[procs.ttw_wlnu],
     keys=[
-        "/TTLNu-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v1/NANOAODSIM",  # noqa
+        "/TTLNu-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22NanoAODv12-mg35x_130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=1,
-    n_events=111308,
+    n_files=26,
+    n_events=2056905,
+)
+
+cpn.add_dataset(
+    name="ttw_wlnu_ewk_amcatnlo",
+    id=15370310,
+    processes=[procs.ttw_wlnu_ewk],
+    keys=[
+        "/TTLNu-EWK_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=31,
+    n_events=298552,
 )
 
 #

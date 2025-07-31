@@ -25,7 +25,7 @@ cpn.add_dataset(
     n_events=100291308,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -41,7 +41,7 @@ cpn.add_dataset(
     n_events=100281976,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -57,7 +57,7 @@ cpn.add_dataset(
     n_events=21462916,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -73,7 +73,7 @@ cpn.add_dataset(
     n_events=21463645,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -93,7 +93,7 @@ cpn.add_dataset(
     n_events=17530531,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -109,7 +109,7 @@ cpn.add_dataset(
     n_events=3751587,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -129,7 +129,7 @@ cpn.add_dataset(
     n_events=105892646,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -139,13 +139,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_egamma],
     keys=[
-        "/EGamma1/Run2023C-22Sep2023_v1-v1/NANOAOD",  # noqa
+        "/EGamma1/Run2023D-22Sep2023_v1-v1/NANOAOD",  # noqa
     ],
-    n_files=71,
-    n_events=67582665,
+    n_files=104,
+    n_events=105824276,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -161,7 +161,7 @@ cpn.add_dataset(
     n_events=22657211,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -171,13 +171,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_egamma],
     keys=[
-        "/EGamma1/Run2023C-22Sep2023_v2-v1/NANOAOD",  # noqa
+        "/EGamma1/Run2023D-22Sep2023_v2-v1/NANOAOD",  # noqa
     ],
-    n_files=24,
+    n_files=30,
     n_events=22653287,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -201,7 +201,7 @@ cpn.add_dataset(
     ),
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -225,7 +225,7 @@ cpn.add_dataset(
     ),
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -249,7 +249,7 @@ cpn.add_dataset(
     ),
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -273,6 +273,6 @@ cpn.add_dataset(
     ),
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )

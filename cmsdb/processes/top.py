@@ -24,7 +24,8 @@ __all__ = [
     "ttz", "ttz_zqq", "ttz_zlep_m1to10", "ttz_zlep_m10toinf", "ttz_zll_m4to50",
     "ttz_zll_m50toinf", "ttz_znunu",
     "ttgamma", "ttgamma_dilept",
-    "ttw", "ttw_wlnu", "ttw_wqq",
+    "ttg_ptg_10to100", "ttg_ptg_100to200", "ttg_ptg_200toinf",
+    "ttw", "ttw_wlnu", "ttw_wlnu_ewk", "ttw_wqq",
     "ttvv",
     "ttzz", "ttwz", "ttww", "tttt", "tthh",
 ]
@@ -532,7 +533,7 @@ ttz_zqq = ttz.add_process(
 ttgamma = ttv.add_process(
     name="ttgamma",
     id=3150,
-    label=f"{tt.label} + gamma",
+    label=f"{tt.label} + " + r"$\gamma$",
 )
 
 # xsec from CMS AN-2021/217, TOP-23-002
@@ -546,6 +547,35 @@ ttgamma_dilept = ttgamma.add_process(
     },
 )
 
+# xsec from ...
+
+ttg_ptg_10to100 = ttgamma.add_process(
+    name="ttg_ptg_10to100",
+    id=3170,
+    label=f"{tt.label} + gamma (pt > 10 GeV)",
+    xsecs={
+        13.6: Number(4.215),
+    },
+)
+
+ttg_ptg_100to200 = ttgamma.add_process(
+    name="ttg_ptg_100to200",
+    id=3180,
+    label=f"{tt.label} + gamma (200 > pt > 100 GeV)",
+    xsecs={
+        13.6: Number(0.3936),
+    },
+)
+
+ttg_ptg_200toinf = ttgamma.add_process(
+    name="ttg_ptg_200toinf",
+    id=3190,
+    label=f"{tt.label} + gamma (pt > 200 GeV)",
+    xsecs={
+        13.6: Number(0.1271),
+
+    },
+)
 
 ttw = ttv.add_process(
     name="ttw",
@@ -575,7 +605,18 @@ ttw = ttv.add_process(
 ttw_wlnu = ttw.add_process(
     name="ttw_wlnu",
     id=3210,
-    xsecs=multiply_xsecs(ttw, const.br_w.lep),
+    xsecs={
+        13.6: Number(0.25)
+    }
+)
+
+ttw_wlnu_ewk = ttw_wlnu.add_process(
+    name="ttw_wlnu_ewk",
+    id=3211,
+    label=f"{ttw_wlnu.label} (EWK)",
+    xsecs={
+        13.6: Number(0.01697)
+    },
 )
 
 ttw_wqq = ttw.add_process(

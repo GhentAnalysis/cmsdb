@@ -118,6 +118,69 @@ cpn.add_dataset(
 
 ####################################################################################################
 #
+# Boson + Gamma production
+#
+####################################################################################################
+
+# DYG to  2LG  TODO
+
+cpn.add_dataset(
+    name="dyg_zll_mll50toinf_ptg10to100_amcatnlo",
+    id=14930640,
+    processes=[procs.dyg_zll_mll50toinf_ptg10to100],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-50_PTG-10to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=119,
+    n_events=48023180,
+)
+
+cpn.add_dataset(
+    name="dyg_zll_mll50toinf_ptg100to200_amcatnlo",
+    id=14958503,
+    processes=[procs.dyg_zll_mll50toinf_ptg100to200],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-50_PTG-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=14,
+    n_events=929434,
+)
+
+cpn.add_dataset(
+    name="dyg_zll_mll50toinf_ptg200to400_amcatnlo",
+    id=14930629,
+    processes=[procs.dyg_zll_mll50toinf_ptg200to400],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-50_PTG-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=11,
+    n_events=502620,
+)
+
+cpn.add_dataset(
+    name="dyg_zll_mll50toinf_ptg400to600_amcatnlo",
+    id=14930551,
+    processes=[procs.dyg_zll_mll50toinf_ptg400to600],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-50_PTG-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=9,
+    n_events=501187,
+)
+
+cpn.add_dataset(
+    name="dyg_zll_mll50toinf_ptg600toinf_amcatnlo",
+    id=14930882,
+    processes=[procs.dyg_zll_mll50toinf_ptg600toinf],
+    keys=[
+        "/DYGto2LG-1Jets_MLL-50_PTG-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=28,
+    n_events=461697,
+)
+
+####################################################################################################
+#
 # Diboson
 #
 ####################################################################################################
@@ -186,8 +249,8 @@ cpn.add_dataset(
     keys=[
         "/WZto3LNu-1Jets-4FS_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6_ext1-v2/NANOAODSIM"  # noqa
     ],
-    n_files=57,
-    n_events=11200104,
+    n_files=40,
+    n_events=5434765,
 )
 
 #

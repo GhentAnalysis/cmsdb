@@ -159,11 +159,20 @@ cpn.add_dataset(
     id=14784485,
     is_data=True,
     processes=[procs.data_muoneg],
-    keys=[
-        "/MuonEG/Run2022G-22Sep2023-v1/NANOAOD",  # noqa
-    ],
-    n_files=27,
-    n_events=6238527,
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/MuonEG/Run2022G-22Sep2023-v1/NANOAOD",  # noqa
+            ],
+            aux={
+                "broken_files": [
+                    "/store/data/Run2022G/MuonEG/NANOAOD/22Sep2023-v1/2520000/cd404eb6-8218-4787-b5ed-af6cd9fe3750.root",  # empty  # noqa: E501
+                ],
+            },
+            n_files=27 - 1,
+            n_events=6238527,
+        ),
+    ),
     aux={
         "era": "G",
     },

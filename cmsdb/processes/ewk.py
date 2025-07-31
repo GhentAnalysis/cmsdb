@@ -60,7 +60,8 @@ __all__ = [
     "wg_wlnu_ptg400to600", "wg_wlnu_ptg600toinf", "wzg_wlnu",
     "dyg",
     "dyg_zll_mll4to50_ptg10to100", "dyg_zll_mll4to50_ptg100to200", "dyg_zll_mll4to50_ptg200toinf",
-    "dyg_zll_mll50toinf_ptg10to50", "dyg_zll_mll50toinf_ptg50to100", "dyg_zll_mll50toinf_ptg100to200",
+    "dyg_zll_mll50toinf_ptg10to50", "dyg_zll_mll50toinf_ptg10to100",
+    "dyg_zll_mll50toinf_ptg50to100", "dyg_zll_mll50toinf_ptg100to200",
     "dyg_zll_mll50toinf_ptg200to400", "dyg_zll_mll50toinf_ptg400to600", "dyg_zll_mll50toinf_ptg600toinf",
 ]
 
@@ -1416,7 +1417,7 @@ wzg_wlnu = wg.add_process(
 dyg = Process(
     name="dyg",
     id=9600,
-    label=r"Z+\gamma",
+    label=r"Z+$\gamma$",
     # xsecs set below as sum over individual processes
 )
 
@@ -1451,8 +1452,17 @@ dyg_zll_mll50toinf_ptg10to50 = dyg.add_process(
     name="dyg_zll_mll50toinf_ptg10to50",
     id=9640,
     xsecs={
-        # 13.6 from CMS AN-23-147
+        # 13.6 from CMS AN-23-089
         13.6: Number(124.4),
+    },
+)
+
+dyg_zll_mll50toinf_ptg10to100 = dyg.add_process(
+    name="dyg_zll_mll50toinf_ptg10to100",
+    id=9645,
+    xsecs={
+        # 13.6 from CMS AN-23-089
+        13.6: Number(124.4 + 2.088),
     },
 )
 
@@ -1460,8 +1470,8 @@ dyg_zll_mll50toinf_ptg50to100 = dyg.add_process(
     name="dyg_zll_mll50toinf_ptg50to100",
     id=9650,
     xsecs={
-        # 13.6 from CMS AN-23-147
-        13.6: Number(39.27),
+        # 13.6 from CMS AN-23-089
+        13.6: Number(2.088),
     },
 )
 
@@ -1469,8 +1479,8 @@ dyg_zll_mll50toinf_ptg100to200 = dyg.add_process(
     name="dyg_zll_mll50toinf_ptg100to200",
     id=9660,
     xsecs={
-        # 13.6 from CMS AN-23-147
-        13.6: Number(1.01),
+        # 13.6 from CMS AN-23-089
+        13.6: Number(0.3493),
     },
 )
 
@@ -1478,7 +1488,7 @@ dyg_zll_mll50toinf_ptg200to400 = dyg.add_process(
     name="dyg_zll_mll50toinf_ptg200to400",
     id=9670,
     xsecs={
-        # 13.6 from CMS AN-23-147
+        # 13.6 from CMS AN-23-089
         13.6: Number(0.08),
     },
 )
@@ -1487,7 +1497,7 @@ dyg_zll_mll50toinf_ptg400to600 = dyg.add_process(
     name="dyg_zll_mll50toinf_ptg400to600",
     id=9680,
     xsecs={
-        # 13.6 from CMS AN-23-147
+        # 13.6 from CMS AN-23-089
         13.6: Number(0.00329),
     },
 )
@@ -1496,7 +1506,7 @@ dyg_zll_mll50toinf_ptg600toinf = dyg.add_process(
     name="dyg_zll_mll50toinf_ptg600toinf",
     id=9690,
     xsecs={
-        # 13.6 from CMS AN-23-147
+        # 13.6 from CMS AN-23-089
         13.6: Number(0.0006773),
     },
 )
