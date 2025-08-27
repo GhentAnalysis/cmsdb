@@ -606,7 +606,7 @@ ttw_wlnu = ttw.add_process(
     name="ttw_wlnu",
     id=3210,
     xsecs={
-        13.6: Number(0.25)
+        13.6: Number(0.2471)
     }
 )
 

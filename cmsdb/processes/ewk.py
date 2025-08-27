@@ -1044,8 +1044,8 @@ zz_zll_zll = zz.add_process(
     xsecs=multiply_xsecs(zz, const.br_zz.llll),
 )
 
-# zz_zll_zll cross section updated to match xsec stated in wZ inclusive measurement 13.6 TeV
-zz_zll_zll.xsecs[13.6] = Number(1.65)
+# cross sections 13.6TeV based on https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV
+zz_zll_zll.xsecs[13.6] = Number(1.6578)
 
 zz_zqq_zqq = zz.add_process(
     name="zz_zqq_zqq",
@@ -1092,8 +1092,8 @@ wz_wlnu_zll = wz.add_process(
     xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.clep),
 )
 
-# wz_wlnu_zll cross section updated to match WZ inclusive measurement 13.6 TeV
-wz_wlnu_zll.xsecs[13.6] = Number(5.31)
+# cross sections 13.6TeV based on https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV
+wz_wlnu_zll.xsecs[13.6] = Number(5.2797)
 
 
 wz_wqq_zll = wz.add_process(
@@ -1198,6 +1198,7 @@ ww_fh = ww.add_process(
 
 #
 # gg -> ZZ -> 4l
+# cross sections 13.6 TeV based on ttW 13.6 TeV analysis (AN-24-239)
 #
 
 ggtozzto4l = zz.add_process(
@@ -1207,7 +1208,6 @@ ggtozzto4l = zz.add_process(
     xsecs={13: Number(0.1), 13.6: Number(0.1)},
 )
 
-# 13.6 TeV xsec GenXSecAnalyzer FAILED TODO
 ggtozzto2e2mu = ggtozzto4l.add_process(
     name="ggtozzto2e2mu",
     id=8510,
@@ -1236,7 +1236,7 @@ ggtozzto4e = ggtozzto4l.add_process(
     name="ggtozzto4e",
     id=8540,
     label="gg -> ZZ -> 4e",
-    xsecs={13: Number(0.0027), 13.6: Number(0.003)},  # TODO
+    xsecs={13: Number(0.0027), 13.6: Number(0.0061150 / 2)},  # TODO
 )
 
 # 13.6 TeV dataset not available
@@ -1244,7 +1244,7 @@ ggtozzto4mu = ggtozzto4l.add_process(
     name="ggtozzto4mu",
     id=8550,
     label="gg -> ZZ -> 4mu",
-    xsecs={13: Number(0.0027), 13.6: Number(0.003)},  # TODO
+    xsecs={13: Number(0.0027), 13.6: Number(0.0061150 / 2)},  # TODO
 )
 
 # 13.6 TeV dataset not available
@@ -1252,20 +1252,16 @@ ggtozzto4tau = ggtozzto4l.add_process(
     name="ggtozzto4tau",
     id=8560,
     label="gg -> ZZ -> 4tau",
-    xsecs={13: Number(0.0027), 13.6: Number(0.003)},  # TODO
+    xsecs={13: Number(0.0027), 13.6: Number(0.0061150 / 2)},  # TODO
 )
 
-ggtozzto4l.set_xsec(
-    13,
-    ggtozzto2e2mu.get_xsec(13) + ggtozzto2e2tau.get_xsec(13) + ggtozzto2mu2tau.get_xsec(13) +
-    ggtozzto4e.get_xsec(13) + ggtozzto4mu.get_xsec(13) + ggtozzto4tau.get_xsec(13),
-)
-
-ggtozzto4l.set_xsec(
-    13.6,
-    ggtozzto2e2mu.get_xsec(13.6) + ggtozzto2e2tau.get_xsec(13.6) + ggtozzto2mu2tau.get_xsec(13.6) +
-    ggtozzto4e.get_xsec(13.6) + ggtozzto4mu.get_xsec(13.6) + ggtozzto4tau.get_xsec(13.6),
-)
+for cme in [13, 13.6]:
+    # update gg -> ZZ -> 4l cross section
+    ggtozzto4l.set_xsec(
+        cme,
+        ggtozzto2e2mu.get_xsec(cme) + ggtozzto2e2tau.get_xsec(cme) + ggtozzto2mu2tau.get_xsec(cme) +
+        ggtozzto4e.get_xsec(cme) + ggtozzto4mu.get_xsec(cme) + ggtozzto4tau.get_xsec(cme),
+    )
 
 
 #
