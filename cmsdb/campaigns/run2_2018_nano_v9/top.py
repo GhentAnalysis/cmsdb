@@ -321,7 +321,7 @@ cpn.add_dataset(
 # TTTT
 
 cpn.add_dataset(
-    name="tttt",
+    name="tttt_amcatnlo",
     id=14284832,
     processes=[procs.tttt],
     keys=[
@@ -330,4 +330,5 @@ cpn.add_dataset(
     n_files=49,
     n_events=13058000,
 )
+
 
