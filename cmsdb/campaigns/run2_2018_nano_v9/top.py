@@ -325,8 +325,9 @@ cpn.add_dataset(
     id=14284832,
     processes=[procs.tttt],
     keys=[
-        "/TTTT_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM"
+        "/TTTT_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
     n_files=49,
     n_events=13058000,
 )
+
