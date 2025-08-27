@@ -606,8 +606,8 @@ ttw_wlnu = ttw.add_process(
     name="ttw_wlnu",
     id=3210,
     xsecs={
-        13.6: Number(0.2471)
-    }
+        13.6: Number(0.2471),
+    },
 )
 
 ttw_wlnu_ewk = ttw_wlnu.add_process(
@@ -615,7 +615,7 @@ ttw_wlnu_ewk = ttw_wlnu.add_process(
     id=3211,
     label=f"{ttw_wlnu.label} (EWK)",
     xsecs={
-        13.6: Number(0.01697)
+        13.6: Number(0.01697),
     },
 )
 

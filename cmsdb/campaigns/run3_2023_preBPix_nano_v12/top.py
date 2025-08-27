@@ -925,7 +925,7 @@ cpn.add_dataset(
             ],
             n_files=37,
             n_events=1976537,
-        )
+        ),
     ),
 )
 
@@ -940,7 +940,7 @@ cpn.add_dataset(
             ],
             n_files=27,
             n_events=605263,
-        )
+        ),
     ),
 )
 
@@ -955,7 +955,7 @@ cpn.add_dataset(
             ],
             n_files=22,
             n_events=606104,
-        )
+        ),
     ),
 )
 
