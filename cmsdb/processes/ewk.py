@@ -89,6 +89,7 @@ dy = Process(
 # and for 13.6 TeV, based on:
 # https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV?rev=12
 
+
 # if needed for scaling from NLO to NNLO:
 # NLO cross section, based on GenXSecAnalyzer for
 # DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8 (Summer20UL16, NLO)
@@ -154,7 +155,7 @@ dy_m10to50 = dy.add_process(
     name="dy_m10to50",
     id=51001,
     xsecs={
-        13: Number(0.1),  # TODO
+        13: Number(15810.),
         13.6: dy_m10to50_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
     aux={

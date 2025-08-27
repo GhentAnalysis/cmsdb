@@ -3,7 +3,6 @@
 
 from order import Campaign
 
-
 cpn = campaign_run2_2018_nano_v9_pNet = Campaign(
     name="run2_2018_nano_v9_pNet",
     id=220181,
