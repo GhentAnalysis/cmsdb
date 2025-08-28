@@ -4,6 +4,8 @@
 CMS datasets from the 2023 pre-BPix data-taking campaign
 """
 
+from order import DatasetInfo
+
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2023_preBPix_nano_v12 import campaign_run3_2023_preBPix_nano_v12 as cpn
 
@@ -23,7 +25,7 @@ cpn.add_dataset(
     n_events=54715896,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -39,7 +41,7 @@ cpn.add_dataset(
     n_events=54698315,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -55,7 +57,7 @@ cpn.add_dataset(
     n_events=17063451,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -71,7 +73,7 @@ cpn.add_dataset(
     n_events=17059895,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -87,7 +89,7 @@ cpn.add_dataset(
     n_events=20015377,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -103,7 +105,7 @@ cpn.add_dataset(
     n_events=20010429,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -119,7 +121,7 @@ cpn.add_dataset(
     n_events=138943783,
     aux={
         "era": "C",
-        "jec_era": "RunCv4",
+        "jec_era": "",
     },
 )
 
@@ -135,7 +137,7 @@ cpn.add_dataset(
     n_events=101615754,
     aux={
         "era": "C",
-        "jec_era": "RunCv4",
+        "jec_era": "",
     },
 )
 
@@ -155,7 +157,7 @@ cpn.add_dataset(
     n_events=9772655,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -171,7 +173,7 @@ cpn.add_dataset(
     n_events=2735170,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -187,7 +189,7 @@ cpn.add_dataset(
     n_events=3502967,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -203,7 +205,7 @@ cpn.add_dataset(
     n_events=24205121,
     aux={
         "era": "C",
-        "jec_era": "RunCv4",
+        "jec_era": "",
     },
 )
 
@@ -223,7 +225,7 @@ cpn.add_dataset(
     n_events=67598081,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -239,7 +241,7 @@ cpn.add_dataset(
     n_events=67582665,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -255,7 +257,7 @@ cpn.add_dataset(
     n_events=17233307,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -271,7 +273,7 @@ cpn.add_dataset(
     n_events=17230822,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -287,7 +289,7 @@ cpn.add_dataset(
     n_events=21993048,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -303,7 +305,7 @@ cpn.add_dataset(
     n_events=21987586,
     aux={
         "era": "C",
-        "jec_era": "RunCv123",
+        "jec_era": "",
     },
 )
 
@@ -319,7 +321,7 @@ cpn.add_dataset(
     n_events=160108119,
     aux={
         "era": "C",
-        "jec_era": "RunCv4",
+        "jec_era": "",
     },
 )
 
@@ -335,6 +337,199 @@ cpn.add_dataset(
     n_events=160049621,
     aux={
         "era": "C",
+        "jec_era": "",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet0_c_v1",
+    id=14784875,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET0/Run2023C-22Sep2023_v1-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=69,
+            n_events=56089464,
+        ),
+    ),
+    aux={
+        "era": "c",
+        "jec_era": "",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet0_c_v2",
+    id=14784867,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET0/Run2023C-22Sep2023_v2-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=34,
+            n_events=17154040,
+        ),
+    ),
+    aux={
+        "era": "c",
+        "jec_era": "",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet0_c_v3",
+    id=14784909,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET0/Run2023C-22Sep2023_v3-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=28,
+            n_events=14859886,
+        ),
+    ),
+    aux={
+        "era": "c",
+        "jec_era": "",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet0_c_v4",
+    id=14785390,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET0/Run2023C-22Sep2023_v4-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=125,
+            n_events=105910300,
+        ),
+    ),
+    aux={
+        "era": "c",
+        "jec_era": "",
+    },
+)
+
+
+cpn.add_dataset(
+    name="data_jetmet1_c_v1",
+    id=14784899,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET1/Run2023C-22Sep2023_v1-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=73,
+            n_events=56071751,
+        ),
+    ),
+    aux={
+        "era": "c",
+        "jec_era": "RunCv123",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet1_c_v2",
+    id=14784905,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET1/Run2023C-22Sep2023_v2-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=30,
+            n_events=17149627,
+        ),
+    ),
+    aux={
+        "era": "c",
+        "jec_era": "RunCv123",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet1_c_v3",
+    id=14784851,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET1/Run2023C-22Sep2023_v3-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=27,
+            n_events=14852598,
+        ),
+    ),
+    aux={
+        "era": "c",
+        "jec_era": "RunCv123",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet1_c_v4",
+    id=14786083,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET1/Run2023C-22Sep2023_v4-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=124,
+            n_events=105874180,
+        ),
+    ),
+    aux={
+        "era": "c",
         "jec_era": "RunCv4",
     },
 )

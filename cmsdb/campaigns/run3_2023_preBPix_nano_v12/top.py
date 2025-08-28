@@ -910,8 +910,61 @@ cpn.add_dataset(
 # TT + X
 #
 
+#
+# TT + Gamma
+#
+
 cpn.add_dataset(
-    name="ttz_zll_m4to50",
+    name="ttg_ptg_10to100_amcatnlo",
+    id=14987262,
+    processes=[procs.ttg_ptg_10to100],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTG-1Jets_PTG-10to100_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=37,
+            n_events=1976537,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttg_ptg_100to200_amcatnlo",
+    id=14998312,
+    processes=[procs.ttg_ptg_100to200],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTG-1Jets_PTG-100to200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=27,
+            n_events=605263,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttg_ptg_200toinf_amcatnlo",
+    id=14995480,
+    processes=[procs.ttg_ptg_200toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTG-1Jets_PTG-200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=22,
+            n_events=606104,
+        ),
+    ),
+)
+
+#
+# TT + V
+#
+
+cpn.add_dataset(
+    name="ttz_zll_m4to50_amcatnlo",
     id=14995483,
     processes=[procs.ttz_zll_m4to50],
     keys=[
@@ -922,32 +975,44 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttz_zll_m50toinf",
+    name="ttz_zll_m50toinf_amcatnlo",
     id=14998321,
     processes=[procs.ttz_zll_m50toinf],
     keys=[
         "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+        "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15_ext1-v2/NANOAODSIM"  # noqa
     ],
-    n_files=26,
-    n_events=794000,
+    n_files=26 + 55,
+    n_events=794000 + 7850000,
 )
 
 cpn.add_dataset(
-    name="ttw_wlnu_1jets",
-    id=15138234,
+    name="ttw_wlnu_1jets_amcatnlo",
+    id=15369862,
     processes=[procs.ttw_wlnu],
     keys=[
-        "/TTLNu-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",
+        "/TTLNu-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer23NanoAODv12-mg35x_130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
     ],
-    n_files=3,
-    n_events=460305,
+    n_files=34,
+    n_events=3935565,
+)
+
+cpn.add_dataset(
+    name="ttw_wlnu_ewk_amcatnlo",
+    id=15140878,
+    processes=[procs.ttw_wlnu_ewk],
+    keys=[
+        "/TTLNu-EWK_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=32,
+    n_events=597000,
 )
 
 #
 # TT + XX
 
 cpn.add_dataset(
-    name="tttt",
+    name="tttt_amcatnlo",
     id=14986966,
     processes=[procs.tttt],
     keys=[
@@ -1010,19 +1075,20 @@ cpn.add_dataset(
 # only dr2 available
 
 cpn.add_dataset(
-    name="twz_tqq_wlnu_zll_dr1",
+    name="twz_tqq_wlnu_zll_dr1_amcatnlo",
     id=15140387,
     processes=[procs.twz_tqq_wlnu_zll_dr1],
     keys=[
         "/TWZ_Tto2Q_WtoLNu_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+        "/TWZ_Tto2Q_WtoLNu_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=52,
-    n_events=4336000,
+    n_files=52 + 35,
+    n_events=4336000 + 1976000,
 )
 
 
 cpn.add_dataset(
-    name="twz_tqq_wlnu_zll_dr2",
+    name="twz_tqq_wlnu_zll_dr2_amcatnlo",
     id=15053561,
     processes=[procs.twz_tqq_wlnu_zll_dr2],
     keys=[
@@ -1033,18 +1099,19 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twz_tlnu_wqq_zll_dr1",
+    name="twz_tlnu_wqq_zll_dr1_amcatnlo",
     id=15139307,
     processes=[procs.twz_tlnu_wqq_zll_dr1],
     keys=[
         "/TWZ_TtoLNu_Wto2Q_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+        "/TWZ_TtoLNu_Wto2Q_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=35,
-    n_events=4272000,
+    n_files=35 + 35,
+    n_events=4272000 + 1988000,
 )
 
 cpn.add_dataset(
-    name="twz_tlnu_wqq_zll_dr2",
+    name="twz_tlnu_wqq_zll_dr2_amcatnlo",
     id=15054302,
     processes=[procs.twz_tlnu_wqq_zll_dr2],
     keys=[
@@ -1054,19 +1121,20 @@ cpn.add_dataset(
     n_events=1091000,
 )
 
-# TODO missing for 2023 preBPix
-# cpn.add_dataset(
-#     name="twz_tlnu_wlnu_zll_dr1",
-#     id=15054360,
-#     processes=[procs.twz_tlnu_wlnu_zll_dr1],
-#     keys=[
-#         ],
-#     n_files=14,
-#     n_events=444000,
-# )
+cpn.add_dataset(
+    name="twz_tlnu_wlnu_zll_dr1_amcatnlo",
+    id=15200503,
+    processes=[procs.twz_tlnu_wlnu_zll_dr1],
+    keys=[
+        "/TWZ_TtoLNu_WtoLNu_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v3/NANOAODSIM",  # noqa
+        "/TWZ_TtoLNu_WtoLNu_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15_ext1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=33 + 24,
+    n_events=2184000 + 992000,
+)
 
 cpn.add_dataset(
-    name="twz_tlnu_wlnu_zll_dr2",
+    name="twz_tlnu_wlnu_zll_dr2_amcatnlo",
     id=15054360,
     processes=[procs.twz_tlnu_wlnu_zll_dr2],
     keys=[
@@ -1076,4 +1144,15 @@ cpn.add_dataset(
     n_events=444000,
 )
 
-# tZq not available in 2023 preBPIX
+# tZq now available in 2023 preBPIX
+
+cpn.add_dataset(
+    name="tzq_zll_4f_m30toinf_amcatnlo",
+    id=15139002,
+    processes=[procs.tzq],
+    keys=[
+        "/TZQB-Zto2L-4FS_MLL-30_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=32,
+    n_events=1800000,
+)

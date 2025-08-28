@@ -4,6 +4,8 @@
 CMS datasets from the 2023 post-BPix data-taking campaign
 """
 
+from order import DatasetInfo
+
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2023_postBPix_nano_v12 import campaign_run3_2023_postBPix_nano_v12 as cpn
 
@@ -23,7 +25,7 @@ cpn.add_dataset(
     n_events=100291308,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -39,7 +41,7 @@ cpn.add_dataset(
     n_events=100281976,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -55,7 +57,7 @@ cpn.add_dataset(
     n_events=21462916,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -71,7 +73,7 @@ cpn.add_dataset(
     n_events=21463645,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -91,7 +93,7 @@ cpn.add_dataset(
     n_events=17530531,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -107,7 +109,7 @@ cpn.add_dataset(
     n_events=3751587,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -127,7 +129,7 @@ cpn.add_dataset(
     n_events=105892646,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -137,13 +139,13 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_egamma],
     keys=[
-        "/EGamma1/Run2023C-22Sep2023_v1-v1/NANOAOD",  # noqa
+        "/EGamma1/Run2023D-22Sep2023_v1-v1/NANOAOD",  # noqa
     ],
-    n_files=71,
-    n_events=67582665,
+    n_files=104,
+    n_events=105824276,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -159,7 +161,7 @@ cpn.add_dataset(
     n_events=22657211,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
     },
 )
 
@@ -169,12 +171,108 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data_egamma],
     keys=[
-        "/EGamma1/Run2023C-22Sep2023_v2-v1/NANOAOD",  # noqa
+        "/EGamma1/Run2023D-22Sep2023_v2-v1/NANOAOD",  # noqa
     ],
-    n_files=24,
+    n_files=30,
     n_events=22653287,
     aux={
         "era": "D",
-        "jec_era": "RunD",
+        "jec_era": "",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet0_d_v1",
+    id=14787276,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET0/Run2023D-22Sep2023_v1-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=70,
+            n_events=61507467,
+        ),
+    ),
+    aux={
+        "era": "D",
+        "jec_era": "",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet0_d_v2",
+    id=14787323,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET0/Run2023D-22Sep2023_v2-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=22,
+            n_events=13254510,
+        ),
+    ),
+    aux={
+        "era": "D",
+        "jec_era": "",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet1_d_v1",
+    id=14787189,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET1/Run2023D-22Sep2023_v1-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=80,
+            n_events=61491693,
+        ),
+    ),
+    aux={
+        "era": "D",
+        "jec_era": "",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet1_d_v2",
+    id=14787000,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET1/Run2023D-22Sep2023_v2-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=25,
+            n_events=13252102,
+        ),
+    ),
+    aux={
+        "era": "D",
+        "jec_era": "",
     },
 )

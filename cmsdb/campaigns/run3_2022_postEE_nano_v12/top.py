@@ -967,8 +967,61 @@ cpn.add_dataset(
 # TT + X
 #
 
+#
+# TT + G
+#
+
 cpn.add_dataset(
-    name="ttz_zll_m4to50",
+    name="ttg_ptg_10to100_amcatnlo",
+    id=14850198,
+    processes=[procs.ttg_ptg_10to100],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTG-1Jets_PTG-10to100_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v4/NANOAODSIM",  # noqa
+            ],
+            n_files=42,
+            n_events=3565533,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttg_ptg_100to200_amcatnlo",
+    id=14845797,
+    processes=[procs.ttg_ptg_100to200],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTG-1Jets_PTG-100to200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=34,
+            n_events=997649,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttg_ptg_200toinf_amcatnlo",
+    id=14850493,
+    processes=[procs.ttg_ptg_200toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTG-1Jets_PTG-200_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+            ],
+            n_files=28,
+            n_events=1041354,
+        ),
+    ),
+)
+
+#
+# TT + V
+#
+
+cpn.add_dataset(
+    name="ttz_zll_m4to50_amcatnlo",
     id=14792774,
     processes=[procs.ttz_zll_m4to50],
     keys=[
@@ -979,26 +1032,40 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ttz_zll_m50toinf",
+    name="ttz_zll_m50toinf_amcatnlo",
     id=14793375,
     processes=[procs.ttz_zll_m50toinf],
     keys=[
         "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+        "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=23,
-    n_events=1343867,
+    n_files=23 + 97,
+    n_events=1343867 + 12586478,
 )
 
 cpn.add_dataset(
-    name="ttw_wlnu_1jets",
-    id=14232323,
+    name="ttw_wlnu_1jets_amcatnlo",
+    id=15289557,
     processes=[procs.ttw_wlnu],
     keys=[
-        "/TTLNu-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v4/NANOAODSIM",  # noqa
+        "/TTLNu-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EENanoAODv12-mg35x_130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],
-    n_files=3,
-    n_events=335985,
+    n_files=171,
+    n_events=7212758,
 )
+
+cpn.add_dataset(
+    name="ttw_wlnu_ewk_amcatnlo",
+    id=15199936,
+    processes=[procs.ttw_wlnu_ewk],
+    keys=[
+        "/TTLNu-EWK_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=27,
+    n_events=599291,
+)
+
+
 #
 # TT + XX
 # TODO process xsecs unknown!!
@@ -1027,7 +1094,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tttt",
+    name="tttt_amcatnlo",
     id=14811100,
     processes=[procs.tttt],
     keys=[
@@ -1055,18 +1122,19 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="twz_tqq_wlnu_zll_dr1",
+    name="twz_tqq_wlnu_zll_dr1_amcatnlo",
     id=14868500,
     processes=[procs.twz_tqq_wlnu_zll_dr1],
     keys=[
         "/TWZ_Tto2Q_WtoLNu_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+        "/TWZ_Tto2Q_WtoLNu_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=35,
-    n_events=159111,
+    n_files=35 + 60,
+    n_events=159111 + 6724016,
 )
 
 cpn.add_dataset(
-    name="twz_tqq_wlnu_zll_dr2",
+    name="twz_tqq_wlnu_zll_dr2_amcatnlo",
     id=14870420,
     processes=[procs.twz_tqq_wlnu_zll_dr2],
     keys=[
@@ -1077,19 +1145,20 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twz_tlnu_wqq_zll_dr1",
+    name="twz_tlnu_wqq_zll_dr1_amcatnlo",
     id=14885317,
     processes=[procs.twz_tlnu_wqq_zll_dr1],
     keys=[
         "/TWZ_TtoLNu_Wto2Q_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v4/NANOAODSIM",  # noqa
+        "/TWZ_TtoLNu_Wto2Q_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=11,
-    n_events=45954,
+    n_files=11 + 96,
+    n_events=45954 + 6752396,
 )
 
 
 cpn.add_dataset(
-    name="twz_tlnu_wqq_zll_dr2",
+    name="twz_tlnu_wqq_zll_dr2_amcatnlo",
     id=14854709,
     processes=[procs.twz_tlnu_wqq_zll_dr2],
     keys=[
@@ -1100,18 +1169,19 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="twz_tlnu_wlnu_zll_dr1",
+    name="twz_tlnu_wlnu_zll_dr1_amcatnlo",
     id=14885324,
     processes=[procs.twz_tlnu_wlnu_zll_dr1],
     keys=[
         "/TWZ_TtoLNu_WtoLNu_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v3/NANOAODSIM",  # noqa
+        "/TWZ_TtoLNu_WtoLNu_Zto2L_DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=23,
-    n_events=414414,
+    n_files=23 + 76,
+    n_events=414414 + 3498530,
 )
 
 cpn.add_dataset(
-    name="twz_tlnu_wlnu_zll_dr2",
+    name="twz_tlnu_wlnu_zll_dr2_amcatnlo",
     id=14870596,
     processes=[procs.twz_tlnu_wlnu_zll_dr2],
     keys=[
@@ -1122,11 +1192,11 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="tzq_zll_4f_m30toinf",
+    name="tzq_zll_4f_m30toinf_amcatnlo",
     id=14916913,
     processes=[procs.tzq],
     keys=[
-         "/TZQB-Zto2L-4FS_MLL-30_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+        "/TZQB-Zto2L-4FS_MLL-30_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
     ],
     n_files=40,
     n_events=3047512,

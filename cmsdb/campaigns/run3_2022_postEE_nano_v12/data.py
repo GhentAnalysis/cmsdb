@@ -159,11 +159,89 @@ cpn.add_dataset(
     id=14784485,
     is_data=True,
     processes=[procs.data_muoneg],
-    keys=[
-        "/MuonEG/Run2022G-22Sep2023-v1/NANOAOD",  # noqa
-    ],
-    n_files=27,
-    n_events=6238527,
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/MuonEG/Run2022G-22Sep2023-v1/NANOAOD",  # noqa
+            ],
+            aux={
+                "broken_files": [
+                    "/store/data/Run2022G/MuonEG/NANOAOD/22Sep2023-v1/2520000/cd404eb6-8218-4787-b5ed-af6cd9fe3750.root",  # empty  # noqa: E501
+                ],
+            },
+            n_files=27 - 1,
+            n_events=6238527,
+        ),
+    ),
+    aux={
+        "era": "G",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet_e",
+    id=14784141,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET/Run2022E-22Sep2023-v1/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=148,
+            n_events=138985608,
+        ),
+    ),
+    aux={
+        "era": "E",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet_f",
+    id=14826581,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET/Run2022F-22Sep2023-v2/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=476,
+            n_events=514823262,
+        ),
+    ),
+    aux={
+        "era": "F",
+    },
+)
+
+cpn.add_dataset(
+    name="data_jetmet_g",
+    id=14826611,
+    is_data=True,
+    processes=[procs.data_jetmet],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/JetMET/Run2022G-22Sep2023-v2/NANOAOD",  # noqa: E501
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=107,
+            n_events=84696790,
+        ),
+    ),
     aux={
         "era": "G",
     },

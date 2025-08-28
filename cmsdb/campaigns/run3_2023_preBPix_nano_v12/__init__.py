@@ -1,4 +1,5 @@
 # coding: utf-8
+# flake8: noqa
 
 """
 Common, analysis independent definition of the 2023 pre-BPix data-taking campaign
@@ -33,9 +34,9 @@ campaign_run3_2023_preBPix_nano_v12 = Campaign(
 
 
 # trailing imports to load datasets
-import cmsdb.campaigns.run3_2023_preBPix_nano_v12.data  # noqa
-import cmsdb.campaigns.run3_2023_preBPix_nano_v12.top  # noqa
-import cmsdb.campaigns.run3_2023_preBPix_nano_v12.ewk  # noqa
-import cmsdb.campaigns.run3_2023_preBPix_nano_v12.qcd  # noqa
-import cmsdb.campaigns.run3_2023_preBPix_nano_v12.higgs  # noqa
-import cmsdb.campaigns.run3_2023_preBPix_nano_v12.hh2bbvv  # noqa
+import cmsdb.campaigns.run3_2023_preBPix_nano_v12.data
+import cmsdb.campaigns.run3_2023_preBPix_nano_v12.top
+import cmsdb.campaigns.run3_2023_preBPix_nano_v12.ewk
+import cmsdb.campaigns.run3_2023_preBPix_nano_v12.qcd
+import cmsdb.campaigns.run3_2023_preBPix_nano_v12.higgs
+import cmsdb.campaigns.run3_2023_preBPix_nano_v12.hh2bbvv

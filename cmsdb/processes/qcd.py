@@ -187,6 +187,10 @@ qcd_ht2000toinf = qcd.add_process(
     },
 )
 
+#
+# QCD BGen HT-binned
+#
+
 qcd_bgen_ht200to300 = qcd.add_process(
     name="qcd_bgen_ht200to300",
     id=33301,
@@ -195,6 +199,7 @@ qcd_bgen_ht200to300 = qcd.add_process(
         13: Number(111700),
     },
 )
+
 qcd_bgen_ht300to500 = qcd.add_process(
     name="qcd_bgen_ht300to500",
     id=33302,
@@ -203,6 +208,7 @@ qcd_bgen_ht300to500 = qcd.add_process(
         13: Number(27960),
     },
 )
+
 qcd_bgen_ht500to700 = qcd.add_process(
     name="qcd_bgen_ht500to700",
     id=33303,
@@ -211,6 +217,7 @@ qcd_bgen_ht500to700 = qcd.add_process(
         13: Number(3078),
     },
 )
+
 qcd_bgen_ht700to1000 = qcd.add_process(
     name="qcd_bgen_ht700to1000",
     id=33304,
@@ -219,6 +226,7 @@ qcd_bgen_ht700to1000 = qcd.add_process(
         13: Number(732),
     },
 )
+
 qcd_bgen_ht1000to1500 = qcd.add_process(
     name="qcd_bgen_ht1000to1500",
     id=33305,
@@ -227,6 +235,7 @@ qcd_bgen_ht1000to1500 = qcd.add_process(
         13: Number(139),
     },
 )
+
 qcd_bgen_ht1500to2000 = qcd.add_process(
     name="qcd_bgen_ht1500to2000",
     id=33306,
@@ -235,6 +244,7 @@ qcd_bgen_ht1500to2000 = qcd.add_process(
         13: Number(14.7),
     },
 )
+
 qcd_bgen_ht2000 = qcd.add_process(
     name="qcd_bgen_ht2000",
     id=33307,
@@ -243,6 +253,7 @@ qcd_bgen_ht2000 = qcd.add_process(
         13: Number(3.09),
     },
 )
+
 #
 # QCD pT-binned
 #

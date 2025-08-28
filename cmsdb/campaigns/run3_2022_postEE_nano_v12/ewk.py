@@ -634,7 +634,7 @@ cpn.add_dataset(
 # )
 
 cpn.add_dataset(
-    name="wz",
+    name="wz_pythia",
     id=14799680,
     is_data=False,
     processes=[procs.wz],
@@ -646,28 +646,29 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wz_wlnu_zll",
+    name="wz_wlnu_zll_powheg",
     id=14790992,
     is_data=False,
     processes=[procs.wz_wlnu_zll],
     keys=[
-        "/WZto3LNu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM ",  # noqa
+        "/WZto3LNu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+        "/WZto3LNu_TuneCP5_13p6TeV_powheg-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/NANOAODSIM"  # noqa
     ],
-    n_files=63,
-    n_events=9779090,
+    n_files=63 + 199,
+    n_events=9779090 + 31432387,
 )
 
 
 cpn.add_dataset(
-    name="wz_wlnu_zll_1jets",
+    name="wz_wlnu_zll_1jets_amcatnlo",
     id=14784506,
     is_data=False,
     processes=[procs.wz_wlnu_zll_1jets],  # TODO change processes to 1 jet specific
     keys=[
-        "/WZto3LNu-1Jets-4FS_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+        "/WZto3LNu-1Jets-4FS_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=108,
-    n_events=10095542,
+    n_files=131,
+    n_events=19099028,
 )
 
 
@@ -699,7 +700,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="zz_zll_zll",
+    name="zz_zll_zll_powheg",
     id=14790743,
     processes=[procs.zz_zll_zll],
     keys=[
@@ -714,7 +715,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="gluglutocontintozzto2e2mu_mcfm",
+    name="ggtozzto2e2mu_mcfm",
     id=14826608,
     processes=[procs.ggtozzto2e2mu],
     keys=[
@@ -725,7 +726,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="gluglutocontintozzto2e2tau_mcfm",
+    name="ggtozzto2e2tau_mcfm",
     id=14889511,
     processes=[procs.ggtozzto2e2tau],
     keys=[
@@ -736,7 +737,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="gluglutocontintozzto2mu2tau_mcfm",
+    name="ggtozzto2mu2tau_mcfm",
     id=14889510,
     processes=[procs.ggtozzto2mu2tau],
     keys=[
@@ -746,44 +747,43 @@ cpn.add_dataset(
     n_events=525000,
 )
 
-# TODO Not found in CMSDAS
-# cpn.add_dataset(
-#    name="gluglutocontintozzto4e_mcfm",
-#    id=14242982,
-#    processes=[procs.ggtozzto4e],
-#    keys=[
-#        "/GluGluToContinToZZTo4e_TuneCP5_13TeV-mcfm701-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
-#    ],
-#    n_files=25,
-#    n_events=974000,
-# )
-#
-# cpn.add_dataset(
-#    name="gluglutocontintozzto4mu_mcfm",
-#    id=14266651,
-#    processes=[procs.ggtozzto4mu],
-#    keys=[
-#        "/GluGluToContinToZZTo4mu_TuneCP5_13TeV-mcfm701-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
-#    ],
-#    n_files=34,
-#    n_events=845232,
-# )
-#
-# cpn.add_dataset(
-#    name="gluglutocontintozzto4tau_mcfm",
-#    id=14253997,
-#    processes=[procs.ggtozzto4tau],
-#    keys=[
-#        "/GluGluToContinToZZTo4tau_TuneCP5_13TeV-mcfm701-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
-#    ],
-#    n_files=10,
-#    n_events=493998,
-# )
+cpn.add_dataset(
+    name="ggtozzto4e_mcfm",
+    id=14889461,
+    processes=[procs.ggtozzto4e],
+    keys=[
+        "/GluGlutoContinto2Zto4E_TuneCP5_13p6TeV_mcfm-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=35,
+    n_events=1035740,
+)
+
+cpn.add_dataset(
+    name="ggtozzto4mu_mcfm",
+    id=14889477,
+    processes=[procs.ggtozzto4mu],
+    keys=[
+        "/GluGlutoContinto2Zto4Mu_TuneCP5_13p6TeV_mcfm-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=35,
+    n_events=1032472,
+)
+
+cpn.add_dataset(
+    name="ggtozzto4tau_mcfm",
+    id=14889468,
+    processes=[procs.ggtozzto4tau],
+    keys=[
+        "/GluGlutoContinto2Zto4Tau_TuneCP5_13p6TeV_mcfm-pythia8/Run3Summer22EENanoAODv12-130X_mcRun3_2022_realistic_postEE_v6-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=36,
+    n_events=1044896,
+)
 
 # VH
 
 cpn.add_dataset(
-    name="vh_htononbb_m125",
+    name="vh_htononbb_m125_amcatnlo",
     id=14850117,
     processes=[procs.vh],
     keys=[
@@ -798,7 +798,7 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="www",
+    name="www_amcatnlo",
     id=14793787,
     processes=[procs.www],
     keys=[
@@ -809,7 +809,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wwz",
+    name="wwz_amcatnlo",
     id=14793788,
     processes=[procs.wwz],
     keys=[
@@ -820,7 +820,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wzz",
+    name="wzz_amcatnlo",
     id=14798602,
     processes=[procs.wzz],
     keys=[
@@ -831,7 +831,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="zzz",
+    name="zzz_amcatnlo",
     id=14805133,
     processes=[procs.zzz],
     keys=[
@@ -848,7 +848,7 @@ cpn.add_dataset(
 # WG
 
 cpn.add_dataset(
-    name="wg_wlnu_ptg10to100",
+    name="wg_wlnu_ptg10to100_amcatnlo",
     id=14787167,
     processes=[procs.wg_wlnu_ptg10to100],
     keys=[
@@ -859,7 +859,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wg_wlnu_ptg100to200",
+    name="wg_wlnu_ptg100to200_amcatnlo",
     id=14787642,
     processes=[procs.wg_wlnu_ptg100to200],
     keys=[
@@ -870,7 +870,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wg_wlnu_ptg200to400",
+    name="wg_wlnu_ptg200to400_amcatnlo",
     id=14850186,
     processes=[procs.wg_wlnu_ptg200to400],
     keys=[
@@ -881,7 +881,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wg_wlnu_ptg400to600",
+    name="wg_wlnu_ptg400to600_amcatnlo",
     id=14850183,
     processes=[procs.wg_wlnu_ptg400to600],
     keys=[
@@ -892,7 +892,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="wg_wlnu_ptg600toinf",
+    name="wg_wlnu_ptg600toinf_amcatnlo",
     id=14852427,
     processes=[procs.wg_wlnu_ptg600toinf],
     keys=[
@@ -905,7 +905,7 @@ cpn.add_dataset(
 # WZG
 
 cpn.add_dataset(
-    name="wzg_wlnu",
+    name="wzg_wlnu_amcatnlo",
     id=14797986,
     processes=[procs.wzg_wlnu],
     keys=[
@@ -918,7 +918,7 @@ cpn.add_dataset(
 # DYG to  2LG
 
 cpn.add_dataset(
-    name="dyg_zll_mll4to50_ptg10to100",
+    name="dyg_zll_mll4to50_ptg10to100_amcatnlo",
     id=14809616,
     processes=[procs.dyg_zll_mll4to50_ptg10to100],
     keys=[
@@ -929,7 +929,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dyg_zll_mll4to50_ptg100to200",
+    name="dyg_zll_mll4to50_ptg100to200_amcatnlo",
     id=14809461,
     processes=[procs.dyg_zll_mll4to50_ptg100to200],
     keys=[
@@ -940,7 +940,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dyg_zll_mll4to50_ptg200toinf",
+    name="dyg_zll_mll4to50_ptg200toinf_amcatnlo",
     id=14811651,
     processes=[procs.dyg_zll_mll4to50_ptg200toinf],
     keys=[
@@ -951,7 +951,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dyg_zll_mll50toinf_ptg10to50",
+    name="dyg_zll_mll50toinf_ptg10to50_amcatnlo",
     id=14790854,
     processes=[procs.dyg_zll_mll50toinf_ptg10to50],
     keys=[
@@ -962,7 +962,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dyg_zll_mll50toinf_ptg50to100",
+    name="dyg_zll_mll50toinf_ptg50to100_amcatnlo",
     id=14808376,
     processes=[procs.dyg_zll_mll50toinf_ptg50to100],
     keys=[
@@ -973,7 +973,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dyg_zll_mll50toinf_ptg100to200",
+    name="dyg_zll_mll50toinf_ptg100to200_amcatnlo",
     id=14793597,
     processes=[procs.dyg_zll_mll50toinf_ptg100to200],
     keys=[
@@ -984,7 +984,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dyg_zll_mll50toinf_ptg200to400",
+    name="dyg_zll_mll50toinf_ptg200to400_amcatnlo",
     id=14886082,
     processes=[procs.dyg_zll_mll50toinf_ptg200to400],
     keys=[
@@ -995,7 +995,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dyg_zll_mll50toinf_ptg400to600",
+    name="dyg_zll_mll50toinf_ptg400to600_amcatnlo",
     id=14887668,
     processes=[procs.dyg_zll_mll50toinf_ptg400to600],
     keys=[
@@ -1006,7 +1006,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dyg_zll_mll50toinf_ptg600toinf",
+    name="dyg_zll_mll50toinf_ptg600toinf_amcatnlo",
     id=14886958,
     processes=[procs.dyg_zll_mll50toinf_ptg600toinf],
     keys=[
