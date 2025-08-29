@@ -15,8 +15,10 @@ __all__ = [
     "dy",
     "dy_m4to10",
     "dy_m10to50",
+    "dy_ee_m10to50", "dy_mumu_m10to50", "dy_tautau_m10to50",
     "dy_m50toinf", "dy_m50toinf_0j", "dy_m50toinf_1j", "dy_m50toinf_2j", "dy_m50toinf_ge3j",
     "dy_m50toinf_3j", "dy_m50toinf_4j",
+    "dy_ee_m50toinf", "dy_mumu_m50toinf", "dy_tautau_m50toinf",
     "dy_m50toinf_1j_pt0to40", "dy_m50toinf_1j_pt40to100", "dy_m50toinf_1j_pt100to200", "dy_m50toinf_1j_pt200to400",
     "dy_m50toinf_1j_pt400to600", "dy_m50toinf_1j_pt600toinf",
     "dy_m50toinf_2j_pt0to40", "dy_m50toinf_2j_pt40to100", "dy_m50toinf_2j_pt100to200", "dy_m50toinf_2j_pt200to400",
@@ -146,6 +148,25 @@ dy_k_factor_nlo_to_nnlo = {
     13.6: dy_m50toinf.get_xsec(13.6) / dy_m50toinf_nlo_13p6tev_xsec,
 }
 
+dy_ee_m50toinf = dy_m50toinf.add_process(
+    name="dy_ee_m50toinf",
+    id=52011,
+    label=r"DY($ee$), $m(ee) > 50$",
+    xsecs={13.6: dy_m50toinf.get_xsec(13.6) / 3.},
+)
+dy_mumu_m50toinf = dy_m50toinf.add_process(
+    name="dy_mumu_m50toinf",
+    id=52012,
+    label=r"DY($\mu\mu$), $m(\mu\mu) > 50$",
+    xsecs={13.6: dy_m50toinf.get_xsec(13.6) / 3.},
+)
+dy_tautau_m50toinf = dy_m50toinf.add_process(
+    name="dy_tautau_m50toinf",
+    id=52013,
+    label=r"DY($\tau\tau$), $m(\tau\tau) > 50$",
+    xsecs={13.6: dy_m50toinf.get_xsec(13.6) / 3.},
+)
+
 
 dy_m4to10 = dy.add_process(
     name="dy_m4to10",
@@ -169,6 +190,26 @@ dy_m10to50 = dy.add_process(
         "mll": (10.0, 50.0),
     },
 )
+
+dy_ee_m10to50 = dy_m10to50.add_process(
+    name="dy_ee_m10to50",
+    id=52511,
+    label=r"DY($ee$), $m(ee) < 50$",
+    xsecs={13.6: dy_m10to50.get_xsec(13.6) / 3.},
+)
+dy_mumu_m10to50 = dy_m10to50.add_process(
+    name="dy_mumu_m10to50",
+    id=52512,
+    label=r"DY($\mu\mu$), $m(\mu\mu) < 50$",
+    xsecs={13.6: dy_m10to50.get_xsec(13.6) / 3.},
+)
+dy_tautau_m10to50 = dy_m10to50.add_process(
+    name="dy_tautau_m10to50",
+    id=52513,
+    label=r"DY($\tau\tau$), $m(\tau\tau) < 50$",
+    xsecs={13.6: dy_m10to50.get_xsec(13.6) / 3.},
+)
+
 
 #
 # N-jet binned Drell-Yan (scaled to NNLO)
