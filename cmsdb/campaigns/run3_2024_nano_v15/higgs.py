@@ -1,6 +1,5 @@
 # coding: utf-8
 
-
 from order import DatasetInfo
 
 import cmsdb.processes as procs
@@ -85,10 +84,10 @@ cpn.add_dataset(
             n_events=250000,
             aux={
                 "broken_files": [
-                ]
-            }
-        )
-    )
+                ],
+            },
+        ),
+    ),
 )
 
 cpn.add_dataset(
@@ -122,9 +121,9 @@ cpn.add_dataset(
             aux={
                 "broken_files": [
                 ],
-            }
-        )
-    )
+            },
+        ),
+    ),
 )
 
 cpn.add_dataset(
@@ -154,9 +153,9 @@ cpn.add_dataset(
             aux={
                 "broken_files": [
                 ],
-            }
-        )
-    )
+            },
+        ),
+    ),
 )
 
 cpn.add_dataset(
@@ -213,7 +212,6 @@ cpn.add_dataset(
 # procs.zh_zqq_hcc
 # procs.zh_znunu_hcc
 
-
 #
 # VH(non bb)
 #
@@ -232,10 +230,10 @@ cpn.add_dataset(
             n_events=3697133,
             aux={
                 "broken_files": [
-                ]
-            }
-        )
-    )
+                ],
+            },
+        ),
+    ),
 )
 
 cpn.add_dataset(

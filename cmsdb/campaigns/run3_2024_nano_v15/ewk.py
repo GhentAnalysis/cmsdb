@@ -7,7 +7,6 @@ Electroweak datasets for the 2022 pre-EE data-taking campaign
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn
 
-
 #
 # Drell-Yan
 #
@@ -95,7 +94,7 @@ cpn.add_dataset(
     id=14679151,
     processes=[procs.dy_lep_j1_m50_pt40to100],
     keys=[
-        "/DYto2L-2Jets_Bin-1J-MLL-50-PTLL-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",   # noqa
+        "/DYto2L-2Jets_Bin-1J-MLL-50-PTLL-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
     ],
     n_files=3045,
     n_events=479655476,
@@ -106,7 +105,7 @@ cpn.add_dataset(
     id=14679152,
     processes=[procs.dy_lep_j1_m50_pt100to200],
     keys=[
-        "/DYto2L-2Jets_Bin-1J-MLL-50-PTLL-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",   # noqa
+        "/DYto2L-2Jets_Bin-1J-MLL-50-PTLL-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
     ],
     n_files=355,
     n_events=227319605,
@@ -353,7 +352,6 @@ cpn.add_dataset(
     n_events=14991109,
 )
 
-
 #
 # Diboson
 #
@@ -444,7 +442,6 @@ cpn.add_dataset(
 
 # WW
 # https://cms-pdmv-prod.web.cern.ch/grasp/samples?dataset_query=WWto*13p6*&nanoaod_version=v15
-
 
 cpn.add_dataset(
     name="ww_fh_powheg",
