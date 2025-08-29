@@ -9,6 +9,7 @@ __all__ = [
     "tt_sl", "tt_dl", "tt_fh",
     "st",
     "st_tchannel", "st_tchannel_t", "st_tchannel_tbar",
+    "st_tchannel_t_lep", "st_tchannel_tbar_lep",
     "st_twchannel", "st_twchannel_t", "st_twchannel_tbar",
     "st_twchannel_t_sl", "st_twchannel_tbar_sl",
     "st_twchannel_t_dl", "st_twchannel_tbar_dl",
@@ -177,6 +178,25 @@ st_tchannel_tbar = st_tchannel.add_process(
         )),
     },
 )
+
+st_tchannel_t_lep = st_tchannel_t.add_process(
+    name="st_tchannel_t_lep",
+    label=r"$t$",
+    id=2111,
+    xsecs={
+        13.6: st_tchannel_t.get_xsec(13.6) * const.br_w.lep,
+    },
+)
+
+st_tchannel_tbar_lep = st_tchannel_tbar.add_process(
+    name="st_tchannel_tbar_lep",
+    label=r"$\bar{t}$",
+    id=2121,
+    xsecs={
+        13.6: st_tchannel_tbar.get_xsec(13.6) * const.br_w.lep,
+    },
+)
+
 
 st_twchannel = st.add_process(
     name="st_twchannel",

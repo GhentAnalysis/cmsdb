@@ -27,6 +27,7 @@ __all__ = [
     "dy_m50toinf_ht1200to2500", "dy_m50toinf_ht2500toinf",
     "dy_pt0to50", "dy_pt50to100", "dy_pt100to250", "dy_pt250to400",
     "dy_pt400to650", "dy_pt650toinf",
+
     "z",
     "z_nunu",
     "z_nunu_ht100to200", "z_nunu_ht200to400", "z_nunu_ht400to600",
@@ -39,11 +40,17 @@ __all__ = [
     "w",
     "w_taunu", "w_munu",
     "w_lnu",
-    "w_lnu_0j", "w_lnu_1j", "w_lnu_2j",
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
+    "w_lnu_0j", "w_lnu_1j", "w_lnu_2j",
+    "w_lnu_j1_pt40to100", "w_lnu_j1_pt100to200", "w_lnu_j1_pt200to400",
+    "w_lnu_j1_pt400to600", "w_lnu_j1_pt600", "w_lnu_j2_pt40to100",
+    "w_lnu_j2_pt100to200", "w_lnu_j2_pt200to400", "w_lnu_j2_pt400to600",
+    "w_lnu_j2_pt600",
+
     "ewk",
     "ewk_wp_lnu_m50toinf", "ewk_wm_lnu_m50toinf", "ewk_z_ll_m50toinf",
+
     "vv",
     "zz",
     "zz_zqq_zll", "zz_zll_znunu", "zz_zll_zll", "zz_zqq_zqq", "zz_znunu_zqq",
@@ -956,6 +963,81 @@ w_lnu_ht2500toinf = w_lnu.add_process(
         13: Number(0.02624, {"tot": 0.00002981}) * w_lnu.get_xsec(13) / w_lnu_lo_13tev_xsec,
     },
 )
+
+# W->lnu j,pT binned samples
+
+# 2024 j,pt binned samples
+j1tot = 2661.0 + 286.1 + 71.9 + 8.05 + 0.885  # from AN2020_235_v8 for 13tev
+j2tot = 1331.0 + 277.7 + 105.9 + 18.67 + 3.037
+j1new = 96011.5 + 4031.2216 + 242.46156 + 9.2714 + 0.9
+j2new = 72890.148 + 7698.5649 + 500 + 18.458459 + 2.2972
+j1scale = j1tot / j1new * 1.05  # 13.6 scaling
+j2scale = j2tot / j2new * 1.05
+# flat k factor estimated from https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV
+k_wlnu_lo = (9009.5 + 12122.5) / (8085.5 + 10697.9)  # = ~1.12
+
+# XSECs from genxsana
+w_lnu_j1_pt40to100 = w_lnu.add_process(
+    name="w_lnu_j1_pt40to100",
+    id=6111,
+    # xsecs={13.6: Number(96011.5)*j1scale},
+    xsecs={13.6: Number(4242.0 * k_wlnu_lo)},
+)
+w_lnu_j1_pt100to200 = w_lnu.add_process(
+    name="w_lnu_j1_pt100to200",
+    id=6112,
+    # xsecs={13.6: Number(4031.2216)*j1scale},
+    xsecs={13.6: Number(338.5 * k_wlnu_lo)},
+)
+w_lnu_j1_pt200to400 = w_lnu.add_process(
+    name="w_lnu_j1_pt200to400",
+    id=6113,
+    # xsecs={13.6: Number(242.46156)*j1scale},
+    xsecs={13.6: Number(2.05 * k_wlnu_lo)},
+)
+w_lnu_j1_pt400to600 = w_lnu.add_process(
+    name="w_lnu_j1_pt400to600",
+    id=6114,
+    # xsecs={13.6: Number(9.2714710)*j1scale},
+    xsecs={13.6: Number(0.6865 * k_wlnu_lo)},
+)
+w_lnu_j1_pt600 = w_lnu.add_process(
+    name="w_lnu_j1_pt600",
+    id=6115,
+    # xsecs={13.6: Number(0.1)*j1scale},
+    xsecs={13.6: Number(0.07805 * k_wlnu_lo)},
+)
+w_lnu_j2_pt40to100 = w_lnu.add_process(
+    name="w_lnu_j2_pt40to100",
+    id=6121,
+    # xsecs={13.6: Number(72890.148)*j2scale},
+    xsecs={13.6: Number(1574.0 * k_wlnu_lo)},
+)
+w_lnu_j2_pt100to200 = w_lnu.add_process(
+    name="w_lnu_j2_pt100to200",
+    id=6122,
+    # xsecs={13.6: Number(7698.5649)*j2scale},
+    xsecs={13.6: Number(416.9 * k_wlnu_lo)},
+)
+w_lnu_j2_pt200to400 = w_lnu.add_process(
+    name="w_lnu_j2_pt200to400",
+    id=6123,
+    # xsecs={13.6: Number(0.1)*j2scale},
+    xsecs={13.6: Number(53.21 * k_wlnu_lo)},
+)
+w_lnu_j2_pt400to600 = w_lnu.add_process(
+    name="w_lnu_j2_pt400to600",
+    id=6124,
+    # xsecs={13.6: Number(18.458459)*j2scale},
+    xsecs={13.6: Number(3.136 * k_wlnu_lo)},
+)
+w_lnu_j2_pt600 = w_lnu.add_process(
+    name="w_lnu_j2_pt600",
+    id=6125,
+    # xsecs={13.6: Number(2.2972922)*j2scale},
+    xsecs={13.6: Number(0.5177 * k_wlnu_lo)},
+)
+
 
 #
 # EWK radiations
