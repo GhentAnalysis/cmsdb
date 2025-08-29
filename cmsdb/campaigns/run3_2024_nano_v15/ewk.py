@@ -28,7 +28,7 @@ cpn.add_dataset(
     name="dy_ee_m50toinf_amcatnlo",
     id=15292625,
     is_data=False,
-    processes=[procs.dy_ee_m50],
+    processes=[procs.dy_ee_m50toinf],
     keys=[
         "/DYto2E-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v4/NANOAODSIM",  # noqa
     ],
@@ -52,7 +52,7 @@ cpn.add_dataset(
     name="dy_mumu_m50toinf_amcatnlo",
     id=15302208,
     is_data=False,
-    processes=[procs.dy_mumu_m50],
+    processes=[procs.dy_mumu_m50toinf],
     keys=[
         "/DYto2Mu-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v6/NANOAODSIM",  # noqa
     ],
@@ -76,7 +76,7 @@ cpn.add_dataset(
     name="dy_tautau_m50toinf_amcatnlo",
     id=15292169,
     is_data=False,
-    processes=[procs.dy_tautau_m50],
+    processes=[procs.dy_tautau_m50toinf],
     keys=[
         "/DYto2Tau-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v5/NANOAODSIM",  # noqa
     ],
@@ -90,9 +90,9 @@ cpn.add_dataset(
 # binned in J, MLL and PTLL (10 bins in total)
 
 cpn.add_dataset(
-    name="dy_lep_j1_m50toinf_pt40to100_amcatnlo",
+    name="dy_m50toinf_1j_pt40to100_amcatnlo",
     id=14679151,
-    processes=[procs.dy_lep_j1_m50_pt40to100],
+    processes=[procs.dy_m50toinf_1j_pt40to100],
     keys=[
         "/DYto2L-2Jets_Bin-1J-MLL-50-PTLL-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
     ],
@@ -101,9 +101,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_j1_m50toinf_pt100to200_amcatnlo",
+    name="dy_m50toinf_1j_pt100to200_amcatnlo",
     id=14679152,
-    processes=[procs.dy_lep_j1_m50_pt100to200],
+    processes=[procs.dy_m50toinf_1j_pt100to200],
     keys=[
         "/DYto2L-2Jets_Bin-1J-MLL-50-PTLL-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
     ],
@@ -114,7 +114,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_j1_m50toinf_pt200to400_amcatnlo",
     id=14679153,
-    processes=[procs.dy_lep_j1_m50_pt200to400],
+    processes=[procs.dy_m50toinf_1j_pt200to400],
     keys=[
         "/DYto2L-2Jets_Bin-1J-MLL-50-PTLL-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
     ],
@@ -123,9 +123,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_j1_m50toinf_pt400to600_amcatnlo",
+    name="dy_m50toinf_1j_pt400to600_amcatnlo",
     id=14679154,
-    processes=[procs.dy_lep_j1_m50_pt400to600],
+    processes=[procs.dy_m50toinf_1j_pt400to600],
     keys=[
         "/DYto2L-2Jets_Bin-1J-MLL-50-PTLL-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
     ],
@@ -134,9 +134,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_j1_m50toinf_pt600_amcatnlo",
+    name="dy_m50toinf_1j_pt600toinf_amcatnlo",
     id=14679155,
-    processes=[procs.dy_lep_j1_m50_pt600],
+    processes=[procs.dy_m50toinf_1j_pt600toinf],
     keys=[
         "/DYto2L-2Jets_Bin-1J-MLL-50-PTLL-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
     ],
@@ -145,9 +145,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_j2_m50toinf_pt40to100_amcatnlo",
+    name="dy_m50toinf_2j_pt40to100_amcatnlo",
     id=14679251,
-    processes=[procs.dy_lep_j2_m50_pt40to100],
+    processes=[procs.dy_m50toinf_2j_pt40to100],
     keys=[
         "/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v3/NANOAODSIM",  # noqa
     ],
@@ -156,9 +156,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_j2_m50toinf_pt100to200_amcatnlo",
+    name="dy_m50toinf_2j_pt100to200_amcatnlo",
     id=14679252,
-    processes=[procs.dy_lep_j2_m50_pt100to200],
+    processes=[procs.dy_m50toinf_2j_pt100to200],
     keys=[
         "/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
     ],
@@ -167,9 +167,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_j2_m50toinf_pt200to400_amcatnlo",
+    name="dy_m50toinf_2j_pt200to400_amcatnlo",
     id=14679253,
-    processes=[procs.dy_lep_j2_m50_pt200to400],
+    processes=[procs.dy_m50toinf_2j_pt200to400],
     keys=[
         "/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
     ],
@@ -178,9 +178,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_j2_m50toinf_pt400to600_amcatnlo",
+    name="dy_m50toinf_2j_pt400to600_amcatnlo",
     id=14679254,
-    processes=[procs.dy_lep_j2_m50_pt400to600],
+    processes=[procs.dy_m50toinf_2j_pt400to600],
     keys=[
         "/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-400to600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
     ],
@@ -189,9 +189,9 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_j2_m50toinf_pt600_amcatnlo",
+    name="dy_m50toinf_2j_pt600_amcatnlo",
     id=14679255,
-    processes=[procs.dy_lep_j2_m50_pt600],
+    processes=[procs.dy_m50toinf_2j_pt600],
     keys=[
         "/DYto2L-2Jets_Bin-2J-MLL-50-PTLL-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
     ],
