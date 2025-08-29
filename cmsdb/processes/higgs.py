@@ -341,7 +341,7 @@ h_decay_map = DotDict.wrap({
         "id": 500000,
         "br": const.br_h.ss,
         "label": r"$H \rightarrow ss$",
-    }
+    },
 })
 
 zz_decay_map = DotDict.wrap({

@@ -62,7 +62,7 @@ br_h_bb_full = Number(0.5824, {"theo": (0.0065j, 0.0065j), "m_q": (0.0072j, 0.00
 br_h_cc_full = Number(0.02891, {"theo": (0.0120j, 0.0120j), "m_q": (0.0526j, 0.0098j), "alpha_s": (0.0125j, 0.0125j)})
 br_h_tt_full = Number(0.06272, {"theo": (0.00073j, 0.00073j), "m_q": (0.000615j, 0.000621j), "alpha_s": (0.00039j, 0.00039j)})  # noqa
 br_h_mm_full = Number(0.0002176, {"theo": (0.0123j, 0.0123j), "m_q": (0.0097j, 0.0099j), "alpha_s": (0.0059j, 0.0064j)})
-br_h_ss_full = Number(0.00025, {"theo": (0., 0.), "m_q": (0., 0.,), "alpha_s": (0., 0.)})
+br_h_ss_full = Number(0.00025, {"theo": (0., 0.), "m_q": (0., 0.), "alpha_s": (0., 0.)})
 
 # TODO: H -> ee BR is not available in the YellowReport, so I'm using the muon BR scaled to electron mass instead
 br_h_ee_full = br_h_mm_full / 200 ** 2
