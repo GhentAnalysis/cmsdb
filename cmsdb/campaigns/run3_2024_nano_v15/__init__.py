@@ -31,6 +31,7 @@ campaign_run3_2024_nano_v15 = Campaign(
         "year": 2024,
         "version": 15,
         "run": 3,
+        "postfix": "",
     },
 )
 

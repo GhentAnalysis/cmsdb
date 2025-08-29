@@ -40,7 +40,7 @@ __all__ = [
     "z_qq_pt100to200_1j", "z_qq_pt100to200_2j", "z_qq_pt200to400_1j", "z_qq_pt200to400_2j",
     "z_qq_pt400to600_1j", "z_qq_pt400to600_2j", "z_qq_pt600toinf_1j", "z_qq_pt600toinf_2j",
     "w",
-    "w_taunu", "w_munu",
+    "w_taunu", "w_munu", "w_enu",
     "w_lnu",
     "w_lnu_ht70to100", "w_lnu_ht100to200", "w_lnu_ht200to400", "w_lnu_ht400to600",
     "w_lnu_ht600to800", "w_lnu_ht800to1200", "w_lnu_ht1200to2500", "w_lnu_ht2500toinf",
@@ -877,6 +877,12 @@ w_munu = w.add_process(
     name="w_munu",
     id=6020,
     label=rf"{w.label} ($W \rightarrow mu\nu$)",
+)
+
+w_enu = w.add_process(
+    name="w_enu",
+    id=6030,
+    label=rf"{w.label} ($W \rightarrow e\nu$)",
 )
 
 

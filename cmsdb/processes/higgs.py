@@ -146,11 +146,11 @@ __all__ = [
     "h_vbf_hzz4l", "h_vbf_hzz2l2nu", "h_vbf_hzz2l2q", "h_vbf_hzz2q2nu", "h_vbf_hzz4nu", "h_vbf_hzz4q",
     "h_vbf_hzg_zll", "h_vbf_hzg_zqq", "h_vbf_hzg_znunu",
     "vh",
-    "vh", "vh_htt", "vh_hww", "vh_hzz", "vh_hbb", "vh_hnonbb", "vh_hcc",
+    "vh", "vh_htt", "vh_hww", "vh_hzz", "vh_hbb", "vh_hnonbb", "vh_hcc", "vh_hss",
     "vh_hzg", "vh_hgg", "vh_hmm",
     "vh_hwwqqlnu", "vh_hww2l2nu", "vh_hww4q",
     "vh_hzz4l", "vh_hzz2l2nu", "vh_hzz2l2q", "vh_hzz2q2nu", "vh_hzz4nu", "vh_hzz4q",
-    "vh_zll", "vh_zll_htt", "vh_zll_hww", "vh_zll_hzz", "vh_zll_hbb", "vh_zll_hnonbb", "vh_zll_hcc",
+    "vh_zll", "vh_zll_htt", "vh_zll_hww", "vh_zll_hzz", "vh_zll_hbb", "vh_zll_hnonbb", "vh_zll_hcc", "vh_zll_hss",
     "vh_zll_hzg", "vh_zll_hgg", "vh_zll_hmm",
     "vh_zll_hwwqqlnu", "vh_zll_hww2l2nu", "vh_zll_hww4q",
     "vh_zll_hzz4l", "vh_zll_hzz2l2nu", "vh_zll_hzz2l2q", "vh_zll_hzz2q2nu", "vh_zll_hzz4nu", "vh_zll_hzz4q",
@@ -166,18 +166,18 @@ __all__ = [
     "zh_hwwqqlnu", "zh_hww2l2nu", "zh_hww4q",
     "zh_hzz4l", "zh_hzz2l2nu", "zh_hzz2l2q", "zh_hzz2q2nu", "zh_hzz4nu", "zh_hzz4q",
     "zh_hzg", "zh_hzg_zll", "zh_hzg_zqq", "zh_hzg_znunu",
-    "zh_zll", "zh_zll_htt", "zh_zll_hww", "zh_zll_hzz", "zh_zll_hbb", "zh_zll_hnonbb", "zh_zll_hcc",
+    "zh_zll", "zh_zll_htt", "zh_zll_hww", "zh_zll_hzz", "zh_zll_hbb", "zh_zll_hnonbb", "zh_zll_hcc", "zh_zll_hss",
     "zh_zll_hzg", "zh_zll_hgg", "zh_zll_hmm",
     "zh_zll_hwwqqlnu", "zh_zll_hww2l2nu", "zh_zll_hww4q",
     "zh_zll_hzz4l", "zh_zll_hzz2l2nu", "zh_zll_hzz2l2q", "zh_zll_hzz2q2nu", "zh_zll_hzz4nu", "zh_zll_hzz4q",
     "zh_zll_hzg_zll", "zh_zll_hzg_zqq", "zh_zll_hzg_znunu",
-    "zh_zqq", "zh_zqq_htt", "zh_zqq_hww", "zh_zqq_hzz", "zh_zqq_hbb", "zh_zqq_hnonbb", "zh_zqq_hcc",
+    "zh_zqq", "zh_zqq_htt", "zh_zqq_hww", "zh_zqq_hzz", "zh_zqq_hbb", "zh_zqq_hnonbb", "zh_zqq_hcc", "zh_zqq_hss",
     "zh_zqq_hzg", "zh_zqq_hgg", "zh_zqq_hmm",
     "zh_zqq_hwwqqlnu", "zh_zqq_hww2l2nu", "zh_zqq_hww4q",
     "zh_zqq_hzz4l", "zh_zqq_hzz2l2nu", "zh_zqq_hzz2l2q", "zh_zqq_hzz2q2nu", "zh_zqq_hzz4nu", "zh_zqq_hzz4q",
     "zh_zqq_hzg_zll", "zh_zqq_hzg_zqq", "zh_zqq_hzg_znunu",
     "zh_znunu", "zh_znunu_htt", "zh_znunu_hww", "zh_znunu_hzz", "zh_znunu_hbb", "zh_znunu_hnonbb", "zh_znunu_hcc",
-    "zh_znunu_hzg", "zh_znunu_hgg", "zh_znunu_hmm",
+    "zh_znunu_hss", "zh_znunu_hzg", "zh_znunu_hgg", "zh_znunu_hmm",
     "zh_znunu_hwwqqlnu", "zh_znunu_hww2l2nu", "zh_znunu_hww4q",
     "zh_znunu_hzz4l", "zh_znunu_hzz2l2nu", "zh_znunu_hzz2l2q", "zh_znunu_hzz2q2nu", "zh_znunu_hzz4nu", "zh_znunu_hzz4q",
     "zh_znunu_hzg_zll", "zh_znunu_hzg_zqq", "zh_znunu_hzg_znunu",
@@ -226,25 +226,25 @@ __all__ = [
     "wmh_hzz4l", "wmh_hzz2l2nu", "wmh_hzz2l2q", "wmh_hzz2q2nu", "wmh_hzz4nu", "wmh_hzz4q",
     "wmh_hzg_zll", "wmh_hzg_zqq", "wmh_hzg_znunu",
     "wph_wlnu",
-    "wph_wlnu_htt", "wph_wlnu_hww", "wph_wlnu_hzz", "wph_wlnu_hbb", "wph_wlnu_hnonbb", "wph_wlnu_hcc",
+    "wph_wlnu_htt", "wph_wlnu_hww", "wph_wlnu_hzz", "wph_wlnu_hbb", "wph_wlnu_hnonbb", "wph_wlnu_hcc", "wph_wlnu_hss",
     "wph_wlnu_hzg", "wph_wlnu_hgg", "wph_wlnu_hmm",
     "wph_wlnu_hwwqqlnu", "wph_wlnu_hww2l2nu", "wph_wlnu_hww4q",
     "wph_wlnu_hzz4l", "wph_wlnu_hzz2l2nu", "wph_wlnu_hzz2l2q", "wph_wlnu_hzz2q2nu", "wph_wlnu_hzz4nu", "wph_wlnu_hzz4q",
     "wph_wlnu_hzg_zll", "wph_wlnu_hzg_zqq", "wph_wlnu_hzg_znunu",
     "wph_wqq",
-    "wph_wqq_htt", "wph_wqq_hww", "wph_wqq_hzz", "wph_wqq_hbb", "wph_wqq_hnonbb", "wph_wqq_hcc",
+    "wph_wqq_htt", "wph_wqq_hww", "wph_wqq_hzz", "wph_wqq_hbb", "wph_wqq_hnonbb", "wph_wqq_hcc", "wph_wqq_hss",
     "wph_wqq_hzg", "wph_wqq_hgg", "wph_wqq_hmm",
     "wph_wqq_hwwqqlnu", "wph_wqq_hww2l2nu", "wph_wqq_hww4q",
     "wph_wqq_hzz4l", "wph_wqq_hzz2l2nu", "wph_wqq_hzz2l2q", "wph_wqq_hzz2q2nu", "wph_wqq_hzz4nu", "wph_wqq_hzz4q",
     "wph_wqq_hzg_zll", "wph_wqq_hzg_zqq", "wph_wqq_hzg_znunu",
     "wmh_wlnu",
-    "wmh_wlnu_htt", "wmh_wlnu_hww", "wmh_wlnu_hzz", "wmh_wlnu_hbb", "wmh_wlnu_hnonbb", "wmh_wlnu_hcc",
+    "wmh_wlnu_htt", "wmh_wlnu_hww", "wmh_wlnu_hzz", "wmh_wlnu_hbb", "wmh_wlnu_hnonbb", "wmh_wlnu_hcc", "wmh_wlnu_hss",
     "wmh_wlnu_hzg", "wmh_wlnu_hgg", "wmh_wlnu_hmm",
     "wmh_wlnu_hwwqqlnu", "wmh_wlnu_hww2l2nu", "wmh_wlnu_hww4q",
     "wmh_wlnu_hzz4l", "wmh_wlnu_hzz2l2nu", "wmh_wlnu_hzz2l2q", "wmh_wlnu_hzz2q2nu", "wmh_wlnu_hzz4nu", "wmh_wlnu_hzz4q",
     "wmh_wlnu_hzg_zll", "wmh_wlnu_hzg_zqq", "wmh_wlnu_hzg_znunu",
     "wmh_wqq",
-    "wmh_wqq_htt", "wmh_wqq_hww", "wmh_wqq_hzz", "wmh_wqq_hbb", "wmh_wqq_hnonbb", "wmh_wqq_hcc",
+    "wmh_wqq_htt", "wmh_wqq_hww", "wmh_wqq_hzz", "wmh_wqq_hbb", "wmh_wqq_hnonbb", "wmh_wqq_hcc", "wmh_wqq_hss",
     "wmh_wqq_hzg", "wmh_wqq_hgg", "wmh_wqq_hmm",
     "wmh_wqq_hwwqqlnu", "wmh_wqq_hww2l2nu", "wmh_wqq_hww4q",
     "wmh_wqq_hzz4l", "wmh_wqq_hzz2l2nu", "wmh_wqq_hzz2l2q", "wmh_wqq_hzz2q2nu", "wmh_wqq_hzz4nu", "wmh_wqq_hzz4q",
@@ -336,6 +336,12 @@ h_decay_map = DotDict.wrap({
         "br": const.br_h.mm,
         "label": r"$H \rightarrow \mu\mu$",
     },
+    "hss": {
+        "name": "hss",
+        "id": 500000,
+        "br": const.br_h.ss,
+        "label": r"$H \rightarrow ss$",
+    }
 })
 
 zz_decay_map = DotDict.wrap({
@@ -481,6 +487,7 @@ h_hcc = add_decay_process(h, h_decay_map.hcc, add_production_mode_parent=False)
 h_hzg = add_decay_process(h, h_decay_map.hzg, add_production_mode_parent=False)
 h_hgg = add_decay_process(h, h_decay_map.hgg, add_production_mode_parent=False)
 h_hmm = add_decay_process(h, h_decay_map.hmm, add_production_mode_parent=False)
+h_hss = add_decay_process(h, h_decay_map.hss, add_production_mode_parent=False)
 
 # Higgs sub-decay channels
 h_hwwqqlnu = add_sub_decay_process(h_hww, ww_decay_map["qqlnu"], add_production_mode_parent=False)
@@ -709,6 +716,7 @@ vh_hcc = add_decay_process(vh, h_decay_map.hcc)
 vh_hzg = add_decay_process(vh, h_decay_map.hzg)
 vh_hgg = add_decay_process(vh, h_decay_map.hgg)
 vh_hmm = add_decay_process(vh, h_decay_map.hmm)
+vh_hss = add_decay_process(vh, h_decay_map.hss)
 
 # Higgs sub-decay channels
 vh_hwwqqlnu = add_sub_decay_process(vh_hww, ww_decay_map["qqlnu"])
@@ -736,6 +744,7 @@ vh_zll_hcc = add_decay_process(vh_zll, h_decay_map.hcc)
 vh_zll_hzg = add_decay_process(vh_zll, h_decay_map.hzg)
 vh_zll_hgg = add_decay_process(vh_zll, h_decay_map.hgg)
 vh_zll_hmm = add_decay_process(vh_zll, h_decay_map.hmm)
+vh_zll_hss = add_decay_process(vh_zll, h_decay_map.hss)
 
 # Higgs sub-decay channels
 vh_zll_hwwqqlnu = add_sub_decay_process(vh_zll_hww, ww_decay_map["qqlnu"])
@@ -763,6 +772,7 @@ vh_zqq_hcc = add_decay_process(vh_zqq, h_decay_map.hcc)
 vh_zqq_hzg = add_decay_process(vh_zqq, h_decay_map.hzg)
 vh_zqq_hgg = add_decay_process(vh_zqq, h_decay_map.hgg)
 vh_zqq_hmm = add_decay_process(vh_zqq, h_decay_map.hmm)
+vh_zqq_hss = add_decay_process(vh_zqq, h_decay_map.hss)
 
 # Higgs sub-decay channels
 vh_zqq_hwwqqlnu = add_sub_decay_process(vh_zqq_hww, ww_decay_map["qqlnu"])
@@ -790,6 +800,7 @@ vh_znunu_hcc = add_decay_process(vh_znunu, h_decay_map.hcc)
 vh_znunu_hzg = add_decay_process(vh_znunu, h_decay_map.hzg)
 vh_znunu_hgg = add_decay_process(vh_znunu, h_decay_map.hgg)
 vh_znunu_hmm = add_decay_process(vh_znunu, h_decay_map.hmm)
+vh_znunu_hss = add_decay_process(vh_znunu, h_decay_map.hss)
 
 # Higgs sub-decay channels
 vh_znunu_hwwqqlnu = add_sub_decay_process(vh_znunu_hww, ww_decay_map["qqlnu"])
@@ -817,6 +828,7 @@ vh_wlnu_hcc = add_decay_process(vh_wlnu, h_decay_map.hcc)
 vh_wlnu_hzg = add_decay_process(vh_wlnu, h_decay_map.hzg)
 vh_wlnu_hgg = add_decay_process(vh_wlnu, h_decay_map.hgg)
 vh_wlnu_hmm = add_decay_process(vh_wlnu, h_decay_map.hmm)
+vh_wlnu_hss = add_decay_process(vh_wlnu, h_decay_map.hss)
 
 # Higgs sub-decay channels
 vh_wlnu_hwwqqlnu = add_sub_decay_process(vh_wlnu_hww, ww_decay_map["qqlnu"])
@@ -844,6 +856,7 @@ vh_wqq_hcc = add_decay_process(vh_wqq, h_decay_map.hcc)
 vh_wqq_hzg = add_decay_process(vh_wqq, h_decay_map.hzg)
 vh_wqq_hgg = add_decay_process(vh_wqq, h_decay_map.hgg)
 vh_wqq_hmm = add_decay_process(vh_wqq, h_decay_map.hmm)
+vh_wqq_hss = add_decay_process(vh_wqq, h_decay_map.hss)
 
 # Higgs sub-decay channels
 vh_wqq_hwwqqlnu = add_sub_decay_process(vh_wqq_hww, ww_decay_map["qqlnu"])
@@ -876,6 +889,7 @@ zh_hcc = add_decay_process(zh, h_decay_map.hcc)
 zh_hzg = add_decay_process(zh, h_decay_map.hzg)
 zh_hgg = add_decay_process(zh, h_decay_map.hgg)
 zh_hmm = add_decay_process(zh, h_decay_map.hmm)
+zh_hss = add_decay_process(zh, h_decay_map.hss)
 
 # Higgs sub-decay channels
 zh_hwwqqlnu = add_sub_decay_process(zh_hww, ww_decay_map["qqlnu"])
@@ -903,6 +917,7 @@ zh_zll_hcc = add_decay_process(zh_zll, h_decay_map.hcc)
 zh_zll_hzg = add_decay_process(zh_zll, h_decay_map.hzg)
 zh_zll_hgg = add_decay_process(zh_zll, h_decay_map.hgg)
 zh_zll_hmm = add_decay_process(zh_zll, h_decay_map.hmm)
+zh_zll_hss = add_decay_process(zh_zll, h_decay_map.hss)
 
 # Higgs sub-decay channels
 zh_zll_hwwqqlnu = add_sub_decay_process(zh_zll_hww, ww_decay_map["qqlnu"])
@@ -930,6 +945,7 @@ zh_zqq_hcc = add_decay_process(zh_zqq, h_decay_map.hcc)
 zh_zqq_hzg = add_decay_process(zh_zqq, h_decay_map.hzg)
 zh_zqq_hgg = add_decay_process(zh_zqq, h_decay_map.hgg)
 zh_zqq_hmm = add_decay_process(zh_zqq, h_decay_map.hmm)
+zh_zqq_hss = add_decay_process(zh_zqq, h_decay_map.hss)
 
 # Higgs sub-decay channels
 zh_zqq_hwwqqlnu = add_sub_decay_process(zh_zqq_hww, ww_decay_map["qqlnu"])
@@ -957,6 +973,7 @@ zh_znunu_hcc = add_decay_process(zh_znunu, h_decay_map.hcc)
 zh_znunu_hzg = add_decay_process(zh_znunu, h_decay_map.hzg)
 zh_znunu_hgg = add_decay_process(zh_znunu, h_decay_map.hgg)
 zh_znunu_hmm = add_decay_process(zh_znunu, h_decay_map.hmm)
+zh_znunu_hss = add_decay_process(zh_znunu, h_decay_map.hss)
 
 # Higgs sub-decay channels
 zh_znunu_hwwqqlnu = add_sub_decay_process(zh_znunu_hww, ww_decay_map["qqlnu"])
@@ -988,6 +1005,7 @@ zh_gg_hcc = add_decay_process(zh_gg, h_decay_map.hcc)
 zh_gg_hzg = add_decay_process(zh_gg, h_decay_map.hzg)
 zh_gg_hgg = add_decay_process(zh_gg, h_decay_map.hgg)
 zh_gg_hmm = add_decay_process(zh_gg, h_decay_map.hmm)
+zh_gg_hss = add_decay_process(zh_gg, h_decay_map.hss)
 
 # Higgs sub-decay channels
 zh_gg_hwwqqlnu = add_sub_decay_process(zh_gg_hww, ww_decay_map["qqlnu"])
@@ -1015,6 +1033,7 @@ zh_gg_zll_hcc = add_decay_process(zh_gg_zll, h_decay_map.hcc)
 zh_gg_zll_hzg = add_decay_process(zh_gg_zll, h_decay_map.hzg)
 zh_gg_zll_hgg = add_decay_process(zh_gg_zll, h_decay_map.hgg)
 zh_gg_zll_hmm = add_decay_process(zh_gg_zll, h_decay_map.hmm)
+zh_gg_zll_hss = add_decay_process(zh_gg_zll, h_decay_map.hss)
 
 # Higgs sub-decay channels
 zh_gg_zll_hwwqqlnu = add_sub_decay_process(zh_gg_zll_hww, ww_decay_map["qqlnu"])
@@ -1042,6 +1061,7 @@ zh_gg_zqq_hcc = add_decay_process(zh_gg_zqq, h_decay_map.hcc)
 zh_gg_zqq_hzg = add_decay_process(zh_gg_zqq, h_decay_map.hzg)
 zh_gg_zqq_hgg = add_decay_process(zh_gg_zqq, h_decay_map.hgg)
 zh_gg_zqq_hmm = add_decay_process(zh_gg_zqq, h_decay_map.hmm)
+zh_gg_zqq_hss = add_decay_process(zh_gg_zqq, h_decay_map.hss)
 
 # Higgs sub-decay channels
 zh_gg_zqq_hwwqqlnu = add_sub_decay_process(zh_gg_zqq_hww, ww_decay_map["qqlnu"])
@@ -1069,6 +1089,7 @@ zh_gg_znunu_hcc = add_decay_process(zh_gg_znunu, h_decay_map.hcc)
 zh_gg_znunu_hzg = add_decay_process(zh_gg_znunu, h_decay_map.hzg)
 zh_gg_znunu_hgg = add_decay_process(zh_gg_znunu, h_decay_map.hgg)
 zh_gg_znunu_hmm = add_decay_process(zh_gg_znunu, h_decay_map.hmm)
+zh_gg_znunu_hss = add_decay_process(zh_gg_znunu, h_decay_map.hss)
 
 # Higgs sub-decay channels
 zh_gg_znunu_hwwqqlnu = add_sub_decay_process(zh_gg_znunu_hww, ww_decay_map["qqlnu"])
@@ -1100,6 +1121,7 @@ wh_hcc = add_decay_process(wh, h_decay_map.hcc)
 wh_hzg = add_decay_process(wh, h_decay_map.hzg)
 wh_hgg = add_decay_process(wh, h_decay_map.hgg)
 wh_hmm = add_decay_process(wh, h_decay_map.hmm)
+wh_hss = add_decay_process(wh, h_decay_map.hss)
 
 # Higgs sub-decay channels
 wh_hwwqqlnu = add_sub_decay_process(wh_hww, ww_decay_map["qqlnu"])
@@ -1127,6 +1149,7 @@ wh_wlnu_hcc = add_decay_process(wh_wlnu, h_decay_map.hcc)
 wh_wlnu_hzg = add_decay_process(wh_wlnu, h_decay_map.hzg)
 wh_wlnu_hgg = add_decay_process(wh_wlnu, h_decay_map.hgg)
 wh_wlnu_hmm = add_decay_process(wh_wlnu, h_decay_map.hmm)
+wh_wlnu_hss = add_decay_process(wh_wlnu, h_decay_map.hss)
 
 # Higgs sub-decay channels
 wh_wlnu_hwwqqlnu = add_sub_decay_process(wh_wlnu_hww, ww_decay_map["qqlnu"])
@@ -1154,6 +1177,7 @@ wh_wqq_hcc = add_decay_process(wh_wqq, h_decay_map.hcc)
 wh_wqq_hzg = add_decay_process(wh_wqq, h_decay_map.hzg)
 wh_wqq_hgg = add_decay_process(wh_wqq, h_decay_map.hgg)
 wh_wqq_hmm = add_decay_process(wh_wqq, h_decay_map.hmm)
+wh_wqq_hss = add_decay_process(wh_wqq, h_decay_map.hss)
 
 # Higgs sub-decay channels
 wh_wqq_hwwqqlnu = add_sub_decay_process(wh_wqq_hww, ww_decay_map["qqlnu"])
@@ -1186,6 +1210,7 @@ wph_hcc = add_decay_process(wph, h_decay_map.hcc)
 wph_hzg = add_decay_process(wph, h_decay_map.hzg)
 wph_hgg = add_decay_process(wph, h_decay_map.hgg)
 wph_hmm = add_decay_process(wph, h_decay_map.hmm)
+wph_hss = add_decay_process(wph, h_decay_map.hss)
 
 # Higgs sub-decay channels
 wph_hwwqqlnu = add_sub_decay_process(wph_hww, ww_decay_map["qqlnu"])
@@ -1213,6 +1238,7 @@ wph_wlnu_hcc = add_decay_process(wph_wlnu, h_decay_map.hcc)
 wph_wlnu_hzg = add_decay_process(wph_wlnu, h_decay_map.hzg)
 wph_wlnu_hgg = add_decay_process(wph_wlnu, h_decay_map.hgg)
 wph_wlnu_hmm = add_decay_process(wph_wlnu, h_decay_map.hmm)
+wph_wlnu_hss = add_decay_process(wph_wlnu, h_decay_map.hss)
 
 # Higgs sub-decay channels
 wph_wlnu_hwwqqlnu = add_sub_decay_process(wph_wlnu_hww, ww_decay_map["qqlnu"])
@@ -1240,6 +1266,7 @@ wph_wqq_hcc = add_decay_process(wph_wqq, h_decay_map.hcc)
 wph_wqq_hzg = add_decay_process(wph_wqq, h_decay_map.hzg)
 wph_wqq_hgg = add_decay_process(wph_wqq, h_decay_map.hgg)
 wph_wqq_hmm = add_decay_process(wph_wqq, h_decay_map.hmm)
+wph_wqq_hss = add_decay_process(wph_wqq, h_decay_map.hss)
 
 # Higgs sub-decay channels
 wph_wqq_hwwqqlnu = add_sub_decay_process(wph_wqq_hww, ww_decay_map["qqlnu"])
@@ -1271,6 +1298,7 @@ wmh_hcc = add_decay_process(wmh, h_decay_map.hcc)
 wmh_hzg = add_decay_process(wmh, h_decay_map.hzg)
 wmh_hgg = add_decay_process(wmh, h_decay_map.hgg)
 wmh_hmm = add_decay_process(wmh, h_decay_map.hmm)
+wmh_hss = add_decay_process(wmh, h_decay_map.hss)
 
 # Higgs sub-decay channels
 wmh_hwwqqlnu = add_sub_decay_process(wmh_hww, ww_decay_map["qqlnu"])
@@ -1298,6 +1326,7 @@ wmh_wlnu_hcc = add_decay_process(wmh_wlnu, h_decay_map.hcc)
 wmh_wlnu_hzg = add_decay_process(wmh_wlnu, h_decay_map.hzg)
 wmh_wlnu_hgg = add_decay_process(wmh_wlnu, h_decay_map.hgg)
 wmh_wlnu_hmm = add_decay_process(wmh_wlnu, h_decay_map.hmm)
+wmh_wlnu_hss = add_decay_process(wmh_wlnu, h_decay_map.hss)
 
 # Higgs sub-decay channels
 wmh_wlnu_hwwqqlnu = add_sub_decay_process(wmh_wlnu_hww, ww_decay_map["qqlnu"])
@@ -1325,6 +1354,7 @@ wmh_wqq_hcc = add_decay_process(wmh_wqq, h_decay_map.hcc)
 wmh_wqq_hzg = add_decay_process(wmh_wqq, h_decay_map.hzg)
 wmh_wqq_hgg = add_decay_process(wmh_wqq, h_decay_map.hgg)
 wmh_wqq_hmm = add_decay_process(wmh_wqq, h_decay_map.hmm)
+wmh_wqq_hss = add_decay_process(wmh_wqq, h_decay_map.hss)
 
 # Higgs sub-decay channels
 wmh_wqq_hwwqqlnu = add_sub_decay_process(wmh_wqq_hww, ww_decay_map["qqlnu"])
