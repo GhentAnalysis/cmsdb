@@ -340,8 +340,8 @@ cpn.add_dataset(
     id=14231384,
     processes=[procs.twztoll_thad_wlept_5f],
     keys=[
-            "/TWZToLL_thad_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
-        ],
+        "/TWZToLL_thad_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+    ],
     n_files=32,
     n_events=2976000,
 )
@@ -351,8 +351,8 @@ cpn.add_dataset(
     id=14728151,
     processes=[procs.twztoll_tlept_whad_5f],
     keys=[
-            "/TWZToLL_tlept_Whad_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
-        ],
+        "/TWZToLL_tlept_Whad_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+    ],
     n_files=12,
     n_events=9806000,
 )
@@ -362,8 +362,8 @@ cpn.add_dataset(
     id=14231368,
     processes=[procs.twztoll_tlept_wlept_5f],
     keys=[
-            "/TWZToLL_tlept_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
-        ],
+        "/TWZToLL_tlept_Wlept_5f_DR_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+    ],
     n_files=10,
     n_events=1000000,
 )
@@ -373,8 +373,8 @@ cpn.add_dataset(
     id=14300361,
     processes=[procs.tzq],
     keys=[
-            "/tZq_ll_4f_ckm_NLO_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
-        ],
+        "/tZq_ll_4f_ckm_NLO_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+    ],
     n_files=14,
     n_events=11916000,
 )
