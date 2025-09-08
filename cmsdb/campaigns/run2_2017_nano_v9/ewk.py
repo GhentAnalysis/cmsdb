@@ -381,19 +381,6 @@ cpn.add_dataset(
     n_events=26454101,
 )
 
-
-cpn.add_dataset(
-    name="w_lnu_0j_amcatnlo",
-    id=14230752,
-    processes=[procs.w_lnu_0j],
-    keys=[
-        "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=119,
-    n_events=168622690,
-)
-
-
 cpn.add_dataset(
     name="w_lnu_0j_amcatnlo",
     id=15026862,
@@ -426,8 +413,6 @@ cpn.add_dataset(
     n_files=68,
     n_events=96032711,
 )
-
-
 
 #
 # EWK
