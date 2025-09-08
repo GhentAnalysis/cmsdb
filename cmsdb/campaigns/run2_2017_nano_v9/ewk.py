@@ -382,29 +382,30 @@ cpn.add_dataset(
 )
 
 
-cpn.add_dataset(
-    name="w_lnu_0j_amcatnlo",
-    id=14230752,
-    processes=[procs.w_lnu_0j],
-    keys=[
-        "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
-    ],
-    n_files=119,
-    n_events=168622690,
-)
-
-
-# TODO: what to do with this dataset? ttHcc used the former
 # cpn.add_dataset(
 #     name="w_lnu_0j_amcatnlo",
-#     id=15026862,
+#     id=14230752,
 #     processes=[procs.w_lnu_0j],
 #     keys=[
-#         "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+#         "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
 #     ],
-#     n_files=80,
-#     n_events=160150804,
+#     n_files=119,
+#     n_events=168622690,
 # )
+
+
+# what to do with this dataset? ttHcc used the former
+# UPDATE: v1 is incomplete across the board, unlike v2. v2 seems to be the one to be used
+cpn.add_dataset(
+    name="w_lnu_0j_amcatnlo",
+    id=15026862,
+    processes=[procs.w_lnu_0j],
+    keys=[
+        "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=80,
+    n_events=160150804,
+)
 
 cpn.add_dataset(
     name="w_lnu_1j_amcatnlo",
