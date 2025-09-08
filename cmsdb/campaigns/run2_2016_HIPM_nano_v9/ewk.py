@@ -1,0 +1,208 @@
+# coding: utf-8
+
+"""
+Electroweak datasets for the 2018 data-taking campaign
+"""
+
+import cmsdb.processes as procs
+from cmsdb.campaigns.run2_2016_HIPM_nano_v9 import campaign_run2_2016_HIPM_nano_v9 as cpn
+
+
+#
+# Drell-Yan
+#
+
+
+cpn.add_dataset(
+    name="dy_m10to50_amcatnlo",
+    id=14550443,
+    processes=[procs.dy_m10to50],
+    keys=[
+        "/DYJetsToLL_M-10to50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=23,
+    n_events=49632553,
+)
+
+cpn.add_dataset(
+    name="dy_m50toinf_amcatnlo",
+    id=14235096,
+    processes=[procs.dy_m50toinf],
+    keys=[
+        "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=62,
+    n_events=90947213,
+)
+
+
+#
+# W + jets
+#
+
+cpn.add_dataset(
+    name="w_lnu_madgraph",
+    id=14884611,
+    processes=[procs.w_lnu],
+    keys=[
+        "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=38 + 474,
+    n_events=74060701 + 79321807,
+)
+
+#
+# W + jets (HT-binned)
+#
+
+cpn.add_dataset(
+    name="w_lnu_ht70to100_madgraph",
+    id=14341281,
+    processes=[procs.w_lnu_ht70to100],
+    keys=[
+        "/WJetsToLNu_HT-70To100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-70To100_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext1-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=24 + 238,
+    n_events=16931765 + 20925685,
+)
+
+cpn.add_dataset(
+    name="w_lnu_ht100to200_madgraph",
+    id=14235541,
+    processes=[procs.w_lnu_ht100to200],
+    keys=[
+        "/WJetsToLNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-100To200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext1-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=19 + 227,
+    n_events=21734530 + 21863595,
+)
+
+cpn.add_dataset(
+    name="w_lnu_ht200to400_madgraph",
+    id=14229253,
+    processes=[procs.w_lnu_ht200to400],
+    keys=[
+        "/WJetsToLNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-200To400_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext1-v3/NANOAODSIM",  # noqa
+    ],
+    n_files=30 + 240,
+    n_events=17870845 + 20287480,
+)
+
+cpn.add_dataset(
+    name="w_lnu_ht400to600_madgraph",
+    id=14233422,
+    processes=[procs.w_lnu_ht400to600],
+    keys=[
+        "/WJetsToLNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext2-v3/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-400To600_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext1-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=12 + 29 + 102,
+    n_events=2467498 + 674032 + 3150490,
+)
+
+cpn.add_dataset(
+    name="w_lnu_ht600to800_madgraph",
+    id=14244164,
+    processes=[procs.w_lnu_ht600to800],
+    keys=[
+        "/WJetsToLNu_HT-600To800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-600To800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext2-v3/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-600To800_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=5 + 30 + 131,
+    n_events=2344130 + 2227346 + 4765628,
+)
+
+cpn.add_dataset(
+    name="w_lnu_ht800to1200_madgraph",
+    id=14234969,
+    processes=[procs.w_lnu_ht800to1200],
+    keys=[
+        "/WJetsToLNu_HT-800To1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-800To1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext2-v3/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-800To1200_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=24 + 34 + 52,
+    n_events=2510487 + 1932857 + 4584029,
+)
+
+cpn.add_dataset(
+    name="w_lnu_ht1200to2500_madgraph",
+    id=14244347,
+    processes=[procs.w_lnu_ht1200to2500],
+    keys=[
+        "/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext2-v3/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-1200To2500_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=19 + 43 + 206,
+    n_events=2119975 + 1917705 + 4387414,
+)
+
+cpn.add_dataset(
+    name="w_lnu_ht2500toinf_madgraph",
+    id=14266963,
+    processes=[procs.w_lnu_ht2500toinf],
+    keys=[
+        "/WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext2-v3/NANOAODSIM",  # noqa
+        "/WJetsToLNu_HT-2500ToInf_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11_ext1-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=17 + 43 + 162,
+    n_events=808649 + 3879925 + 4258411,
+)
+
+#
+# W + Jet (NLO)
+#
+
+cpn.add_dataset(
+    name="w_lnu_amcatnlo",
+    id=14260236,
+    processes=[procs.w_lnu],
+    keys=[
+        "/WJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=59,
+    n_events=28949426,
+)
+
+
+cpn.add_dataset(
+    name="w_lnu_0j_amcatnlo",
+    id=14339204,
+    processes=[procs.w_lnu_0j],
+    keys=[
+        "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=107,
+    n_events=151109845,
+)
+
+cpn.add_dataset(
+    name="w_lnu_1j_amcatnlo",
+    id=14341244,
+    processes=[procs.w_lnu_1j],
+    keys=[
+        "/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=114,
+    n_events=173468850,
+)
+
+cpn.add_dataset(
+    name="w_lnu_2j_amcatnlo",
+    id=14229249,
+    processes=[procs.w_lnu_2j],
+    keys=[
+        "/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=73,
+    n_events=87929021,
+)
+
