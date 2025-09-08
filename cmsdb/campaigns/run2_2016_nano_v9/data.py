@@ -16,7 +16,7 @@ cpn.add_dataset(
     name="data_e_f",
     id=14230145,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_e],
     keys=[
         "/SingleElectron/Run2016F-UL2016_MiniAODv2_NanoAODv9-v1/NANOAOD",
     ],
@@ -31,7 +31,7 @@ cpn.add_dataset(
     name="data_e_g",
     id=14239294,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_e],
     keys=[
         "/SingleElectron/Run2016G-UL2016_MiniAODv2_NanoAODv9-v1/NANOAOD",
     ],
@@ -46,7 +46,7 @@ cpn.add_dataset(
     name="data_e_h",
     id=14227078,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_e],
     keys=[
         "/SingleElectron/Run2016H-UL2016_MiniAODv2_NanoAODv9-v1/NANOAOD",
     ],
@@ -65,7 +65,7 @@ cpn.add_dataset(
     name="data_mu_f",
     id=14233029,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2016F-UL2016_MiniAODv2_NanoAODv9-v1/NANOAOD",
     ],
@@ -80,7 +80,7 @@ cpn.add_dataset(
     name="data_mu_g",
     id=14227079,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2016G-UL2016_MiniAODv2_NanoAODv9-v1/NANOAOD",
     ],
@@ -95,7 +95,7 @@ cpn.add_dataset(
     name="data_mu_h",
     id=14227072,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2016H-UL2016_MiniAODv2_NanoAODv9-v1/NANOAOD",
     ],

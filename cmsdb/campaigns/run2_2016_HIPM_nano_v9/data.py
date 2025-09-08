@@ -15,7 +15,7 @@ cpn.add_dataset(
     name="data_e_b",
     id=14345316,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_e],
     keys=[
         "/SingleElectron/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
 
@@ -31,7 +31,7 @@ cpn.add_dataset(
     name="data_e_c",
     id=14345292,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_e],
     keys=[
         "/SingleElectron/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
@@ -46,7 +46,7 @@ cpn.add_dataset(
     name="data_e_d",
     id=14345209,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_e],
     keys=[
         "/SingleElectron/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
@@ -61,7 +61,7 @@ cpn.add_dataset(
     name="data_e_e",
     id=14345668,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_e],
     keys=[
         "/SingleElectron/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
@@ -76,7 +76,7 @@ cpn.add_dataset(
     name="data_e_f",
     id=14345250,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_e],
     keys=[
         "/SingleElectron/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
@@ -96,7 +96,7 @@ cpn.add_dataset(
     name="data_mu_b",
     id=14345036,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
@@ -111,7 +111,7 @@ cpn.add_dataset(
     name="data_mu_c",
     id=14345260,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
@@ -126,7 +126,7 @@ cpn.add_dataset(
     name="data_mu_d",
     id=14345352,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
@@ -141,7 +141,7 @@ cpn.add_dataset(
     name="data_mu_e",
     id=14345735,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
@@ -156,7 +156,7 @@ cpn.add_dataset(
     name="data_mu_f",
     id=14345750,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",
     ],
