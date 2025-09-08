@@ -203,6 +203,63 @@ cpn.add_dataset(
     n_events=1480047,
 )
 
+# pt binned
+cpn.add_dataset(
+    name="dy_pt50to100_amcatnlo",
+    id=14231159,
+    processes=[procs.dy_pt50to100],
+    keys=[
+        "/DYJetsToLL_Pt-50To100_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=88,
+    n_events=107079717,
+)
+
+cpn.add_dataset(
+    name="dy_pt100to250_amcatnlo",
+    id=14300156,
+    processes=[procs.dy_pt100to250],
+    keys=[
+        "/DYJetsToLL_Pt-100To250_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=56,
+    n_events=75818801,
+)
+
+cpn.add_dataset(
+    name="dy_pt250to400_amcatnlo",
+    id=14235259,
+    processes=[procs.dy_pt250to400],
+    keys=[
+        "/DYJetsToLL_Pt-250To400_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=45,
+    n_events=18739246,
+)
+
+cpn.add_dataset(
+    name="dy_pt400to650_amcatnlo",
+    id=14228178,
+    processes=[procs.dy_pt400to650],
+    keys=[
+        "/DYJetsToLL_Pt-400To650_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=3,
+    n_events=1895259,
+)
+
+cpn.add_dataset(
+    name="dy_pt650toinf_amcatnlo",
+    id=14232153,
+    processes=[procs.dy_pt650toinf],
+    keys=[
+        "/DYJetsToLL_Pt-650ToInf_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=24,
+    n_events=1921546,
+)
+
+
 #
 # W boson production
 #
@@ -308,6 +365,68 @@ cpn.add_dataset(
     n_files=15,
     n_events=1185699,
 )
+
+#
+# W + Jets (NLO)
+#
+
+cpn.add_dataset(
+    name="w_lnu_amcatnlo",
+    id=14305034,
+    processes=[procs.w_lnu],
+    keys=[
+        "/WJetsToLNu_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=45,
+    n_events=26454101,
+)
+
+
+cpn.add_dataset(
+    name="w_lnu_0j_amcatnlo",
+    id=14230752,
+    processes=[procs.w_lnu_0j],
+    keys=[
+        "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=119,
+    n_events=168622690,
+)
+
+
+cpn.add_dataset(
+    name="w_lnu_0j_amcatnlo",
+    id=15026862,
+    processes=[procs.w_lnu_0j],
+    keys=[
+        "/WJetsToLNu_0J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=80,
+    n_events=160150804,
+)
+
+cpn.add_dataset(
+    name="w_lnu_1j_amcatnlo",
+    id=14302894,
+    processes=[procs.w_lnu_1j],
+    keys=[
+        "/WJetsToLNu_1J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=127,
+    n_events=177102579,
+)
+
+cpn.add_dataset(
+    name="w_lnu_2j_amcatnlo",
+    id=15026723,
+    processes=[procs.w_lnu_2j],
+    keys=[
+        "/WJetsToLNu_2J_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=68,
+    n_events=96032711,
+)
+
 
 
 #
