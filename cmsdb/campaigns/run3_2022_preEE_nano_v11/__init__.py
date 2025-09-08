@@ -21,21 +21,23 @@ from order import Campaign
 # campaign
 #
 
-campaign_run3_2022_preEE_nano_v11 = Campaign(
-    name="run3_2022_preEE_nano_v11",
+campaign_run3_2024_nano_v15 = Campaign(
+    name="run3_2024_nano_v15",
     id=320221101,  # 3 2022 11 01(u)
     ecm=13.6,
     bx=25,
     aux={
         "tier": "NanoAOD",
-        "year": 2022,
-        "version": 11,
+        "year": 2024,
+        "version": 15,
+        "run": 3,
+        "postfix": "",
     },
 )
 
 
 # trailing imports to load datasets
-import cmsdb.campaigns.run3_2022_preEE_nano_v11.data  # noqa
-import cmsdb.campaigns.run3_2022_preEE_nano_v11.top  # noqa
-import cmsdb.campaigns.run3_2022_preEE_nano_v11.ewk  # noqa
-import cmsdb.campaigns.run3_2022_preEE_nano_v11.qcd  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.top  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.ewk  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.higgs  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.data  # noqa

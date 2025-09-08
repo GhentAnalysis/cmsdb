@@ -9,6 +9,7 @@ __all__ = [
     "tt_sl", "tt_dl", "tt_fh",
     "st",
     "st_tchannel", "st_tchannel_t", "st_tchannel_tbar",
+    "st_tchannel_t_lep", "st_tchannel_tbar_lep",
     "st_twchannel", "st_twchannel_t", "st_twchannel_tbar",
     "st_twchannel_t_sl", "st_twchannel_tbar_sl",
     "st_twchannel_t_dl", "st_twchannel_tbar_dl",
@@ -16,32 +17,37 @@ __all__ = [
     "st_schannel", "st_schannel_lep", "st_schannel_had",
     "st_schannel_t", "st_schannel_t_lep", "st_schannel_t_had",
     "st_schannel_tbar", "st_schannel_tbar_lep", "st_schannel_tbar_had",
-    "tzq",
-    "twz", "twztoll_thad_wlept_5f", "twztoll_tlept_whad_5f", "twztoll_tlept_wlept_5f",
+    "tzq", "tzq_wlnu",
+    "tx",
+    "twz_tqq_wlnu_zll_dr1", "twz_tlnu_wqq_zll_dr1", "twz_tlnu_wlnu_zll_dr1",
+    "twz_tqq_wlnu_zll_dr2", "twz_tlnu_wqq_zll_dr2", "twz_tlnu_wlnu_zll_dr2",
     "ttv",
-    "ttz", "ttz_llnunu_m10", "ttz_llnunu_m1",
-    "ttw", "ttw_lnu", "ttw_qq",
-    "tth", "tthjetstononbb",
+    "ttz", "ttz_zqq", "ttz_zlep_m1to10", "ttz_zlep_m10toinf", "ttz_zll_m4to50",
+    "ttz_zll_m50toinf", "ttz_znunu",
     "ttgamma", "ttgamma_dilept",
-    "ttxx",
+    "ttg_ptg_10to100", "ttg_ptg_100to200", "ttg_ptg_200toinf",
+    "ttw", "ttw_wlnu", "ttw_wlnu_ewk", "ttw_wqq",
     "ttvv",
-    "ttzz", "ttwz", "ttww", "tthh", "ttwh", "ttzh", "tttt"
+    "ttzz", "ttwz", "ttww", "tttt", "tthh",
 ]
+
 
 from order import Process
 from scinum import Number
 
 import cmsdb.constants as const
+from cmsdb.util import multiply_xsecs
 
 
 #
 # ttbar
 # (ids up to 1999)
 #
-# https://twiki.cern.ch/twiki/bin/view/LHCPhysics/TtbarNNLO?rev=16#Top_quark_pair_cross_sections_at
-# use mtop = 172.5 GeV, see
+# https://twiki.cern.ch/twiki/bin/view/LHCPhysics/TtbarNNLO?rev=21#Updated_reference_cross_sections
+# cross sections correspond to mtop = 172.5 GeV
 # https://twiki.cern.ch/twiki/bin/view/CMS/TopMonteCarloSystematics?rev=7#mtop
 #
+
 
 tt = Process(
     name="tt",
@@ -49,50 +55,55 @@ tt = Process(
     label=r"$t\bar{t}$",
     color=(205, 0, 9),
     xsecs={
-        13: Number(831.76, {
-            "scale": (19.77, 29.20),
-            "pdf": 35.06,
-            "mtop": (23.18, 22.45),
+        13: Number(833.9, {
+            "scale": (20.5, 30.0),
+            "pdf": 21.0,
+            "mtop": (23.2, 22.5),
+        }),
+        13.6: Number(923.6, {
+            "scale": (22.6, 33.4),
+            "pdf": 22.8,
+            "mtop": (25.4, 24.6),
         }),
     },
 )
 
 tt_sl = tt.add_process(
     name="tt_sl",
-    id=1100,
+    id=tt.id + 100,
     label=f"{tt.label}, SL",
     color=(205, 0, 9),
-    xsecs={
-        13: tt.get_xsec(13) * const.br_ww.sl,
-    },
+    xsecs=multiply_xsecs(tt, const.br_ww.sl),
 )
 
 tt_dl = tt.add_process(
     name="tt_dl",
-    id=1200,
+    id=tt.id + 200,
     label=f"{tt.label}, DL",
     color=(235, 230, 10),
-    xsecs={
-        13: tt.get_xsec(13) * const.br_ww.dl,
-    },
+    xsecs=multiply_xsecs(tt, const.br_ww.dl),
 )
 
 tt_fh = tt.add_process(
     name="tt_fh",
-    id=1300,
+    id=tt.id + 300,
     label=f"{tt.label}, FH",
     color=(255, 153, 0),
-    xsecs={
-        13: tt.get_xsec(13) * const.br_ww.fh,
-    },
+    xsecs=multiply_xsecs(tt, const.br_ww.fh),
 )
 
 
 #
 # single-top
 #
-# https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopSigma?rev=12#Single_Top_Cross_sections_at_13
+# using updated tables from 2022
+# t- and tw-channel: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20#Predictions_for_top_quark_produc  # noqa
+# s-channel: https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36#Single_top_s_channel_cross_secti
+# for the tW-channel, the t and tbar channels contribute equally as stated in
+# Ref https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36#Single_top_Wt_channel_cross_sect
 #
+# 13 TeV s-channel cross sections from here:
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/SingleTopSigma?rev=12#Single_Top_Cross_sections_at_13?rev=12
 
 st = Process(
     name="st",
@@ -106,10 +117,19 @@ st_tchannel = st.add_process(
     id=2100,
     label=f"{st.label}, t-channel",
     xsecs={
-        13: Number(216.99, dict(
-            scale=(6.62, 4.64),
-            pdf=6.16,  # includes alpha_s
-            mtop=1.81,
+        13: Number(214.2, dict(
+            scale=(2.4, 1.7),
+            pdf=(3.3, 2.2),  # includes alpha_s
+            mtop=(1.7, 1.9),
+            E_beam=(0.4, 0.3),
+            integration=0.2,
+        )),
+        13.6: Number(232.2, dict(
+            scale=(2.6, 1.9),
+            pdf=(3.4, 2.2),  # includes alpha_s
+            mtop=(1.9, 1.6),
+            E_beam=(0.6, 0.5),
+            integration=0.2,
         )),
     },
 )
@@ -119,10 +139,20 @@ st_tchannel_t = st_tchannel.add_process(
     label=r"Single $t$, t-channel",
     id=2110,
     xsecs={
-        13: Number(136.02, dict(
-            scale=(4.09, 2.92),
-            pdf=3.52,  # includes alpha_s
-            mtop=1.11,
+        13: Number(134.2, dict(
+            scale=(1.5, 1.1),
+            pdf=(2.1, 1.3),  # includes alpha_s
+            mtop=(1.0, 1.2),
+            E_beam=0.2,
+            integration=0.1,
+        )),
+        13.6: Number(145.0, dict(
+            scale=(1.7, 1.1),
+            pdf=(2.3, 1.5),  # includes alpha_s
+            mtop=(1.3, 0.9),
+            E_beam=(0.4, 0.3),
+            integration=0.1,
+
         )),
     },
 )
@@ -132,22 +162,58 @@ st_tchannel_tbar = st_tchannel.add_process(
     label=r"Single $\bar{t}$, t-channel",
     id=2120,
     xsecs={
-        13: Number(80.95, dict(
-            scale=(2.53, 1.71),
-            pdf=3.18,  # includes alpha_s
-            mtop=(0.71, 0.70),
+        13: Number(80.0, dict(
+            scale=0.8,
+            pdf=(1.6, 1.2),  # includes alpha_s
+            mtop=0.7,
+            E_beam=(0.2, 0.1),
+            integration=0.1,
+        )),
+        13.6: Number(87.2, dict(
+            scale=(0.9, 0.8),
+            pdf=(1.5, 1.3),  # includes alpha_s
+            mtop=(0.6, 0.7),
+            E_beam=(0.2, 0.2),
+            integration=0.1,
         )),
     },
 )
+
+st_tchannel_t_lep = st_tchannel_t.add_process(
+    name="st_tchannel_t_lep",
+    label=r"$t$",
+    id=2111,
+    xsecs={
+        13.6: st_tchannel_t.get_xsec(13.6) * const.br_w.lep,
+    },
+)
+
+st_tchannel_tbar_lep = st_tchannel_tbar.add_process(
+    name="st_tchannel_tbar_lep",
+    label=r"$\bar{t}$",
+    id=2121,
+    xsecs={
+        13.6: st_tchannel_tbar.get_xsec(13.6) * const.br_w.lep,
+    },
+)
+
 
 st_twchannel = st.add_process(
     name="st_twchannel",
     id=2200,
     label=f"{st.label}, tW-channel",
     xsecs={
-        13: Number(71.7, dict(
-            scale=1.8,
-            pdf=3.4,
+        13: Number(79.3, dict(
+            scale=(1.9, 1.8),
+            pdf=2.2,  # includes alpha_s
+            mtop=1.2,
+            E_beam=0.2,
+        )),
+        13.6: Number(87.9, dict(
+            scale=(2.0, 1.9),
+            pdf=2.4,  # includes alpha_s
+            mtop=1.3,
+            E_beam=0.2,
         )),
     },
 )
@@ -156,58 +222,54 @@ st_twchannel_t = st_twchannel.add_process(
     name="st_twchannel_t",
     id=2210,
     xsecs={
-        13: Number(35.85, dict(
-            scale=0.90,
-            pdf=1.70,
-        )),
+        13: st_twchannel.get_xsec(13) / 2,
+        13.6: st_twchannel.get_xsec(13.6) / 2,
     },
 )
 
 st_twchannel_t_sl = st_twchannel_t.add_process(
     name="st_twchannel_t_sl",
     id=2211,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs=multiply_xsecs(st_twchannel_t, const.br_ww.sl),
 )
 
 st_twchannel_t_dl = st_twchannel_t.add_process(
     name="st_twchannel_t_dl",
     id=2212,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs=multiply_xsecs(st_twchannel_t, const.br_ww.dl),
 )
 
 st_twchannel_t_fh = st_twchannel_t.add_process(
     name="st_twchannel_t_fh",
     id=2213,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs=multiply_xsecs(st_twchannel_t, const.br_ww.fh),
 )
 
 st_twchannel_tbar = st_twchannel.add_process(
     name="st_twchannel_tbar",
     id=2220,
     xsecs={
-        13: Number(35.85, dict(
-            scale=0.90,
-            pdf=1.70,
-        )),
+        13: st_twchannel.get_xsec(13) / 2,
+        13.6: st_twchannel.get_xsec(13.6) / 2,
     },
 )
 
 st_twchannel_tbar_sl = st_twchannel_tbar.add_process(
     name="st_twchannel_tbar_sl",
     id=2221,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs=multiply_xsecs(st_twchannel_tbar, const.br_ww.sl),
 )
 
 st_twchannel_tbar_dl = st_twchannel_tbar.add_process(
     name="st_twchannel_tbar_dl",
     id=2222,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs=multiply_xsecs(st_twchannel_tbar, const.br_ww.dl),
 )
 
 st_twchannel_tbar_fh = st_twchannel_tbar.add_process(
     name="st_twchannel_tbar_fh",
     id=2223,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs=multiply_xsecs(st_twchannel_tbar, const.br_ww.fh),
 )
 
 st_schannel = st.add_process(
@@ -215,81 +277,89 @@ st_schannel = st.add_process(
     id=2300,
     label=f"{st.label}, s-channel",
     xsecs={
-        13: Number(11.36, dict(
-            scale=0.18,
-            pdf=(0.40, 0.45),
-        )),
+        13: Number(10.32, {
+            "scale": (0.29, 0.24),
+            "pdf": 0.27,
+            "mtop": (0.23, 0.22),
+            "E_beam": 0.01,
+        }),
+        13.6: Number(7.246, {
+            "scale": (0.059, 0.043),
+        }),
+        # only scale uncertainty is given in the twiki
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
+        # TODO: update after final calculations
+        # no value for 13.6 in NLO twiki
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopRefXsec?rev=36
     },
 )
 
 st_schannel_lep = st_schannel.add_process(
     name="st_schannel_lep",
     id=2301,
-    xsecs={
-        13: st_schannel.get_xsec(13) * const.br_w.lep,
-    },
+    xsecs=multiply_xsecs(st_schannel, const.br_w.lep),
 )
 
 st_schannel_had = st_schannel.add_process(
     name="st_schannel_had",
     id=2302,
-    xsecs={
-        13: st_schannel.get_xsec(13) * const.br_w.had,
-    },
+    xsecs=multiply_xsecs(st_schannel, const.br_w.had),
 )
 
 st_schannel_t = st_schannel.add_process(
     name="st_schannel_t",
     id=2310,
     xsecs={
-        13: Number(7.20, dict(
-            scale=0.13,
-            pdf=(0.29, 0.23),
-        )),
+        13: Number(6.35, {
+            "scale": (0.18, 0.15),
+            "pdf": 0.14,
+            "mtop": (0.14, 0.13),
+            "E_beam": 0.01,
+        }),
+        # TODO: 13.6 TeV xsecs
+        # not available yet in
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
     },
 )
 
 st_schannel_t_lep = st_schannel_t.add_process(
     name="st_schannel_t_lep",
     id=2311,
-    xsecs={
-        13: st_schannel_t.get_xsec(13) * const.br_w.lep,
-    },
+    xsecs=multiply_xsecs(st_schannel_t, const.br_w.lep),
 )
 
 st_schannel_t_had = st_schannel_t.add_process(
     name="st_schannel_t_had",
     id=2312,
-    xsecs={
-        13: st_schannel_t.get_xsec(13) * const.br_w.had,
-    },
+    xsecs=multiply_xsecs(st_schannel_t, const.br_w.had),
 )
 
 st_schannel_tbar = st_schannel.add_process(
     name="st_schannel_tbar",
     id=2320,
     xsecs={
-        13: Number(4.16, dict(
-            scale=0.05,
-            pdf=(0.12, 0.23),
-        )),
+        13: Number(3.97, {
+            "scale": (0.11, 0.09),
+            "pdf": 0.15,
+            "mtop": 0.09,
+            "E_beam": 0.01,
+        }),
+        # TODO: 13.6 TeV xsecs
+        # not available yet in
+        # https://twiki.cern.ch/twiki/bin/view/LHCPhysics/SingleTopNNLORef?rev=20
     },
 )
 
 st_schannel_tbar_lep = st_schannel_tbar.add_process(
     name="st_schannel_tbar_lep",
     id=2321,
-    xsecs={
-        13: st_schannel_tbar.get_xsec(13) * const.br_w.lep,
-    },
+    xsecs=multiply_xsecs(st_schannel_tbar, const.br_w.lep),
 )
 
 st_schannel_tbar_had = st_schannel_tbar.add_process(
     name="st_schannel_tbar_had",
     id=2322,
-    xsecs={
-        13: st_schannel_tbar.get_xsec(13) * const.br_w.had,
-    },
+    xsecs=multiply_xsecs(st_schannel_tbar, const.br_w.had),
 )
 
 # define the combined single top cross section as the sum of the three channels
@@ -298,41 +368,86 @@ st.set_xsec(
     st_tchannel.get_xsec(13) + st_twchannel.get_xsec(13) + st_schannel.get_xsec(13),
 )
 
-# Single top + vector boson
+st.set_xsec(
+    13.6,
+    st_tchannel.get_xsec(13.6) + st_twchannel.get_xsec(13.6) + st_schannel.get_xsec(13.6),
+)
 
-tzq = Process(
+
+# Single top + vector boson
+# 13.6 TeV xsec from GenXSecAnalyzer
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/HowToGenXSecAnalyzer
+
+tx = Process(
+    name="tx",
+    id=2499,
+    label="t+X",
+    xsecs={},
+)
+
+tzq = tx.add_process(
     name="tzq",
     id=2500,
-    label='tZq',
-    xsecs={13: 0.07358},
+    label="tZq",
+    xsecs={13: 0.07358, 13.6: Number(0.07968)},
 )
 
-twz = Process(
+tzq_wlnu = tzq.add_process(
+    name="tzq_wlnu",
+    id=2510,
+    label="tZq (lept)",
+    xsecs=multiply_xsecs(tzq, const.br_w.lep),
+)
+
+
+twz = tx.add_process(
     name="twz",
     id=2600,
-    label='tWZ',
-    xsecs={13: Number(0.1)},
+    label="tWZ",
 )
 
-twztoll_thad_wlept_5f = twz.add_process(
-    name="twztoll_thad_wlept_5f",
+# 13.6 TeV xsec from GenXSecAnalyzer
+# https://twiki.cern.ch/twiki/bin/viewauth/CMS/HowToGenXSecAnalyzer
+twz_tqq_wlnu_zll_dr2 = twz.add_process(
+    name="twz_tqq_wlnu_zll_dr2",
     id=2610,
-    label='twztoll_thad_wlept_5f',
-    xsecs={13: Number(0.003004)},
+    label="twz_tqq_wlnu_zll_dr2",
+    xsecs={13: Number(0.1), 13.6: Number(0.009135)},
 )
 
-twztoll_tlept_whad_5f = twz.add_process(
-    name="twztoll_tlept_whad_5f",
+twz_tlnu_wqq_zll_dr2 = twz.add_process(
+    name="twz_tlnu_wqq_zll_dr2",
     id=2620,
-    label='twztoll_tlept_whad_5f',
-    xsecs={13: Number(0.003004)},
+    label="twz_tlnu_wqq_zll_dr2",
+    xsecs={13: Number(0.1), 13.6: Number(0.009135)},
 )
 
-twztoll_tlept_wlept_5f = twz.add_process(
-    name="twztoll_tlept_wlept_5f",
+twz_tlnu_wlnu_zll_dr2 = twz.add_process(
+    name="twz_tlnu_wlnu_zll_dr2",
     id=2630,
-    label='twztoll_tlept_wlept_5f',
-    xsecs={13: Number(0.0015)},
+    label="twz_tlnu_wlnu_zll_dr2",
+    xsecs={13: Number(0.1), 13.6: Number(0.009135 / 2)},
+)
+
+twz_tqq_wlnu_zll_dr1 = twz.add_process(
+    name="twz_tqq_wlnu_zll_dr1",
+    id=2640,
+    label="twz_tqq_wlnu_zll_dr1",
+    xsecs={13: Number(0.003004), 13.6: Number(0.003338)},
+)
+
+twz_tlnu_wqq_zll_dr1 = twz.add_process(
+    name="twz_tlnu_wqq_zll_dr1",
+    id=2650,
+    label="twz_tlnu_wqq_zll_dr1",
+    xsecs={13: Number(0.003004), 13.6: Number(0.003338)},
+)
+
+twz_tlnu_wlnu_zll_dr1 = twz.add_process(
+    name="twz_tlnu_wlnu_zll_dr1",
+    id=2660,
+    label="twz_tlnu_wlnu_zll_dr1",
+    xsecs={13: Number(0.0015), 13.6: Number(0.001669)},
 )
 
 
@@ -340,158 +455,280 @@ twztoll_tlept_wlept_5f = twz.add_process(
 # ttbar + 1 vector boson
 #
 
+# ttv cross section values based on
+# 13 TeV: https://www.arxiv.org/abs/2001.03031
+# 14 TeV: https://www.arxiv.org/abs/1812.08622
 
 ttv = Process(
     name="ttv",
     id=3000,
-    label=f"{tt.label} + V",
-    xsecs={13: Number(0.1)},  # TODO
+    label=f"{tt.label}V",
 )
 
 ttz = ttv.add_process(
     name="ttz",
     id=3100,
-    label=f"{tt.label} + Z",
-    xsecs={13: Number(0.1)},  # TODO
+    label=f"{tt.label}Z",
+    xsecs={
+        13: Number(0.859, {
+            "scale": (0.086j, 0.095j),
+            "pdf": 0.023j,
+        }),
+        # from xsdb for ttz_zqq: https://xsdb-temp.app.cern.ch/xsdb/?columns=67108863&currentPage=0&pageSize=10&searchQuery=process_name%3D%5ETTZ-ZtoQQ-1Jets_TuneCP5_13p6TeV_amcatnloFXFX-pythia8%24  # noqa
+        13.6: Number(0.660300, {
+            "total": 0.003767,
+        }) / const.br_z.qq,
+        14: Number(1.045, {
+            "scale": (0.088j, 0.099j),
+            "pdf": 0.031j,
+        }),
+    },
 )
 
-ttz_llnunu_m10 = ttz.add_process(
-    name="ttz_llnunu_m10",  # non-hadronically decaying Z m10>
+# based on CMS AN-2023/021, TOP-23-004
+
+# zlep = zll or znunu, both decays present in samples
+ttz_zlep_m10toinf = ttz.add_process(
+    name="ttz_zlep_m10toinf",  # non-hadronically decaying Z
     id=3110,
-    xsecs={13: 0.281},
+    xsecs={
+        13: Number(0.28136),
+    },
 )
 
 
-ttz_llnunu_m1 = ttz.add_process(
-    name="ttz_llnunu_m1",  # non-hadronically decaying Z m1-10
-    id=3120,
-    xsecs={13: 0.08416},
+ttz_zlep_m1to10 = ttz.add_process(
+    name="ttz_zlep_m1to10",  # non-hadronically decaying Z
+    id=3111,
+    xsecs={
+        13: Number(0.0822),
+    },
 )
 
-ttz.set_xsec(
-    13,
-    ttz_llnunu_m10.get_xsec(13) + ttz_llnunu_m1.get_xsec(13)
+# based on GenXSecAnalyzer
+
+ttz_zll_m4to50 = ttz.add_process(
+    name="ttz_zll_m4to50",
+    id=3115,
+    xsecs={
+        # XSDB
+        13.6: Number(0.03949, {
+            "total": 0.00002728,
+        }),
+    },
 )
 
+ttz_zll_m50toinf = ttz.add_process(
+    name="ttz_zll_m50toinf",
+    id=3116,
+    xsecs={
+        13: Number(0.0822),
+        # XSDB
+        13.6: Number(0.08646, {
+            "total": 0.0000552,
+        }),
+    },
+)
+
+ttz_znunu = ttz.add_process(
+    name="ttz_znunu",
+    id=3130,
+    xsecs={
+        # XSDB
+        13.6: Number(0.1638, {
+            "total": 0.00007274,
+        }),
+    },
+)
+
+ttz_zqq = ttz.add_process(
+    name="ttz_zqq",
+    id=3140,
+    xsecs=multiply_xsecs(ttz, const.br_z.qq),
+)
+
+#
+# ttgamma
+#
+
+ttgamma = ttv.add_process(
+    name="ttgamma",
+    id=3150,
+    label=f"{tt.label} + " + r"$\gamma$",
+)
+
+# xsec from CMS AN-2021/217, TOP-23-002
+
+ttgamma_dilept = ttgamma.add_process(
+    name="ttgamma_dilept",
+    id=3160,
+    label=f"{tt.label} + gamma",
+    xsecs={
+        13: Number(0.4208),
+    },
+)
+
+# xsec from ...
+
+ttg_ptg_10to100 = ttgamma.add_process(
+    name="ttg_ptg_10to100",
+    id=3170,
+    label=f"{tt.label} + gamma (pt > 10 GeV)",
+    xsecs={
+        13.6: Number(4.215),
+    },
+)
+
+ttg_ptg_100to200 = ttgamma.add_process(
+    name="ttg_ptg_100to200",
+    id=3180,
+    label=f"{tt.label} + gamma (200 > pt > 100 GeV)",
+    xsecs={
+        13.6: Number(0.3936),
+    },
+)
+
+ttg_ptg_200toinf = ttgamma.add_process(
+    name="ttg_ptg_200toinf",
+    id=3190,
+    label=f"{tt.label} + gamma (pt > 200 GeV)",
+    xsecs={
+        13.6: Number(0.1271),
+
+    },
+)
 
 ttw = ttv.add_process(
     name="ttw",
     id=3200,
-    label=f"{tt.label} + W",
-    xsecs={13: Number(0.1)},  # TODO
+    label=f"{tt.label}W",
+    xsecs={
+        13: Number(0.592, {
+            "scale": (0.261j, 0.162j),
+            "pdf": 0.021j,
+        }),
+        # XSDB: only LO in database, estimate an energy scaling factor from LO samples and multiply
+        # to 13 TeV value for now, TODO
+        13.6: 0.2505 / 0.2149 * Number(0.592, {
+            "scale": (0.261j, 0.162j),
+            "pdf": 0.021j,
+        }),
+        14: Number(0.429, {  # ttW+
+            "scale": (0.264j, 0.167j),
+            "pdf": 0.032j,
+        }) + Number(0.224, {  # ttW-
+            "scale": (0.264j, 0.164j),
+            "pdf": 0.036j,
+        }),
+    },
 )
 
-ttw_lnu = ttw.add_process(
-    name="ttw_lnu",
+ttw_wlnu = ttw.add_process(
+    name="ttw_wlnu",
     id=3210,
-    xsecs={13: Number(0.235)},
+    xsecs={
+        13.6: Number(0.2471),
+    },
 )
 
-ttw_qq = ttw.add_process(
-    name="ttw_qq",
+ttw_wlnu_ewk = ttw_wlnu.add_process(
+    name="ttw_wlnu_ewk",
+    id=3211,
+    label=f"{ttw_wlnu.label} (EWK)",
+    xsecs={
+        13.6: Number(0.01697),
+    },
+)
+
+ttw_wqq = ttw.add_process(
+    name="ttw_wqq",
     id=3220,
-    xsecs={13: Number(0.1)},  # TODO
+    xsecs=multiply_xsecs(ttw, const.br_w.had),
 )
 
 
-tth = ttv.add_process(
-    name="tth",
-    id=3300,
-    label=f"{tt.label} + H",
-    xsecs={13: Number(0.1)},  # TODO
-)
-
-tthjetstononbb = tth.add_process(
-    name="tthjetstononbb",
-    id=3310,
-    label=f"{tt.label} + H (nonbb)",
-    xsecs={13: Number(0.211)},
-)
-
-ttgamma = ttv.add_process(
-    name="ttgamma",
-    id=3400,
-    label=f"${tt.label} + \gamma$",
-    xsecs={13: Number(0.1)},  # TODO
-)
-
-ttgamma_dilept = ttgamma.add_process(
-    name="ttgamma_dilept",
-    id=3410,
-    label=f"${tt.label} + \gamma(ll)$",
-    xsecs={13: Number(2.22)},
-)
+# set combined cross sections
+for ecm in (13, 14):
+    ttv.set_xsec(ecm, ttw.get_xsec(ecm) + ttz.get_xsec(ecm))
 
 
-#
-# ttbar + 2 bosons/fermions
-#
-
-ttxx = Process(
-    name="ttxx",
-    id=3999,
-    label=f"{tt.label} + XX",
-    xsecs={13: Number(0.1)},
-)
-
-#
 # ttbar + 2 vector bosons
 #
+# https://arxiv.org/pdf/1610.07922.pdf page 165 Table 42
+#
 
-
-ttvv = ttxx.add_process(
+ttvv = Process(
     name="ttvv",
     id=4000,
-    label=f"{tt.label} + VV",
-    xsecs={13: Number(0.1)},
+    label=f"{tt.label}VV",
 )
 
+# 13.6 TeV xsec from GenXSecAnalyzer
 ttzz = ttvv.add_process(
     name="ttzz",
     id=4100,
-    xsecs={13: Number(0.001386)},
+    xsecs={
+        13: Number(1982E-6, {
+            "scale": (0.052j, 0.090j),
+            "pdf": 0.026j,
+        }),
+        # 13.6 from GenXSecAnalyzer:
+        # similar values also found in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2023_179_v6.pdf
+        13.6: Number(0.001562, {
+            "tot": 0.0000003675,  # xsdb Number(0.001579, {"tot": 0.000003248})
+        }),
+    },
 )
 
+# 13.6 TeV dataset still missing TODO
 ttwz = ttvv.add_process(
     name="ttwz",
     id=4200,
-    xsecs={13: Number(0.002453)},
+    xsecs={
+        13: (
+            Number(2705E-6, {"scale": (0.099j, 0.106j), "pdf": 0.027j}) +
+            Number(1179E-6, {"scale": 0.112j, "pdf": 0.037j})
+        ),
+
+    },
 )
 
+# 13.6 TeV xsec from GenXSecAnalyzer
 ttww = ttvv.add_process(
     name="ttww",
     id=4300,
-    xsecs={13: Number(0.007003)},
+    xsecs={
+        13: Number(8380E-6, {  # Calculation performed in 5FS
+            "scale": (0.332j, 0.231j),
+            "pdf": 0.030j,
+        }),
+        # 13.6 from GenXSecAnalyzer:
+        # similar values also found in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2023_179_v6.pdf
+        13.6: Number(0.008165, {
+            "tot": 0.000002113,  # xsdb Number(0.008203, {"tot": 0.00001404})
+        }),
+    },
 )
 
-#
-# ttbar + 2 bosons with atleast 1 Higgs
-#
-
-tthh = ttxx.add_process(
+# 13.6 TeV dataset still missing TODO
+tthh = ttvv.add_process(
     name="tthh",
     id=4400,
-    label=f"{tt.label} + HH",
+    label=f"{tt.label}HH",
     xsecs={13: Number(0.0003697)},
 )
 
-ttwh = ttxx.add_process(
-    name="ttwh",
-    id=4500,
-    label=f"{tt.label} + WH",
-    xsecs={13: Number(0.001141)},
-)
 
-ttzh = ttxx.add_process(
-    name="ttzh",
-    id=4600,
-    label=f"{tt.label} + ZH",
-    xsecs={13: Number(0.00113)},
-)
-
-tttt = ttxx.add_process(
-    name="ttt",
+# 13.6 TeV https://arxiv.org/abs/2212.03259
+tttt = ttvv.add_process(
+    name="tttt",
     id=4700,
     label=f"{tt.label}{tt.label}",
-    xsecs={13: Number(0.01337)},
+    xsecs={13: Number(0.01337), 13.6: Number(0.01582)},
+)
+
+# define the combined ttvv cross section as the sum of the three channels
+ttvv.set_xsec(
+    13,
+    ttzz.get_xsec(13) + ttwz.get_xsec(13) + ttww.get_xsec(13),
 )

@@ -36,7 +36,6 @@ cpn.add_dataset(
 )
 
 
-
 cpn.add_dataset(
     name="dy_lept_m50_ht-100to200_madgraph",
     id=14248856,
@@ -109,7 +108,7 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="w_lnu_madgraph",
-    id=14231010, # id first dataset
+    id=14231010,  # id first dataset
     processes=[procs.w_lnu],
     keys=[
         "/WJetsToLNu_TuneCP5_13TeV-madgraphMLM-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa

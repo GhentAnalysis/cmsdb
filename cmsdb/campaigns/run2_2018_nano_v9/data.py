@@ -186,19 +186,19 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-        name="data_muoneg_d",
-        id=14380603,
-        is_data=True,
-        processes=[procs.data],
-        keys=[
-            "/MuonEG/Run2018D-UL2018_MiniAODv2_NanoAODv9_GT36-v2/NANOAOD",
-        ],
-        n_files=60,
-        n_events=71947999,
-        aux={
+    name="data_muoneg_d",
+    id=14380603,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MuonEG/Run2018D-UL2018_MiniAODv2_NanoAODv9_GT36-v2/NANOAOD",
+    ],
+    n_files=60,
+    n_events=71947999,
+    aux={
         "era": "D",
     },
-    )
+)
 
 #
 # Muon
