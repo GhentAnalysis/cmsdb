@@ -14,7 +14,7 @@ from cmsdb.campaigns.run2_2017_nano_v9 import campaign_run2_2017_nano_v9 as cpn
 
 # amcatnlo
 cpn.add_dataset(
-    name="dy_lep_m10to50_amcatnlo",
+    name="dy_m10to50_amcatnlo",
     id=14550981,
     processes=[procs.dy_m10to50],
     keys=[
@@ -25,7 +25,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_m50_amcatnlo",
+    name="dy_m50toinf_amcatnlo",
     id=14262316,
     processes=[procs.dy_m50toinf],
     keys=[
