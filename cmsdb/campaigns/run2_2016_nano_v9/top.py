@@ -11,11 +11,11 @@ from cmsdb.campaigns.run2_2016_nano_v9 import campaign_run2_2016_nano_v9 as cpn
 
 
 #
-# ttbar
+# single top
 #
 
 cpn.add_dataset(
-    name="st_tchannel_t_powheg",
+    name="st_tchannel_t_4f_powheg",
     id=14266078,
     processes=[procs.st_tchannel_t],
     info=dict(
@@ -58,7 +58,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_tchannel_tbar_powheg",
+    name="st_tchannel_tbar_4f_powheg",
     id=14258662,
     processes=[procs.st_tchannel_tbar],
     info=dict(
@@ -101,7 +101,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_twchannel_t",
+    name="st_twchannel_t_powheg",
     id=14238236,
     processes=[procs.st_twchannel_t],
     info=dict(
@@ -116,7 +116,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="st_twchannel_tbar",
+    name="st_twchannel_tbar_powheg",
     id=14238490,
     processes=[procs.st_twchannel_tbar],
     info=dict(
@@ -129,6 +129,10 @@ cpn.add_dataset(
         ),
     ),
 )
+
+#
+# ttbar
+#
 
 cpn.add_dataset(
     name="tt_sl_powheg",
