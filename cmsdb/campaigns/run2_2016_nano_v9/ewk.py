@@ -5,7 +5,7 @@ Electroweak datasets for the 2018 data-taking campaign
 """
 
 import cmsdb.processes as procs
-from cmsdb.campaigns.run2_2018_nano_v9 import campaign_run2_2018_nano_v9 as cpn
+from cmsdb.campaigns.run2_2016_nano_v9 import campaign_run2_2016_nano_v9 as cpn
 
 
 #
