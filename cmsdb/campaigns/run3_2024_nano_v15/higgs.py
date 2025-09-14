@@ -259,3 +259,54 @@ cpn.add_dataset(
     n_files=46,
     n_events=4188141,
 )
+
+####################################################################################################
+#
+# ttH
+#
+####################################################################################################
+
+cpn.add_dataset(
+    name="tth_hnonbb_powheg",
+    id=15349148,
+    processes=[procs.tth_hnonbb],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTH-HtoNon2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=531,
+            n_events=53980865,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="tth_htobb_powheg",
+    id=15382320,
+    processes=[procs.tth_hbb],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=22,
+            n_events=2443910,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="tth_htocc_powheg",
+    id=15370446,
+    processes=[procs.tth_hcc],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTH-Hto2C_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=24,
+            n_events=996455,
+        ),
+    ),
+)
