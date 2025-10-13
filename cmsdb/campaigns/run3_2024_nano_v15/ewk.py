@@ -3,6 +3,7 @@
 """
 Electroweak datasets for the 2022 pre-EE data-taking campaign
 """
+from order import DatasetInfo
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn
@@ -112,7 +113,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_lep_j1_m50toinf_pt200to400_amcatnlo",
+    name="dy_m50toinf_1j_pt200to400_amcatnlo",
     id=14679153,
     processes=[procs.dy_m50toinf_1j_pt200to400],
     keys=[
@@ -189,7 +190,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="dy_m50toinf_2j_pt600_amcatnlo",
+    name="dy_m50toinf_2j_pt600toinf_amcatnlo",
     id=14679255,
     processes=[procs.dy_m50toinf_2j_pt600toinf],
     keys=[
@@ -455,7 +456,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="ww_dl_powheg",
+    name="ww_wlnu_wlnu_powheg",
     id=14694220,
     processes=[procs.ww_dl],
     keys=[
@@ -474,4 +475,60 @@ cpn.add_dataset(
     ],
     n_files=326,
     n_events=275723961,
+)
+
+#
+# VVV
+#
+
+cpn.add_dataset(
+    name="www_amcatnlo",
+    id=15349413,
+    processes=[procs.www],
+    keys=[
+        "/WWW-4F_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=49,
+    n_events=4299284,
+)
+
+cpn.add_dataset(
+    name="wwz_amcatnlo",
+    id=15348589,
+    processes=[procs.wwz],
+    keys=[
+        "/WWZ-4F_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=171,
+    n_events=16184379,
+)
+
+cpn.add_dataset(
+    name="wzz_amcatnlo",
+    id=15348847,
+    processes=[procs.wzz],
+    keys=[
+        "/WZZ-5F_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=127,
+    n_events=16199286,
+)
+
+cpn.add_dataset( 
+    name="zzz_amcatnlo",
+    id=15349235,
+    processes=[procs.zzz],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/ZZZ-5F_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa               
+            ],
+            aux={
+                "broken_files": [
+                ]
+            },
+            n_files=201, 
+            n_events=16192091,
+        ),
+    ),
 )

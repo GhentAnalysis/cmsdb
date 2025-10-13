@@ -137,3 +137,96 @@ cpn.add_dataset(
     n_files=154,
     n_events=23999000,
 )
+
+#
+# TT + X
+#
+
+cpn.add_dataset(
+    name="ttz_zll_m4to50_amcatnlo",
+    id=15390973,
+    processes=[procs.ttz_zll_m4to50],
+    keys=[
+        "/TTLL_Bin-MLL-4to50_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=37,
+    n_events=2965000,
+)
+
+cpn.add_dataset(
+    name="ttz_zll_m50toinf_amcatnlo",
+    id=15390855,
+    processes=[procs.ttz_zll_m50toinf],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTLL_Bin-MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=47,
+            n_events=3952000,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttw_wlnu_ewk_amcatnlo",
+    id=15370310,
+    processes=[procs.ttw_wlnu_ewk],
+    keys=[
+        "/TTLNu-EWK_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=38,
+    n_events=2999000,
+)
+
+#
+# TT + XX
+#
+
+cpn.add_dataset(
+    name="ttww_madgraph",
+    id=15393150,
+    processes=[procs.ttww],
+    keys=[
+        "/TTWW_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=56,
+    n_events=5801000,
+)
+
+cpn.add_dataset(
+    name="ttwz_madgraph",
+    id=15393070,
+    processes=[procs.ttwz],
+    keys=[
+        "/TTWZ_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=51,
+    n_events=5529000,
+)
+
+# cpn.add_dataset(
+#     name="ttzz_madgraph",
+#     id=14800072,
+#     processes=[procs.ttzz],
+#     keys=[
+#         "/TTZZ_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+#     ],
+#     n_files=0,
+#     n_events=0,
+# )
+
+cpn.add_dataset(
+    name="tzq_zll_4f_m30toinf_amcatnlo",
+    id=15393166,
+    processes=[procs.tzq],
+    keys=[
+        "/TZQB-Zto2L-4FS_Bin-MLL-30_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-Madgraph_2_6_5_150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=73,
+    n_events=8839000,
+)

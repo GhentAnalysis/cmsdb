@@ -28,7 +28,7 @@ __all__ = [
     "ttg_ptg_10to100", "ttg_ptg_100to200", "ttg_ptg_200toinf",
     "ttw", "ttw_wlnu", "ttw_wlnu_ewk", "ttw_wqq",
     "ttvv",
-    "ttzz", "ttwz", "ttww", "tttt", "tthh",
+    "ttzz", "ttwz", "ttww", "tttt", "tthh", "ttt", "tttW", "tttWm", "tttWp", "tttJ",
 ]
 
 
@@ -689,7 +689,7 @@ ttwz = ttvv.add_process(
             Number(2705E-6, {"scale": (0.099j, 0.106j), "pdf": 0.027j}) +
             Number(1179E-6, {"scale": 0.112j, "pdf": 0.037j})
         ),
-
+        13.6: Number(0.002715)
     },
 )
 
@@ -714,21 +714,74 @@ ttww = ttvv.add_process(
 tthh = ttvv.add_process(
     name="tthh",
     id=4400,
-    label=f"{tt.label}HH",
+    label=f"{tt.label}HH",                                                                                                       
     xsecs={13: Number(0.0003697)},
 )
 
 
 # 13.6 TeV https://arxiv.org/abs/2212.03259
-tttt = ttvv.add_process(
+tttt = Process(
     name="tttt",
     id=4700,
     label=f"{tt.label}{tt.label}",
     xsecs={13: Number(0.01337), 13.6: Number(0.01582)},
 )
 
+
 # define the combined ttvv cross section as the sum of the three channels
 ttvv.set_xsec(
     13,
     ttzz.get_xsec(13) + ttwz.get_xsec(13) + ttww.get_xsec(13),
+)
+
+
+# TTT
+#
+
+ttt = Process(
+    name="ttt",
+    id=3001,
+    label=f"{tt.label}tX",
+)
+
+tttW = ttt.add_process(
+    name="tttW",
+    id=3020,
+    label=f"{tt.label}tW",
+    xsecs={13: Number(0.0013)}, 
+)
+
+tttWm = tttW.add_process(
+    name="tttWm",
+    id=3021,
+    label=f"{tt.label}tWm",
+    xsecs={13: Number(0.00066)}, 
+)
+
+tttWp = tttW.add_process(
+    name="tttWp",
+    id=3022,
+    label=f"{tt.label}tWp",
+    xsecs={13: Number(0.00066)}, 
+)
+
+tttJ = ttt.add_process(
+    name="tttJ",
+    id=3030,
+    label=f"{tt.label}tJ",
+    xsecs={13: Number(0.0007)}, 
+)
+
+tttJm = tttJ.add_process(
+    name="tttJm",
+    id=3031,
+    label=f"{tt.label}tJm",
+    xsecs={13: Number(0.00049)}, 
+)
+
+tttJp = tttJ.add_process(
+    name="tttJp",
+    id=3032,
+    label=f"{tt.label}tJp",
+    xsecs={13: Number(0.00021)}, 
 )

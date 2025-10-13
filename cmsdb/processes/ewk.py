@@ -129,7 +129,7 @@ dy_m50toinf = dy.add_process(
             "scale": 0.02j,
             "pdf": 14.78,
         }),
-        13.6: const.n_leps * Number(2091.7, {
+        13.6: const.n_leps * Number(2081.6, {
             "scale": (0.008j, 0.013j),
             "pdf": 0.01j,
         }),
@@ -360,6 +360,7 @@ dy_m50toinf_1j_pt0to40 = dy_m50toinf_1j.add_process(
 dy_m50toinf_1j_pt40to100 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt40to100",
     id=511111,
+    xsecs={13.6: Number(466.7)},
     aux={
         "mll": (50.0, const.inf),
         "njets": (1, 2),
@@ -370,6 +371,7 @@ dy_m50toinf_1j_pt40to100 = dy_m50toinf_1j.add_process(
 dy_m50toinf_1j_pt100to200 = dy_m50toinf_1j.add_process(
     name="dy_m50toinf_1j_pt100to200",
     id=511112,
+    xsecs={13.6: Number(42.28)},
     aux={
         "mll": (50.0, const.inf),
         "njets": (1, 2),
@@ -420,6 +422,7 @@ dy_m50toinf_2j_pt0to40 = dy_m50toinf_2j.add_process(
 dy_m50toinf_2j_pt40to100 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt40to100",
     id=511121,
+    xsecs={13.6: Number(170.5)},
     aux={
         "mll": (50.0, const.inf),
         "njets": (2, 3),
@@ -430,6 +433,7 @@ dy_m50toinf_2j_pt40to100 = dy_m50toinf_2j.add_process(
 dy_m50toinf_2j_pt100to200 = dy_m50toinf_2j.add_process(
     name="dy_m50toinf_2j_pt100to200",
     id=511122,
+    xsecs={13.6: Number(52.26)},
     aux={
         "mll": (50.0, const.inf),
         "njets": (2, 3),

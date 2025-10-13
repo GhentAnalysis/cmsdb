@@ -259,3 +259,53 @@ cpn.add_dataset(
     n_files=46,
     n_events=4188141,
 )
+
+
+#
+# TT + H (X)
+# 
+
+cpn.add_dataset(
+    name="tth_hnonbb_powheg",
+    id=15349148,
+    processes=[procs.tth_hnonbb],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTH-HtoNon2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=531,
+            n_events=53980865,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttzh_madgraph",
+    id=14861662,
+    processes=[procs.ttzh],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTZH-ZHto4B_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=27,
+            n_events=9984820,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="ttwh_madgraph",
+    id=15396854,
+    processes=[procs.ttwh],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTWH_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=100,
+            n_events=10595000,
+        ),
+    ),
+)
