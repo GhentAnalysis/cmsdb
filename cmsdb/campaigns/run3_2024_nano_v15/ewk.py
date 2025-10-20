@@ -1,7 +1,7 @@
 # coding: utf-8
 
 """
-Electroweak datasets for the 2022 pre-EE data-taking campaign
+Electroweak datasets for the 2024 data-taking campaign
 """
 from order import DatasetInfo
 
