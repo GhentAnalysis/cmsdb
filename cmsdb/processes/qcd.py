@@ -453,7 +453,7 @@ qcd_mu_pt170to300 = qcd_mu.add_process(
     id=31107,
     xsecs={
         13: Number(7019.0),
-        # 13.6: missing in XSDB
+        13.6: Number(7763.0),
     },
 )
 
@@ -471,7 +471,7 @@ qcd_mu_pt470to600 = qcd_mu.add_process(
     id=31109,
     xsecs={
         13: Number(58.86),
-        # 13.6: missing in XSDB
+        13.6: Number(68.24),
     },
 )
 
@@ -498,7 +498,7 @@ qcd_mu_pt1000toinf = qcd_mu.add_process(
     id=31112,
     xsecs={
         13: Number(1.08),  # NOTE: not found via XSDB, taken from an old reference
-        # 13.6: missing in XSDB
+        13.6: Number(1.323),
     },
 )
 
@@ -529,11 +529,13 @@ qcd_em_pt20to30 = qcd_em.add_process(
         13: Number(4896000.0),
     },
 )
+
 qcd_em_pt30to50 = qcd_em.add_process(
     name="qcd_em_pt30to50",
     id=31203,
     xsecs={
         13: Number(6447000.0),
+        13.6: Number(6686000.0),
     },
 )
 
@@ -542,6 +544,8 @@ qcd_em_pt50to80 = qcd_em.add_process(
     id=31204,
     xsecs={
         13: Number(1988000.0),
+        13.6: Number(2118000.0),
+
     },
 )
 
@@ -550,6 +554,7 @@ qcd_em_pt80to120 = qcd_em.add_process(
     id=31205,
     xsecs={
         13: Number(367500.0),
+        13.6: Number(394100.0),
     },
 )
 
@@ -558,6 +563,7 @@ qcd_em_pt120to170 = qcd_em.add_process(
     id=31206,
     xsecs={
         13: Number(66590.0),
+        13.6: Number(72170.0),
     },
 )
 
@@ -566,6 +572,7 @@ qcd_em_pt170to300 = qcd_em.add_process(
     id=31207,
     xsecs={
         13: Number(16620.0),
+        13.6: Number(17920.0),
     },
 )
 
@@ -574,6 +581,7 @@ qcd_em_pt300toinf = qcd_em.add_process(
     id=31208,
     xsecs={
         13: Number(1104.0),
+        13.6: Number(1231.0),
     },
 )
 
@@ -582,6 +590,7 @@ qcd_em_pt10to30 = qcd_em.add_process(
     id=31209,
     xsecs={
         13: Number(0.1),  # TODO
+        13.6: Number(6854000.0),
     },
 )
 
