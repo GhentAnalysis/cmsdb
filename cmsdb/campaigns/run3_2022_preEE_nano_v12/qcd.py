@@ -31,7 +31,7 @@ cpn.add_dataset(
     keys=[
         "/QCD_PT-20to30_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
     ],
-    n_files=71,
+    n_files=70,
     n_events=30200859,
 )
 cpn.add_dataset(
@@ -247,4 +247,75 @@ cpn.add_dataset(
     ],
     n_files=26,
     n_events=2947774,
+)
+
+
+#
+# QCD (pythia, pt-binned, BCtoE enriched)
+#
+
+cpn.add_dataset(
+    name="qcd_bctoe_pt15to20_pythia",
+    id=14793296,
+    processes=[procs.qcd_bctoe_pt15to20],
+    keys=[
+        "/QCD_PT-15to20_bcToE_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=15,
+    n_events=969999,
+)
+
+cpn.add_dataset(
+    name="qcd_bctoe_pt20to30_pythia",
+    id=14803239,
+    processes=[procs.qcd_bctoe_pt20to30],
+    keys=[
+        "/QCD_PT-20to30_bcToE_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=26,
+    n_events=978651,
+)
+
+cpn.add_dataset(
+    name="qcd_bctoe_pt30to80_pythia",
+    id=14801988,
+    processes=[procs.qcd_bctoe_pt30to80],
+    keys=[
+        "/QCD_PT-30to80_bcToE_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=17,
+    n_events=943812,
+)
+
+cpn.add_dataset(
+    name="qcd_bctoe_pt80to170_pythia",
+    id=14804072,
+    processes=[procs.qcd_bctoe_pt80to170],
+    keys=[
+        "/QCD_PT-80to170_bcToE_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=40,
+    n_events=962428,
+)
+
+cpn.add_dataset(
+    name="qcd_bctoe_pt170to250_pythia",
+    id=14796485,
+    processes=[procs.qcd_bctoe_pt170to250],
+    keys=[
+        "/QCD_PT-170to250_bcToE_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=18,
+    n_events=1001851,
+)
+
+cpn.add_dataset(
+    name="qcd_bctoe_pt250toinf_pythia",
+    id=14794133,
+    processes=[procs.qcd_bctoe_pt250toinf],
+    keys=[
+        "/QCD_PT-250toInf_bcToE_TuneCP5_13p6TeV_pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=14,
+    n_events=962459,
 )
