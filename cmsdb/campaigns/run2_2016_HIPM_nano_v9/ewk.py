@@ -16,7 +16,7 @@ from cmsdb.campaigns.run2_2016_HIPM_nano_v9 import campaign_run2_2016_HIPM_nano_
 cpn.add_dataset(
     name="dy_lep_m10to50_amcatnlo",
     id=14550443,
-    processes=[procs.dy_lep_m10to50],
+    processes=[procs.dy_m10to50],
     keys=[
         "/DYJetsToLL_M-10to50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
     ],
@@ -27,7 +27,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_m50_amcatnlo",
     id=14235096,
-    processes=[procs.dy_lep_m50],
+    processes=[procs.dy_m50toinf],
     keys=[
         "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL16NanoAODAPVv9-106X_mcRun2_asymptotic_preVFP_v11-v1/NANOAODSIM",  # noqa
     ],

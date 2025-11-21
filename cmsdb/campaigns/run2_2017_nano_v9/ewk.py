@@ -16,7 +16,7 @@ from cmsdb.campaigns.run2_2017_nano_v9 import campaign_run2_2017_nano_v9 as cpn
 cpn.add_dataset(
     name="dy_lep_m10to50_amcatnlo",
     id=14550981,
-    processes=[procs.dy_lep_m10to50],
+    processes=[procs.dy_m10to50],
     keys=[
         "/DYJetsToLL_M-10to50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -27,7 +27,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_m50_amcatnlo",
     id=14262316,
-    processes=[procs.dy_lep_m50],
+    processes=[procs.dy_m50toinf],
     keys=[
         "/DYJetsToLL_M-50_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
     ],
@@ -207,7 +207,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_pt50to100_amcatnlo",
     id=14231159,
-    processes=[procs.dy_lep_pt50to100],
+    processes=[procs.dy_pt50to100],
     keys=[
         "/DYJetsToLL_Pt-50To100_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -218,7 +218,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_pt100to250_amcatnlo",
     id=14300156,
-    processes=[procs.dy_lep_pt100to250],
+    processes=[procs.dy_pt100to250],
     keys=[
         "/DYJetsToLL_Pt-100To250_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -229,7 +229,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_pt250to400_amcatnlo",
     id=14235259,
-    processes=[procs.dy_lep_pt250to400],
+    processes=[procs.dy_pt250to400],
     keys=[
         "/DYJetsToLL_Pt-250To400_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -240,7 +240,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_pt400to650_amcatnlo",
     id=14228178,
-    processes=[procs.dy_lep_pt400to650],
+    processes=[procs.dy_pt400to650],
     keys=[
         "/DYJetsToLL_Pt-400To650_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
@@ -251,7 +251,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="dy_lep_pt650_amcatnlo",
     id=14232153,
-    processes=[procs.dy_lep_pt650],
+    processes=[procs.dy_pt650toinf],
     keys=[
         "/DYJetsToLL_Pt-650ToInf_MatchEWPDG20_TuneCP5_13TeV-amcatnloFXFX-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
     ],
