@@ -183,7 +183,8 @@ dy_m10to50 = dy.add_process(
     name="dy_m10to50",
     id=51001,
     xsecs={
-        13: Number(15810.),
+        # 13: Number(15810.) # original cmsdb entry
+        13: Number(20460.0, 22.97) * dy_k_factor_nlo_to_nnlo[13], # XSDB
         13.6: dy_m10to50_nlo_13p6tev_xsec * dy_k_factor_nlo_to_nnlo[13.6],
     },
     aux={
@@ -924,20 +925,32 @@ w_lnu_lo_13tev_xsec = Number(54070.0, {"tot": 18.32})
 
 
 # jet binned samples
+# nlo xsec from xsdb
+nlo_xsecs = [
+    Number(53330.0, {"br": 90.89}),
+    Number(8875.0, {"br": 55.31}),
+    Number(3338.0, {"br": 34.64}),
+]
+scaling = w_lnu.get_xsec(13) / sum(nlo_xsecs)
+scaled_nlo_xsecs = [xs * scaling for xs in nlo_xsecs]
+
 w_lnu_0j = w_lnu.add_process(
     name="w_lnu_0j",
     id=6101,
-    xsecs={13: Number(48716.955)},
+    # xsecs={13: Number(48716.955)}, # original cmsdb entry
+    xsecs={13: scaled_nlo_xsecs[0]},
 )
 w_lnu_1j = w_lnu.add_process(
     name="w_lnu_1j",
     id=6102,
-    xsecs={13: Number(8107.312)},
+    # xsecs={13: Number(8107.312)}, # original cmsdb entry
+    xsecs={13: scaled_nlo_xsecs[1]},
 )
 w_lnu_2j = w_lnu.add_process(
     name="w_lnu_2j",
     id=6103,
-    xsecs={13: Number(3049.263)},
+    # xsecs={13: Number(3049.263)}, # original cmsdb entry
+    xsecs={13: scaled_nlo_xsecs[2]},
 )
 
 # LO cross sections, scaled to NNLO

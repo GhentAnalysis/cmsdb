@@ -131,6 +131,28 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="st_schannel_had_4f_amcatnlo",
+    id=14369560,
+    processes=[procs.st_schannel_had],
+    keys=[
+        "/ST_s-channel_4f_hadronicDecays_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=23,
+    n_events=5300000,
+)
+
+cpn.add_dataset(
+    name="st_schannel_lep_4f_amcatnlo",
+    id=14341788,
+    processes=[procs.st_schannel_lep],
+    keys=[
+        "/ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=19,
+    n_events=5471000,
+)
+
+cpn.add_dataset(
     name="tt_sl_powheg",
     id=14232860,
     processes=[procs.tt_sl],

@@ -78,6 +78,8 @@ cpn.add_dataset(
     ),
 )
 
+
+
 cpn.add_dataset(
     name="st_tchannel_tbar_powheg",
     id=14296756,
@@ -170,6 +172,28 @@ cpn.add_dataset(
             n_events=7749000,
         ),
     ),
+)
+
+cpn.add_dataset(
+    name="st_schannel_had_4f_amcatnlo",
+    id=14369372,
+    processes=[procs.st_schannel_had],
+    keys=[
+        "/ST_s-channel_4f_hadronicDecays_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=30,
+    n_events=16259000,
+)
+
+cpn.add_dataset(
+    name="st_schannel_lep_4f_amcatnlo",
+    id=14235212,
+    processes=[procs.st_schannel_lep],
+    keys=[
+        "/ST_s-channel_4f_leptonDecays_TuneCP5_13TeV-amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=19,
+    n_events=19365999,
 )
 
 cpn.add_dataset(

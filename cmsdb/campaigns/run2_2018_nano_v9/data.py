@@ -123,17 +123,15 @@ cpn.add_dataset(
 
 cpn.add_dataset(
     name="data_egamma_d",
-    id=14253410,
+    id=14763285,
     is_data=True,
     processes=[procs.data],
     keys=[
-        "/EGamma/Run2018D-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
+        "/EGamma/Run2018D-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",  # noqa
     ],
-    n_files=355,
-    n_events=752524583,
-    aux={
-        "era": "D",
-    },
+    n_files=465,
+    aux=dict(era="D"),
+    n_events=752061412,
 )
 
 #
