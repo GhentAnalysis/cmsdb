@@ -2,7 +2,7 @@
 
 """
 Common, analysis independent definition of the 2025 data-taking campaign
-with datasets at NanoAOD tier in version 11. 
+with datasets at NanoAOD tier in version 15. 
 The corresponding set of MC samples include a siMuonlation of the detector.
 See https://python-order.readthedocs.io/en/latest/quickstart.html#analysis-campaign-and-config.
 
@@ -18,7 +18,7 @@ from order import Campaign
 
 campaign_run3_2025_nano_v15 = Campaign(
     name="run3_2025_nano_v15",
-    id=320221101,  # 3 2022 11 01(u)
+    id=320251501,  # 3 2025 15 01(u)
     ecm=13.6,
     bx=25,
     aux={
@@ -31,3 +31,6 @@ campaign_run3_2025_nano_v15 = Campaign(
 
 # trailing imports to load datasets
 import cmsdb.campaigns.run3_2025_nano_v15.data  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.top  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.ewk  # noqa
+import cmsdb.campaigns.run3_2024_nano_v15.higgs  # noqa

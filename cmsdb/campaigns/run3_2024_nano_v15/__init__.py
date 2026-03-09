@@ -23,7 +23,7 @@ from order import Campaign
 
 campaign_run3_2024_nano_v15 = Campaign(
     name="run3_2024_nano_v15",
-    id=320221101,  # 3 2022 11 01(u)
+    id=320241201,  # 3 2024 15 01(u)
     ecm=13.6,
     bx=25,
     aux={

@@ -2,26 +2,8 @@ from order import DatasetInfo
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2025_nano_v15 import campaign_run3_2025_nano_v15 as cpn
 
-cpn.add_dataset(
-    name="data_mu0_b_v1",
-    id=15312702,
-    is_data=True,
-    processes=[procs.data],
-    info=dict(
-        nominal=DatasetInfo(
-            keys=[
-                "/Muon0/Run2025B-PromptReco-v1/NANOAOD",
-            ],
-            aux={
-                "broken_files": [
-                ],
-            },
-            n_files=77,  # 77-0
-            n_events=5602078,
-        )
-    ),
-    aux={"era": "B", "jec_era": ""},
-)
+
+# Auto-generated dataset definitions
 
 cpn.add_dataset(
     name="data_mu0_c_v1",
@@ -79,32 +61,53 @@ cpn.add_dataset(
                 "broken_files": [
                 ],
             },
-            n_files=600,  # 600-0
-            n_events=263215051,
+            n_files=606,  # 606-0
+            n_events=265645863,
         )
     ),
     aux={"era": "E", "jec_era": ""},
 )
 
 cpn.add_dataset(
-    name="data_mu1_b_v1",
-    id=15312746,
+    name="data_mu0_f_v1",
+    id=15402368,
     is_data=True,
     processes=[procs.data],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/Muon1/Run2025B-PromptReco-v1/NANOAOD",
+                "/Muon0/Run2025F-PromptReco-v1/NANOAOD",
             ],
             aux={
                 "broken_files": [
                 ],
             },
-            n_files=77,  # 77-0
-            n_events=5598676,
+            n_files=884,  # 884-0
+            n_events=377119912,
         )
     ),
-    aux={"era": "B", "jec_era": ""},
+    aux={"era": "F", "jec_era": ""},
+)
+
+cpn.add_dataset(
+    name="data_mu0_g_v1",
+    id=15427399,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/Muon0/Run2025G-PromptReco-v1/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=1009,  # 1009-0
+            n_events=442329683,
+        )
+    ),
+    aux={"era": "G", "jec_era": ""},
 )
 
 cpn.add_dataset(
@@ -163,34 +166,53 @@ cpn.add_dataset(
                 "broken_files": [
                 ],
             },
-            n_files=605,  # 605-0
-            n_events=263187770,
+            n_files=611,  # 611-0
+            n_events=265630211,
         )
     ),
     aux={"era": "E", "jec_era": ""},
 )
 
 cpn.add_dataset(
-    name="data_egamma0_b_v1",
-    id=15312758,
+    name="data_mu1_f_v1",
+    id=15402367,
     is_data=True,
     processes=[procs.data],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/EGamma0/Run2025B-PromptReco-v1/NANOAOD",
+                "/Muon1/Run2025F-PromptReco-v1/NANOAOD",
             ],
             aux={
                 "broken_files": [
-"/store/data/Run2025B/EGamma0/NANOAOD/PromptReco-v1/000/391/581/00000/83ed105e-4722-4b60-b8d6-f87a0859e7a3.root",  # empty file
-"/store/data/Run2025B/EGamma0/NANOAOD/PromptReco-v1/000/392/086/00000/4d448857-826c-442c-af18-e769497e5415.root",  # empty file
                 ],
             },
-            n_files=73,  # 75-2
-            n_events=5256904,
+            n_files=891,  # 891-0
+            n_events=377092035,
         )
     ),
-    aux={"era": "B", "jec_era": ""},
+    aux={"era": "F", "jec_era": ""},
+)
+
+cpn.add_dataset(
+    name="data_mu1_g_v1",
+    id=15427408,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/Muon1/Run2025G-PromptReco-v1/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=1003,  # 1003-0
+            n_events=442232031,
+        )
+    ),
+    aux={"era": "G", "jec_era": ""},
 )
 
 cpn.add_dataset(
@@ -257,25 +279,45 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_egamma1_b_v1",
-    id=15312679,
+    name="data_egamma0_f_v1",
+    id=15402347,
     is_data=True,
     processes=[procs.data],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/EGamma1/Run2025B-PromptReco-v1/NANOAOD",
+                "/EGamma0/Run2025F-PromptReco-v1/NANOAOD",
             ],
             aux={
                 "broken_files": [
-"/store/data/Run2025B/EGamma1/NANOAOD/PromptReco-v1/000/392/090/00000/2f9660dd-3f0f-49bd-ae60-80d667cd4426.root",  # empty file
                 ],
             },
-            n_files=74,  # 75-1
-            n_events=5253103,
+            n_files=888,  # 888-0
+            n_events=346019505,
         )
     ),
-    aux={"era": "B", "jec_era": ""},
+    aux={"era": "F", "jec_era": ""},
+)
+
+cpn.add_dataset(
+    name="data_egamma0_g_v1",
+    id=15426114,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/EGamma0/Run2025G-PromptReco-v1/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=1012,  # 1012-0
+            n_events=421398444,
+        )
+    ),
+    aux={"era": "G", "jec_era": ""},
 )
 
 cpn.add_dataset(
@@ -311,11 +353,10 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/data/Run2025D/EGamma1/NANOAOD/PromptReco-v1/000/395/517/00000/285d006b-02f9-4870-a8c3-232b45b15dd5.root" # currently unavailable
                 ],
             },
-            n_files=1095,  # 1096-1
-            n_events=413998146,
+            n_files=1095,  # 1095-0
+            n_events=413556254,
         )
     ),
     aux={"era": "D", "jec_era": ""},
@@ -343,24 +384,45 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_egamma2_b_v1",
-    id=15312739,
+    name="data_egamma1_f_v1",
+    id=15402363,
     is_data=True,
     processes=[procs.data],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/EGamma2/Run2025B-PromptReco-v1/NANOAOD",
+                "/EGamma1/Run2025F-PromptReco-v1/NANOAOD",
             ],
             aux={
                 "broken_files": [
                 ],
             },
-            n_files=75,  # 75-0
-            n_events=5254123,
+            n_files=875,  # 875-0
+            n_events=346000262,
         )
     ),
-    aux={"era": "B", "jec_era": ""},
+    aux={"era": "F", "jec_era": ""},
+)
+
+cpn.add_dataset(
+    name="data_egamma1_g_v1",
+    id=15426128,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/EGamma1/Run2025G-PromptReco-v1/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=1010,  # 1010-0
+            n_events=421102377,
+        )
+    ),
+    aux={"era": "G", "jec_era": ""},
 )
 
 cpn.add_dataset(
@@ -419,34 +481,53 @@ cpn.add_dataset(
                 "broken_files": [
                 ],
             },
-            n_files=592,  # 592-0
-            n_events=240535413,
+            n_files=593,  # 593-0
+            n_events=240923259,
         )
     ),
     aux={"era": "E", "jec_era": ""},
 )
 
 cpn.add_dataset(
-    name="data_egamma3_b_v1",
-    id=15312712,
+    name="data_egamma2_f_v1",
+    id=15402325,
     is_data=True,
     processes=[procs.data],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/EGamma3/Run2025B-PromptReco-v1/NANOAOD",
+                "/EGamma2/Run2025F-PromptReco-v1/NANOAOD",
             ],
             aux={
                 "broken_files": [
-"/store/data/Run2025B/EGamma3/NANOAOD/PromptReco-v1/000/392/089/00000/13c371cc-1e34-4b80-aa18-af7b9f544d62.root",  # empty file
-"/store/data/Run2025B/EGamma3/NANOAOD/PromptReco-v1/000/392/086/00000/19302938-b874-419e-b30c-bd7eaffeb8f9.root",  # empty file
                 ],
             },
-            n_files=73,  # 75-2
-            n_events=5253489,
+            n_files=876,  # 876-0
+            n_events=346008679,
         )
     ),
-    aux={"era": "B", "jec_era": ""},
+    aux={"era": "F", "jec_era": ""},
+)
+
+cpn.add_dataset(
+    name="data_egamma2_g_v1",
+    id=15427107,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/EGamma2/Run2025G-PromptReco-v1/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=1016,  # 1016-0
+            n_events=421453068,
+        )
+    ),
+    aux={"era": "G", "jec_era": ""},
 )
 
 cpn.add_dataset(
@@ -505,32 +586,53 @@ cpn.add_dataset(
                 "broken_files": [
                 ],
             },
-            n_files=597,  # 597-0
-            n_events=240896876,
+            n_files=598,  # 598-0
+            n_events=240923335,
         )
     ),
     aux={"era": "E", "jec_era": ""},
 )
 
 cpn.add_dataset(
-    name="data_muoneg_b_v1",
-    id=15312837,
+    name="data_egamma3_f_v1",
+    id=15402311,
     is_data=True,
     processes=[procs.data],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/MuonEG/Run2025B-PromptReco-v1/NANOAOD",
+                "/EGamma3/Run2025F-PromptReco-v1/NANOAOD",
             ],
             aux={
                 "broken_files": [
                 ],
             },
-            n_files=47,  # 47-0
-            n_events=910971,
+            n_files=889,  # 889-0
+            n_events=346009210,
         )
     ),
-    aux={"era": "B", "jec_era": ""},
+    aux={"era": "F", "jec_era": ""},
+)
+
+cpn.add_dataset(
+    name="data_egamma3_g_v1",
+    id=15427103,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/EGamma3/Run2025G-PromptReco-v1/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=1012,  # 1012-0
+            n_events=421124471,
+        )
+    ),
+    aux={"era": "G", "jec_era": ""},
 )
 
 cpn.add_dataset(
@@ -545,8 +647,8 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-"/store/data/Run2025C/MuonEG/NANOAOD/PromptReco-v1/000/392/674/00000/a67210fc-f344-40b6-a391-41b9ce40e92c.root",  # empty file
-"/store/data/Run2025C/MuonEG/NANOAOD/PromptReco-v1/000/392/992/00000/0bc110c2-fa13-4a5d-8ba1-7d383dc05613.root",  # empty file
+                    "/store/data/Run2025C/MuonEG/NANOAOD/PromptReco-v1/000/392/674/00000/a67210fc-f344-40b6-a391-41b9ce40e92c.root",  # empty file
+                    "/store/data/Run2025C/MuonEG/NANOAOD/PromptReco-v1/000/392/992/00000/0bc110c2-fa13-4a5d-8ba1-7d383dc05613.root",  # empty file
                 ],
             },
             n_files=170,  # 172-2
@@ -568,10 +670,10 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-"/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/188/00000/7e5cc229-ede7-4a4a-88ef-d10b41f3ec5a.root",  # empty file
-"/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/187/00000/f9ddbea8-810f-4995-aa10-3c0dede035dc.root",  # empty file
-"/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/518/00000/391d1b46-ab1a-4214-b22f-b2ff2e53bcc1.root",  # empty file
-"/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/640/00000/bee90dfb-e61e-4874-8427-220aacc6cd63.root",  # empty file
+                    "/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/188/00000/7e5cc229-ede7-4a4a-88ef-d10b41f3ec5a.root",  # empty file
+                    "/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/187/00000/f9ddbea8-810f-4995-aa10-3c0dede035dc.root",  # empty file
+                    "/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/518/00000/391d1b46-ab1a-4214-b22f-b2ff2e53bcc1.root",  # empty file
+                    "/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/640/00000/bee90dfb-e61e-4874-8427-220aacc6cd63.root",  # empty file
                 ],
             },
             n_files=325,  # 329-4
@@ -593,7 +695,7 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-"/store/data/Run2025E/MuonEG/NANOAOD/PromptReco-v1/000/396/155/00000/4d2a409c-e578-4392-96b4-4b664009d9dd.root",  # empty file
+                    "/store/data/Run2025E/MuonEG/NANOAOD/PromptReco-v1/000/396/155/00000/4d2a409c-e578-4392-96b4-4b664009d9dd.root",  # empty file
                 ],
             },
             n_files=164,  # 165-1
@@ -601,6 +703,50 @@ cpn.add_dataset(
         )
     ),
     aux={"era": "E", "jec_era": ""},
+)
+
+cpn.add_dataset(
+    name="data_muoneg_f_v1",
+    id=15403455,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/MuonEG/Run2025F-PromptReco-v1/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                    "/store/data/Run2025F/MuonEG/NANOAOD/PromptReco-v1/000/396/818/00000/094de818-ac6b-4f7e-a57f-b4faf734b006.root",  # empty file
+                ],
+            },
+            n_files=269,  # 270-1
+            n_events=58301670,
+        )
+    ),
+    aux={"era": "F", "jec_era": ""},
+)
+
+cpn.add_dataset(
+    name="data_muoneg_g_v1",
+    id=15427226,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/MuonEG/Run2025G-PromptReco-v1/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                    "/store/data/Run2025G/MuonEG/NANOAOD/PromptReco-v1/000/398/649/00000/7ffad70c-d9f4-43e6-a858-1b8824b53fff.root",  # empty file
+                ],
+            },
+            n_files=281,  # 282-1
+            n_events=67268221,
+        )
+    ),
+    aux={"era": "G", "jec_era": ""},
 )
 
 cpn.add_dataset(
@@ -625,6 +771,27 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="data_mu0_f_v2",
+    id=15419648,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/Muon0/Run2025F-PromptReco-v2/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=344,  # 344-0
+            n_events=143519758,
+        )
+    ),
+    aux={"era": "F", "jec_era": ""},
+)
+
+cpn.add_dataset(
     name="data_mu1_c_v2",
     id=15337600,
     is_data=True,
@@ -643,6 +810,27 @@ cpn.add_dataset(
         )
     ),
     aux={"era": "C", "jec_era": ""},
+)
+
+cpn.add_dataset(
+    name="data_mu1_f_v2",
+    id=15419721,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/Muon1/Run2025F-PromptReco-v2/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=345,  # 345-0
+            n_events=143511119,
+        )
+    ),
+    aux={"era": "F", "jec_era": ""},
 )
 
 cpn.add_dataset(
@@ -667,6 +855,27 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="data_egamma0_f_v2",
+    id=15419742,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/EGamma0/Run2025F-PromptReco-v2/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=351,  # 351-0
+            n_events=139317024,
+        )
+    ),
+    aux={"era": "F", "jec_era": ""},
+)
+
+cpn.add_dataset(
     name="data_egamma1_c_v2",
     id=15336258,
     is_data=True,
@@ -685,6 +894,27 @@ cpn.add_dataset(
         )
     ),
     aux={"era": "C", "jec_era": ""},
+)
+
+cpn.add_dataset(
+    name="data_egamma1_f_v2",
+    id=15419718,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/EGamma1/Run2025F-PromptReco-v2/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=350,  # 350-0
+            n_events=139310909,
+        )
+    ),
+    aux={"era": "F", "jec_era": ""},
 )
 
 cpn.add_dataset(
@@ -709,6 +939,27 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="data_egamma2_f_v2",
+    id=15419764,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/EGamma2/Run2025F-PromptReco-v2/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=358,  # 358-0
+            n_events=139313488,
+        )
+    ),
+    aux={"era": "F", "jec_era": ""},
+)
+
+cpn.add_dataset(
     name="data_egamma3_c_v2",
     id=15336578,
     is_data=True,
@@ -730,6 +981,27 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="data_egamma3_f_v2",
+    id=15419649,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/EGamma3/Run2025F-PromptReco-v2/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=340,  # 340-0
+            n_events=139314438,
+        )
+    ),
+    aux={"era": "F", "jec_era": ""},
+)
+
+cpn.add_dataset(
     name="data_muoneg_c_v2",
     id=15337052,
     is_data=True,
@@ -748,4 +1020,25 @@ cpn.add_dataset(
         )
     ),
     aux={"era": "C", "jec_era": ""},
+)
+
+cpn.add_dataset(
+    name="data_muoneg_f_v2",
+    id=15419217,
+    is_data=True,
+    processes=[procs.data],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/MuonEG/Run2025F-PromptReco-v2/NANOAOD",
+            ],
+            aux={
+                "broken_files": [
+                ],
+            },
+            n_files=105,  # 105-0
+            n_events=22447339,
+        )
+    ),
+    aux={"era": "F", "jec_era": ""},
 )

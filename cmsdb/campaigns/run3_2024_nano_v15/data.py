@@ -217,7 +217,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_egamma0_j",
+    name="data_egamma0_i_v2",
     id=15291464,
     is_data=True,
     processes=[procs.data],
@@ -227,12 +227,12 @@ cpn.add_dataset(
     n_files=198,
     n_events=150687674,
     aux={
-        "era": "J",
+        "era": "I",
     },
 )
 
 cpn.add_dataset(
-    name="data_egamma1_j",
+    name="data_egamma1_i_v2",
     id=15291646,
     is_data=True,
     processes=[procs.data],
@@ -242,7 +242,7 @@ cpn.add_dataset(
     n_files=179,
     n_events=150687112,
     aux={
-        "era": "J",
+        "era": "I",
     },
 )
 
@@ -468,7 +468,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_mu0_j",
+    name="data_mu0_i_v2",
     id=-15259292,
     is_data=True,
     processes=[procs.data],
@@ -483,7 +483,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_mu1_j",
+    name="data_mu1_i_v2",
     id=15291176,
     is_data=True,
     processes=[procs.data],
@@ -593,7 +593,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muoneg_j",
+    name="data_muoneg_i_v2",
     id=15299587,
     is_data=True,
     processes=[procs.data],
