@@ -54,6 +54,55 @@ cpn.add_dataset(
             n_files=32,
             n_events=25401000,
         ),
+        cr1_up=DatasetInfo(
+            keys=[
+                "/ST_t-channel_top_4f_InclusiveDecays_TuneCP5CR1_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=59,
+            n_events=25457000,
+        ),
+        cr2_up=DatasetInfo(
+            keys=[
+                "/ST_t-channel_top_4f_InclusiveDecays_TuneCP5CR2_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=29,
+            n_events=23728000,
+        ),
+        erd_up=DatasetInfo(
+            keys=[
+                "/ST_t-channel_top_4f_InclusiveDecays_TuneCP5_erdON_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=27,
+            n_events=24527000,
+        ),
+        mtop_down=DatasetInfo(
+            keys=[
+                "/ST_t-channel_top_4f_InclusiveDecays_mtop1715_TuneCP5_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=27,
+            n_events=24833000,
+        ),
+        mtop_up=DatasetInfo(
+            keys=[
+                "/ST_t-channel_top_4f_InclusiveDecays_mtop1735_TuneCP5_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=65,
+            n_events=24764000,
+        ),
+        wtop_down=DatasetInfo(
+            keys=[
+                "/ST_t-channel_top_4f_InclusiveDecays_wtop0p85_TuneCP5_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=72,
+            n_events=24917000,
+        ),
+        wtop_up=DatasetInfo(
+            keys=[
+                "/ST_t-channel_top_4f_InclusiveDecays_wtop1p15_TuneCP5_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=36,
+            n_events=24643000,
+        ),
     ),
 )
 
@@ -96,6 +145,55 @@ cpn.add_dataset(
             ],
             n_files=50,
             n_events=11902000,
+        ),
+        cr1_up=DatasetInfo(
+            keys=[
+                "/ST_t-channel_antitop_4f_InclusiveDecays_TuneCP5CR1_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=20,
+            n_events=12557000,
+        ),
+        cr2_up=DatasetInfo(
+            keys=[
+                "/ST_t-channel_antitop_4f_InclusiveDecays_TuneCP5CR2_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=13,
+            n_events=12213000,
+        ),
+        erd_up=DatasetInfo(
+            keys=[
+                "/ST_t-channel_antitop_4f_InclusiveDecays_TuneCP5_erdON_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=34,
+            n_events=12632000,
+        ),
+        mtop_down=DatasetInfo(
+            keys=[
+                "/ST_t-channel_antitop_4f_InclusiveDecays_mtop1715_TuneCP5_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=15,
+            n_events=12661000,
+        ),
+        mtop_up=DatasetInfo(
+            keys=[
+                "/ST_t-channel_antitop_4f_InclusiveDecays_mtop1735_TuneCP5_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=14,
+            n_events=12319000,
+        ),
+        wtop_down=DatasetInfo(
+            keys=[
+                "/ST_t-channel_antitop_4f_InclusiveDecays_wtop0p85_TuneCP5_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=13,
+            n_events=12604000,
+        ),
+        wtop_up=DatasetInfo(
+            keys=[
+                "/ST_t-channel_antitop_4f_InclusiveDecays_wtop1p15_TuneCP5_13TeV-powheg-madspin-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=16,
+            n_events=12326000,
         ),
     ),
 )
@@ -166,6 +264,105 @@ cpn.add_dataset(
         ),
         tune_up=DatasetInfo(
             keys=[
+                "/TTToSemiLeptonic_TuneCP5up_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=56,
+            n_events=57909000,
+        ),
+        tune_down=DatasetInfo(
+            keys=[
+                "/TTToSemiLeptonic_TuneCP5down_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=21,
+            n_events=19427000,
+        ),
+        hdamp_up=DatasetInfo(
+            keys=[
+                "/TTToSemiLeptonic_hdampUP_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=58,
+            n_events=60762000,
+        ),
+        hdamp_down=DatasetInfo(
+            keys=[
+                "/TTToSemiLeptonic_hdampDOWN_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=51,
+            n_events=60649000,
+        ),
+        cr1_up=DatasetInfo(
+            keys=[
+                "/TTToSemiLeptonic_TuneCP5CR1_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=67,
+            n_events=61029000,
+        ),
+        cr2_up=DatasetInfo(
+            keys=[
+                "/TTToSemiLeptonic_TuneCP5CR2_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=59,
+            n_events=62693000,
+        ),
+        erd_up=DatasetInfo(
+            keys=[
+                "/TTToSemiLeptonic_TuneCP5_erdON_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=65,
+            n_events=54573000,
+        ),
+        rtt_up=DatasetInfo(
+            keys=[
+                "/TTToSemiLeptonic_TuneCP5_RTT_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
+            ],
+            n_files=606,
+            n_events=92581792,
+        ),
+        mtop_down=DatasetInfo(
+            keys=[
+                "/TTToSemiLeptonic_mtop171p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=56,
+            n_events=62661000,
+        ),
+        mtop_up=DatasetInfo(
+            keys=[
+                "/TTToSemiLeptonic_mtop173p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=57,
+            n_events=62827000,
+        ),
+        wtop_down=DatasetInfo(
+            keys=[
+                "/TTToSemiLeptonic_widthx0p85_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=71,
+            n_events=57310000,
+        ),
+        wtop_up=DatasetInfo(
+            keys=[
+                "/TTToSemiLeptonic_widthx1p15_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=90,
+            n_events=57310000,
+        ),
+    ),
+)
+
+cpn.add_dataset(
+    name="tt_dl_powheg",
+    id=14232826,
+    processes=[procs.tt_dl],
+    info=dict(
+        nominal=DatasetInfo(
+            keys=[
+                "/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=49,
+            n_events=43546000,
+        ),
+        tune_up=DatasetInfo(
+            keys=[
                 "/TTTo2L2Nu_TuneCP5up_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
             ],
             n_files=42,
@@ -192,48 +389,61 @@ cpn.add_dataset(
             n_files=18,
             n_events=18100999,
         ),
-    ),
-)
-
-cpn.add_dataset(
-    name="tt_dl_powheg",
-    id=14232826,
-    processes=[procs.tt_dl],
-    info=dict(
-        nominal=DatasetInfo(
+        cr1_up=DatasetInfo(
             keys=[
-                "/TTTo2L2Nu_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+                "/TTTo2L2Nu_TuneCP5CR1_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
             ],
-            n_files=49,
-            n_events=43546000,
+            n_files=36,
+            n_events=18121000,
         ),
-        tune_up=DatasetInfo(
+        cr2_up=DatasetInfo(
             keys=[
-                "/TTToSemiLeptonic_TuneCP5up_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+                "/TTTo2L2Nu_TuneCP5CR2_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
             ],
-            n_files=56,
-            n_events=57909000,
+            n_files=17,
+            n_events=18015000,
         ),
-        tune_down=DatasetInfo(
+        erd_up=DatasetInfo(
             keys=[
-                "/TTToSemiLeptonic_TuneCP5down_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+                "/TTTo2L2Nu_TuneCP5_erdON_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
             ],
-            n_files=21,
-            n_events=19427000,
+            n_files=28,
+            n_events=17506000,
         ),
-        hdamp_up=DatasetInfo(
+        rtt_up=DatasetInfo(
             keys=[
-                "/TTToSemiLeptonic_hdampUP_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+                "/TTTo2L2Nu_TuneCP5_RTT_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v2/NANOAODSIM",  # noqa
             ],
-            n_files=58,
-            n_events=60762000,
+            n_files=325,
+            n_events=48987022,
         ),
-        hdamp_down=DatasetInfo(
+        mtop_down=DatasetInfo(
             keys=[
-                "/TTToSemiLeptonic_hdampDOWN_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+                "/TTTo2L2Nu_mtop171p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
             ],
-            n_files=51,
-            n_events=60649000,
+            n_files=72,
+            n_events=16976000,
+        ),
+        mtop_up=DatasetInfo(
+            keys=[
+                "/TTTo2L2Nu_mtop173p5_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=16,
+            n_events=18601000,
+        ),
+        wtop_down=DatasetInfo(
+            keys=[
+                "/TTTo2L2Nu_widthx0p85_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=40,
+            n_events=18449000,
+        ),
+        wtop_up=DatasetInfo(
+            keys=[
+                "/TTTo2L2Nu_widthx1p15_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL16NanoAODv9-106X_mcRun2_asymptotic_v17-v1/NANOAODSIM",  # noqa
+            ],
+            n_files=26,
+            n_events=17756000,
         ),
     ),
 )
