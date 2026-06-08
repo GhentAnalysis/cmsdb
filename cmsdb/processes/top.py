@@ -555,6 +555,10 @@ ttgamma = ttv.add_process(
     name="ttgamma",
     id=3150,
     label=f"{tt.label} + " + r"$\gamma$",
+    # GenXSecAnalyzer
+    xsecs={
+        13.6: Number(4.6353),
+    },
 )
 
 # xsec from CMS AN-2021/217, TOP-23-002

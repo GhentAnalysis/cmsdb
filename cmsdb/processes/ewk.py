@@ -67,7 +67,7 @@ __all__ = [
     "wg",
     "wg_wlnu_ptg10to100", "wg_wlnu_ptg100to200", "wg_wlnu_ptg200to400",
     "wg_wlnu_ptg400to600", "wg_wlnu_ptg600toinf", "wzg_wlnu",
-    "dyg",
+    "dyg", "dyg_zll_mll50toinf",
     "dyg_zll_mll4to50_ptg10to100", "dyg_zll_mll4to50_ptg100to200", "dyg_zll_mll4to50_ptg200toinf",
     "dyg_zll_mll50toinf_ptg10to50", "dyg_zll_mll50toinf_ptg10to100",
     "dyg_zll_mll50toinf_ptg50to100", "dyg_zll_mll50toinf_ptg100to200",
@@ -1405,7 +1405,7 @@ for cme in [13, 13.6]:
 vvv = Process(
     name="vvv",
     id=9000,
-    label="Triple-Boson",
+    label="VVV",
     # xsecs set below as sum over individual processes
 )
 
@@ -1578,7 +1578,16 @@ dyg_zll_mll4to50_ptg200toinf = dyg.add_process(
     },
 )
 
-dyg_zll_mll50toinf_ptg10to50 = dyg.add_process(
+dyg_zll_mll50toinf = dyg.add_process(
+    name="dyg_zll_mll50toinf",
+    id=9601,
+    xsecs={
+        # from GenXSecAnalyzer
+        13.6: Number(127.0),
+    },
+)
+
+dyg_zll_mll50toinf_ptg10to50 = dyg_zll_mll50toinf.add_process(
     name="dyg_zll_mll50toinf_ptg10to50",
     id=9640,
     xsecs={
@@ -1587,7 +1596,7 @@ dyg_zll_mll50toinf_ptg10to50 = dyg.add_process(
     },
 )
 
-dyg_zll_mll50toinf_ptg10to100 = dyg.add_process(
+dyg_zll_mll50toinf_ptg10to100 = dyg_zll_mll50toinf.add_process(
     name="dyg_zll_mll50toinf_ptg10to100",
     id=9645,
     xsecs={
@@ -1596,7 +1605,7 @@ dyg_zll_mll50toinf_ptg10to100 = dyg.add_process(
     },
 )
 
-dyg_zll_mll50toinf_ptg50to100 = dyg.add_process(
+dyg_zll_mll50toinf_ptg50to100 = dyg_zll_mll50toinf.add_process(
     name="dyg_zll_mll50toinf_ptg50to100",
     id=9650,
     xsecs={
@@ -1605,7 +1614,7 @@ dyg_zll_mll50toinf_ptg50to100 = dyg.add_process(
     },
 )
 
-dyg_zll_mll50toinf_ptg100to200 = dyg.add_process(
+dyg_zll_mll50toinf_ptg100to200 = dyg_zll_mll50toinf.add_process(
     name="dyg_zll_mll50toinf_ptg100to200",
     id=9660,
     xsecs={
@@ -1614,7 +1623,7 @@ dyg_zll_mll50toinf_ptg100to200 = dyg.add_process(
     },
 )
 
-dyg_zll_mll50toinf_ptg200to400 = dyg.add_process(
+dyg_zll_mll50toinf_ptg200to400 = dyg_zll_mll50toinf.add_process(
     name="dyg_zll_mll50toinf_ptg200to400",
     id=9670,
     xsecs={
@@ -1623,7 +1632,7 @@ dyg_zll_mll50toinf_ptg200to400 = dyg.add_process(
     },
 )
 
-dyg_zll_mll50toinf_ptg400to600 = dyg.add_process(
+dyg_zll_mll50toinf_ptg400to600 = dyg_zll_mll50toinf.add_process(
     name="dyg_zll_mll50toinf_ptg400to600",
     id=9680,
     xsecs={
@@ -1632,7 +1641,7 @@ dyg_zll_mll50toinf_ptg400to600 = dyg.add_process(
     },
 )
 
-dyg_zll_mll50toinf_ptg600toinf = dyg.add_process(
+dyg_zll_mll50toinf_ptg600toinf = dyg_zll_mll50toinf.add_process(
     name="dyg_zll_mll50toinf_ptg600toinf",
     id=9690,
     xsecs={

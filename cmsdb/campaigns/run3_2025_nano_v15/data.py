@@ -38,9 +38,10 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
+                    "/store/data/Run2025D/Muon0/NANOAOD/PromptReco-v1/000/395/517/00000/39de813a-c531-4ecc-9585-8aa1b8dd7108.root",
                 ],
             },
-            n_files=1166,  # 1166-0
+            n_files=1165,  # 1166-1
             n_events=479676562,
         )
     ),
@@ -143,9 +144,10 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
+                    "/store/data/Run2025D/Muon1/NANOAOD/PromptReco-v1/000/395/522/00000/61f82247-c38c-4e02-bdb4-080981e24954.root"
                 ],
             },
-            n_files=1159,  # 1159-0
+            n_files=1158,  # 1159-1
             n_events=479642866,
         )
     ),
@@ -332,9 +334,10 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
+                    "/store/data/Run2025C/EGamma1/NANOAOD/PromptReco-v1/000/392/992/00000/76fd2e77-82dd-47d4-9b40-2b540ce232b8.root"
                 ],
             },
-            n_files=652,  # 652-0
+            n_files=651,  # 652-1
             n_events=243674671,
         )
     ),
@@ -866,9 +869,10 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
+                    "/store/data/Run2025F/EGamma0/NANOAOD/PromptReco-v2/000/397/711/00000/8d4bc58b-8d03-492a-87e6-bff77b7e46aa.root"
                 ],
             },
-            n_files=351,  # 351-0
+            n_files=350,  # 351-1
             n_events=139317024,
         )
     ),
@@ -929,9 +933,10 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
+                    "/store/data/Run2025C/EGamma2/NANOAOD/PromptReco-v2/000/393/126/00000/637da0ca-2fac-4525-adce-4a4fcf2de21a.root"
                 ],
             },
-            n_files=351,  # 351-0
+            n_files=350,  # 351-1
             n_events=133950574,
         )
     ),

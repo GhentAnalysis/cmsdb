@@ -203,6 +203,18 @@ for cpn in [cpn24, cpn25]:
         n_events=9801431,
     )
 
+    cpn.add_dataset(
+        name="dyg_zll_m50toinf_amcatnlo",
+        id=15462713,
+        is_data=False,
+        processes=[procs.dyg_zll_mll50toinf],
+        keys=[
+            "/DYGto2LG-1Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+        ],
+        n_files=1527,
+        n_events=263214524,
+    )
+
     #
     # W boson production
     #
