@@ -51,8 +51,8 @@ from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customna
 #     keys=[
 #         "/QCD-4Jets_Bin-HT-200to400_TuneCP5_13p6TeV_madgraphMLM-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=252,
-#     n_events=21779616,
+#     n_files=254,
+#     n_events=21919883,
 # )
 #
 
@@ -159,8 +159,8 @@ from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customna
 #     keys=[
 #         "/QCD_Bin-PT-20to30_TuneCP5_13p6TeV_pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=939,
-#     n_events=82078360,
+#     n_files=940,
+#     n_events=82100928,
 # )
 #
 
@@ -195,8 +195,8 @@ from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customna
 #     keys=[
 #         "/QCD_Bin-PT-80to120_TuneCP5_13p6TeV_pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=168,
-#     n_events=10924582,
+#     n_files=172,
+#     n_events=11145514,
 # )
 #
 
@@ -255,8 +255,8 @@ from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customna
 #     keys=[
 #         "/QCD_Bin-PT-600to800_TuneCP5_13p6TeV_pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=1060,
-#     n_events=53015892,
+#     n_files=1063,
+#     n_events=53127626,
 # )
 #
 
@@ -471,8 +471,8 @@ from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customna
 #     keys=[
 #         "/QCD_Bin-PT-1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=483,
-#     n_events=21436197,
+#     n_files=484,
+#     n_events=21481321,
 # )
 #
 

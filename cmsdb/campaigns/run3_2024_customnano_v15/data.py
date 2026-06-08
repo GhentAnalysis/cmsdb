@@ -4,6 +4,7 @@
 data datasets for the 2024 data-taking campaign
 """
 
+from order import DatasetInfo
 import cmsdb.processes as procs
 
 from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customnano_v15 as cpn
@@ -15,8 +16,8 @@ cpn.add_dataset(
     keys=[
         "/Muon0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024C-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=693,
-    n_events=67871221,
+    n_files=695,
+    n_events=68069710,
 )
 
 cpn.add_dataset(
@@ -48,8 +49,8 @@ cpn.add_dataset(
     keys=[
         "/Muon0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024F-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1217,
-    n_events=118204930,
+    n_files=1268,
+    n_events=123058960,
 )
 
 cpn.add_dataset(
@@ -59,8 +60,8 @@ cpn.add_dataset(
     keys=[
         "/Muon0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=9864,
-    n_events=956200852,
+    n_files=9964,
+    n_events=965903658,
 )
 
 cpn.add_dataset(
@@ -70,8 +71,8 @@ cpn.add_dataset(
     keys=[
         "/Muon0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024H-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=228,
-    n_events=22124478,
+    n_files=243,
+    n_events=23584916,
 )
 
 cpn.add_dataset(
@@ -345,8 +346,8 @@ cpn.add_dataset(
     keys=[
         "/EGamma1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024E-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1907,
-    n_events=182744780,
+    n_files=1912,
+    n_events=183250048,
 )
 
 cpn.add_dataset(
@@ -367,8 +368,8 @@ cpn.add_dataset(
     keys=[
         "/EGamma1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=8116,
-    n_events=773321006,
+    n_files=8117,
+    n_events=773417123,
 )
 
 cpn.add_dataset(
@@ -448,8 +449,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/JetMET0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=2178,
-#     n_events=212912998,
+#     n_files=2254,
+#     n_events=220340093,
 # )
 #
 
@@ -580,8 +581,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=662,
-#     n_events=64120716,
+#     n_files=722,
+#     n_events=69842034,
 # )
 #
 
