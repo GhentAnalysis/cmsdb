@@ -332,434 +332,434 @@ from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customna
 # )
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370558,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-15to20_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1715,
-#     n_events=117879553,
-# )
+cpn.add_dataset(
+    name="qcd_mu_pt15to20_pythia8",
+    id=3370558,
+    processes=[procs.qcd_mu_pt15to20],
+    keys=[
+        "/QCD_Bin-PT-15to20_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1715,
+    n_events=117879553,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370579,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-20to30_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1314,
-#     n_events=93304586,
-# )
+cpn.add_dataset(
+    name="qcd_mu_pt20to30_pythia8",
+    id=3370579,
+    processes=[procs.qcd_mu_pt20to30],
+    keys=[
+        "/QCD_Bin-PT-20to30_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1314,
+    n_events=93304586,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370550,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-30to50_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1391,
-#     n_events=95305920,
-# )
+cpn.add_dataset(
+    name="qcd_mu_pt30to50_pythia8",
+    id=3370550,
+    processes=[procs.qcd_mu_pt30to50],
+    keys=[
+        "/QCD_Bin-PT-30to50_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1391,
+    n_events=95305920,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370576,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-50to80_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=800,
-#     n_events=55934694,
-# )
+cpn.add_dataset(
+    name="qcd_mu_pt50to80_pythia8",
+    id=3370576,
+    processes=[procs.qcd_mu_pt50to80],
+    keys=[
+        "/QCD_Bin-PT-50to80_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=800,
+    n_events=55934694,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370540,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-80to120_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1475,
-#     n_events=94128199,
-# )
+cpn.add_dataset(
+    name="qcd_mu_pt80to120_pythia8",
+    id=3370540,
+    processes=[procs.qcd_mu_pt80to120],
+    keys=[
+        "/QCD_Bin-PT-80to120_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1475,
+    n_events=94128199,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370574,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-120to170_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1541,
-#     n_events=98511779,
-# )
+cpn.add_dataset(
+    name="qcd_mu_pt120to170_pythia8",
+    id=3370574,
+    processes=[procs.qcd_mu_pt120to170],
+    keys=[
+        "/QCD_Bin-PT-120to170_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1541,
+    n_events=98511779,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370529,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-170to300_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1690,
-#     n_events=94338762,
-# )
+cpn.add_dataset(
+    name="qcd_mu_pt170to300_pythia8",
+    id=3370529,
+    processes=[procs.qcd_mu_pt170to300],
+    keys=[
+        "/QCD_Bin-PT-170to300_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1690,
+    n_events=94338762,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370582,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-300to470_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=285,
-#     n_events=15604575,
-# )
+cpn.add_dataset(
+    name="qcd_mu_pt300to470_pythia8",
+    id=3370582,
+    processes=[procs.qcd_mu_pt300to470],
+    keys=[
+        "/QCD_Bin-PT-300to470_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=285,
+    n_events=15604575,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370608,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-470to600_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1367,
-#     n_events=67155667,
-# )
+cpn.add_dataset(
+    name="qcd_mu_pt470to600_pythia8",
+    id=3370608,
+    processes=[procs.qcd_mu_pt470to600],
+    keys=[
+        "/QCD_Bin-PT-470to600_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1367,
+    n_events=67155667,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370524,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-600to800_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1269,
-#     n_events=52887870,
-# )
+cpn.add_dataset(
+    name="qcd_mu_pt600to800_pythia8",
+    id=3370524,
+    processes=[procs.qcd_mu_pt600to800],
+    keys=[
+        "/QCD_Bin-PT-600to800_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1269,
+    n_events=52887870,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370528,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-800to1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=758,
-#     n_events=34557229,
-# )
+cpn.add_dataset(
+    name="qcd_mu_pt800to1000_pythia8",
+    id=3370528,
+    processes=[procs.qcd_mu_pt800to1000],
+    keys=[
+        "/QCD_Bin-PT-800to1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=758,
+    n_events=34557229,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370656,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=484,
-#     n_events=21481321,
-# )
+cpn.add_dataset(
+    name="qcd_mu_pt1000_pythia8",
+    id=3370656,
+    processes=[procs.qcd_mu_pt1000],
+    keys=[
+        "/QCD_Bin-PT-1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=484,
+    n_events=21481321,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370664,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-15to20_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=388,
-#     n_events=31078562,
-# )
+cpn.add_dataset(
+    name="qcd_em_pt15to20_pythia8",
+    id=3370664,
+    processes=[procs.qcd_em_pt15to20],
+    keys=[
+        "/QCD_Bin-PT-15to20_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=388,
+    n_events=31078562,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370607,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-20to30_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=346,
-#     n_events=27281445,
-# )
+cpn.add_dataset(
+    name="qcd_em_pt20to30_pythia8",
+    id=3370607,
+    processes=[procs.qcd_em_pt20to30],
+    keys=[
+        "/QCD_Bin-PT-20to30_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=346,
+    n_events=27281445,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370695,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-30to50_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=365,
-#     n_events=29033070,
-# )
+cpn.add_dataset(
+    name="qcd_em_pt30to50_pythia8",
+    id=3370695,
+    processes=[procs.qcd_em_pt30to50],
+    keys=[
+        "/QCD_Bin-PT-30to50_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=365,
+    n_events=29033070,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370679,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-50to80_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=431,
-#     n_events=29057555,
-# )
+cpn.add_dataset(
+    name="qcd_em_pt50to80_pythia8",
+    id=3370679,
+    processes=[procs.qcd_em_pt50to80],
+    keys=[
+        "/QCD_Bin-PT-50to80_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=431,
+    n_events=29057555,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370697,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-80to120_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=408,
-#     n_events=29437751,
-# )
+cpn.add_dataset(
+    name="qcd_em_pt80to120_pythia8",
+    id=3370697,
+    processes=[procs.qcd_em_pt80to120],
+    keys=[
+        "/QCD_Bin-PT-80to120_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=408,
+    n_events=29437751,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370538,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-120to170_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=430,
-#     n_events=27584498,
-# )
+cpn.add_dataset(
+    name="qcd_em_pt120to170_pythia8",
+    id=3370538,
+    processes=[procs.qcd_em_pt120to170],
+    keys=[
+        "/QCD_Bin-PT-120to170_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=430,
+    n_events=27584498,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370676,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-170to300_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=494,
-#     n_events=29488005,
-# )
+cpn.add_dataset(
+    name="qcd_em_pt170to300_pythia8",
+    id=3370676,
+    processes=[procs.qcd_em_pt170to300],
+    keys=[
+        "/QCD_Bin-PT-170to300_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=494,
+    n_events=29488005,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370687,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-300to470_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=487,
-#     n_events=30176218,
-# )
+cpn.add_dataset(
+    name="qcd_em_pt300to470_pythia8",
+    id=3370687,
+    processes=[procs.qcd_em_pt300to470],
+    keys=[
+        "/QCD_Bin-PT-300to470_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=487,
+    n_events=30176218,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370693,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-470to600_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=574,
-#     n_events=34732273,
-# )
+cpn.add_dataset(
+    name="qcd_em_pt470to600_pythia8",
+    id=3370693,
+    processes=[procs.qcd_em_pt470to600],
+    keys=[
+        "/QCD_Bin-PT-470to600_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=574,
+    n_events=34732273,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370554,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-600to800_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=623,
-#     n_events=32396094,
-# )
+cpn.add_dataset(
+    name="qcd_em_pt600to800_pythia8",
+    id=3370554,
+    processes=[procs.qcd_em_pt600to800],
+    keys=[
+        "/QCD_Bin-PT-600to800_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=623,
+    n_events=32396094,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370567,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-800to1000_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=593,
-#     n_events=32018900,
-# )
+cpn.add_dataset(
+    name="qcd_em_pt800to1000_pythia8",
+    id=3370567,
+    processes=[procs.qcd_em_pt800to1000],
+    keys=[
+        "/QCD_Bin-PT-800to1000_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=593,
+    n_events=32018900,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370590,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-1000_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=444,
-#     n_events=22920551,
-# )
+cpn.add_dataset(
+    name="qcd_em_pt1000_pythia8",
+    id=3370590,
+    processes=[procs.qcd_em_pt1000],
+    keys=[
+        "/QCD_Bin-PT-1000_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=444,
+    n_events=22920551,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370534,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-15to20_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=365,
-#     n_events=28031670,
-# )
+cpn.add_dataset(
+    name="qcd_bctoe_pt15to20_pythia8",
+    id=3370534,
+    processes=[procs.qcd_bctoe_pt15to20],
+    keys=[
+        "/QCD_Bin-PT-15to20_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=365,
+    n_events=28031670,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370572,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-20to30_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=198,
-#     n_events=15700566,
-# )
+cpn.add_dataset(
+    name="qcd_bctoe_pt20to30_pythia8",
+    id=3370572,
+    processes=[procs.qcd_bctoe_pt20to30],
+    keys=[
+        "/QCD_Bin-PT-20to30_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=198,
+    n_events=15700566,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370674,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-30to50_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=378,
-#     n_events=28905365,
-# )
+cpn.add_dataset(
+    name="qcd_bctoe_pt30to50_pythia8",
+    id=3370674,
+    processes=[procs.qcd_bctoe_pt30to50],
+    keys=[
+        "/QCD_Bin-PT-30to50_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=378,
+    n_events=28905365,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370548,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-50to80_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=396,
-#     n_events=30131770,
-# )
+cpn.add_dataset(
+    name="qcd_bctoe_pt50to80_pythia8",
+    id=3370548,
+    processes=[procs.qcd_bctoe_pt50to80],
+    keys=[
+        "/QCD_Bin-PT-50to80_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=396,
+    n_events=30131770,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370708,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-80to120_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=395,
-#     n_events=27867233,
-# )
+cpn.add_dataset(
+    name="qcd_bctoe_pt80to120_pythia8",
+    id=3370708,
+    processes=[procs.qcd_bctoe_pt80to120],
+    keys=[
+        "/QCD_Bin-PT-80to120_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=395,
+    n_events=27867233,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370671,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-120to170_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=487,
-#     n_events=34004679,
-# )
+cpn.add_dataset(
+    name="qcd_bctoe_pt120to170_pythia8",
+    id=3370671,
+    processes=[procs.qcd_bctoe_pt120to170],
+    keys=[
+        "/QCD_Bin-PT-120to170_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=487,
+    n_events=34004679,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370578,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-170to300_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=267,
-#     n_events=17047865,
-# )
+cpn.add_dataset(
+    name="qcd_bctoe_pt170to300_pythia8",
+    id=3370578,
+    processes=[procs.qcd_bctoe_pt170to300],
+    keys=[
+        "/QCD_Bin-PT-170to300_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=267,
+    n_events=17047865,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370703,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-300to470_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=480,
-#     n_events=28169450,
-# )
+cpn.add_dataset(
+    name="qcd_bctoe_pt300to470_pythia8",
+    id=3370703,
+    processes=[procs.qcd_bctoe_pt300to470],
+    keys=[
+        "/QCD_Bin-PT-300to470_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=480,
+    n_events=28169450,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370584,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-470to600_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=544,
-#     n_events=29400547,
-# )
+cpn.add_dataset(
+    name="qcd_bctoe_pt470to600_pythia8",
+    id=3370584,
+    processes=[procs.qcd_bctoe_pt470to600],
+    keys=[
+        "/QCD_Bin-PT-470to600_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=544,
+    n_events=29400547,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370573,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-600to800_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=636,
-#     n_events=31488761,
-# )
+cpn.add_dataset(
+    name="qcd_bctoe_pt600to800_pythia8",
+    id=3370573,
+    processes=[procs.qcd_bctoe_pt600to800],
+    keys=[
+        "/QCD_Bin-PT-600to800_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=636,
+    n_events=31488761,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370549,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-800to1000_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=626,
-#     n_events=31551377,
-# )
+cpn.add_dataset(
+    name="qcd_bctoe_pt800to1000_pythia8",
+    id=3370549,
+    processes=[procs.qcd_bctoe_pt800to1000],
+    keys=[
+        "/QCD_Bin-PT-800to1000_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=626,
+    n_events=31551377,
+)
 #
 
-# cpn.add_dataset(
-#     name="PLACEHOLDER_pythia8",
-#     id=3370569,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/QCD_Bin-PT-1000_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=401,
-#     n_events=18479175,
-# )
+cpn.add_dataset(
+    name="qcd_bctoe_pt1000_pythia8",
+    id=3370569,
+    processes=[procs.qcd_bctoe_pt1000],
+    keys=[
+        "/QCD_Bin-PT-1000_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=401,
+    n_events=18479175,
+)
 #
