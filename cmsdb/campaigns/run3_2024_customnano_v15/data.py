@@ -16,8 +16,8 @@ cpn.add_dataset(
     keys=[
         "/Muon0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024C-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=695,
-    n_events=68069710,
+    n_files=997,
+    n_events=97505587,
 )
 
 cpn.add_dataset(
@@ -27,8 +27,8 @@ cpn.add_dataset(
     keys=[
         "/Muon0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=581,
-    n_events=56446727,
+    n_files=1243,
+    n_events=120787065,
 )
 
 cpn.add_dataset(
@@ -38,8 +38,8 @@ cpn.add_dataset(
     keys=[
         "/Muon0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024E-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=688,
-    n_events=66879609,
+    n_files=1748,
+    n_events=169640946,
 )
 
 cpn.add_dataset(
@@ -49,8 +49,8 @@ cpn.add_dataset(
     keys=[
         "/Muon0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024F-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1268,
-    n_events=123058960,
+    n_files=4558,
+    n_events=442432787,
 )
 
 cpn.add_dataset(
@@ -60,8 +60,8 @@ cpn.add_dataset(
     keys=[
         "/Muon0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=9964,
-    n_events=965903658,
+    n_files=13056,
+    n_events=1265796226,
 )
 
 cpn.add_dataset(
@@ -71,8 +71,8 @@ cpn.add_dataset(
     keys=[
         "/Muon0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024H-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=243,
-    n_events=23584916,
+    n_files=734,
+    n_events=71171769,
 )
 
 cpn.add_dataset(
@@ -82,8 +82,8 @@ cpn.add_dataset(
     keys=[
         "/Muon0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=188,
-    n_events=18253507,
+    n_files=960,
+    n_events=92402446,
 )
 
 cpn.add_dataset(
@@ -104,8 +104,8 @@ cpn.add_dataset(
     keys=[
         "/Muon1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=963,
-    n_events=93653103,
+    n_files=1238,
+    n_events=120415086,
 )
 
 cpn.add_dataset(
@@ -137,8 +137,8 @@ cpn.add_dataset(
     keys=[
         "/Muon1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=6606,
-    n_events=641695857,
+    n_files=6608,
+    n_events=641891857,
 )
 
 cpn.add_dataset(
@@ -159,8 +159,8 @@ cpn.add_dataset(
     keys=[
         "/Muon1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1013,
-    n_events=97435749,
+    n_files=1015,
+    n_events=97630010,
 )
 
 cpn.add_dataset(
@@ -181,8 +181,8 @@ cpn.add_dataset(
     keys=[
         "/MuonEG/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=182,
-    n_events=18031311,
+    n_files=190,
+    n_events=18827708,
 )
 
 cpn.add_dataset(
@@ -214,8 +214,8 @@ cpn.add_dataset(
     keys=[
         "/MuonEG/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v3-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=966,
-    n_events=95992626,
+    n_files=986,
+    n_events=97985222,
 )
 
 cpn.add_dataset(
@@ -225,8 +225,8 @@ cpn.add_dataset(
     keys=[
         "/MuonEG/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024H-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=141,
-    n_events=14027028,
+    n_files=144,
+    n_events=14323522,
 )
 
 cpn.add_dataset(
@@ -258,8 +258,8 @@ cpn.add_dataset(
     keys=[
         "/EGamma0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1622,
-    n_events=156460481,
+    n_files=1623,
+    n_events=156558757,
 )
 
 cpn.add_dataset(
@@ -335,8 +335,8 @@ cpn.add_dataset(
     keys=[
         "/EGamma1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1604,
-    n_events=154737779,
+    n_files=1620,
+    n_events=156275778,
 )
 
 cpn.add_dataset(
@@ -346,8 +346,8 @@ cpn.add_dataset(
     keys=[
         "/EGamma1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024E-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1912,
-    n_events=183250048,
+    n_files=2602,
+    n_events=249293277,
 )
 
 cpn.add_dataset(
@@ -357,8 +357,8 @@ cpn.add_dataset(
     keys=[
         "/EGamma1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024F-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=6385,
-    n_events=610697584,
+    n_files=6597,
+    n_events=631018208,
 )
 
 cpn.add_dataset(
@@ -368,8 +368,8 @@ cpn.add_dataset(
     keys=[
         "/EGamma1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=8117,
-    n_events=773417123,
+    n_files=9469,
+    n_events=903246278,
 )
 
 cpn.add_dataset(
@@ -379,8 +379,8 @@ cpn.add_dataset(
     keys=[
         "/EGamma1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024H-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1385,
-    n_events=131849721,
+    n_files=1416,
+    n_events=134835799,
 )
 
 cpn.add_dataset(
@@ -390,258 +390,257 @@ cpn.add_dataset(
     keys=[
         "/EGamma1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1374,
-    n_events=131561563,
+    n_files=1388,
+    n_events=132903874,
 )
 
-# cpn.add_dataset(
-#     name="data_jetmet0_c",
-#     id=3371589,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024C-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=705,
-#     n_events=69348871,
-# )
-#
+cpn.add_dataset(
+    name="data_jetmet0_c",
+    id=3371589,
+    processes=[procs.data],
+    keys=[
+        "/JetMET0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024C-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=705,
+    n_events=69348871,
+)
 
-# cpn.add_dataset(
-#     name="data_jetmet0_d",
-#     id=3371565,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=773,
-#     n_events=75911377,
-# )
-#
 
-# cpn.add_dataset(
-#     name="data_jetmet0_e",
-#     id=3371616,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024E-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1264,
-#     n_events=123673375,
-# )
-#
+cpn.add_dataset(
+    name="data_jetmet0_d",
+    id=3371565,
+    processes=[procs.data],
+    keys=[
+        "/JetMET0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=773,
+    n_events=75911377,
+)
 
-# cpn.add_dataset(
-#     name="data_jetmet0_f",
-#     id=3371517,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024F-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=3167,
-#     n_events=309079689,
-# )
-#
 
-# cpn.add_dataset(
-#     name="data_jetmet0_g",
-#     id=3371610,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=2254,
-#     n_events=220340093,
-# )
-#
+cpn.add_dataset(
+    name="data_jetmet0_e",
+    id=3371616,
+    processes=[procs.data],
+    keys=[
+        "/JetMET0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024E-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1264,
+    n_events=123673375,
+)
 
-# cpn.add_dataset(
-#     name="data_jetmet0_h",
-#     id=3371559,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024H-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=548,
-#     n_events=53636159,
-# )
-#
 
-# cpn.add_dataset(
-#     name="data_jetmet0_i",
-#     id=3371617,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=578,
-#     n_events=56541702,
-# )
-#
+cpn.add_dataset(
+    name="data_jetmet0_f",
+    id=3371517,
+    processes=[procs.data],
+    keys=[
+        "/JetMET0/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024F-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=3167,
+    n_events=309079689,
+)
 
-# cpn.add_dataset(
-#     name="data_jetmet1_c",
-#     id=3371623,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024C-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=689,
-#     n_events=67782994,
-# )
-#
 
-# cpn.add_dataset(
-#     name="data_jetmet1_d",
-#     id=3371575,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=753,
-#     n_events=73956332,
-# )
-#
+cpn.add_dataset(
+    name="data_jetmet0_g",
+    id=3371610,
+    processes=[procs.data],
+    keys=[
+        "/JetMET0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=4101,
+    n_events=400918604,
+)
 
-# cpn.add_dataset(
-#     name="data_jetmet1_e",
-#     id=3371558,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024E-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=378,
-#     n_events=37008371,
-# )
-#
 
-# cpn.add_dataset(
-#     name="data_jetmet1_f",
-#     id=3371578,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024F-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=2936,
-#     n_events=286691411,
-# )
-#
+cpn.add_dataset(
+    name="data_jetmet0_h",
+    id=3371559,
+    processes=[procs.data],
+    keys=[
+        "/JetMET0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024H-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=570,
+    n_events=55794457,
+)
 
-# cpn.add_dataset(
-#     name="data_jetmet1_g",
-#     id=3371570,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=3821,
-#     n_events=373637674,
-# )
-#
 
-# cpn.add_dataset(
-#     name="data_jetmet1_h",
-#     id=3371954,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024H-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=117,
-#     n_events=11491798,
-# )
-#
+cpn.add_dataset(
+    name="data_jetmet0_i",
+    id=3371617,
+    processes=[procs.data],
+    keys=[
+        "/JetMET0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=606,
+    n_events=59259348,
+)
 
-# cpn.add_dataset(
-#     name="data_jetmet1_i",
-#     id=3371564,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1089,
-#     n_events=106317879,
-# )
-#
 
-# cpn.add_dataset(
-#     name="data_parkinghh_c",
-#     id=3371985,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024C-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=988,
-#     n_events=96434885,
-# )
-#
+cpn.add_dataset(
+    name="data_jetmet1_c",
+    id=3371623,
+    processes=[procs.data],
+    keys=[
+        "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024C-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=708,
+    n_events=69648563,
+)
 
-# cpn.add_dataset(
-#     name="data_parkinghh_d",
-#     id=3371966,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=722,
-#     n_events=69842034,
-# )
-#
 
-# cpn.add_dataset(
-#     name="data_parkinghh_e",
-#     id=3371910,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024E-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=195,
-#     n_events=18903311,
-# )
-#
+cpn.add_dataset(
+    name="data_jetmet1_d",
+    id=3371575,
+    processes=[procs.data],
+    keys=[
+        "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=772,
+    n_events=75810110,
+)
 
-# cpn.add_dataset(
-#     name="data_parkinghh_f",
-#     id=3371874,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024F-MINIv6NANOv15-v4-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=4988,
-#     n_events=479362077,
-# )
-#
 
-# cpn.add_dataset(
-#     name="data_parkinghh_g",
-#     id=3371936,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v3-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1337,
-#     n_events=128771337,
-# )
-#
+cpn.add_dataset(
+    name="data_jetmet1_e",
+    id=3371558,
+    processes=[procs.data],
+    keys=[
+        "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024E-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1251,
+    n_events=122429415,
+)
 
-# cpn.add_dataset(
-#     name="data_parkinghh_h",
-#     id=3371951,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024H-MINIv6NANOv15-v3-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1007,
-#     n_events=97064942,
-# )
-#
 
-# cpn.add_dataset(
-#     name="data_parkinghh_i",
-#     id=3371927,
-#     processes=[procs.PLACEHOLDER],
-#     keys=[
-#         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v3-00000000000000000000000000000000/USER",  # noqa
-#     ],
-#     n_files=1075,
-#     n_events=103577087,
-# )
-#
+cpn.add_dataset(
+    name="data_jetmet1_f",
+    id=3371578,
+    processes=[procs.data],
+    keys=[
+        "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024F-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=3167,
+    n_events=309180839,
+)
+
+
+cpn.add_dataset(
+    name="data_jetmet1_g",
+    id=3371570,
+    processes=[procs.data],
+    keys=[
+        "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=4051,
+    n_events=396101653,
+)
+
+
+cpn.add_dataset(
+    name="data_jetmet1_h",
+    id=3371954,
+    processes=[procs.data],
+    keys=[
+        "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024H-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=563,
+    n_events=55103321,
+)
+
+
+cpn.add_dataset(
+    name="data_jetmet1_i",
+    id=3371564,
+    processes=[procs.data],
+    keys=[
+        "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1164,
+    n_events=113604401,
+)
+
+
+cpn.add_dataset(
+    name="data_parkinghh_c",
+    id=3371985,
+    processes=[procs.PLACEHOLDER],
+    keys=[
+        "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024C-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1077,
+    n_events=105158321,
+)
+
+
+cpn.add_dataset(
+    name="data_parkinghh_d",
+    id=3371966,
+    processes=[procs.PLACEHOLDER],
+    keys=[
+        "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1299,
+    n_events=125986310,
+)
+
+
+cpn.add_dataset(
+    name="data_parkinghh_e",
+    id=3371910,
+    processes=[procs.PLACEHOLDER],
+    keys=[
+        "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024E-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1835,
+    n_events=177935339,
+)
+
+
+cpn.add_dataset(
+    name="data_parkinghh_f",
+    id=3371874,
+    processes=[procs.PLACEHOLDER],
+    keys=[
+        "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024F-MINIv6NANOv15-v4-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=5065,
+    n_events=486729639,
+)
+
+
+cpn.add_dataset(
+    name="data_parkinghh_g",
+    id=3371936,
+    processes=[procs.PLACEHOLDER],
+    keys=[
+        "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v3-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=7383,
+    n_events=709609093,
+)
+
+
+cpn.add_dataset(
+    name="data_parkinghh_h",
+    id=3371951,
+    processes=[procs.PLACEHOLDER],
+    keys=[
+        "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024H-MINIv6NANOv15-v3-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1033,
+    n_events=99559443,
+)
+
+
+cpn.add_dataset(
+    name="data_parkinghh_i",
+    id=3371927,
+    processes=[procs.PLACEHOLDER],
+    keys=[
+        "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v3-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1075,
+    n_events=103577087,
+)

@@ -339,8 +339,8 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-15to20_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1715,
-    n_events=117879553,
+    n_files=1812,
+    n_events=125036760,
 )
 #
 
@@ -375,8 +375,8 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-50to80_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=800,
-    n_events=55934694,
+    n_files=1540,
+    n_events=107449521,
 )
 #
 
@@ -399,8 +399,8 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-120to170_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1541,
-    n_events=98511779,
+    n_files=1560,
+    n_events=99824346,
 )
 #
 
@@ -423,8 +423,8 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-300to470_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=285,
-    n_events=15604575,
+    n_files=1479,
+    n_events=78777016,
 )
 #
 
@@ -435,8 +435,8 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-470to600_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1367,
-    n_events=67155667,
+    n_files=1451,
+    n_events=71786916,
 )
 #
 
@@ -447,8 +447,8 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-600to800_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1269,
-    n_events=52887870,
+    n_files=1879,
+    n_events=85781844,
 )
 #
 
@@ -459,20 +459,20 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-800to1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=758,
-    n_events=34557229,
+    n_files=1800,
+    n_events=81930100,
 )
 #
 
 cpn.add_dataset(
-    name="qcd_mu_pt1000_pythia8",
+    name="qcd_mu_pt1000toinf_pythia8",
     id=3370656,
-    processes=[procs.qcd_mu_pt1000],
+    processes=[procs.qcd_mu_pt1000toinf],
     keys=[
         "/QCD_Bin-PT-1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=484,
-    n_events=21481321,
+    n_files=1822,
+    n_events=82961453,
 )
 #
 
@@ -609,9 +609,9 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="qcd_em_pt1000_pythia8",
+    name="qcd_em_pt1000toinf_pythia8",
     id=3370590,
-    processes=[procs.qcd_em_pt1000],
+    processes=[procs.qcd_em_pt1000toinf],
     keys=[
         "/QCD_Bin-PT-1000_Fil-EMEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
@@ -639,8 +639,8 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-20to30_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=198,
-    n_events=15700566,
+    n_files=359,
+    n_events=28309392,
 )
 #
 
@@ -699,8 +699,8 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-170to300_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=267,
-    n_events=17047865,
+    n_files=492,
+    n_events=31713720,
 )
 #
 
@@ -711,8 +711,8 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-300to470_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=480,
-    n_events=28169450,
+    n_files=490,
+    n_events=28833430,
 )
 #
 
@@ -735,8 +735,8 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-600to800_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=636,
-    n_events=31488761,
+    n_files=658,
+    n_events=32966804,
 )
 #
 
@@ -753,13 +753,13 @@ cpn.add_dataset(
 #
 
 cpn.add_dataset(
-    name="qcd_bctoe_pt1000_pythia8",
+    name="qcd_bctoe_pt1000toinf_pythia8",
     id=3370569,
-    processes=[procs.qcd_bctoe_pt1000],
+    processes=[procs.qcd_bctoe_pt1000toinf],
     keys=[
         "/QCD_Bin-PT-1000_Fil-bcToE_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=401,
-    n_events=18479175,
+    n_files=422,
+    n_events=19760876,
 )
 #

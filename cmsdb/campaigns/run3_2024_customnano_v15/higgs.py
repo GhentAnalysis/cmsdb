@@ -98,8 +98,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/TTH-Hto2G_Par-M-125_TuneCP5_13p6TeV_amcatnloFXFX-madspin-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=1003,
-#     n_events=34817578,
+#     n_files=1004,
+#     n_events=34851285,
 # )
 #
 
@@ -122,8 +122,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/VBFH-Hto2G_Par-M-125_TuneCP5_13p6TeV_amcatnlo-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=90,
-#     n_events=4398894,
+#     n_files=91,
+#     n_events=4483026,
 # )
 #
 
@@ -170,8 +170,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/HPlusB-Hto2G-4FS-MuRFScaleDynX0p50_Par-M-125_TuneCP5_13p6TeV_amcatnlo-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=283,
-#     n_events=14809000,
+#     n_files=286,
+#     n_events=15000000,
 # )
 #
 
@@ -373,8 +373,30 @@ cpn.add_dataset(
 # )
 #
 
-# missing /VBFH-Hto2C_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2_ext1-v2/MINIAODSIM
-# missing /VBFH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2_ext1-v2/MINIAODSIM
+# cpn.add_dataset(
+#     name="PLACEHOLDER_powheg",
+#     id=3370731,
+#     processes=[procs.PLACEHOLDER],
+#     keys=[
+#         "/VBFH-Hto2C_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-ext1-v2-00000000000000000000000000000000/USER",  # noqa
+#     ],
+#     n_files=335,
+#     n_events=19989500,
+# )
+#
+
+# cpn.add_dataset(
+#     name="PLACEHOLDER_powheg",
+#     id=3370650,
+#     processes=[procs.PLACEHOLDER],
+#     keys=[
+#         "/VBFH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powheg-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-ext1-v2-00000000000000000000000000000000/USER",  # noqa
+#     ],
+#     n_files=349,
+#     n_events=19990298,
+# )
+#
+
 # cpn.add_dataset(
 #     name="PLACEHOLDER_powheg",
 #     id=3370698,
@@ -387,7 +409,18 @@ cpn.add_dataset(
 # )
 #
 
-# missing /GluGluH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2_ext1-v2/MINIAODSIM
+# cpn.add_dataset(
+#     name="PLACEHOLDER_powheg",
+#     id=3370661,
+#     processes=[procs.PLACEHOLDER],
+#     keys=[
+#         "/GluGluH-Hto2B_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-ext1-v2-00000000000000000000000000000000/USER",  # noqa
+#     ],
+#     n_files=307,
+#     n_events=19932930,
+# )
+#
+
 # cpn.add_dataset(
 #     name="PLACEHOLDER_powheg",
 #     id=3370717,
@@ -400,7 +433,18 @@ cpn.add_dataset(
 # )
 #
 
-# missing /GluGluH-Hto2C_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2_ext1-v2/MINIAODSIM
+# cpn.add_dataset(
+#     name="PLACEHOLDER_powheg",
+#     id=3370757,
+#     processes=[procs.PLACEHOLDER],
+#     keys=[
+#         "/GluGluH-Hto2C_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-ext1-v2-00000000000000000000000000000000/USER",  # noqa
+#     ],
+#     n_files=323,
+#     n_events=19919744,
+# )
+#
+
 # cpn.add_dataset(
 #     name="PLACEHOLDER_powheg",
 #     id=3370675,
@@ -569,7 +613,7 @@ cpn.add_dataset(
 #     keys=[
 #         "/WminusH-Hto2G-WtoLNu_Par-M-125_TuneCP5_13p6TeV_powhegMINLO-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=56,
-#     n_events=874130,
+#     n_files=58,
+#     n_events=918020,
 # )
 #

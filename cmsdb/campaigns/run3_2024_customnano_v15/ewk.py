@@ -7,7 +7,6 @@ from order import DatasetInfo
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customnano_v15 as cpn
-
 # cpn.add_dataset(
 #     name="PLACEHOLDER_amcatnlo",
 #     id=3371660,
@@ -15,8 +14,8 @@ from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customna
 #     keys=[
 #         "/Wto2Q-2Jets_Bin-PTQQ-100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v3-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=2472,
-#     n_events=149113003,
+#     n_files=6372,
+#     n_events=377842325,
 # )
 #
 
@@ -27,8 +26,8 @@ from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customna
 #     keys=[
 #         "/Wto2Q-2Jets_Bin-PTQQ-200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=17,
-#     n_events=682095,
+#     n_files=2535,
+#     n_events=154307921,
 # )
 #
 
@@ -39,8 +38,8 @@ from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customna
 #     keys=[
 #         "/Wto2Q-2Jets_Bin-PTQQ-400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v3-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=911,
-#     n_events=47112701,
+#     n_files=916,
+#     n_events=47423661,
 # )
 #
 
@@ -75,8 +74,8 @@ from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customna
 #     keys=[
 #         "/Wto2Q-3Jets_Bin-HT-400to800_TuneCP5_13p6TeV_madgraphMLM-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=2312,
-#     n_events=147224645,
+#     n_files=6761,
+#     n_events=401294004,
 # )
 #
 
@@ -123,8 +122,8 @@ cpn.add_dataset(
     keys=[
         "/WtoLNu-2Jets_Bin-1J-PTLNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v3-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=2994,
-    n_events=217652728,
+    n_files=6250,
+    n_events=446357793,
 )
 
 cpn.add_dataset(
@@ -134,8 +133,8 @@ cpn.add_dataset(
     keys=[
         "/WtoLNu-2Jets_Bin-1J-PTLNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v3-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=3969,
-    n_events=274918001,
+    n_files=7059,
+    n_events=493719086,
 )
 
 cpn.add_dataset(
@@ -145,8 +144,8 @@ cpn.add_dataset(
     keys=[
         "/WtoLNu-2Jets_Bin-1J-PTLNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=435,
-    n_events=37040113,
+    n_files=526,
+    n_events=44967803,
 )
 
 cpn.add_dataset(
@@ -167,8 +166,8 @@ cpn.add_dataset(
     keys=[
         "/WtoLNu-2Jets_Bin-1J-PTLNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=174,
-    n_events=15044100,
+    n_files=177,
+    n_events=15305397,
 )
 
 cpn.add_dataset(
@@ -178,8 +177,8 @@ cpn.add_dataset(
     keys=[
         "/WtoLNu-2Jets_Bin-2J-PTLNu-40to100_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v3-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=5854,
-    n_events=388406653,
+    n_files=7098,
+    n_events=483113802,
 )
 
 cpn.add_dataset(
@@ -189,8 +188,8 @@ cpn.add_dataset(
     keys=[
         "/WtoLNu-2Jets_Bin-2J-PTLNu-100to200_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v3-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=5352,
-    n_events=342840702,
+    n_files=7440,
+    n_events=469917942,
 )
 
 cpn.add_dataset(
@@ -200,8 +199,8 @@ cpn.add_dataset(
     keys=[
         "/WtoLNu-2Jets_Bin-2J-PTLNu-200to400_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=221,
-    n_events=19017336,
+    n_files=871,
+    n_events=75124628,
 )
 
 cpn.add_dataset(
@@ -222,14 +221,10 @@ cpn.add_dataset(
     keys=[
         "/WtoLNu-2Jets_Bin-2J-PTLNu-600_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=190,
-    n_events=14708268,
+    n_files=194,
+    n_events=14991109,
 )
 
-# missing /WtoLNu-4Jets_Bin-1J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
-# missing /WtoLNu-4Jets_Bin-2J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
-# missing /WtoLNu-4Jets_Bin-3J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
-# missing /WtoLNu-4Jets_Bin-4J_TuneCP5_13p6TeV_madgraphMLM-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
 # cpn.add_dataset(
 #     name="PLACEHOLDER_madgraph",
 #     id=3371584,
@@ -261,8 +256,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/Zto2Q-4Jets_Bin-HT-800to1500_TuneCP5_13p6TeV_madgraphMLM-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=1113,
-#     n_events=50224006,
+#     n_files=1143,
+#     n_events=51519410,
 # )
 #
 
@@ -273,8 +268,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/Zto2Q-4Jets_Bin-HT-1500to2500_TuneCP5_13p6TeV_madgraphMLM-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=1526,
-#     n_events=67063660,
+#     n_files=1529,
+#     n_events=67209394,
 # )
 #
 
@@ -333,8 +328,8 @@ cpn.add_dataset(
     keys=[
         "/DYto2E-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v4-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=931,
-    n_events=68606814,
+    n_files=6585,
+    n_events=483753919,
 )
 
 cpn.add_dataset(
@@ -344,8 +339,8 @@ cpn.add_dataset(
     keys=[
         "/DYto2Mu-2Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v6-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=3225,
-    n_events=245692231,
+    n_files=6731,
+    n_events=488612255,
 )
 
 cpn.add_dataset(
@@ -390,21 +385,123 @@ cpn.add_dataset(
 #     keys=[
 #         "/DYto2Tau-4Jets_Bin-MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=3566,
-#     n_events=273359932,
+#     n_files=6328,
+#     n_events=487541879,
 # )
 #
 
-# missing /WWtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
-# missing /WWto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
-# missing /WZtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
-# missing /WZToLNu2B-1Jets-4FS_TuneCP5_13p6TeV_amcatnloFXFX-madspin-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
-# missing /WZtoL3Nu-1Jets-4FS_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
-# missing /WZto2L2Q_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
-# missing /WZto3LNu_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
-# missing /ZZto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
-# missing /ZZto2L2Q_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
-# missing /ZZto4L_TuneCP5_13p6TeV_powheg-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
+cpn.add_dataset(
+    name="ww_sl_powheg",
+    id=3374712,
+    processes=[procs.ww_sl],
+    keys=[
+        "/WWtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=528,
+    n_events=45629492,
+)
+
+cpn.add_dataset(
+    name="ww_wlnu_wlnu_powheg",
+    id=3374654,
+    processes=[procs.ww_dl],
+    keys=[
+        "/WWto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=2740,
+    n_events=237685705,
+)
+
+cpn.add_dataset(
+    name="wz_wlnu_zqq_powheg",
+    id=3374836,
+    processes=[procs.wz_wlnu_zqq],
+    keys=[
+        "/WZtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1258,
+    n_events=110891238,
+)
+
+# cpn.add_dataset(
+#     name="PLACEHOLDER_amcatnlo",
+#     id=3374849,
+#     processes=[procs.PLACEHOLDER],
+#     keys=[
+#         "/WZToLNu2B-1Jets-4FS_TuneCP5_13p6TeV_amcatnloFXFX-madspin-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+#     ],
+#     n_files=149,
+#     n_events=9501204,
+# )
+#
+
+# cpn.add_dataset(
+#     name="PLACEHOLDER_amcatnlo",
+#     id=3374822,
+#     processes=[procs.PLACEHOLDER],
+#     keys=[
+#         "/WZtoL3Nu-1Jets-4FS_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+#     ],
+#     n_files=184,
+#     n_events=14455252,
+# )
+#
+
+cpn.add_dataset(
+    name="wz_wqq_zll_powheg",
+    id=3374648,
+    processes=[procs.wz_wqq_zll],
+    keys=[
+        "/WZto2L2Q_TuneCP5_13p6TeV_powheg-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=2563,
+    n_events=221335803,
+)
+
+cpn.add_dataset(
+    name="wz_wlnu_zll_powheg",
+    id=3374701,
+    processes=[procs.wz_wlnu_zll],
+    keys=[
+        "/WZto3LNu_TuneCP5_13p6TeV_powheg-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=2576,
+    n_events=225578500,
+)
+
+cpn.add_dataset(
+    name="zz_zll_znunu_powheg",
+    id=3374703,
+    processes=[procs.zz_zll_znunu],
+    keys=[
+        "/ZZto2L2Nu_TuneCP5_13p6TeV_powheg-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=2136,
+    n_events=184067847,
+)
+
+cpn.add_dataset(
+    name="zz_zqq_zll_powheg",
+    id=3374868,
+    processes=[procs.zz_zqq_zll],
+    keys=[
+        "/ZZto2L2Q_TuneCP5_13p6TeV_powheg-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=227,
+    n_events=19955250,
+)
+
+cpn.add_dataset(
+    name="zz_zll_zll_powheg",
+    id=3374704,
+    processes=[procs.zz_zll_zll],
+    keys=[
+        "/ZZto4L_TuneCP5_13p6TeV_powheg-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=2677,
+    n_events=231251881,
+)
+
 cpn.add_dataset(
     name="www_amcatnlo",
     id=3371810,
@@ -434,8 +531,8 @@ cpn.add_dataset(
     keys=[
         "/WZZ-5F_TuneCP5_13p6TeV_amcatnlo-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=294,
-    n_events=16162158,
+    n_files=295,
+    n_events=16199286,
 )
 
 cpn.add_dataset(
@@ -449,7 +546,6 @@ cpn.add_dataset(
     n_events=16192091,
 )
 
-# missing /DYGto2LG-1Jets_Bin-MLL-50_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/RunIII2024Summer24MiniAODv6-150X_mcRun3_2024_realistic_v2-v2/MINIAODSIM
 cpn.add_dataset(
     name="ww_fh_powheg",
     id=3370663,
@@ -503,8 +599,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/WtoENu-2Jets_Bin-0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=380,
-#     n_events=47073829,
+#     n_files=3752,
+#     n_events=478505838,
 # )
 #
 
@@ -515,8 +611,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/WtoENu-2Jets_Bin-1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=1798,
-#     n_events=138401918,
+#     n_files=5463,
+#     n_events=385149736,
 # )
 #
 
@@ -527,8 +623,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/WtoENu-2Jets_Bin-2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=1600,
-#     n_events=87928101,
+#     n_files=4812,
+#     n_events=274136429,
 # )
 #
 
@@ -539,8 +635,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/WtoMuNu-2Jets_Bin-0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=1791,
-#     n_events=230504399,
+#     n_files=3615,
+#     n_events=462467985,
 # )
 #
 
@@ -551,8 +647,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/WtoMuNu-2Jets_Bin-1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=1336,
-#     n_events=102959013,
+#     n_files=4683,
+#     n_events=335599201,
 # )
 #
 
@@ -563,8 +659,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/WtoMuNu-2Jets_Bin-2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=1557,
-#     n_events=90728354,
+#     n_files=4861,
+#     n_events=299879589,
 # )
 #
 
@@ -575,8 +671,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/WtoTauNu-2Jets_Bin-0J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=537,
-#     n_events=67650643,
+#     n_files=1942,
+#     n_events=242740915,
 # )
 #
 
@@ -587,8 +683,8 @@ cpn.add_dataset(
 #     keys=[
 #         "/WtoTauNu-2Jets_Bin-1J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=3579,
-#     n_events=272738846,
+#     n_files=4898,
+#     n_events=374344313,
 # )
 #
 
@@ -599,7 +695,7 @@ cpn.add_dataset(
 #     keys=[
 #         "/WtoTauNu-2Jets_Bin-2J_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/cmst3-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
 #     ],
-#     n_files=831,
-#     n_events=50440762,
+#     n_files=4493,
+#     n_events=327817735,
 # )
 #
