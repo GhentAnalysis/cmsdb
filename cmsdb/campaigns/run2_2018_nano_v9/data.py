@@ -8,11 +8,15 @@ import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2018_nano_v9 import campaign_run2_2018_nano_v9 as cpn
 
 
+#
+# DoubleMuon
+#
+
 cpn.add_dataset(
     name="data_mumu_a",
     id=14354207,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/DoubleMuon/Run2018A-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
@@ -27,7 +31,7 @@ cpn.add_dataset(
     name="data_mumu_b",
     id=14347708,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/DoubleMuon/Run2018B-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
@@ -42,7 +46,7 @@ cpn.add_dataset(
     name="data_mumu_c",
     id=14346926,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/DoubleMuon/Run2018C-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
@@ -57,7 +61,7 @@ cpn.add_dataset(
     name="data_mumu_d",
     id=14372673,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/DoubleMuon/Run2018D-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
@@ -68,11 +72,15 @@ cpn.add_dataset(
     },
 )
 
+#
+# EGamma
+#
+
 cpn.add_dataset(
     name="data_egamma_a",
     id=14378617,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_egamma],
     keys=[
         "/EGamma/Run2018A-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
@@ -87,7 +95,7 @@ cpn.add_dataset(
     name="data_egamma_b",
     id=14427695,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_egamma],
     keys=[
         "/EGamma/Run2018B-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
@@ -102,7 +110,7 @@ cpn.add_dataset(
     name="data_egamma_c",
     id=14406640,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_egamma],
     keys=[
         "/EGamma/Run2018C-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
@@ -117,7 +125,7 @@ cpn.add_dataset(
     name="data_egamma_d",
     id=14253410,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_egamma],
     keys=[
         "/EGamma/Run2018D-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
@@ -128,11 +136,15 @@ cpn.add_dataset(
     },
 )
 
+#
+# MuonEG
+#
+
 cpn.add_dataset(
     name="data_muoneg_a",
     id=14374701,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_muoneg],
     keys=[
         "/MuonEG/Run2018A-UL2018_MiniAODv2_NanoAODv9_GT36-v2/NANOAOD",
     ],
@@ -147,7 +159,7 @@ cpn.add_dataset(
     name="data_muoneg_b",
     id=14360493,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_muoneg],
     keys=[
         "/MuonEG/Run2018B-UL2018_MiniAODv2_NanoAODv9_GT36-v2/NANOAOD",
     ],
@@ -162,7 +174,7 @@ cpn.add_dataset(
     name="data_muoneg_c",
     id=14371068,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_muoneg],
     keys=[
         "/MuonEG/Run2018C-UL2018_MiniAODv2_NanoAODv9_GT36-v2/NANOAOD",
     ],
@@ -177,7 +189,7 @@ cpn.add_dataset(
     name="data_muoneg_d",
     id=14380603,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_muoneg],
     keys=[
         "/MuonEG/Run2018D-UL2018_MiniAODv2_NanoAODv9_GT36-v2/NANOAOD",
     ],
@@ -188,11 +200,15 @@ cpn.add_dataset(
     },
 )
 
+#
+# Muon
+#
+
 cpn.add_dataset(
     name="data_mu_a",
     id=14380807,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2018A-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
@@ -207,7 +223,7 @@ cpn.add_dataset(
     name="data_mu_b",
     id=14354707,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2018B-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
@@ -222,7 +238,7 @@ cpn.add_dataset(
     name="data_mu_c",
     id=14346995,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2018C-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
@@ -237,7 +253,7 @@ cpn.add_dataset(
     name="data_mu_d",
     id=14375327,
     is_data=True,
-    processes=[procs.data],
+    processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2018D-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
