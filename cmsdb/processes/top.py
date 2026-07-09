@@ -28,7 +28,7 @@ __all__ = [
     "ttg_ptg_10to100", "ttg_ptg_100to200", "ttg_ptg_200toinf",
     "ttw", "ttw_wlnu", "ttw_wlnu_ewk", "ttw_wqq",
     "ttvv",
-    "ttzz", "ttwz", "ttww", "tttt", "tthh", "ttt", "tttW", "tttWm", "tttWp", "tttJ", "tttJm", "tttJp",
+    "ttzz", "ttwz", "ttww", "tttt", "tthh", "ttt", "tttw", "tttwm", "tttwp", "tttj", "tttjm", "tttjp",
 ]
 
 
@@ -748,46 +748,46 @@ ttt = Process(
     label=f"{tt.label}tX",
 )
 
-tttW = ttt.add_process(
-    name="tttW",
+tttw = ttt.add_process(
+    name="tttw",
     id=3020,
     label=f"{tt.label}tW",
     xsecs={13: Number(0.0013)},
 )
 
-tttWm = tttW.add_process(
-    name="tttWm",
+tttwm = tttw.add_process(
+    name="tttwm",
     id=3021,
     label=f"{tt.label}tWm",
     xsecs={13: Number(0.00066),
            13.6: Number(0.0005901)},
 )
 
-tttWp = tttW.add_process(
-    name="tttWp",
+tttwp = tttw.add_process(
+    name="tttwp",
     id=3022,
     label=f"{tt.label}tWp",
     xsecs={13: Number(0.00066),
            13.6: Number(0.0005975)},
 )
 
-tttJ = ttt.add_process(
-    name="tttJ",
+tttj = ttt.add_process(
+    name="tttj",
     id=3030,
     label=f"{tt.label}tJ",
     xsecs={13: Number(0.0007)},
 )
 
-tttJm = tttJ.add_process(
-    name="tttJm",
+tttjm = tttj.add_process(
+    name="tttjm",
     id=3031,
     label=f"{tt.label}tJm",
     xsecs={13: Number(0.00049),
            13.6: Number(0.0005215)},
 )
 
-tttJp = tttJ.add_process(
-    name="tttJp",
+tttjp = tttj.add_process(
+    name="tttjp",
     id=3032,
     label=f"{tt.label}tJp",
     xsecs={13: Number(0.00021),

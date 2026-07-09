@@ -59,15 +59,28 @@ __all__ = [
     "qcd_em_pt80to120",
     "qcd_em_pt120to170",
     "qcd_em_pt170to300",
-    "qcd_em_pt300toinf",
-    "qcd_em_pt10to30",
+    "qcd_em_pt300to470",
+    "qcd_em_pt470to600",
+    "qcd_em_pt600to800",
+    "qcd_em_pt800to1000",
+    "qcd_em_pt1000toinf",
     "qcd_bctoe",
     "qcd_bctoe_pt15to20",
     "qcd_bctoe_pt20to30",
     "qcd_bctoe_pt30to80",
+    "qcd_bctoe_pt30to50",
+    "qcd_bctoe_pt50to80",
+    "qcd_bctoe_pt80to120",
     "qcd_bctoe_pt80to170",
+    "qcd_bctoe_pt120to170",
     "qcd_bctoe_pt170to250",
     "qcd_bctoe_pt250toinf",
+    "qcd_bctoe_pt170to300",
+    "qcd_bctoe_pt300to470",
+    "qcd_bctoe_pt470to600",
+    "qcd_bctoe_pt600to800",
+    "qcd_bctoe_pt800to1000",
+    "qcd_bctoe_pt1000toinf",
     "qcd_doubleem",
     "qcd_doubleem_pt30to40_mgg80toinf",
     "qcd_doubleem_pt40toinf_mgg80toinf",
@@ -393,14 +406,14 @@ qcd_mu = qcd.add_process(
 
 # 13 TeV xsecs based on datasets QCD_Pt-{i}To{j}_MuEnrichedPt5_TuneCP5_13TeV-pythia8 (Summer20UL16)
 # https://cms-gen-dev.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD_Pt-15To20_MuEnrichedPt5_TuneCP5_13TeV-pythia8  # noqa
-# 13.6 TeV xsecs based on datasets QCD_PT-{i}to{j}_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8 (Run3Summer22)
-# https://xsdb-temp.app.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD_PT-15to20_MuEnrichedPt5_TuneCP5_13p6TeV_pythia8  # noqa
+
+# 13.6 TeV xsecs based on XSDB search
 qcd_mu_pt15to20 = qcd_mu.add_process(
     name="qcd_mu_pt15to20",
     id=31101,
     xsecs={
         13: Number(2797000.0),
-        13.6: Number(2982000.0),
+        13.6: Number(3018000.0),
     },
 )
 
@@ -409,7 +422,7 @@ qcd_mu_pt20to30 = qcd_mu.add_process(
     id=31102,
     xsecs={
         13: Number(2518000.0),
-        13.6: Number(2679000.0),
+        13.6: Number(2701000.0),
     },
 )
 qcd_mu_pt30to50 = qcd_mu.add_process(
@@ -417,7 +430,7 @@ qcd_mu_pt30to50 = qcd_mu.add_process(
     id=31103,
     xsecs={
         13: Number(1361000.0),
-        13.6: Number(1465000.0),
+        13.6: Number(1461000.0),
     },
 )
 
@@ -426,7 +439,7 @@ qcd_mu_pt50to80 = qcd_mu.add_process(
     id=31104,
     xsecs={
         13: Number(377800.0),
-        13.6: Number(402900.0),
+        13.6: Number(407600.0),
     },
 )
 
@@ -435,7 +448,7 @@ qcd_mu_pt80to120 = qcd_mu.add_process(
     id=31105,
     xsecs={
         13: Number(88620.0),
-        13.6: Number(95130.0),
+        13.6: Number(96070.0),
     },
 )
 
@@ -444,7 +457,7 @@ qcd_mu_pt120to170 = qcd_mu.add_process(
     id=31106,
     xsecs={
         13: Number(21070.0),
-        13.6: Number(22980.0),
+        13.6: Number(23140.0),
     },
 )
 
@@ -453,7 +466,7 @@ qcd_mu_pt170to300 = qcd_mu.add_process(
     id=31107,
     xsecs={
         13: Number(7019.0),
-        # 13.6: missing in XSDB
+        13.6: Number(7754.0),
     },
 )
 
@@ -462,7 +475,7 @@ qcd_mu_pt300to470 = qcd_mu.add_process(
     id=31108,
     xsecs={
         13: Number(622.4),
-        13.6: Number(699.1),
+        13.6: Number(699.6),
     },
 )
 
@@ -471,7 +484,7 @@ qcd_mu_pt470to600 = qcd_mu.add_process(
     id=31109,
     xsecs={
         13: Number(58.86),
-        # 13.6: missing in XSDB
+        13.6: Number(67.67),
     },
 )
 
@@ -480,7 +493,7 @@ qcd_mu_pt600to800 = qcd_mu.add_process(
     id=31110,
     xsecs={
         13: Number(18.22),
-        13.6: Number(21.37),
+        13.6: Number(21.27),
     },
 )
 
@@ -489,7 +502,7 @@ qcd_mu_pt800to1000 = qcd_mu.add_process(
     id=31111,
     xsecs={
         13: Number(3.25),
-        13.6: Number(3.913),
+        13.6: Number(3.89),
     },
 )
 
@@ -498,7 +511,7 @@ qcd_mu_pt1000toinf = qcd_mu.add_process(
     id=31112,
     xsecs={
         13: Number(1.08),  # NOTE: not found via XSDB, taken from an old reference
-        # 13.6: missing in XSDB
+        13.6: Number(1.323),
     },
 )
 
@@ -512,13 +525,17 @@ qcd_em = qcd.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
-# based on datasets QCD_Pt-{i}to{j}_EMEnriched_TuneCP5_13TeV-pythia8 (Summer20UL16)
+# 13 TeV xsecs based on datasets QCD_Pt-{i}to{j}_EMEnriched_TuneCP5_13TeV-pythia8 (Summer20UL16)
 # https://cms-gen-dev.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD_Pt-15to20_EMEnriched_TuneCP5_13TeV-pythia8  # noqa
+
+# 13.6 TeV xsecs based on XSDB search
+
 qcd_em_pt15to20 = qcd_em.add_process(
     name="qcd_em_pt15to20",
     id=31201,
     xsecs={
         13: Number(1324000.0),
+        13.6: Number(1444000.0),
     },
 )
 
@@ -527,6 +544,7 @@ qcd_em_pt20to30 = qcd_em.add_process(
     id=31202,
     xsecs={
         13: Number(4896000.0),
+        13.6: Number(5309000.0),
     },
 )
 qcd_em_pt30to50 = qcd_em.add_process(
@@ -534,6 +552,7 @@ qcd_em_pt30to50 = qcd_em.add_process(
     id=31203,
     xsecs={
         13: Number(6447000.0),
+        13.6: Number(6849000.0),
     },
 )
 
@@ -542,6 +561,7 @@ qcd_em_pt50to80 = qcd_em.add_process(
     id=31204,
     xsecs={
         13: Number(1988000.0),
+        13.6: Number(2130000.0),
     },
 )
 
@@ -550,6 +570,7 @@ qcd_em_pt80to120 = qcd_em.add_process(
     id=31205,
     xsecs={
         13: Number(367500.0),
+        13.6: Number(391400.0),
     },
 )
 
@@ -558,6 +579,7 @@ qcd_em_pt120to170 = qcd_em.add_process(
     id=31206,
     xsecs={
         13: Number(66590.0),
+        13.6: Number(71630.0),
     },
 )
 
@@ -566,20 +588,59 @@ qcd_em_pt170to300 = qcd_em.add_process(
     id=31207,
     xsecs={
         13: Number(16620.0),
+        13.6: Number(18010.0),
     },
 )
 
-qcd_em_pt300toinf = qcd_em.add_process(
-    name="qcd_em_pt300toinf",
+qcd_em_pt300to470 = qcd_em.add_process(
+    name="qcd_em_pt300to470",
     id=31208,
     xsecs={
         13: Number(1104.0),
+        13.6: Number(1116.0),
     },
 )
 
+qcd_em_pt470to600 = qcd_em.add_process(
+    name="qcd_em_pt470to600",
+    id=31209,
+    xsecs={
+        13: Number(58.86),
+        13.6: Number(82.76),
+    },
+)
+
+qcd_em_pt600to800 = qcd_em.add_process(
+    name="qcd_em_pt600to800",
+    id=31210,
+    xsecs={
+        13: Number(18.22),
+        13.6: Number(21.62),
+    },
+)
+
+qcd_em_pt800to1000 = qcd_em.add_process(
+    name="qcd_em_pt800to1000",
+    id=31211,
+    xsecs={
+        13: Number(3.25),
+        13.6: Number(3.361),
+    },
+)
+
+qcd_em_pt1000toinf = qcd_em.add_process(
+    name="qcd_em_pt1000toinf",
+    id=31212,
+    xsecs={
+        13: Number(1.08),
+        13.6: Number(1.02),
+    },
+)
+
+
 qcd_em_pt10to30 = qcd_em.add_process(
     name="qcd_em_pt10to30",
-    id=31209,
+    id=31213,
     xsecs={
         13: Number(0.1),  # TODO
     },
@@ -595,13 +656,17 @@ qcd_bctoe = qcd.add_process(
     xsecs={13: Number(0.1)},  # TODO
 )
 
-# based on datasets QCD_Pt_{i}to{j}_bcToE_TuneCP5_13TeV_pythia8 (Autumn18 (pt15to20) or Fall17 (all other))
+# 13 TeV xsecs based on datasets QCD_Pt_{i}to{j}_bcToE_TuneCP5_13TeV_pythia8 (Autumn18 (pt15to20) or Fall17 (all other))
 # https://cms-gen-dev.cern.ch/xsdb/?columns=37814272&currentPage=0&pageSize=10&searchQuery=DAS%3DQCD_Pt_15to20_bcToE_TuneCP5_13TeV_pythia8
+
+# 13.6 TeV xsecs based on XSDB search
+
 qcd_bctoe_pt15to20 = qcd_bctoe.add_process(
     name="qcd_bctoe_pt15to20",
     id=31301,
     xsecs={
         13: Number(186200.0),
+        13.6: Number(2348000.0),
     },
 )
 
@@ -610,11 +675,31 @@ qcd_bctoe_pt20to30 = qcd_bctoe.add_process(
     id=31302,
     xsecs={
         13: Number(303800.0),
+        13.6: Number(2037000.0),
     },
 )
+
+qcd_bctoe_pt30to50 = qcd_bctoe.add_process(
+    name="qcd_bctoe_pt30to50",
+    id=31303,
+    xsecs={
+        13: Number(362300.0),
+        13.6: Number(1042000.0),
+    },
+)
+
+qcd_bctoe_pt50to80 = qcd_bctoe.add_process(
+    name="qcd_bctoe_pt50to80",
+    id=31304,
+    xsecs={
+        13: Number(191100.0),
+        13.6: Number(270800.0),
+    },
+)
+
 qcd_bctoe_pt30to80 = qcd_bctoe.add_process(
     name="qcd_bctoe_pt30to80",
-    id=31303,
+    id=31305,
     xsecs={
         13: Number(362300.0),
     },
@@ -622,7 +707,7 @@ qcd_bctoe_pt30to80 = qcd_bctoe.add_process(
 
 qcd_bctoe_pt80to170 = qcd_bctoe.add_process(
     name="qcd_bctoe_pt80to170",
-    id=31304,
+    id=31306,
     xsecs={
         13: Number(33700.0),
     },
@@ -630,7 +715,7 @@ qcd_bctoe_pt80to170 = qcd_bctoe.add_process(
 
 qcd_bctoe_pt170to250 = qcd_bctoe.add_process(
     name="qcd_bctoe_pt170to250",
-    id=31305,
+    id=31307,
     xsecs={
         13: Number(2125.0),
     },
@@ -638,9 +723,81 @@ qcd_bctoe_pt170to250 = qcd_bctoe.add_process(
 
 qcd_bctoe_pt250toinf = qcd_bctoe.add_process(
     name="qcd_bctoe_pt250toinf",
-    id=31306,
+    id=31308,
     xsecs={
         13: Number(562.5),
+    },
+)
+
+qcd_bctoe_pt80to120 = qcd_bctoe.add_process(
+    name="qcd_bctoe_pt80to120",
+    id=31309,
+    xsecs={
+        13: Number(33700.0),
+        13.6: Number(60250.0),
+    },
+)
+
+qcd_bctoe_pt120to170 = qcd_bctoe.add_process(
+    name="qcd_bctoe_pt120to170",
+    id=31310,
+    xsecs={
+        13: Number(33700.0),
+        13.6: Number(13830.0),
+    },
+),
+
+qcd_bctoe_pt170to300 = qcd_bctoe.add_process(
+    name="qcd_bctoe_pt170to300",
+    id=31311,
+    xsecs={
+        13: Number(2125.0),
+        13.6: Number(4416.5),
+    },
+)
+
+qcd_bctoe_pt300to470 = qcd_bctoe.add_process(
+    name="qcd_bctoe_pt300to470",
+    id=31312,
+    xsecs={
+        13: Number(562.5),
+        13.6: Number(377.1),
+    },
+)
+
+qcd_bctoe_pt470to600 = qcd_bctoe.add_process(
+    name="qcd_bctoe_pt470to600",
+    id=31313,
+    xsecs={
+        13: Number(150.0),
+        13.6: Number(35.35),
+    },
+)
+
+qcd_bctoe_pt600to800 = qcd_bctoe.add_process(
+    name="qcd_bctoe_pt600to800",
+    id=31314,
+    xsecs={
+        13: Number(37.5),
+        13.6: Number(10.85),
+    },
+)
+
+qcd_bctoe_pt800to1000 = qcd_bctoe.add_process(
+    name="qcd_bctoe_pt800to1000",
+    id=31315,
+    xsecs={
+        13: Number(7.5),
+        13.6: Number(1.96),
+    },
+)
+
+qcd_bctoe_pt1000toinf = qcd_bctoe.add_process(
+    name="qcd_bctoe_pt1000toinf",
+    id=31316,
+    xsecs={
+        13: Number(1.5),
+        13.6: Number(0.6528),
     },
 )
 

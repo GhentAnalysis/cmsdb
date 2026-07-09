@@ -7,9 +7,8 @@ from order import DatasetInfo
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn24
-from cmsdb.campaigns.run3_2025_nano_v15 import campaign_run3_2025_nano_v15 as cpn25
 
-for cpn in [cpn24, cpn25]:
+for cpn in [cpn24]:
 
     #
     # Drell-Yan

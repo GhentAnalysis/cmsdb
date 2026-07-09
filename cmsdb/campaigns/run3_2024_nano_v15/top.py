@@ -4,10 +4,8 @@ from order import DatasetInfo
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn24
-from cmsdb.campaigns.run3_2025_nano_v15 import campaign_run3_2025_nano_v15 as cpn25
 
-
-for cpn in [cpn24, cpn25]:
+for cpn in [cpn24]:
 
     #
     # ttbar
@@ -283,7 +281,7 @@ for cpn in [cpn24, cpn25]:
         name="tttjm_amcatnlo",
         id=15564732,
         is_data=False,
-        processes=[procs.tttJm],
+        processes=[procs.tttjm],
         keys=[
             "/TTTJminus-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
@@ -295,7 +293,7 @@ for cpn in [cpn24, cpn25]:
         name="tttjp_amcatnlo",
         id=15565015,
         is_data=False,
-        processes=[procs.tttJp],
+        processes=[procs.tttjp],
         keys=[
             "/TTTJplus-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
@@ -307,7 +305,7 @@ for cpn in [cpn24, cpn25]:
         name="tttwm_amcatnlo",
         id=15563933,
         is_data=False,
-        processes=[procs.tttWm],
+        processes=[procs.tttwm],
         keys=[
             "/TTTWminus-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
@@ -319,7 +317,7 @@ for cpn in [cpn24, cpn25]:
         name="tttwp_amcatnlo",
         id=15563932,
         is_data=False,
-        processes=[procs.tttWp],
+        processes=[procs.tttwp],
         keys=[
             "/TTTWplus-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
