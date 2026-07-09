@@ -565,7 +565,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_parkinghh_c",
     id=3371985,
-    processes=[procs.PLACEHOLDER],
+    processes=[procs.data],
     keys=[
         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024C-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
@@ -577,7 +577,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_parkinghh_d",
     id=3371966,
-    processes=[procs.PLACEHOLDER],
+    processes=[procs.data],
     keys=[
         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024D-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
@@ -589,7 +589,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_parkinghh_e",
     id=3371910,
-    processes=[procs.PLACEHOLDER],
+    processes=[procs.data],
     keys=[
         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024E-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
     ],
@@ -601,7 +601,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_parkinghh_f",
     id=3371874,
-    processes=[procs.PLACEHOLDER],
+    processes=[procs.data],
     keys=[
         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024F-MINIv6NANOv15-v4-00000000000000000000000000000000/USER",  # noqa
     ],
@@ -613,7 +613,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_parkinghh_g",
     id=3371936,
-    processes=[procs.PLACEHOLDER],
+    processes=[procs.data],
     keys=[
         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024G-MINIv6NANOv15-v3-00000000000000000000000000000000/USER",  # noqa
     ],
@@ -625,7 +625,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_parkinghh_h",
     id=3371951,
-    processes=[procs.PLACEHOLDER],
+    processes=[procs.data],
     keys=[
         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024H-MINIv6NANOv15-v3-00000000000000000000000000000000/USER",  # noqa
     ],
@@ -637,7 +637,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="data_parkinghh_i",
     id=3371927,
-    processes=[procs.PLACEHOLDER],
+    processes=[procs.data],
     keys=[
         "/ParkingHH/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v3-00000000000000000000000000000000/USER",  # noqa
     ],
