@@ -7,6 +7,62 @@ CMS datasets from the 2018 data-taking campaign
 import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2018_nano_v9 import campaign_run2_2018_nano_v9 as cpn
 
+#
+# MET
+#
+
+cpn.add_dataset(
+    name="data_met_a",
+    id=14357560,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MET/Run2018A-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",  # noqa
+    ],
+    n_files=43,
+    aux=dict(era="A"),
+    n_events=52759851,
+)
+
+cpn.add_dataset(
+    name="data_met_b",
+    id=14360637,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MET/Run2018B-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",  # noqa
+    ],
+    n_files=19,
+    aux=dict(era="B"),
+    n_events=29714277,
+)
+
+cpn.add_dataset(
+    name="data_met_c",
+    id=14649660,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MET/Run2018C-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",  # noqa
+    ],
+    n_files=27,
+    aux=dict(era="C"),
+    n_events=31144738,
+)
+
+cpn.add_dataset(
+    name="data_met_d",
+    id=14432261,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MET/Run2018D-UL2018_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",  # noqa
+    ],
+    n_files=76,
+    aux=dict(era="D"),
+    n_events=160411782,
+)
+
 
 #
 # DoubleMuon
