@@ -7,7 +7,6 @@ CMS datasets from the 2017 data-taking campaign
 import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2017_nano_v9 import campaign_run2_2017_nano_v9 as cpn
 
-
 #
 # SingleElectron
 #
@@ -251,75 +250,65 @@ cpn.add_dataset(
     name="data_met_b",
     id=14225468,
     is_data=True,
-    processes=[procs.data_met],
+    processes=[procs.data],
     keys=[
-        "/MET/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        "/MET/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
     ],
     n_files=43,
+    aux=dict(era="B"),
     n_events=51623474,
-    aux={
-        "era": "B",
-    },
 )
 
 cpn.add_dataset(
     name="data_met_c",
     id=14226051,
     is_data=True,
-    processes=[procs.data_met],
+    processes=[procs.data],
     keys=[
-        "/MET/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        "/MET/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
     ],
     n_files=53,
+    aux=dict(era="C"),
     n_events=115906496,
-    aux={
-        "era": "C",
-    },
 )
 
 cpn.add_dataset(
     name="data_met_d",
     id=14230935,
     is_data=True,
-    processes=[procs.data_met],
+    processes=[procs.data],
     keys=[
-        "/MET/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        "/MET/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
     ],
     n_files=15,
+    aux=dict(era="D"),
     n_events=20075033,
-    aux={
-        "era": "D",
-    },
 )
 
 cpn.add_dataset(
     name="data_met_e",
     id=14225819,
     is_data=True,
-    processes=[procs.data_met],
+    processes=[procs.data],
     keys=[
-        "/MET/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        "/MET/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
     ],
     n_files=48,
+    aux=dict(era="E"),
     n_events=71418865,
-    aux={
-        "era": "E",
-    },
 )
 
 cpn.add_dataset(
     name="data_met_f",
     id=14224849,
     is_data=True,
-    processes=[procs.data_met],
+    processes=[procs.data],
     keys=[
-        "/MET/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        "/MET/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
     ],
     n_files=133,
+    aux=dict(era="F"),
     n_events=177521562,
-    aux={
-        "era": "F",
-    },
 )
 
 

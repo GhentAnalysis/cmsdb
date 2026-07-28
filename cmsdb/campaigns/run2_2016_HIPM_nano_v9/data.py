@@ -8,6 +8,75 @@ import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2016_HIPM_nano_v9 import campaign_run2_2016_HIPM_nano_v9 as cpn
 
 #
+# MET
+#
+
+cpn.add_dataset(
+    name="data_met_b",
+    id=14345732,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MET/Run2016B-ver2_HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",  # noqa
+    ],
+    n_files=26,
+    aux=dict(era="B"),
+    n_events=35987712,
+)
+
+cpn.add_dataset(
+    name="data_met_c",
+    id=14345710,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MET/Run2016C-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",  # noqa
+    ],
+    n_files=24,
+    aux=dict(era="C"),
+    n_events=17381222,
+)
+
+cpn.add_dataset(
+    name="data_met_d",
+    id=14345740,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MET/Run2016D-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",  # noqa
+    ],
+    n_files=24,
+    aux=dict(era="D"),
+    n_events=20947429,
+)
+
+cpn.add_dataset(
+    name="data_met_e",
+    id=14345277,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MET/Run2016E-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",  # noqa
+    ],
+    n_files=24,
+    aux=dict(era="E"),
+    n_events=22348402,
+)
+
+cpn.add_dataset(
+    name="data_met_f",
+    id=14345745,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MET/Run2016F-HIPM_UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",  # noqa
+    ],
+    n_files=18,
+    aux=dict(era="F"),
+    n_events=11936579,
+)
+
+#
 # SingleElectron
 #
 

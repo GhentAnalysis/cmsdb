@@ -7,6 +7,48 @@ CMS datasets from the 2016 data-taking campaign
 import cmsdb.processes as procs
 from cmsdb.campaigns.run2_2016_nano_v9 import campaign_run2_2016_nano_v9 as cpn
 
+#
+# MET
+#
+
+cpn.add_dataset(
+    name="data_met_f",
+    id=14227158,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MET/Run2016F-UL2016_MiniAODv2_NanoAODv9-v2/NANOAOD",  # noqa
+    ],
+    n_files=3,
+    aux=dict(era="F"),
+    n_events=1383250,
+)
+
+cpn.add_dataset(
+    name="data_met_g",
+    id=14237241,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MET/Run2016G-UL2016_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=17,
+    aux=dict(era="G"),
+    n_events=26974131,
+)
+
+cpn.add_dataset(
+    name="data_met_h",
+    id=14227075,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MET/Run2016H-UL2016_MiniAODv2_NanoAODv9-v1/NANOAOD",  # noqa
+    ],
+    n_files=32,
+    aux=dict(era="H"),
+    n_events=39773485,
+)
 
 #
 # SingleElectron

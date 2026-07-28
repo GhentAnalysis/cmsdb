@@ -572,6 +572,29 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
+    name="st_tchannel_antitop_5f_powheg",
+    id=14340610,
+    processes=[procs.st_tchannel_tbar],
+    keys=[
+        "/ST_t-channel_antitop_5f_InclusiveDecays_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=84,
+    n_events=70131000,
+)
+
+cpn.add_dataset(
+    name="st_tchannel_top_5f_powheg",
+    id=14345663,
+    processes=[procs.st_tchannel_t],
+    keys=[
+        "/ST_t-channel_top_5f_InclusiveDecays_TuneCP5_13TeV-powheg-pythia8/RunIISummer20UL17NanoAODv9-106X_mc2017_realistic_v9-v1/NANOAODSIM",  # noqa
+    ],
+    n_files=200,
+    n_events=138655000,
+)
+
+
+cpn.add_dataset(
     name="st_twchannel_t",
     id=14246131,
     processes=[procs.st_twchannel_t],
