@@ -423,8 +423,8 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-300to470_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1479,
-    n_events=78777016,
+    n_files=1493,
+    n_events=79703716,
 )
 #
 
@@ -471,8 +471,8 @@ cpn.add_dataset(
     keys=[
         "/QCD_Bin-PT-1000_Fil-MuEnriched_TuneCP5_13p6TeV_pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1822,
-    n_events=82961453,
+    n_files=1900,
+    n_events=87159405,
 )
 #
 
