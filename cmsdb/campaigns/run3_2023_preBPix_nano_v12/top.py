@@ -1040,7 +1040,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="ttwz_madgraph",
     id=14969092,
-    processes=[procs.ttw],
+    processes=[procs.ttwz],
     info=dict(
         nominal=DatasetInfo(
             keys=[

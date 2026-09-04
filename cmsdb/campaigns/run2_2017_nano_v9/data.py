@@ -92,79 +92,74 @@ cpn.add_dataset(
 # SingleMuon
 #
 
+# using GT36
+# see https://twiki.cern.ch/twiki/bin/view/CMS/PdmVRun2LegacyAnalysis
+# see https://cms-talk.web.cern.ch/t/recipes-for-run2-legacy-analyses/21949
+
+
 cpn.add_dataset(
     name="data_mu_b",
-    id=14226191,
+    id=14578783,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
         "/SingleMuon/Run2017B-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
     ],
-    n_files=79,
-    n_events=136300266,
-    aux={
-        "era": "B",
-    },
+    n_files=52,
+    aux=dict(era="B"),
+    n_events=102065936,
 )
 
 cpn.add_dataset(
     name="data_mu_c",
-    id=14226140,
+    id=14656573,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2017C-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        "/SingleMuon/Run2017C-UL2017_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
-    n_files=117,
-    n_events=165652756,
-    aux={
-        "era": "C",
-    },
+    n_files=94,
+    aux=dict(era="C"),
+    n_events=165575653,
 )
 
 cpn.add_dataset(
     name="data_mu_d",
-    id=14226234,
+    id=14463112,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2017D-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        "/SingleMuon/Run2017D-UL2017_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
-    n_files=47,
-    n_events=70361660,
-    aux={
-        "era": "D",
-    },
+    n_files=40,
+    aux=dict(era="D"),
+    n_events=70274947,
 )
 
 cpn.add_dataset(
     name="data_mu_e",
-    id=14235644,
+    id=14579995,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2017E-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        "/SingleMuon/Run2017E-UL2017_MiniAODv2_NanoAODv9_GT36-v2/NANOAOD",
     ],
-    n_files=78,
-    n_events=154618774,
-    aux={
-        "era": "E",
-    },
+    n_files=84,
+    aux=dict(era="E"),
+    n_events=154548001,
 )
 
 cpn.add_dataset(
     name="data_mu_f",
-    id=14226183,
+    id=14423708,
     is_data=True,
     processes=[procs.data_mu],
     keys=[
-        "/SingleMuon/Run2017F-UL2017_MiniAODv2_NanoAODv9-v1/NANOAOD",
+        "/SingleMuon/Run2017F-UL2017_MiniAODv2_NanoAODv9_GT36-v1/NANOAOD",
     ],
-    n_files=115,
-    n_events=242140980,
-    aux={
-        "era": "F",
-    },
+    n_files=138,
+    aux=dict(era="F"),
+    n_events=241575058,
 )
 
 

@@ -193,10 +193,10 @@ cpn.add_dataset(
     processes=[procs.ttz_zll_m50toinf],
     keys=[
         "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6-v2/NANOAODSIM",  # noqa
-        "/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6_ext1-v2/NANOAODSIM",  # noqa
+        #"/TTLL_MLL-50_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer23BPixNanoAODv12-130X_mcRun3_2023_realistic_postBPix_v6_ext1-v2/NANOAODSIM",  # noqa
     ],
-    n_files=23 + 43,
-    n_events=400000 + 3856000,
+    n_files=23, #+ 43,
+    n_events=400000, #+ 3856000,
 )
 
 cpn.add_dataset(

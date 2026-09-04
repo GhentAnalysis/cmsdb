@@ -41,6 +41,21 @@ for cpn in [cpn24]:
     )
 
     #
+    # TTG
+    #
+    cpn.add_dataset(
+        name="ttg_amcatnlo",
+        id=15536929,
+        is_data=False,
+        processes=[procs.ttgamma],
+        keys=[
+            "/TTG-1Jets_TuneCP5_13p6TeV_amcatnloFXFXold-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+        ],
+        n_files=143,
+        n_events=19416271,
+    )
+
+    #
     # t channel
     #
 
@@ -227,16 +242,16 @@ for cpn in [cpn24]:
         n_events=5529000,
     )
 
-    # cpn.add_dataset(
-    #     name="ttzz_madgraph",
-    #     id=14800072,
-    #     processes=[procs.ttzz],
-    #     keys=[
-    #         "/TTZZ_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
-    #     ],
-    #     n_files=0,
-    #     n_events=0,
-    # )
+    cpn.add_dataset(
+        name="ttzz_madgraph",
+        id=15541782,
+        processes=[procs.ttzz],
+        keys=[
+            "/TTZZ_TuneCP5_13p6TeV_madgraph-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
+        ],
+        n_files=282,
+        n_events=10798000,
+    )
 
     cpn.add_dataset(
         name="tzq_zll_4f_m30toinf_amcatnlo",
@@ -264,74 +279,74 @@ for cpn in [cpn24]:
 
     cpn.add_dataset(
         name="tttjm_amcatnlo",
-        id=15393311,
+        id=15564732,
         is_data=False,
         processes=[procs.tttjm],
         keys=[
-            "",  # noqa
+            "/TTTJminus-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
-        n_files=0,
-        n_events=0,
+        n_files=138,
+        n_events=9663000,
     )
 
     cpn.add_dataset(
         name="tttjp_amcatnlo",
-        id=15393343,
+        id=15565015,
         is_data=False,
         processes=[procs.tttjp],
         keys=[
-            "",  # noqa
+            "/TTTJplus-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
-        n_files=0,
-        n_events=0,
+        n_files=142,
+        n_events=9513000,
     )
 
     cpn.add_dataset(
         name="tttwm_amcatnlo",
-        id=15393376,
+        id=15563933,
         is_data=False,
         processes=[procs.tttwm],
         keys=[
-            "",  # noqa
+            "/TTTWminus-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
-        n_files=0,
-        n_events=0,
+        n_files=187,
+        n_events=9690184,
     )
 
     cpn.add_dataset(
         name="tttwp_amcatnlo",
-        id=15393412,
+        id=15563932,
         is_data=False,
         processes=[procs.tttwp],
         keys=[
-            "",  # noqa
+            "/TTTWplus-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
-        n_files=0,
-        n_events=0,
+        n_files=173,
+        n_events=9580240,
     )
 
     cpn.add_dataset(
         name="twz_tqq_wlnu_zll_dr1_amcatnlo",
-        id=15393450,
+        id=15582517,
         is_data=False,
         processes=[procs.twz_tqq_wlnu_zll_dr1],
         keys=[
-            "",  # noqa
+            "/TWZ-Tto2Q-WtoLNu-Zto2L-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
-        n_files=0,
-        n_events=0,
+        n_files=119,
+        n_events=10942000,
     )
 
     cpn.add_dataset(
         name="twz_tlnu_wqq_zll_dr1_amcatnlo",
-        id=15393488,
+        id=15582538,
         is_data=False,
         processes=[procs.twz_tlnu_wqq_zll_dr1],
         keys=[
-            "",  # noqa
+            "/TWZ-TtoLNu-Wto2Q-Zto2L-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
-        n_files=0,
-        n_events=0,
+        n_files=117,
+        n_events=10951000,
     )
 
     cpn.add_dataset(
@@ -340,8 +355,8 @@ for cpn in [cpn24]:
         is_data=False,
         processes=[procs.twz_tlnu_wlnu_zll_dr1],
         keys=[
-            "",  # noqa
+            "/TWZ-TtoLNu-WtoLNu-Zto2L-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
-        n_files=0,
-        n_events=0,
+        n_files=98,
+        n_events=10992000,
     )
