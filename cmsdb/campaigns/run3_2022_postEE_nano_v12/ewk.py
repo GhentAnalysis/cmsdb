@@ -78,12 +78,12 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/mc/Run3Summer22EENanoAODv12/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/NANOAODSIM/130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/2530000/80affbe1-2769-4b59-ad16-96d957d14c19.root",
-                    "/store/mc/Run3Summer22EENanoAODv12/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/NANOAODSIM/130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/40000/d3ac3b8b-bf43-4858-b635-a74ee4372bed.root",
-                    "/store/mc/Run3Summer22EENanoAODv12/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/NANOAODSIM/130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/40000/294b44a6-9f92-470a-a628-5ac5e1a712a1.root",
-                ]
+                    "/store/mc/Run3Summer22EENanoAODv12/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/NANOAODSIM/130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/2530000/80affbe1-2769-4b59-ad16-96d957d14c19.root",  # noqa
+                    "/store/mc/Run3Summer22EENanoAODv12/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/NANOAODSIM/130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/40000/d3ac3b8b-bf43-4858-b635-a74ee4372bed.root",  # noqa
+                    "/store/mc/Run3Summer22EENanoAODv12/DYto2L-4Jets_MLL-50_TuneCP5_13p6TeV_madgraphMLM-pythia8/NANOAODSIM/130X_mcRun3_2022_realistic_postEE_v6_ext1-v2/40000/294b44a6-9f92-470a-a628-5ac5e1a712a1.root",  # noqa
+                ],
             },
-            n_files=1584, # 1587-3
+            n_files=1584,  # 1587-3
             n_events=254295366,
         ),
     ),

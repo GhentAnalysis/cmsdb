@@ -876,21 +876,21 @@ cpn.add_dataset(
     n_events=1987058,
 )
 
-cpn.add_dataset( 
+cpn.add_dataset(
     name="zzz_amcatnlo",
     id=14801345,
     processes=[procs.zzz],
     info=dict(
         nominal=DatasetInfo(
             keys=[
-                "/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa               
+                "/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/Run3Summer22NanoAODv12-130X_mcRun3_2022_realistic_v5-v2/NANOAODSIM",  # noqa
             ],
             aux={
                 "broken_files": [
-                    "/store/mc/Run3Summer22NanoAODv12/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2022_realistic_v5-v2/50000/7c4f3eb2-3c7e-4c21-98ed-c1892bb3a057.root", # no pfd weights
-                ]
+                    "/store/mc/Run3Summer22NanoAODv12/ZZZ_TuneCP5_13p6TeV_amcatnlo-pythia8/NANOAODSIM/130X_mcRun3_2022_realistic_v5-v2/50000/7c4f3eb2-3c7e-4c21-98ed-c1892bb3a057.root",  # no pfd weights  # noqa
+                ],
             },
-            n_files=22, # 23 -1
+            n_files=22,  # 23 -1
             n_events=1970234,
         ),
     ),

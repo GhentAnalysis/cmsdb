@@ -3,7 +3,6 @@
 """
 Electroweak datasets for the 2024 data-taking campaign
 """
-from order import DatasetInfo
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customnano_v15 as cpn

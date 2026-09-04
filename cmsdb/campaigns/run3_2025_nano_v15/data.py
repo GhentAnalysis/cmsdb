@@ -21,7 +21,7 @@ cpn.add_dataset(
             },
             n_files=638,  # 638-0
             n_events=250835953,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -38,12 +38,12 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/data/Run2025D/Muon0/NANOAOD/PromptReco-v1/000/395/517/00000/39de813a-c531-4ecc-9585-8aa1b8dd7108.root",
+                    "/store/data/Run2025D/Muon0/NANOAOD/PromptReco-v1/000/395/517/00000/39de813a-c531-4ecc-9585-8aa1b8dd7108.root",  # noqa
                 ],
             },
             n_files=1165,  # 1166-1
             n_events=479676562,
-        )
+        ),
     ),
     aux={"era": "D", "jec_era": ""},
 )
@@ -64,7 +64,7 @@ cpn.add_dataset(
             },
             n_files=606,  # 606-0
             n_events=265645863,
-        )
+        ),
     ),
     aux={"era": "E", "jec_era": ""},
 )
@@ -85,7 +85,7 @@ cpn.add_dataset(
             },
             n_files=884,  # 884-0
             n_events=377119912,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -106,7 +106,7 @@ cpn.add_dataset(
             },
             n_files=1009,  # 1009-0
             n_events=442329683,
-        )
+        ),
     ),
     aux={"era": "G", "jec_era": ""},
 )
@@ -127,7 +127,7 @@ cpn.add_dataset(
             },
             n_files=644,  # 644-0
             n_events=250819768,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -144,12 +144,12 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/data/Run2025D/Muon1/NANOAOD/PromptReco-v1/000/395/522/00000/61f82247-c38c-4e02-bdb4-080981e24954.root"
+                    "/store/data/Run2025D/Muon1/NANOAOD/PromptReco-v1/000/395/522/00000/61f82247-c38c-4e02-bdb4-080981e24954.root",  # noqa
                 ],
             },
             n_files=1158,  # 1159-1
             n_events=479642866,
-        )
+        ),
     ),
     aux={"era": "D", "jec_era": ""},
 )
@@ -170,7 +170,7 @@ cpn.add_dataset(
             },
             n_files=611,  # 611-0
             n_events=265630211,
-        )
+        ),
     ),
     aux={"era": "E", "jec_era": ""},
 )
@@ -191,7 +191,7 @@ cpn.add_dataset(
             },
             n_files=891,  # 891-0
             n_events=377092035,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -212,7 +212,7 @@ cpn.add_dataset(
             },
             n_files=1003,  # 1003-0
             n_events=442232031,
-        )
+        ),
     ),
     aux={"era": "G", "jec_era": ""},
 )
@@ -233,7 +233,7 @@ cpn.add_dataset(
             },
             n_files=655,  # 655-0
             n_events=243682359,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -254,7 +254,7 @@ cpn.add_dataset(
             },
             n_files=1105,  # 1105-0
             n_events=414017171,
-        )
+        ),
     ),
     aux={"era": "D", "jec_era": ""},
 )
@@ -275,7 +275,7 @@ cpn.add_dataset(
             },
             n_files=595,  # 595-0
             n_events=240927385,
-        )
+        ),
     ),
     aux={"era": "E", "jec_era": ""},
 )
@@ -296,7 +296,7 @@ cpn.add_dataset(
             },
             n_files=888,  # 888-0
             n_events=346019505,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -317,7 +317,7 @@ cpn.add_dataset(
             },
             n_files=1012,  # 1012-0
             n_events=421398444,
-        )
+        ),
     ),
     aux={"era": "G", "jec_era": ""},
 )
@@ -334,12 +334,12 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/data/Run2025C/EGamma1/NANOAOD/PromptReco-v1/000/392/992/00000/76fd2e77-82dd-47d4-9b40-2b540ce232b8.root"
+                    "/store/data/Run2025C/EGamma1/NANOAOD/PromptReco-v1/000/392/992/00000/76fd2e77-82dd-47d4-9b40-2b540ce232b8.root",  # noqa
                 ],
             },
             n_files=651,  # 652-1
             n_events=243674671,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -360,7 +360,7 @@ cpn.add_dataset(
             },
             n_files=1095,  # 1095-0
             n_events=413556254,
-        )
+        ),
     ),
     aux={"era": "D", "jec_era": ""},
 )
@@ -381,7 +381,7 @@ cpn.add_dataset(
             },
             n_files=596,  # 596-0
             n_events=240921314,
-        )
+        ),
     ),
     aux={"era": "E", "jec_era": ""},
 )
@@ -402,7 +402,7 @@ cpn.add_dataset(
             },
             n_files=875,  # 875-0
             n_events=346000262,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -423,7 +423,7 @@ cpn.add_dataset(
             },
             n_files=1010,  # 1010-0
             n_events=421102377,
-        )
+        ),
     ),
     aux={"era": "G", "jec_era": ""},
 )
@@ -444,7 +444,7 @@ cpn.add_dataset(
             },
             n_files=656,  # 656-0
             n_events=243672282,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -465,7 +465,7 @@ cpn.add_dataset(
             },
             n_files=1121,  # 1121-0
             n_events=414008481,
-        )
+        ),
     ),
     aux={"era": "D", "jec_era": ""},
 )
@@ -486,7 +486,7 @@ cpn.add_dataset(
             },
             n_files=593,  # 593-0
             n_events=240923259,
-        )
+        ),
     ),
     aux={"era": "E", "jec_era": ""},
 )
@@ -507,7 +507,7 @@ cpn.add_dataset(
             },
             n_files=876,  # 876-0
             n_events=346008679,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -528,7 +528,7 @@ cpn.add_dataset(
             },
             n_files=1016,  # 1016-0
             n_events=421453068,
-        )
+        ),
     ),
     aux={"era": "G", "jec_era": ""},
 )
@@ -549,7 +549,7 @@ cpn.add_dataset(
             },
             n_files=660,  # 660-0
             n_events=243679348,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -570,7 +570,7 @@ cpn.add_dataset(
             },
             n_files=1090,  # 1090-0
             n_events=414010046,
-        )
+        ),
     ),
     aux={"era": "D", "jec_era": ""},
 )
@@ -591,7 +591,7 @@ cpn.add_dataset(
             },
             n_files=598,  # 598-0
             n_events=240923335,
-        )
+        ),
     ),
     aux={"era": "E", "jec_era": ""},
 )
@@ -612,7 +612,7 @@ cpn.add_dataset(
             },
             n_files=889,  # 889-0
             n_events=346009210,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -633,7 +633,7 @@ cpn.add_dataset(
             },
             n_files=1012,  # 1012-0
             n_events=421124471,
-        )
+        ),
     ),
     aux={"era": "G", "jec_era": ""},
 )
@@ -650,13 +650,13 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/data/Run2025C/MuonEG/NANOAOD/PromptReco-v1/000/392/674/00000/a67210fc-f344-40b6-a391-41b9ce40e92c.root",  # empty file
-                    "/store/data/Run2025C/MuonEG/NANOAOD/PromptReco-v1/000/392/992/00000/0bc110c2-fa13-4a5d-8ba1-7d383dc05613.root",  # empty file
+                    "/store/data/Run2025C/MuonEG/NANOAOD/PromptReco-v1/000/392/674/00000/a67210fc-f344-40b6-a391-41b9ce40e92c.root",  # empty file  # noqa
+                    "/store/data/Run2025C/MuonEG/NANOAOD/PromptReco-v1/000/392/992/00000/0bc110c2-fa13-4a5d-8ba1-7d383dc05613.root",  # empty file  # noqa
                 ],
             },
             n_files=170,  # 172-2
             n_events=41994774,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -673,15 +673,15 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/188/00000/7e5cc229-ede7-4a4a-88ef-d10b41f3ec5a.root",  # empty file
-                    "/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/187/00000/f9ddbea8-810f-4995-aa10-3c0dede035dc.root",  # empty file
-                    "/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/518/00000/391d1b46-ab1a-4214-b22f-b2ff2e53bcc1.root",  # empty file
-                    "/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/640/00000/bee90dfb-e61e-4874-8427-220aacc6cd63.root",  # empty file
+                    "/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/188/00000/7e5cc229-ede7-4a4a-88ef-d10b41f3ec5a.root",  # empty file  # noqa
+                    "/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/187/00000/f9ddbea8-810f-4995-aa10-3c0dede035dc.root",  # empty file  # noqa
+                    "/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/518/00000/391d1b46-ab1a-4214-b22f-b2ff2e53bcc1.root",  # empty file  # noqa
+                    "/store/data/Run2025D/MuonEG/NANOAOD/PromptReco-v1/000/395/640/00000/bee90dfb-e61e-4874-8427-220aacc6cd63.root",  # empty file  # noqa
                 ],
             },
             n_files=325,  # 329-4
             n_events=72820407,
-        )
+        ),
     ),
     aux={"era": "D", "jec_era": ""},
 )
@@ -698,12 +698,12 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/data/Run2025E/MuonEG/NANOAOD/PromptReco-v1/000/396/155/00000/4d2a409c-e578-4392-96b4-4b664009d9dd.root",  # empty file
+                    "/store/data/Run2025E/MuonEG/NANOAOD/PromptReco-v1/000/396/155/00000/4d2a409c-e578-4392-96b4-4b664009d9dd.root",  # empty file  # noqa
                 ],
             },
             n_files=164,  # 165-1
             n_events=40691496,
-        )
+        ),
     ),
     aux={"era": "E", "jec_era": ""},
 )
@@ -720,12 +720,12 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/data/Run2025F/MuonEG/NANOAOD/PromptReco-v1/000/396/818/00000/094de818-ac6b-4f7e-a57f-b4faf734b006.root",  # empty file
+                    "/store/data/Run2025F/MuonEG/NANOAOD/PromptReco-v1/000/396/818/00000/094de818-ac6b-4f7e-a57f-b4faf734b006.root",  # empty file  # noqa
                 ],
             },
             n_files=269,  # 270-1
             n_events=58301670,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -742,12 +742,12 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/data/Run2025G/MuonEG/NANOAOD/PromptReco-v1/000/398/649/00000/7ffad70c-d9f4-43e6-a858-1b8824b53fff.root",  # empty file
+                    "/store/data/Run2025G/MuonEG/NANOAOD/PromptReco-v1/000/398/649/00000/7ffad70c-d9f4-43e6-a858-1b8824b53fff.root",  # empty file  # noqa
                 ],
             },
             n_files=281,  # 282-1
             n_events=67268221,
-        )
+        ),
     ),
     aux={"era": "G", "jec_era": ""},
 )
@@ -768,7 +768,7 @@ cpn.add_dataset(
             },
             n_files=356,  # 356-0
             n_events=148575745,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -789,7 +789,7 @@ cpn.add_dataset(
             },
             n_files=344,  # 344-0
             n_events=143519758,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -810,7 +810,7 @@ cpn.add_dataset(
             },
             n_files=350,  # 350-0
             n_events=148565659,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -831,7 +831,7 @@ cpn.add_dataset(
             },
             n_files=345,  # 345-0
             n_events=143511119,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -852,7 +852,7 @@ cpn.add_dataset(
             },
             n_files=342,  # 342-0
             n_events=133952379,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -869,12 +869,12 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/data/Run2025F/EGamma0/NANOAOD/PromptReco-v2/000/397/711/00000/8d4bc58b-8d03-492a-87e6-bff77b7e46aa.root"
+                    "/store/data/Run2025F/EGamma0/NANOAOD/PromptReco-v2/000/397/711/00000/8d4bc58b-8d03-492a-87e6-bff77b7e46aa.root",  # noqa
                 ],
             },
             n_files=350,  # 351-1
             n_events=139317024,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -895,7 +895,7 @@ cpn.add_dataset(
             },
             n_files=347,  # 347-0
             n_events=133951067,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -916,7 +916,7 @@ cpn.add_dataset(
             },
             n_files=350,  # 350-0
             n_events=139310909,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -933,12 +933,12 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/data/Run2025C/EGamma2/NANOAOD/PromptReco-v2/000/393/126/00000/637da0ca-2fac-4525-adce-4a4fcf2de21a.root"
+                    "/store/data/Run2025C/EGamma2/NANOAOD/PromptReco-v2/000/393/126/00000/637da0ca-2fac-4525-adce-4a4fcf2de21a.root",  # noqa
                 ],
             },
             n_files=350,  # 351-1
             n_events=133950574,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -959,7 +959,7 @@ cpn.add_dataset(
             },
             n_files=358,  # 358-0
             n_events=139313488,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -980,7 +980,7 @@ cpn.add_dataset(
             },
             n_files=343,  # 343-0
             n_events=133949781,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -1001,7 +1001,7 @@ cpn.add_dataset(
             },
             n_files=340,  # 340-0
             n_events=139314438,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )
@@ -1022,7 +1022,7 @@ cpn.add_dataset(
             },
             n_files=92,  # 92-0
             n_events=23203653,
-        )
+        ),
     ),
     aux={"era": "C", "jec_era": ""},
 )
@@ -1043,7 +1043,7 @@ cpn.add_dataset(
             },
             n_files=105,  # 105-0
             n_events=22447339,
-        )
+        ),
     ),
     aux={"era": "F", "jec_era": ""},
 )

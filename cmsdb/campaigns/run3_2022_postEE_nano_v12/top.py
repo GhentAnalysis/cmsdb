@@ -24,10 +24,10 @@ cpn.add_dataset(
             ],
             aux={
                 "broken_files": [
-                    "/store/mc/Run3Summer22EENanoAODv12/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/NANOAODSIM/130X_mcRun3_2022_realistic_postEE_v6-v2/30000/2e71b221-c0cb-4a30-a5ae-a605d1942f44.root"
-                ]
+                    "/store/mc/Run3Summer22EENanoAODv12/TTtoLNu2Q_TuneCP5_13p6TeV_powheg-pythia8/NANOAODSIM/130X_mcRun3_2022_realistic_postEE_v6-v2/30000/2e71b221-c0cb-4a30-a5ae-a605d1942f44.root",  # noqa
+                ],
             },
-            n_files=522, # 523-1
+            n_files=522,  # 523-1
             n_events=267007920,
         ),
         extension=DatasetInfo(

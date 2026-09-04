@@ -745,7 +745,7 @@ qcd_bctoe_pt120to170 = qcd_bctoe.add_process(
         13: Number(33700.0),
         13.6: Number(13830.0),
     },
-),
+)
 
 qcd_bctoe_pt170to300 = qcd_bctoe.add_process(
     name="qcd_bctoe_pt170to300",

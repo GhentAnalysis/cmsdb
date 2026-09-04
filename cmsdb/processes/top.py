@@ -693,7 +693,7 @@ ttwz = ttvv.add_process(
             Number(2705E-6, {"scale": (0.099j, 0.106j), "pdf": 0.027j}) +
             Number(1179E-6, {"scale": 0.112j, "pdf": 0.037j})
         ),
-        13.6: Number(0.002715)
+        13.6: Number(0.002715),
     },
 )
 

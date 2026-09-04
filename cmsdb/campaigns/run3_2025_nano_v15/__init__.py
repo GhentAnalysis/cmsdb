@@ -2,7 +2,7 @@
 
 """
 Common, analysis independent definition of the 2025 data-taking campaign
-with datasets at NanoAOD tier in version 15. 
+with datasets at NanoAOD tier in version 15.
 The corresponding set of MC samples include a siMuonlation of the detector.
 See https://python-order.readthedocs.io/en/latest/quickstart.html#analysis-campaign-and-config.
 

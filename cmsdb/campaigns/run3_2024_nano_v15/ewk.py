@@ -539,7 +539,7 @@ for cpn in [cpn24]:
                 ],
                 aux={
                     "broken_files": [
-                    ]
+                    ],
                 },
                 n_files=201,
                 n_events=16192091,
