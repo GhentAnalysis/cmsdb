@@ -27,7 +27,7 @@ campaign_run3_2024_customnano_v15 = Campaign(
     ecm=13.6,
     bx=25,
     aux={
-        "tier": "NanoAOD",
+        "tier": "CustomNanoAOD",
         "year": 2024,
         "version": 15,
         "run": 3,
