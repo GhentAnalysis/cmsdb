@@ -9,7 +9,7 @@ import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_customnano_v15 import campaign_run3_2024_customnano_v15 as cpn
 
 cpn.add_dataset(
-    name="data_muon0_c",
+    name="data_mu0_c",
     id=3372666,
     is_data=True,
     processes=[procs.data],
@@ -21,7 +21,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon0_d",
+    name="data_mu0_d",
     id=3372653,
     is_data=True,
     processes=[procs.data],
@@ -33,7 +33,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon0_e",
+    name="data_mu0_e",
     id=3372681,
     is_data=True,
     processes=[procs.data],
@@ -45,7 +45,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon0_f",
+    name="data_mu0_f",
     id=3372658,
     is_data=True,
     processes=[procs.data],
@@ -57,7 +57,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon0_g",
+    name="data_mu0_g",
     id=3371521,
     is_data=True,
     processes=[procs.data],
@@ -69,7 +69,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon0_h",
+    name="data_mu0_h",
     id=3371539,
     is_data=True,
     processes=[procs.data],
@@ -81,7 +81,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon0_i",
+    name="data_mu0_i_v1",
     id=3371614,
     is_data=True,
     processes=[procs.data],
@@ -93,7 +93,19 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon1_c",
+    name="data_mu0_i_v2",
+    id=33716140,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/Muon0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15_v2-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1097,
+    n_events=105194627,
+)
+
+cpn.add_dataset(
+    name="data_mu1_c",
     id=3370523,
     is_data=True,
     processes=[procs.data],
@@ -105,7 +117,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon1_d",
+    name="data_mu1_d",
     id=3370575,
     is_data=True,
     processes=[procs.data],
@@ -117,7 +129,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon1_e",
+    name="data_mu1_e",
     id=3370570,
     is_data=True,
     processes=[procs.data],
@@ -129,7 +141,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon1_f",
+    name="data_mu1_f",
     id=3370557,
     is_data=True,
     processes=[procs.data],
@@ -141,7 +153,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon1_g",
+    name="data_mu1_g",
     id=3370568,
     is_data=True,
     processes=[procs.data],
@@ -153,7 +165,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon1_h",
+    name="data_mu1_h",
     id=3370551,
     is_data=True,
     processes=[procs.data],
@@ -165,7 +177,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muon1_i",
+    name="data_mu1_i_v1",
     id=3370561,
     is_data=True,
     processes=[procs.data],
@@ -174,6 +186,18 @@ cpn.add_dataset(
     ],
     n_files=1015,
     n_events=97630010,
+)
+
+cpn.add_dataset(
+    name="data_mu1_i_v2",
+    id=33705610,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/Muon1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1095,
+    n_events=105133498,
 )
 
 cpn.add_dataset(
@@ -249,7 +273,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_muoneg_i",
+    name="data_muoneg_i_v1",
     id=3372024,
     is_data=True,
     processes=[procs.data],
@@ -258,6 +282,18 @@ cpn.add_dataset(
     ],
     n_files=147,
     n_events=14579063,
+)
+
+cpn.add_dataset(
+    name="data_muoneg_i_v2",
+    id=33720240,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/MuonEG/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=148,
+    n_events=14674636,
 )
 
 cpn.add_dataset(
@@ -333,7 +369,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_egamma0_i",
+    name="data_egamma0_i_v1",
     id=3371586,
     is_data=True,
     processes=[procs.data],
@@ -342,6 +378,18 @@ cpn.add_dataset(
     ],
     n_files=1392,
     n_events=132904290,
+)
+
+cpn.add_dataset(
+    name="data_egamma0_i_v2",
+    id=33715860,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/EGamma0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15_v2-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1575,
+    n_events=150687674,
 )
 
 cpn.add_dataset(
@@ -417,7 +465,7 @@ cpn.add_dataset(
 )
 
 cpn.add_dataset(
-    name="data_egamma1_i",
+    name="data_egamma1_i_v1",
     id=3372064,
     is_data=True,
     processes=[procs.data],
@@ -426,6 +474,18 @@ cpn.add_dataset(
     ],
     n_files=1388,
     n_events=132903874,
+)
+
+cpn.add_dataset(
+    name="data_egamma1_i_v2",
+    id=33720640,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/EGamma1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1592,
+    n_events=151157592,
 )
 
 cpn.add_dataset(
@@ -507,7 +567,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="data_jetmet0_i",
+    name="data_jetmet0_i_v1",
     id=3371617,
     is_data=True,
     processes=[procs.data],
@@ -516,6 +576,18 @@ cpn.add_dataset(
     ],
     n_files=606,
     n_events=59259348,
+)
+
+cpn.add_dataset(
+    name="data_jetmet0_i_v2",
+    id=33716170,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/JetMET0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1269,
+    n_events=116046182,
 )
 
 
@@ -598,7 +670,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="data_jetmet1_i",
+    name="data_jetmet1_i_v1",
     id=3371564,
     is_data=True,
     processes=[procs.data],
@@ -607,6 +679,19 @@ cpn.add_dataset(
     ],
     n_files=607,
     n_events=59255632,
+)
+
+
+cpn.add_dataset(
+    name="data_jetmet1_i_v2",
+    id=33715640,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1308,
+    n_events=116127561,
 )
 
 
@@ -689,7 +774,7 @@ cpn.add_dataset(
 
 
 cpn.add_dataset(
-    name="data_parkinghh_i",
+    name="data_parkinghh_i_v1",
     id=3371927,
     is_data=True,
     processes=[procs.data],
@@ -698,4 +783,16 @@ cpn.add_dataset(
     ],
     n_files=1075,
     n_events=103577087,
+)
+
+cpn.add_dataset(
+    name="data_parkinghh_i_v2",
+    id=33719270,
+    is_data=True,
+    processes=[procs.data],
+    keys=[
+        "/ParkingHH/phys_higgs-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15_v2-v2-00000000000000000000000000000000/USER",  # noqa
+    ],
+    n_files=1094,
+    n_events=104677951,
 )
