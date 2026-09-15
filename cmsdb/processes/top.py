@@ -740,7 +740,7 @@ ttvv.set_xsec(
 
 
 # TTT
-#
+# https://github.com/gdurieux/triple-top-nlo
 
 ttt = Process(
     name="ttt",
@@ -752,44 +752,53 @@ tttw = ttt.add_process(
     name="tttw",
     id=3020,
     label=f"{tt.label}tW",
-    xsecs={13: Number(0.0013)},
+    # xsecs={13: Number(0.0013)},
 )
 
 tttwm = tttw.add_process(
     name="tttwm",
     id=3021,
     label=f"{tt.label}tWm",
-    xsecs={13: Number(0.00066),
-           13.6: Number(0.0005901)},
+    xsecs={ #13: Number(0.00066),
+            #13.6: Number(0.0005901)
+            13: Number(0.000863),
+            13.6: Number(0.00102)},
 )
 
 tttwp = tttw.add_process(
     name="tttwp",
     id=3022,
     label=f"{tt.label}tWp",
-    xsecs={13: Number(0.00066),
-           13.6: Number(0.0005975)},
+    xsecs={ #13: Number(0.00066),
+            #13.6: Number(0.0005901)
+            13: Number(0.000863),
+            13.6: Number(0.00102)},
 )
 
 tttj = ttt.add_process(
     name="tttj",
     id=3030,
     label=f"{tt.label}tJ",
-    xsecs={13: Number(0.0007)},
+    # xsecs={13: Number(0.0007)},
 )
 
 tttjm = tttj.add_process(
     name="tttjm",
     id=3031,
     label=f"{tt.label}tJm",
-    xsecs={13: Number(0.00049),
-           13.6: Number(0.0005215)},
+    xsecs={ #13: Number(0.00049),
+            #13.6: Number(0.0005215)
+            13: Number(0.000547),
+            13.6: Number(0.000623)
+           },
 )
 
 tttjp = tttj.add_process(
     name="tttjp",
     id=3032,
     label=f"{tt.label}tJp",
-    xsecs={13: Number(0.00021),
-           13.6: Number(0.0002281)},
+    xsecs={# 13: Number(0.00021),
+           #13.6: Number(0.0002281)
+           13: Number(0.000232),
+           13.6: Number(0.000269)},
 )

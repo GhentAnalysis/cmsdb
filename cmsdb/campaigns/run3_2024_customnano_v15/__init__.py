@@ -1,11 +1,9 @@
 # coding: utf-8
 
 """
-Common, analysis independent definition of the 2022 pre-EE data-taking campaign
-with datasets at NanoAOD tier in version 11. The 'pre-EE' refers to data taken
-before part of the positive ECAL endcap (EE+) had to be shut down because of a water
-leak inside the detector in late 2022 (more details can be found at
-https://cms.cern/news/problems-and-solutions-ecal-leak-story).
+Common, analysis independent definition of the 2024 customNanoAOD data-taking campaign
+with datasets at CustomNanoAOD tier in version 15. The 'custom' refers to a modified
+version of the standard NanoAOD format, including PNet Lepton ID and other enhancements.
 The corresponding set of MC samples include a simulation of the detector including
 the endcap region that was later affected by the leak.
 

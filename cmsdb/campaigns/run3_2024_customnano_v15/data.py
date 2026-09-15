@@ -92,6 +92,7 @@ cpn.add_dataset(
     n_events=97634104,
 )
 
+
 cpn.add_dataset(
     name="data_mu0_i_v2",
     id=33716140,
@@ -194,7 +195,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data],
     keys=[
-        "/Muon1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+        "/Muon1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15_v2-v1-00000000000000000000000000000000/USER",  # noqa
     ],
     n_files=1095,
     n_events=105133498,
@@ -482,7 +483,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data],
     keys=[
-        "/EGamma1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+        "/EGamma1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15_v2-v1-00000000000000000000000000000000/USER",  # noqa
     ],
     n_files=1592,
     n_events=151157592,
@@ -584,7 +585,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data],
     keys=[
-        "/JetMET0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v2-00000000000000000000000000000000/USER",  # noqa
+        "/JetMET0/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15_v2-v2-00000000000000000000000000000000/USER",  # noqa
     ],
     n_files=1269,
     n_events=116046182,
@@ -688,7 +689,7 @@ cpn.add_dataset(
     is_data=True,
     processes=[procs.data],
     keys=[
-        "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15-v1-00000000000000000000000000000000/USER",  # noqa
+        "/JetMET1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15_v2-v1-00000000000000000000000000000000/USER",  # noqa
     ],
     n_files=1308,
     n_events=116127561,

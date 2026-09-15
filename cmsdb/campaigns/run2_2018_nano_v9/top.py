@@ -336,7 +336,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="tttWm_amcatnlo",
     id=14930894,
-    processes=[procs.tttWm],
+    processes=[procs.tttwm],
     keys=[
         "/TTTWminus-DR1_TuneCP5_13TeV_amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
     ],
@@ -347,7 +347,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="tttWp_amcatnlo",
     id=14930428,
-    processes=[procs.tttWp],
+    processes=[procs.tttwp],
     keys=[
         "/TTTWplus-DR1_TuneCP5_13TeV_amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
     ],
@@ -358,7 +358,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="tttW_madgraph",
     id=14286685,
-    processes=[procs.tttW],
+    processes=[procs.tttw],
     keys=[
         "/TTTW_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
@@ -369,7 +369,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="tttJm_amcatnlo",
     id=14928256,
-    processes=[procs.tttJ],
+    processes=[procs.tttj],
     keys=[
         "/TTTJminus-DR1_TuneCP5_13TeV_amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
     ],
@@ -380,7 +380,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="tttJp_amcatnlo",
     id=14930833,
-    processes=[procs.tttJ],
+    processes=[procs.tttj],
     keys=[
         "/TTTJplus-DR1_TuneCP5_13TeV_amcatnlo-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v1/NANOAODSIM",  # noqa
     ],
@@ -391,7 +391,7 @@ cpn.add_dataset(
 cpn.add_dataset(
     name="tttJ_madgraph",
     id=14285505,
-    processes=[procs.tttJ],
+    processes=[procs.tttj],
     keys=[
         "/TTTJ_TuneCP5_13TeV-madgraph-pythia8/RunIISummer20UL18NanoAODv9-106X_upgrade2018_realistic_v16_L1v1-v2/NANOAODSIM",  # noqa
     ],
