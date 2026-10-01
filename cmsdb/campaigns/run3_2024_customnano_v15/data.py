@@ -485,8 +485,8 @@ cpn.add_dataset(
     keys=[
         "/EGamma1/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_Run2024I-MINIv6NANOv15_v2-v1-00000000000000000000000000000000/USER",  # noqa
     ],
-    n_files=1592,
-    n_events=151157592,
+    n_files=1587,
+    n_events=150687112,
 )
 
 cpn.add_dataset(
