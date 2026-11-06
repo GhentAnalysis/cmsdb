@@ -32,7 +32,7 @@ campaign_run3_2022_preEE_nano_v12 = Campaign(
         "run": 3,
         "year": 2022,
         "version": 12,
-        "postfix": "",
+        "postfix": "pre",
     },
     tags={"preEE"},
 )
@@ -42,7 +42,4 @@ campaign_run3_2022_preEE_nano_v12 = Campaign(
 import cmsdb.campaigns.run3_2022_preEE_nano_v12.data
 import cmsdb.campaigns.run3_2022_preEE_nano_v12.top
 import cmsdb.campaigns.run3_2022_preEE_nano_v12.ewk
-import cmsdb.campaigns.run3_2022_preEE_nano_v12.qcd
 import cmsdb.campaigns.run3_2022_preEE_nano_v12.higgs
-import cmsdb.campaigns.run3_2022_preEE_nano_v12.hh2bbww
-import cmsdb.campaigns.run3_2022_preEE_nano_v12.hhh4b2tau

@@ -408,7 +408,27 @@ cpn.add_dataset(
 #
 ####################################################################################################
 
-# TODO: not yet found in DAS
+cpn.add_dataset(
+    name="st_tchannel_t_4f_lep_powheg",
+    id=15017347,
+    processes=[procs.st_tchannel_t],
+    keys=[
+        "/TBbarQ_t-channel_4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=92,
+    n_events=5786000,
+)
+
+cpn.add_dataset(
+    name="st_tchannel_tbar_4f_lep_powheg",
+    id=15017262,
+    processes=[procs.st_tchannel_tbar],
+    keys=[
+        "/TbarBQ_t-channel_4FS_TuneCP5_13p6TeV_powheg-madspin-pythia8/Run3Summer23NanoAODv12-130X_mcRun3_2023_realistic_v15-v2/NANOAODSIM",  # noqa
+    ],
+    n_files=61,
+    n_events=2878000,
+)
 
 ####################################################################################################
 #
