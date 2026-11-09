@@ -58,7 +58,7 @@ __all__ = [
     "zz_zqq_zll", "zz_zll_znunu", "zz_zll_zll", "zz_zqq_zqq", "zz_znunu_zqq",
     "wz", "wz_wlnu_zll", "wz_wqq_zll", "wz_wlnu_zqq", "wz_wlnu_znunu", "wz_wlnu_zll_1jets",
     "ww",
-    "ww_dl", "ww_sl", "ww_fh",
+    "ww_dl", "ww_sl", "ww_fh", "ss_ww",
     "ggtozzto4l",
     "ggtozzto2e2mu", "ggtozzto2mu2tau", "ggtozzto2e2tau",
     "ggtozzto4e", "ggtozzto4mu", "ggtozzto4tau",
@@ -67,7 +67,7 @@ __all__ = [
     "wg",
     "wg_wlnu_ptg10to100", "wg_wlnu_ptg100to200", "wg_wlnu_ptg200to400",
     "wg_wlnu_ptg400to600", "wg_wlnu_ptg600toinf", "wzg_wlnu",
-    "dyg", "dyg_zll_mll50toinf",
+    "dyg", "dyg_zll_mll50toinf", "dyg_ztoll_5f",
     "dyg_zll_mll4to50_ptg10to100", "dyg_zll_mll4to50_ptg100to200", "dyg_zll_mll4to50_ptg200toinf",
     "dyg_zll_mll50toinf_ptg10to50", "dyg_zll_mll50toinf_ptg10to100",
     "dyg_zll_mll50toinf_ptg50to100", "dyg_zll_mll50toinf_ptg100to200",
@@ -1226,6 +1226,8 @@ wz_wlnu_zll = wz.add_process(
     xsecs=multiply_xsecs(wz, const.br_w.lep * const.br_z.clep),
 )
 
+wz_wlnu_zll.xsecs[13] = Number(4.9173)  # https://indico.cern.ch/event/963958/contributions/4058869/attachments/2119607/3566972/2020_10_09_WZ_cross_section.pdf  # noqa
+
 # cross sections 13.6TeV based on https://twiki.cern.ch/twiki/bin/viewauth/CMS/MATRIXCrossSectionsat13p6TeV
 wz_wlnu_zll.xsecs[13.6] = Number(5.2797)
 
@@ -1327,6 +1329,15 @@ ww_fh = ww.add_process(
     id=8330,
     xsecs={
         13: ww.get_xsec(13) * const.br_ww.fh,  # value around 53.94 for comparison to GenXSecAnalyzer NLO result
+    },
+)
+
+ss_ww = ww.add_process(
+    name="ss_ww",
+    id=8340,
+    label="WW (same sign)",
+    xsecs={
+        13: 0.02794,
     },
 )
 
@@ -1647,5 +1658,14 @@ dyg_zll_mll50toinf_ptg600toinf = dyg_zll_mll50toinf.add_process(
     xsecs={
         # 13.6 from CMS AN-23-089
         13.6: Number(0.0006773),
+    },
+)
+
+dyg_ztoll_5f = dyg.add_process(
+    name="dyg_ztoll_5f",
+    id=9700,
+    xsecs={
+        # from TOP-24-008
+        13: Number(55.48)
     },
 )

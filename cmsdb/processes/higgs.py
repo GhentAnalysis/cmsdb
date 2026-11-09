@@ -1411,8 +1411,9 @@ tth_hnonbb_1j = tth_hnonbb.add_process(
     id=99000,
     label=r"$t\bar{t}H$",
     xsecs={
+        13: tth_hnonbb.xsecs[13],
         13.6: tth_hnonbb.xsecs[13.6],
-        # 13.6: Number(0.5781),  # TODO: only preliminary
+        #13.6: Number(0.5781),  # TODO: only preliminary
     },
 )
 
@@ -1469,6 +1470,7 @@ ttzh = ttvh.add_process(
     id=120000,
     label=r"$t\bar{t}ZH$",
     xsecs={
+        13: Number(0.00113),  # LO (MCM)
         13.6: 0.00129,
     },
     aux={"production_mode_parent": ttvh},
@@ -1478,6 +1480,7 @@ ttwh = ttvh.add_process(
     id=130000,
     label=r"$t\bar{t}WH$",
     xsecs={
+        13: Number(0.001141),  # LO (MCM)
         13.6: 0.001252,
     },
     aux={"production_mode_parent": ttvh},

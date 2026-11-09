@@ -16,6 +16,8 @@ def get_generator_name(name: str) -> str:
     """
     if "powheg" in name:
         return "_powheg"
+    elif "mcfm" in name:
+        return "_mcfm"
     elif "madgraph" in name:
         return "_madgraph"
     elif "amcatnlo" in name:
@@ -180,13 +182,21 @@ convert_functions = {
 }
 
 
+def das_instance(dataset: str) -> str:
+    """
+    Returns the DAS instance suffix needed for a dataset; privately produced /USER datasets
+    live in prod/phys03 instead of the global DBS.
+    """
+    return " instance=prod/phys03" if dataset.endswith("/USER") else ""
+
+
 def get_das_info(
     dataset: str,
 ) -> dict:
     from law.util import interruptable_popen
 
     # call dasgoclient command
-    cmd = f"dasgoclient -query='dataset={dataset}' -json"
+    cmd = f"dasgoclient -query='dataset={dataset}{das_instance(dataset)}' -json"
     code, out, _ = interruptable_popen(
         cmd,
         shell=True,
@@ -234,7 +244,7 @@ def print_das_info(
             datasets.append(das_string)
         else:
             # using a wildcard leads to a different structer in json format
-            cmd = f"dasgoclient -query='dataset={das_string}' -json"
+            cmd = f"dasgoclient -query='dataset={das_string}{das_instance(das_string)}' -json"
             code, out, _ = interruptable_popen(
                 cmd,
                 shell=True,

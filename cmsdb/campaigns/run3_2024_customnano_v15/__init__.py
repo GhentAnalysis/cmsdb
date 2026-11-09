@@ -30,6 +30,7 @@ campaign_run3_2024_customnano_v15 = Campaign(
         "version": 15,
         "run": 3,
         "postfix": "",
+        "is_custom": True
     },
 )
 

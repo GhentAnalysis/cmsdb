@@ -713,3 +713,36 @@ for cpn in [cpn24, cpn25]:
     #     n_events=327817735,
     # )
     #
+
+    cpn.add_dataset(
+        name="dy_ee_m10to50_madgraph",
+        id=3371659,
+        processes=[procs.dy_ee_m10to50],
+        keys=[
+            "/DYto2E-4Jets_Bin-MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+        ],
+        n_files=5195,
+        n_events=391568488,
+    )
+
+    cpn.add_dataset(
+        name="dy_mumu_m10to50_madgraph",
+        id=3371734,
+        processes=[procs.dy_mumu_m10to50],
+        keys=[
+            "/DYto2Mu-4Jets_Bin-MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+        ],
+        n_files=5926,
+        n_events=416553031,
+    )
+
+    cpn.add_dataset(
+        name="dy_tautau_m10to50_madgraph",
+        id=3371972,
+        processes=[procs.dy_tautau_m10to50],
+        keys=[
+            "/DYto2Tau-4Jets_Bin-MLL-10to50_TuneCP5_13p6TeV_madgraphMLM-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+        ],
+        n_files=6328,
+        n_events=487541879,
+    )

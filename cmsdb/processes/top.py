@@ -24,7 +24,7 @@ __all__ = [
     "ttv",
     "ttz", "ttz_zqq", "ttz_zlep_m1to10", "ttz_zlep_m10toinf", "ttz_zll_m4to50",
     "ttz_zll_m50toinf", "ttz_znunu",
-    "ttgamma", "ttgamma_dilept",
+    "ttgamma", "ttgamma_dilept", "ttgamma_singlelept",
     "ttg_ptg_10to100", "ttg_ptg_100to200", "ttg_ptg_200toinf",
     "ttw", "ttw_wlnu", "ttw_wlnu_ewk", "ttw_wqq",
     "ttvv",
@@ -561,14 +561,15 @@ ttgamma = ttv.add_process(
     },
 )
 
-# xsec from CMS AN-2021/217, TOP-23-002
+# xsec from CMS AN-2023/082, TOP-24-008
+# (previously 0.4208 from CMS AN-2021/217, TOP-23-002)
 
 ttgamma_dilept = ttgamma.add_process(
     name="ttgamma_dilept",
     id=3160,
     label=f"{tt.label} + gamma",
     xsecs={
-        13: Number(0.4208),
+        13: Number(2.22),
     },
 )
 
@@ -602,14 +603,27 @@ ttg_ptg_200toinf = ttgamma.add_process(
     },
 )
 
+ttgamma_singlelept = ttgamma.add_process(
+    name="ttgamma_singlelept",
+    id=3161,
+    label=f"{tt.label} + gamma",
+    xsecs={
+        13: Number(7.509)
+    }
+)
+
 ttw = ttv.add_process(
     name="ttw",
     id=3200,
     label=f"{tt.label}W",
     xsecs={
-        13: Number(0.592, {
-            "scale": (0.261j, 0.162j),
-            "pdf": 0.021j,
+        # 13: Number(0.592, {
+        #     "scale": (0.261j, 0.162j),
+        #     "pdf": 0.021j,
+        # }),
+        13: Number(0.7224, {
+            "scale": (0.0702j, 0.0777j),
+            "pdf": 0.0072j
         }),
         # XSDB: only LO in database, estimate an energy scaling factor from LO samples and multiply
         # to 13 TeV value for now, TODO
@@ -631,6 +645,7 @@ ttw_wlnu = ttw.add_process(
     name="ttw_wlnu",
     id=3210,
     xsecs={
+        13: ttw.get_xsec(13) * const.br_w.lep,
         13.6: Number(0.2471),
     },
 )
@@ -640,6 +655,7 @@ ttw_wlnu_ewk = ttw_wlnu.add_process(
     id=3211,
     label=f"{ttw_wlnu.label} (EWK)",
     xsecs={
+        13: Number(0.01127),
         13.6: Number(0.01697),
     },
 )
@@ -763,7 +779,7 @@ tttw_drw = tttw.add_process(
            13.6: Number(0.00204)},
 )
 
-tttwm_drw = tttw.add_process(
+tttwm_drw = tttw_drw.add_process(
     name="tttwm_drw",
     id=3021,
     label=f"{tt.label}tWm",
@@ -771,7 +787,7 @@ tttwm_drw = tttw.add_process(
             13.6: Number(0.00102)},
 )
 
-tttwp_drw = tttw.add_process(
+tttwp_drw = tttw_drw.add_process(
     name="tttwp_drw",
     id=3022,
     label=f"{tt.label}tWp",
