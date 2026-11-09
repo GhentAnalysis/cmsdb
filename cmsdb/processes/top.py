@@ -28,7 +28,7 @@ __all__ = [
     "ttg_ptg_10to100", "ttg_ptg_100to200", "ttg_ptg_200toinf",
     "ttw", "ttw_wlnu", "ttw_wlnu_ewk", "ttw_wqq",
     "ttvv",
-    "ttzz", "ttwz", "ttww", "tttt", "tthh", "ttt", "tttw", "tttwm", "tttwp", "tttj", "tttjm", "tttjp",
+    "ttzz", "ttwz", "ttww", "tttt", "tthh", "ttt", "tttw", "tttw_dr1", "tttw_drw", "tttwm_dr1", "tttwp_dr1", "tttwm_drw", "tttwp_drw", "tttj", "tttjm", "tttjp",
 ]
 
 
@@ -740,7 +740,8 @@ ttvv.set_xsec(
 
 
 # TTT
-# https://github.com/gdurieux/triple-top-nlo
+# https://github.com/gdurieux/triple-top-nlo : containts tttW-drW and tttj-dr1 xsecs 
+# We should ue PDF4LHC21_40_pdfas, not sure where the documentation is for the tttW-dr1 xsecs
 
 ttt = Process(
     name="ttt",
@@ -752,34 +753,61 @@ tttw = ttt.add_process(
     name="tttw",
     id=3020,
     label=f"{tt.label}tW",
-    # xsecs={13: Number(0.0013)},
 )
 
-tttwm = tttw.add_process(
-    name="tttwm",
+tttw_drw = tttw.add_process(
+    name="tttw_drw",
+    id=3023,
+    label=f"{tt.label}tW ($DR_W$)",
+    xsecs={13: Number(0.001726),
+           13.6: Number(0.00204)},
+)
+
+tttwm_drw = tttw.add_process(
+    name="tttwm_drw",
     id=3021,
     label=f"{tt.label}tWm",
-    xsecs={ #13: Number(0.00066),
-            #13.6: Number(0.0005901)
-            13: Number(0.000863),
+    xsecs={ 13: Number(0.000863),
             13.6: Number(0.00102)},
 )
 
-tttwp = tttw.add_process(
-    name="tttwp",
+tttwp_drw = tttw.add_process(
+    name="tttwp_drw",
     id=3022,
     label=f"{tt.label}tWp",
-    xsecs={ #13: Number(0.00066),
-            #13.6: Number(0.0005901)
-            13: Number(0.000863),
+    xsecs={ 13: Number(0.000863),
             13.6: Number(0.00102)},
+)
+
+tttw_dr1 = tttw.add_process(
+    name="tttw_dr1",
+    id=3024,
+    label=f"{tt.label}tW ($DR_1$)",
+    xsecs={ 13: Number(0.00132),
+            13.6: Number(0.0011802)},
+)
+
+tttwm_dr1 = tttw_dr1.add_process(
+    name="tttwm_dr1",
+    id=3025,
+    label=f"{tt.label}tWm",
+    xsecs={ 13: Number(0.00066),
+            13.6: Number(0.0005901)}
+)
+
+tttwp_dr1 = tttw_dr1.add_process(
+    name="tttwp_dr1",
+    id=3026,
+    label=f"{tt.label}tWp",
+    xsecs={ 13: Number(0.00066),
+            13.6: Number(0.0005901)}
 )
 
 tttj = ttt.add_process(
     name="tttj",
     id=3030,
     label=f"{tt.label}tJ",
-    # xsecs={13: Number(0.0007)},
+    xsecs={13: Number(0.0007)},
 )
 
 tttjm = tttj.add_process(
@@ -789,8 +817,7 @@ tttjm = tttj.add_process(
     xsecs={ #13: Number(0.00049),
             #13.6: Number(0.0005215)
             13: Number(0.000547),
-            13.6: Number(0.000623)
-           },
+            13.6: Number(0.000623)},
 )
 
 tttjp = tttj.add_process(

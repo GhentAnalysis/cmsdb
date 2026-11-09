@@ -35,3 +35,7 @@ campaign_run3_2025_customnano_v15 = Campaign(
 
 # trailing imports to load datasets
 import cmsdb.campaigns.run3_2025_customnano_v15.data  # noqa
+import cmsdb.campaigns.run3_2024_customnano_v15.top  # noqa
+import cmsdb.campaigns.run3_2024_customnano_v15.ewk  # noqa
+import cmsdb.campaigns.run3_2024_customnano_v15.higgs  # noqa
+import cmsdb.campaigns.run3_2024_customnano_v15.qcd  # noqa

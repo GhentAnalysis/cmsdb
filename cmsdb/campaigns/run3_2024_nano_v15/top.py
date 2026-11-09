@@ -4,8 +4,9 @@ from order import DatasetInfo
 
 import cmsdb.processes as procs
 from cmsdb.campaigns.run3_2024_nano_v15 import campaign_run3_2024_nano_v15 as cpn24
+from cmsdb.campaigns.run3_2025_nano_v15 import campaign_run3_2025_nano_v15 as cpn25
 
-for cpn in [cpn24]:
+for cpn in [cpn24, cpn25]:
 
     #
     # ttbar
@@ -302,10 +303,10 @@ for cpn in [cpn24]:
     )
 
     cpn.add_dataset(
-        name="tttwm_amcatnlo",
+        name="tttwm_dr1_amcatnlo",
         id=15563933,
         is_data=False,
-        processes=[procs.tttwm],
+        processes=[procs.tttwm_dr1],
         keys=[
             "/TTTWminus-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
@@ -317,7 +318,7 @@ for cpn in [cpn24]:
         name="tttwp_amcatnlo",
         id=15563932,
         is_data=False,
-        processes=[procs.tttwp],
+        processes=[procs.tttwp_dr1],
         keys=[
             "/TTTWplus-DR1_TuneCP5_13p6TeV_amcatnlo-pythia8/RunIII2024Summer24NanoAODv15-150X_mcRun3_2024_realistic_v2-v2/NANOAODSIM",  # noqa
         ],
