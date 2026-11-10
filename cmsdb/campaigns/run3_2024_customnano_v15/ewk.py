@@ -449,17 +449,16 @@ for cpn in [cpn24, cpn25]:
     # )
     #
 
-    # cpn.add_dataset(
-    #     name="PLACEHOLDER_amcatnlo",
-    #     id=3374822,
-    #     processes=[procs.PLACEHOLDER],
-    #     keys=[
-    #         "/WZtoL3Nu-1Jets-4FS_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
-    #     ],
-    #     n_files=184,
-    #     n_events=14455252,
-    # )
-    #
+    cpn.add_dataset(
+        name="wz_wlnu_znunu_amcatnlo",
+        id=3411486,
+        processes=[procs.wz_wlnu_znunu],
+        keys=[
+            "/WZtoL3Nu-1Jets-4FS_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+        ],
+        n_files=188,
+        n_events=14775891,
+    )
 
     cpn.add_dataset(
         name="wz_wqq_zll_powheg",

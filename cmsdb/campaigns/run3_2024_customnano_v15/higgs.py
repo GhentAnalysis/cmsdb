@@ -225,6 +225,43 @@ for cpn in [cpn24, cpn25]:
     # )
     #
 
+    #
+    # VH, H -> non-bb
+    #
+
+    cpn.add_dataset(
+        name="wph_hnonbb_amcatnlo",
+        id=3411480,
+        processes=[procs.wph_hnonbb],
+        keys=[
+            "/WplusH-HtoNon2B_Par-M-125_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+        ],
+        n_files=81,
+        n_events=4074508,
+    )
+
+    cpn.add_dataset(
+        name="wmh_hnonbb_amcatnlo",
+        id=3411481,
+        processes=[procs.wmh_hnonbb],
+        keys=[
+            "/WminusH-HtoNon2B_Par-M-125_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+        ],
+        n_files=83,
+        n_events=3697133,
+    )
+
+    cpn.add_dataset(
+        name="zh_hnonbb_amcatnlo",
+        id=3411496,
+        processes=[procs.zh_hnonbb],
+        keys=[
+            "/ZH-HtoNon2B_Par-M-125_TuneCP5_13p6TeV_amcatnloFXFX-pythia8/CustomNanoAODv15-NanoTuples-uParTv3-parTlepID-NanoAODv15_RunIII2024Summer24MiniAODv6-150X_v2-v2-00000000000000000000000000000000/USER",  # noqa
+        ],
+        n_files=86,
+        n_events=4188141,
+    )
+
     cpn.add_dataset(
         name="wmh_wqq_hbb_powheg",
         id=3370688,
