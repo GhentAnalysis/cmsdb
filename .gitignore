@@ -23,3 +23,6 @@ build
 static
 docs/_build
 tmp
+
+# generated outputs of scripts/create_customnano_v15_campaign.py
+scripts/customnano_v15*/*.txt
